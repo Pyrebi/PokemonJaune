@@ -12,6 +12,9 @@
 - **Evolutions par échange remplacées par le niveau** : Kadabra (N.36),
   Machopeur (N.40), Gravalanch (N.40), Spectrum (N.38).
 
+- **CT réutilisables et CS oubliables** : une CT n'est plus consommée quand on
+  l'utilise, et les capacités CS peuvent être remplacées comme les autres.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

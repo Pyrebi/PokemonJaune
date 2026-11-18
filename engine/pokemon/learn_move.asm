@@ -164,7 +164,7 @@ TryingToLearn:
 	ld a, [hl]
 	push af
 	push bc
-	call IsMoveHM
+	and a ; les capacités CS peuvent désormais être oubliées
 	pop bc
 	pop de
 	ld a, d

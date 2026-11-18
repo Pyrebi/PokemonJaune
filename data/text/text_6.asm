@@ -1,11 +1,7 @@
 TeachingHMsText::
-	text "Une capacité CS"
-	line "apprise par un"
-	cont "#MON ne peut"
-	cont "plus être"
-	cont "oubliée."
-
-	para "Réfléchis bien"
-	line "avant d'enseigner"
-	cont "une CS."
+	text "Les CT et les CS"
+	line "servent toujours"
+	cont "et leurs"
+	cont "capacités peuvent"
+	cont "être oubliées."
 	done

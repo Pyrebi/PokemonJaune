@@ -12,9 +12,9 @@ _Route14CooltrainerM1EndBattleText::
 
 _Route14CooltrainerM1AfterBattleText::
 	text "Tu as des CS,"
-	line "non? Les #MON"
-	cont "ne peuvent jamais"
-	cont "oublier ces"
+	line "non? On peut les"
+	cont "oublier, comme"
+	cont "les autres"
 	cont "capacités."
 	done
 

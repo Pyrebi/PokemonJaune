@@ -558,8 +558,8 @@ TMNotebookText::
 	line "en tout."
 
 	para "Il existe aussi 5"
-	line "CS réutilisables"
-	cont "à volonté."
+	line "CS. CT et CS sont"
+	cont "réutilisables!"
 
 	para "SYLPHE SARL@"
 	text_end

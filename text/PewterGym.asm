@@ -65,11 +65,10 @@ _TM34ExplanationText::
 	cont "tu peux enseigner"
 	cont "aux #MON!"
 
-	para "Une CT ne sert"
-	line "qu'une fois! Donc"
-	cont "quand tu en"
-	cont "utilises une,"
-	cont "choisis bien ton"
+	para "Une CT ne"
+	line "s'use jamais!"
+	cont "Apprends-la"
+	cont "à tous tes"
 	cont "#MON!"
 
 	para "La CT34 contient"
