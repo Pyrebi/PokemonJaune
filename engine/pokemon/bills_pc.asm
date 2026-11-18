@@ -1,73 +1,59 @@
 DisplayPCMainMenu::
+; entrées : PC de LEO, PC du joueur, MAITRE CAPA., [PC du PROF.CHEN],
+; [LIGUE #MON], DECONNEXION
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	call SaveScreenTilesToBuffer2
-	ld a, [wNumHoFTeams]
-	and a
-	jr nz, .leaguePCAvailable
+	ld b, 4 ; LEO, joueur, maître des capacités, déconnexion
 	CheckEvent EVENT_GOT_POKEDEX
-	jr z, .noOaksPC
+	jr z, .countDone
+	inc b
 	ld a, [wNumHoFTeams]
 	and a
-	jr nz, .leaguePCAvailable
+	jr z, .countDone
+	inc b
+.countDone
+	ld a, b
+	dec a
+	ld [wMaxMenuItem], a
+	ld a, b
+	add a
+	ld b, a ; hauteur = 2 lignes par entrée
+	ld c, 14
 	hlcoord 0, 0
-	lb bc, 8, 14
-	jr .next
-.noOaksPC
-	hlcoord 0, 0
-	lb bc, 6, 14
-	jr .next
-.leaguePCAvailable
-	hlcoord 0, 0
-	lb bc, 10, 14
-.next
 	call TextBoxBorder
 	call UpdateSprites
-	ld a, 3
-	ld [wMaxMenuItem], a
-	CheckEvent EVENT_MET_BILL
-	jr nz, .metBill
-	hlcoord 2, 2
 	ld de, SomeonesPCText
-	jr .next2
-.metBill
-	hlcoord 2, 2
+	CheckEvent EVENT_MET_BILL
+	jr z, .placeBill
 	ld de, BillsPCText
-.next2
+.placeBill
+	hlcoord 2, 2
 	call PlaceString
 	hlcoord 2, 4
+	ld de, PlayersPCText ; « PC DE  »
+	call PlaceString
+	ld h, b
+	ld l, c
 	ld de, wPlayerName
 	call PlaceString
-	ld l, c
-	ld h, b
-	ld de, PlayersPCText
-	call PlaceString
-	CheckEvent EVENT_GOT_POKEDEX
-	jr z, .noOaksPC2
 	hlcoord 2, 6
+	ld de, MoveRelearnerPCText
+	call PlaceString
+	hlcoord 2, 8
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .placeLogOff
 	ld de, OaksPCText
 	call PlaceString
+	hlcoord 2, 10
 	ld a, [wNumHoFTeams]
 	and a
-	jr z, .noLeaguePC
-	ld a, 4
-	ld [wMaxMenuItem], a
-	hlcoord 2, 8
+	jr z, .placeLogOff
 	ld de, PKMNLeaguePCText
 	call PlaceString
-	hlcoord 2, 10
+	hlcoord 2, 12
+.placeLogOff
 	ld de, LogOffPCText
-	jr .next3
-.noLeaguePC
-	hlcoord 2, 8
-	ld de, LogOffPCText
-	jr .next3
-.noOaksPC2
-	ld a, $2
-	ld [wMaxMenuItem], a
-	hlcoord 2, 6
-	ld de, LogOffPCText
-.next3
 	call PlaceString
 	ld a, PAD_A | PAD_B
 	ld [wMenuWatchedKeys], a
@@ -85,6 +71,7 @@ DisplayPCMainMenu::
 SomeonesPCText:   db "PC DE ???@"
 BillsPCText:      db "PC DE LEO@"
 PlayersPCText:    db "PC DE @"
+MoveRelearnerPCText: db "MAITRE CAPA.@"
 OaksPCText:       db "PC DU PROF.CHEN@"
 PKMNLeaguePCText: db "LIGUE <PKMN>@"
 LogOffPCText:     db "DECONNEXION@"

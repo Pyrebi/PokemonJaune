@@ -165,6 +165,7 @@ INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 INCLUDE "gfx/trade.asm"
 INCLUDE "engine/pokemon/evos_moves.asm"
+INCLUDE "engine/pokemon/move_relearner.asm"
 
 
 SECTION "Battle Core", ROMX

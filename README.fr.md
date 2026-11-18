@@ -30,6 +30,9 @@
   les dresseurs et le Spectre) et MULTI. EXP (×1, ×2, ×3, ×5). Enregistrées
   avec la partie, réglables aussi depuis l'écran titre.
 
+- **Maître des capacités** (entrée « MAITRE CAPA. » du PC) : réapprendre les
+  capacités de départ et celles de la liste par niveau jusqu'au niveau actuel.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

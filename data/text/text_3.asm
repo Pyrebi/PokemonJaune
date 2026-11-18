@@ -170,6 +170,17 @@ _RareCandyText::
 	text "!@"
 	text_end
 
+_RelearnerNoMovesText::
+	text "Ce #MON n'a"
+	line "aucune capacité à"
+	cont "apprendre ici."
+	prompt
+
+_RelearnerWhichMoveText::
+	text "Quelle capacité"
+	line "apprendre?"
+	done
+
 _TurnedOnPC1Text::
 	text "<PLAYER> allume le"
 	line "PC."
