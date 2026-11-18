@@ -48,6 +48,9 @@
   - les capacités SPECTRE sont super efficaces contre PSY (au lieu de sans effet) ;
   - PUISSANCE double les chances de coup critique (au lieu de les diviser par 4) ;
   - une précision de 100 % ne rate plus jamais (fin du raté à 1/256).
+- **DV au maximum** : tout Pokémon obtenu par le joueur (capture, cadeau,
+  PIKACHU de départ, envoi dans la boîte) a 15 dans chaque DV. Les Pokémon
+  sauvages et ceux des dresseurs ne changent pas.
 - **Informations** : les DV (0-15) dans le résumé, à côté de chaque statistique et
   sous les PV ; amitié et humeur du PIKACHU de départ en page 2 du résumé.
 

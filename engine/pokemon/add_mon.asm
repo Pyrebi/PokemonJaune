@@ -110,10 +110,9 @@ _AddPartyMon::
 	and a ; is this a wild mon caught in battle?
 	jr nz, .copyEnemyMonData
 
-; Not wild.
-	call Random ; generate random IVs
+; Not wild : DV au maximum pour les #MON du joueur (au lieu d'aléatoires)
+	ld a, $ff
 	ld b, a
-	call Random
 
 .next4
 	push bc
@@ -144,9 +143,8 @@ _AddPartyMon::
 .copyEnemyMonData
 	ld bc, MON_DVS
 	add hl, bc
-	ld a, [wEnemyMonDVs] ; copy IVs from cur enemy mon
+	ld a, $ff ; DV au maximum pour un #MON capturé (au lieu de ceux de l'ennemi)
 	ld [hli], a
-	ld a, [wEnemyMonDVs + 1]
 	ld [hl], a
 	ld a, [wEnemyMonHP]    ; copy HP from cur enemy mon
 	ld [de], a

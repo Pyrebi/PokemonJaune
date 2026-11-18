@@ -3171,6 +3171,10 @@ INCLUDE "engine/items/bag_pockets.asm"
 
 ; store the new mon in the first slot, shifting all existing box data down
 SendNewMonToBox:
+; DV au maximum pour un #MON envoyé dans la boîte (capture ou cadeau)
+	ld a, $ff
+	ld [wEnemyMonDVs], a
+	ld [wEnemyMonDVs + 1], a
 	ld de, wBoxCount
 	ld a, [de]
 	inc a
