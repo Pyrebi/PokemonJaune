@@ -353,6 +353,7 @@ StatusScreen2:
 	push bc
 	push hl
 	push de
+	call StatusScreen_PrintMovePower
 	ld hl, wCurrentMenuItem
 	ld a, [hl]
 	push af
@@ -479,6 +480,29 @@ StatusScreen_ClearName:
 	ld bc, NAME_LENGTH - 1
 	ld a, ' '
 	jp FillMemory
+
+; affiche « PUI xx » à gauche de la ligne des PP (de = position des PP)
+StatusScreen_PrintMovePower:
+	push bc
+	ld [wMovePower], a
+	push de
+	callfar GetMovePower
+	pop de
+	push de
+	ld hl, -11
+	add hl, de
+	ld de, .label
+	call PlaceString
+	ld h, b
+	ld l, c
+	inc hl
+	ld de, wMovePowerText
+	call PlaceString
+	pop de
+	pop bc
+	ret
+.label
+	db "PUI@"
 
 StatusScreen_PrintPP:
 ; print PP or -- c times, going down two rows each time

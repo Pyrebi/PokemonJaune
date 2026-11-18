@@ -1,4 +1,7 @@
 LearnMove:
+	ld a, [wMoveNum] ; puissance, affichée dans TryingToLearnText
+	ld [wMovePower], a
+	callfar GetMovePower
 	call SaveScreenTilesToBuffer1
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks

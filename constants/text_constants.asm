@@ -27,3 +27,6 @@ DEF LEADING_ZEROES EQU 1 << BIT_LEADING_ZEROES
 	const TEXT_PIKACHU_ANIM     ; $d4
 
 DEF TEXT_START_MENU EQU $00
+
+; texte de la puissance d'une capacité (« 120@ » ou « -@ »), dans le tampon temporaire
+DEF wMovePowerText EQUS "(wBuffer + 20)"

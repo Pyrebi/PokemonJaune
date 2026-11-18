@@ -176,6 +176,14 @@ _RelearnerNoMovesText::
 	cont "apprendre ici."
 	prompt
 
+_RelearnerConfirmText::
+	text_ram wStringBuffer
+	text_start
+	line "PUISSANCE @"
+	text_ram wMovePowerText
+	text " OK?"
+	done
+
 _RelearnerWhichMoveText::
 	text "Quelle capacité"
 	line "apprendre?"

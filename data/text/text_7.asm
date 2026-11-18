@@ -138,6 +138,9 @@ _TryingToLearnText::
 	cont "@"
 	text_ram wStringBuffer
 	text "!"
+	cont "(PUISSANCE @"
+	text_ram wMovePowerText
+	text ")"
 
 	para "Mais @"
 	text_ram wLearnMoveMonName

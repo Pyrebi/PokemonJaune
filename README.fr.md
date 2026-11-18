@@ -33,6 +33,10 @@
 - **Maître des capacités** (entrée « MAITRE CAPA. » du PC) : réapprendre les
   capacités de départ et celles de la liste par niveau jusqu'au niveau actuel.
 
+- **Puissance des capacités** affichée dans le résumé d'un Pokémon (« PUI »), dans
+  la confirmation du Maître des capacités et dans le message « ... veut apprendre ».
+  « - » pour les capacités de statut ou à dégâts fixes.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

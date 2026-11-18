@@ -2307,7 +2307,9 @@ wOwnedTMHMs:: flag_array NUM_TM_HM
 wCurBagPocket:: db
 ; options bonus : bit 0 = capture à 100 %, bits 1-2 = multiplicateur d'EXP (x1, x2, x3, x5)
 wBonusOptions:: db
-	ds 78 + 56 - (1 + BAG_ITEM_CAPACITY * 2 + 1) - (NUM_TM_HM + 7) / 8 - 2
+; puissance d'une capacité (temporaire, pour l'affichage)
+wMovePower:: db
+	ds 78 + 56 - (1 + BAG_ITEM_CAPACITY * 2 + 1) - (NUM_TM_HM + 7) / 8 - 3
 
 wObtainedHiddenItemsFlags:: flag_array MAX_HIDDEN_ITEMS
 

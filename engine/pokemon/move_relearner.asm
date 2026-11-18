@@ -41,10 +41,23 @@ MoveRelearnerPC::
 	ld a, [wCurListMenuItem]
 	ld [wMoveNum], a
 	ld [wNamedObjectIndex], a
+	ld [wMovePower], a
+	call GetMovePower
 	call GetMoveName
 	call CopyToStringBuffer
+; confirmation avec la puissance
+	ld hl, .confirmText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .chooseMon
 	predef LearnMove
 	jr .chooseMon
+
+.confirmText
+	text_far _RelearnerConfirmText
+	text_end
 .exit
 	call GBPalWhiteOutWithDelay3
 	call RestoreScreenTilesAndReloadTilePatterns
@@ -57,6 +70,57 @@ MoveRelearnerPC::
 .whichMoveText
 	text_far _RelearnerWhichMoveText
 	text_end
+
+; entrée : [wMovePower] = capacité ; sortie : [wMovePower] = sa puissance
+; et écrit le texte correspondant dans wMovePowerText (« - » si 0 ou 1 :
+; capacités de statut ou à dégâts fixes)
+GetMovePower::
+	ld a, [wMovePower]
+	and a
+	jr z, .gotPower
+	dec a
+	ld hl, Moves + MOVE_POWER
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld a, [hl]
+.gotPower
+	ld [wMovePower], a
+	ld hl, wMovePowerText
+	cp 2
+	jr nc, .number
+	ld [hl], '-'
+	inc hl
+	ld [hl], '@'
+	ret
+.number
+	ld c, 100
+	call .digit
+	ld c, 10
+	call .digit
+	add '0'
+	ld [hli], a
+	ld [hl], '@'
+	ret
+.digit ; écrit le chiffre de a / c (sans zéro en tête), a = reste
+	ld b, '0' - 1
+.sub
+	inc b
+	sub c
+	jr nc, .sub
+	add c
+	push af
+	ld a, b
+	cp '0'
+	jr nz, .write
+	ld a, l
+	cp LOW(wMovePowerText) ; pas de zéro en tête
+	jr z, .skip
+	ld a, b
+.write
+	ld [hli], a
+.skip
+	pop af
+	ret
 
 ; construit dans wPocketView la liste des capacités réapprenables
 ; du #MON [wWhichPokemon] (espèce [wCurPartySpecies])

@@ -128,6 +128,8 @@ DisplayListMenuIDLoop::
 	ld a, [wListMenuID]
 	and a ; PCPOKEMONLISTMENU?
 	jr z, .pokemonList
+	cp MOVESLISTMENU ; liste de capacités : pas de prix ni de nom d'objet
+	jr z, .storeChosenEntry
 ; if it's an item menu
 	ASSERT wCurListMenuItem == wCurItem
 	push hl
