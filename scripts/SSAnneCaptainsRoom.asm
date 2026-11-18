@@ -40,6 +40,11 @@ SSAnneCaptainsRoomCaptainText:
 	ld hl, SSAnneCaptainsRoomCaptainNotSickAnymoreText
 	call PrintText
 .done
+	CheckEvent EVENT_GOT_HM01
+	jr z, .noFieldItem
+	ld d, SECATEUR
+	farcall GiveFieldItemIfMissing
+.noFieldItem
 	jp TextScriptEnd
 
 SSAnneCaptainsRoomRubCaptainsBackText:

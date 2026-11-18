@@ -28,6 +28,11 @@ Route2GateOaksAideText:
 .got_item
 	ld hl, .FlashExplanationText
 	call PrintText
+	CheckEvent EVENT_GOT_HM05
+	jr z, .noFieldItem
+	ld d, LAMPE
+	farcall GiveFieldItemIfMissing
+.noFieldItem
 .no_item
 	jp TextScriptEnd
 

@@ -54,6 +54,11 @@ WardensHouseWardenText:
 	ld hl, .HM04NoRoomText
 	call PrintText
 .done
+	CheckEvent EVENT_GOT_HM04
+	jr z, .noFieldItem
+	ld d, GANTS
+	farcall GiveFieldItemIfMissing
+.noFieldItem
 	jp TextScriptEnd
 
 .Gibberish1Text:

@@ -6,7 +6,7 @@ ItemNames::
 	li "POKé BALL"
 	li "CARTE"
 	li "BICYCLETTE"
-	li "?????" ; SURFBOARD
+	li "BATEAU" ; SURFBOARD
 	li "SAFARI BALL"
 	li "POKéDEX"
 	li "PIERRE LUNE"
@@ -43,13 +43,13 @@ ItemNames::
 	li "FOSSILE DOME"
 	li "NAUTILE"
 	li "CLE SECRETE"
-	li "?????" ; ITEM_2C
+	li "SECATEUR" ; SECATEUR
 	li "BON COMMANDE"
 	li "PRECISION +"
 	li "PIERREPLANTE"
 	li "CARTE MAGN."
 	li "PEPITE"
-	li "PP PLUS" ; ITEM_32
+	li "GANTS" ; GANTS
 	li "POKéPOUPEE"
 	li "TOTAL SOIN"
 	li "RAPPEL"
@@ -83,6 +83,8 @@ ItemNames::
 	li "HUILE MAX"
 	li "ELIXIR"
 	li "MAX ELIXIR"
+	li "LAMPE"
+	li "TELEPORTEUR"
 	assert_list_length NUM_ITEMS
 	li "SS2"
 	li "SS1"

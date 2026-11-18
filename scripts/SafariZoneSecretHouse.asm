@@ -26,6 +26,11 @@ SafariZoneSecretHouseFishingGuruText:
 	ld hl, .HM03ExplanationText
 	call PrintText
 .done
+	CheckEvent EVENT_GOT_HM03
+	jr z, .noFieldItem
+	ld d, SURFBOARD
+	farcall GiveFieldItemIfMissing
+.noFieldItem
 	jp TextScriptEnd
 
 .YouHaveWonText:

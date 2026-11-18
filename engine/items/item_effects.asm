@@ -60,13 +60,13 @@ ItemUsePtrTable:
 	dw UnusableItem      ; DOME_FOSSIL
 	dw UnusableItem      ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
-	dw UnusableItem      ; ITEM_2C
+	dw ItemUseSecateur   ; SECATEUR
 	dw UnusableItem      ; BIKE_VOUCHER
 	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseEvoStone   ; LEAF_STONE
 	dw ItemUseCardKey    ; CARD_KEY
 	dw UnusableItem      ; NUGGET
-	dw UnusableItem      ; ITEM_32
+	dw ItemUseGants      ; GANTS
 	dw ItemUsePokeDoll   ; POKE_DOLL
 	dw ItemUseMedicine   ; FULL_HEAL
 	dw ItemUseMedicine   ; REVIVE
@@ -100,6 +100,8 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
+	dw ItemUseLampe      ; LAMPE
+	dw ItemUseTeleporteur ; TELEPORTEUR
 
 ItemUseBall:
 
@@ -698,6 +700,38 @@ ItemUseBicycle:
 
 ; indirectly used by SURF in StartMenu_Pokemon.surf
 ItemUseSurfboard:
+; utilisé par la capacité SURF (wPseudoItemID = SURFBOARD) et par l'objet BATEAU
+	ld a, [wPseudoItemID]
+	and a
+	jr nz, ItemUseSurfboard_Do ; capacité : les vérifications sont déjà faites
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wWalkBikeSurfState]
+	cp 2 ; déjà en train de surfer : on essaie de descendre
+	jr z, ItemUseSurfboard_Do
+	ld a, [wObtainedBadges]
+	bit BIT_SOULBADGE, a
+	jp z, FieldItemNeedBadge
+	farcall IsSurfingAllowed
+	ld hl, wStatusFlags1
+	bit BIT_SURF_ALLOWED, [hl]
+	res BIT_SURF_ALLOWED, [hl]
+	jr nz, .surfAllowed
+	xor a
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+.surfAllowed
+	ld a, PLAYER_SURF
+	ld [wPlayerState], a
+	call ItemUseSurfboard_Do
+	ld a, [wActionResultOrTookBattleTurn]
+	and a
+	ret nz
+	ld [wPlayerState], a ; échec : retour au sprite normal (PLAYER_NORMAL)
+	ret
+
+ItemUseSurfboard_Do:
 	ld a, [wWalkBikeSurfState]
 	ld [wWalkBikeSurfStateCopy], a
 	cp 2 ; is the player already surfing?
@@ -775,6 +809,132 @@ ItemUseSurfboard:
 	inc a
 	ld [wSimulatedJoypadStatesIndex], a
 	ret
+
+; ---------------------------------------------------------------------------
+; Objets des CS : ils réutilisent les routines des capacités, avec les mêmes
+; conditions (badges compris). Le nom du joueur remplace celui du #MON.
+; ---------------------------------------------------------------------------
+
+; donne l'objet de CS d (une seule fois), avec un message
+GiveFieldItemIfMissing::
+	ld b, d
+	push de
+	call IsItemInBag
+	pop de
+	ret nz ; déjà dans le sac
+	ld b, d
+	ld c, 1
+	call GiveItem
+	ret nc ; sac plein : on réessaiera en reparlant au personnage
+	ld hl, .text
+	jp PrintText
+.text
+	text_far _ReceivedFieldItemText
+	sound_get_key_item
+	text_end
+
+FieldItemNeedBadge:
+	xor a
+	ld [wActionResultOrTookBattleTurn], a
+	ld hl, .text
+	jp PrintText
+.text
+	text_far _NewBadgeRequiredText
+	text_end
+
+; copie le nom du joueur dans wNameBuffer (utilisé par les textes des capacités)
+FieldItemCopyPlayerName:
+	ld hl, wPlayerName
+	ld de, wNameBuffer
+	ld bc, NAME_LENGTH
+	jp CopyData
+
+ItemUseSecateur:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wObtainedBadges]
+	bit BIT_CASCADEBADGE, a
+	jp z, FieldItemNeedBadge
+	ld a, [wWhichPokemon]
+	push af
+	ld a, $ff ; signale à UsedCut que c'est le joueur qui coupe
+	ld [wWhichPokemon], a
+	predef UsedCut
+	pop af
+	ld [wWhichPokemon], a
+	ret
+
+ItemUseGants:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wObtainedBadges]
+	bit BIT_RAINBOWBADGE, a
+	jp z, FieldItemNeedBadge
+	call FieldItemCopyPlayerName
+	ld hl, wStatusFlags1
+	set BIT_STRENGTH_ACTIVE, [hl]
+	ld hl, .usedText
+	call PrintText
+	ld hl, .canMoveText
+	call PrintText
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+.usedText
+	text_far _UsedStrengthText
+	text_end
+.canMoveText
+	text_far _CanMoveBouldersText
+	text_end
+
+ItemUseLampe:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wObtainedBadges]
+	bit BIT_BOULDERBADGE, a
+	jp z, FieldItemNeedBadge
+	ld a, [wMapPalOffset]
+	and a ; l'endroit est-il sombre ?
+	jp z, ItemUseNoEffect
+	xor a
+	ld [wMapPalOffset], a
+	ld hl, .text
+	call PrintText
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a
+	ret
+.text
+	text_far _FlashLightsAreaText
+	text_end
+
+ItemUseTeleporteur:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wObtainedBadges]
+	bit BIT_THUNDERBADGE, a
+	jp z, FieldItemNeedBadge
+	call CheckIfInOutsideMap
+	jr z, .canFly
+	call FieldItemCopyPlayerName
+	xor a
+	ld [wActionResultOrTookBattleTurn], a
+	ld hl, .cannotFlyText
+	jp PrintText
+.canFly
+	call ChooseFlyDestination
+	ld a, 1 ; fermer le menu dans tous les cas (la carte a remplacé l'écran)
+	ld [wActionResultOrTookBattleTurn], a
+	ld a, [wStatusFlags6]
+	bit BIT_FLY_WARP, a
+	jp z, ItemUseReloadOverworldData
+	jp EnableHidePikachuWhileLeavingMap
+.cannotFlyText
+	text_far _CannotFlyHereText
+	text_end
 
 SurfingGotOnText:
 	text_far _SurfingGotOnText

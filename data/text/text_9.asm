@@ -58,6 +58,20 @@ _ItemUseBallText06::
 	text "!@"
 	text_end
 
+_FieldItemAskText::
+	text "Utiliser"
+	line "@"
+	text_ram wNameBuffer
+	text "?"
+	done
+
+_ReceivedFieldItemText::
+	text "<PLAYER> reçoit"
+	line "aussi @"
+	text_ram wStringBuffer
+	text "!@"
+	text_end
+
 _SurfingGotOnText::
 	text "<PLAYER> monte sur"
 	line "@"

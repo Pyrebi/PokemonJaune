@@ -30,8 +30,18 @@ UsedCut:
 	ld a, 1
 	ld [wActionResultOrTookBattleTurn], a ; used cut
 	ld a, [wWhichPokemon]
+	inc a ; $ff : COUPE via l'objet SECATEUR (c'est le joueur qui coupe)
+	jr z, .usePlayerName
+	dec a
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
+	jr .gotName
+.usePlayerName
+	ld hl, wPlayerName
+	ld de, wNameBuffer
+	ld bc, NAME_LENGTH
+	call CopyData
+.gotName
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
 	call GBPalWhiteOutWithDelay3

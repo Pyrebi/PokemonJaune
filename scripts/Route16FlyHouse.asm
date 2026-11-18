@@ -23,6 +23,11 @@ Route16FlyHouseBrunetteGirlText:
 	ld hl, .HM02NoRoomText
 .got_item
 	call PrintText
+	CheckEvent EVENT_GOT_HM02
+	jr z, .noFieldItem
+	ld d, TELEPORTEUR
+	farcall GiveFieldItemIfMissing
+.noFieldItem
 	jp TextScriptEnd
 
 .Text:

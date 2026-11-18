@@ -6,4 +6,9 @@ UsableItems_CloseMenu:
 	db OLD_ROD
 	db GOOD_ROD
 	db SUPER_ROD
+	db SURFBOARD
+	db SECATEUR
+	db GANTS
+	db LAMPE
+	db TELEPORTEUR
 	db -1 ; end
