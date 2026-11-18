@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Lecteur GBC</title>
+<style>
+  :root { --bg:#f4f1e8; --fg:#222; --panel:#fff; --accent:#d8b100; --btn:#3a3a3a; --btnfg:#fff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16161a; --fg:#eee; --panel:#222228; --accent:#f2cf2b; --btn:#55555e; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,sans-serif;
+         display:flex; flex-direction:column; align-items:center; padding:16px; gap:12px; }
+  h1 { font-size:1.1rem; margin:0; }
+  canvas { width:min(100%, 480px); aspect-ratio:160/144; image-rendering:pixelated;
+           background:#000; border:4px solid var(--accent); border-radius:6px; }
+  .bar { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+  button, label.file { background:var(--btn); color:var(--btnfg); border:0; border-radius:6px;
+           padding:8px 12px; font-size:.9rem; cursor:pointer; }
+  #status { font-size:.85rem; opacity:.8; min-height:1.2em; text-align:center; }
+  .pad { display:grid; grid-template-columns:repeat(3,52px); grid-template-rows:repeat(3,52px); gap:4px; }
+  .pad button, .ab button { padding:0; font-weight:bold; touch-action:none; user-select:none; }
+  .controls { display:flex; gap:32px; align-items:center; justify-content:center; width:min(100%,480px); }
+  .ab { display:flex; gap:12px; } .ab button { width:60px; height:60px; border-radius:50%; }
+  .ss { display:flex; gap:12px; } .ss button { font-size:.75rem; }
+  .help { font-size:.8rem; opacity:.75; text-align:center; max-width:480px; }
+</style>
+</head>
+<body>
+<h1>Pokémon Jaune — build local</h1>
+<canvas id="screen" width="160" height="144"></canvas>
+<div id="status">Chargement…</div>
+<div class="bar">
+  <label class="file">Charger un ROM (.gbc)<input id="file" type="file" accept=".gbc,.gb" hidden></label>
+  <button id="pause">Pause</button>
+  <button id="save">Sauver état</button>
+  <button id="load">Charger état</button>
+  <button id="fast">Vitesse x1</button>
+</div>
+<div class="controls">
+  <div class="pad">
+    <span></span><button data-k="UP">▲</button><span></span>
+    <button data-k="LEFT">◀</button><span></span><button data-k="RIGHT">▶</button>
+    <span></span><button data-k="DOWN">▼</button><span></span>
+  </div>
+  <div class="ab"><button data-k="B">B</button><button data-k="A">A</button></div>
+</div>
+<div class="ss"><button data-k="SELECT">SELECT</button><button data-k="START">START</button></div>
+<p class="help">Clavier : flèches = croix · X = A · Z (ou W) = B · Entrée = Start · Maj droite / Retour arrière = Select.<br>
+La sauvegarde en jeu est conservée dans le navigateur (IndexedDB).</p>
+
+<script src="https://cdn.jsdelivr.net/npm/wasmboy@0.7.1/dist/wasmboy.wasm.iife.js"></script>
+<script>
+const W = window.WasmBoy.WasmBoy || window.WasmBoy;
+const statusEl = document.getElementById('status');
+const say = t => statusEl.textContent = t;
+const state = { UP:false, DOWN:false, LEFT:false, RIGHT:false, A:false, B:false, START:false, SELECT:false };
+const push = () => { try { W.setJoypadState(state); } catch (e) {} };
+let speed = 1, ready = false;
+
+const keymap = { ArrowUp:'UP', ArrowDown:'DOWN', ArrowLeft:'LEFT', ArrowRight:'RIGHT',
+  KeyX:'A', KeyZ:'B', KeyW:'B', Enter:'START', ShiftRight:'SELECT', Backspace:'SELECT' };
+addEventListener('keydown', e => { const k = keymap[e.code]; if (k) { state[k] = true; push(); e.preventDefault(); W.resumeAudioContext && W.resumeAudioContext(); } });
+addEventListener('keyup',   e => { const k = keymap[e.code]; if (k) { state[k] = false; push(); e.preventDefault(); } });
+document.querySelectorAll('[data-k]').forEach(b => {
+  const k = b.dataset.k;
+  const on  = e => { e.preventDefault(); state[k] = true;  push(); W.resumeAudioContext && W.resumeAudioContext(); };
+  const off = e => { e.preventDefault(); state[k] = false; push(); };
+  b.addEventListener('pointerdown', on); b.addEventListener('pointerup', off);
+  b.addEventListener('pointerleave', off); b.addEventListener('pointercancel', off);
+});
+
+async function start(bytes, name) {
+  say('Démarrage de ' + name + '…');
+  await W.config({
+    isGbcEnabled: true, isAudioEnabled: true, frameSkip: 0,
+    gameboyFrameRate: 60, saveStateCallback: s => s,
+    onPlay: () => say('En jeu : ' + name), onPause: () => say('En pause'),
+  }, document.getElementById('screen'));
+  W.disableDefaultJoypad();
+  await W.loadROM(bytes);
+  await W.play();
+  ready = true;
+}
+
+document.getElementById('file').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  start(new Uint8Array(await f.arrayBuffer()), f.name);
+});
+document.getElementById('pause').onclick = async () => {
+  if (!ready) return;
+  if (W.isPlaying()) await W.pause(); else await W.play();
+};
+document.getElementById('save').onclick = async () => {
+  if (!ready) return; await W.saveState(); await W.play(); say('État sauvegardé');
+};
+document.getElementById('load').onclick = async () => {
+  if (!ready) return;
+  const states = await W.getSaveStates();
+  if (!states || !states.length) return say('Aucun état sauvegardé');
+  states.sort((a, b) => b.date - a.date);
+  await W.loadState(states[0]); await W.play(); say('État chargé');
+};
+document.getElementById('fast').onclick = e => {
+  speed = speed === 1 ? 2 : speed === 2 ? 4 : 1;
+  W.setSpeed(speed); e.target.textContent = 'Vitesse x' + speed;
+};
+
+// Si le ROM compilé est servi à côté de la page (make web), on le lance directement.
+fetch('pokeyellow.gbc').then(r => r.ok ? r.arrayBuffer() : Promise.reject())
+  .then(b => start(new Uint8Array(b), 'pokeyellow.gbc'))
+  .catch(e => { if (e) console.error(e); say('Choisis le fichier pokeyellow.gbc compilé pour commencer.'); });
+</script>
+</body>
+</html>
