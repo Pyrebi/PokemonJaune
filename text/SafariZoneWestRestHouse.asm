@@ -1,19 +1,24 @@
 _SafariZoneWestRestHouseScientistText::
-	text "Tossing ROCKs at"
-	line "#MON might"
-	cont "make them run,"
-	cont "but they'll be"
-	cont "easier to catch."
+	text "Lancer des"
+	line "CAILLOUX aux"
+	cont "#MON peut les"
+	cont "faire fuir, mais"
+	cont "ils seront plus"
+	cont "faciles à"
+	cont "attraper."
 	done
 
 _SafariZoneWestRestHouseCooltrainerMText::
-	text "Using BAIT will"
-	line "make #MON"
-	cont "easier to catch."
+	text "Avec un APPAT, les"
+	line "#MON sont plus"
+	cont "faciles à"
+	cont "attraper."
 	done
 
 _SafariZoneWestRestHouseSilphWorkerFText::
-	text "I hiked a lot, but"
-	line "I didn't see any"
-	cont "#MON I wanted."
+	text "J'ai beaucoup"
+	line "marché, mais je"
+	cont "n'ai vu aucun"
+	cont "#MON qui me"
+	cont "plaisait."
 	done

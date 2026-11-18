@@ -1,60 +1,61 @@
 _NameRatersHouseNameRaterWantMeToRateText::
-	text "Hello, hello!"
-	line "I am the official"
-	cont "NAME RATER!"
+	text "Bonjour, bonjour!"
+	line "Je suis le JUGE"
+	cont "DES NOMS officiel!"
 
-	para "Want me to rate"
-	line "the nicknames of"
-	cont "your #MON?"
+	para "Veux-tu que je"
+	line "juge les surnoms"
+	cont "de tes #MON?"
 	done
 
 _NameRatersHouseNameRaterWhichPokemonText::
-	text "Which #MON"
-	line "should I look at?"
+	text "Quel #MON"
+	line "dois-je examiner?"
 	prompt
 
 _NameRatersHouseNameRaterGiveItANiceNameText::
 	text_ram wNameBuffer
-	text ", is it?"
-	line "That is a decent"
-	cont "nickname!"
+	text ", c'est ça?"
+	line "C'est un surnom"
+	cont "correct!"
 
-	para "But, would you"
-	line "like me to give"
-	cont "it a nicer name?"
+	para "Mais veux-tu que"
+	line "je lui donne un"
+	cont "nom plus joli?"
 
-	para "How about it?"
+	para "Qu'en dis-tu?"
 	done
 
 _NameRatersHouseNameRaterWhatShouldWeNameItText::
-	text "Fine! What should"
-	line "we name it?"
+	text "Bien! Comment"
+	line "allons-nous"
+	cont "l'appeler?"
 	prompt
 
 _NameRatersHouseNameRaterPokemonHasBeenRenamedText::
-	text "OK! This #MON"
-	line "has been renamed"
+	text "OK! Ce #MON"
+	line "s'appelle"
 	cont "@"
 	text_ram wBuffer
 	text "!"
 
-	para "That's a better"
-	line "name than before!"
+	para "C'est un meilleur"
+	line "nom qu'avant!"
 	done
 
 _NameRatersHouseNameRaterComeAnyTimeYouLikeText::
-	text "Fine! Come any-"
-	line "time you like!"
+	text "Bien! Reviens"
+	line "quand tu veux!"
 	done
 
 _NameRatersHouseNameRaterATrulyImpeccableNameText::
 	text_ram wNameBuffer
-	text ", is it?"
-	line "That is a truly"
-	cont "impeccable name!"
+	text ", c'est ça?"
+	line "C'est un nom"
+	cont "vraiment parfait!"
 
-	para "Take good care of"
-	line "@"
+	para "Prends bien soin"
+	line "de @"
 	text_ram wNameBuffer
 	text "!"
 	done

@@ -1,30 +1,34 @@
 _LavenderMartBaldingGuyText::
-	text "I'm searching for"
-	line "items that raise"
-	cont "the abilities of"
-	cont "#MON during a"
-	cont "single battle."
+	text "Je cherche des"
+	line "objets qui"
+	cont "augmentent les"
+	cont "capacités des"
+	cont "#MON pendant un"
+	cont "combat."
 
-	para "X ATTACK, X"
-	line "DEFEND, X SPEED"
-	cont "and X SPECIAL are"
-	cont "what I'm after."
+	para "ATTAQUE +, DEFENSE"
+	line "+, VITESSE + et"
+	cont "SPECIAL +, voilà"
+	cont "ce que je cherche."
 
-	para "Do you know where"
-	line "I can get them?"
+	para "Tu sais où je peux"
+	line "les trouver?"
 	done
 
 _LavenderMartCooltrainerMReviveText::
-	text "You know REVIVE?"
-	line "It revives any"
-	cont "fainted #MON!"
+	text "Tu connais le"
+	line "RAPPEL? Il ranime"
+	cont "n'importe quel"
+	cont "#MON K.O.!"
 	done
 
 _LavenderMartCooltrainerMNuggetText::
-	text "I found a NUGGET"
-	line "in the mountains."
+	text "J'ai trouvé une"
+	line "PEPITE dans la"
+	cont "montagne."
 
-	para "I thought it was"
-	line "useless, but it"
-	cont "sold for ¥5000!"
+	para "Je pensais qu'elle"
+	line "ne valait rien,"
+	cont "mais je l'ai"
+	cont "vendue ¥5000!"
 	done

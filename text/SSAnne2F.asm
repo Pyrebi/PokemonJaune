@@ -1,63 +1,70 @@
 _SSAnne2FWaiterText::
-	text "This ship, she is"
-	line "a luxury liner"
-	cont "for trainers!"
+	text "Ce navire est un"
+	line "paquebot de luxe"
+	cont "pour dresseurs!"
 
-	para "At every port, we"
-	line "hold parties with"
-	cont "invited trainers!"
+	para "A chaque escale,"
+	line "nous donnons des"
+	cont "fêtes avec des"
+	cont "dresseurs invités!"
 	done
 
 _SSAnne2FRivalText::
 	text "<RIVAL>: Bonjour!"
 	line "<PLAYER>!"
 
-	para "Imagine seeing"
-	line "you here!"
+	para "Toi, ici!"
 
-	para "<PLAYER>, were you"
-	line "really invited?"
+	para "<PLAYER>, tu as"
+	line "vraiment été"
+	cont "invité?"
 
-	para "So how's your"
-	line "#DEX coming?"
+	para "Alors, où en est"
+	line "ton #DEX?"
 
-	para "I already caught"
-	line "40 kinds, pal!"
+	para "J'ai déjà attrapé"
+	line "40 espèces, mon"
+	cont "pote!"
 
-	para "Different kinds"
-	line "are everywhere!"
+	para "Il y a des espèces"
+	line "différentes"
+	cont "partout!"
 
-	para "Crawl around in"
-	line "grassy areas!"
+	para "Fouille bien les"
+	line "hautes herbes!"
 	done
 
 _SSAnne2FRivalDefeatedText::
-	text "Humph!"
+	text "Hmpf!"
 
-	para "At least you're"
-	line "raising your"
+	para "Au moins, tu"
+	line "élèves tes"
 	cont "#MON!"
 	prompt
 
 _SSAnne2FRivalVictoryText::
-	text "<PLAYER>! What are"
-	line "you, seasick?"
+	text "<PLAYER>! Tu as le"
+	line "mal de mer ou"
+	cont "quoi?"
 
-	para "You should shape"
-	line "up, pal!"
+	para "Reprends-toi, mon"
+	line "pote!"
 	prompt
 
 _SSAnne2FRivalCutMasterText::
-	text "<RIVAL>: I heard"
-	line "there was a CUT"
-	cont "master on board."
+	text "<RIVAL>: Il paraît"
+	line "qu'il y a un"
+	cont "maître de COUPE à"
+	cont "bord."
 
-	para "But, he was just a"
-	line "seasick, old man!"
+	para "Mais c'est juste"
+	line "un vieux qui a le"
+	cont "mal de mer!"
 
-	para "But, CUT itself is"
-	line "really useful!"
+	para "Mais COUPE est"
+	line "vraiment utile!"
 
-	para "You should go see"
-	line "him! Smell ya!"
+	para "Tu devrais aller"
+	line "le voir! A plus,"
+	cont "minable!"
 	done

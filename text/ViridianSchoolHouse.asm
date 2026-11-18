@@ -1,20 +1,20 @@
 _ViridianSchoolHouseBrunetteGirlText::
-	text "Whew! I'm trying"
-	line "to memorize all"
-	cont "my notes."
+	text "Ouf! J'essaie de"
+	line "mémoriser toutes"
+	cont "mes notes."
 	done
 
 _ViridianSchoolHouseLittleGirlText::
-	text "Sis says #MON"
-	line "will become tame"
-	cont "if you treat them"
-	cont "nicely."
+	text "Ma soeur dit que"
+	line "les #MON"
+	cont "deviennent dociles"
+	cont "si on les traite"
+	cont "bien."
 	done
 
 _ViridianSchoolHouseCooltrainerFText::
-	text "Okay!"
+	text "OK!"
 
-	para "Be sure to read"
-	line "the blackboard"
-	cont "carefully!"
+	para "Lis bien le"
+	line "tableau!"
 	done

@@ -1,26 +1,29 @@
 _FuchsiaMeetingRoomSafariZoneWorker1::
-	text "We nicknamed the"
-	line "WARDEN SLOWPOKE."
+	text "On a surnommé le"
+	line "GARDIEN RAMOLOSS."
 
-	para "He and SLOWPOKE"
-	line "both look vacant!"
+	para "Lui et RAMOLOSS"
+	line "ont le même air"
+	cont "absent!"
 	done
 
 _FuchsiaMeetingRoomSafariZoneWorker2::
-	text "SLOWPOKE is very"
-	line "knowledgeable"
-	cont "about #MON!"
+	text "RAMOLOSS en sait"
+	line "beaucoup sur les"
+	cont "#MON!"
 
-	para "He even has some"
-	line "fossils of rare,"
-	cont "extinct #MON!"
+	para "Il a même des"
+	line "fossiles de"
+	cont "#MON rares et"
+	cont "disparus!"
 	done
 
 _FuchsiaMeetingRoomSafariZoneWorker3::
-	text "SLOWPOKE came in,"
-	line "but I couldn't"
-	cont "understand him."
+	text "RAMOLOSS est"
+	line "passé, mais je ne"
+	cont "l'ai pas compris."
 
-	para "I think he's got"
-	line "a speech problem!"
+	para "Je crois qu'il a"
+	line "un problème"
+	cont "d'élocution!"
 	done

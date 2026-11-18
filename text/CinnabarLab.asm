@@ -1,29 +1,31 @@
 _CinnabarLabFishingGuruText::
-	text "We study #MON"
-	line "extensively here."
+	text "Nous étudions les"
+	line "#MON en"
+	cont "profondeur ici."
 
-	para "People often bring"
-	line "us rare #MON"
-	cont "for examination."
+	para "On nous apporte"
+	line "souvent des"
+	cont "#MON rares à"
+	cont "examiner."
 	done
 
 _CinnabarLabPhotoText::
-	text "A photo of the"
-	line "LAB's founder,"
-	cont "DR.FUJI!"
+	text "Une photo du"
+	line "fondateur du LABO,"
+	cont "le DR FUJI!"
 	done
 
 _CinnabarLabMeetingRoomSignText::
-	text "#MON LAB"
-	line "Meeting Room"
+	text "LABO #MON Salle"
+	line "de Réunion"
 	done
 
 _CinnabarLabRAndDSignText::
-	text "#MON LAB"
-	line "R-and-D Room"
+	text "LABO #MON Salle"
+	line "de R-D"
 	done
 
 _CinnabarLabTestingRoomSignText::
-	text "#MON LAB"
-	line "Testing Room"
+	text "LABO #MON Salle"
+	line "des Essais"
 	done

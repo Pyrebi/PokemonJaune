@@ -1,187 +1,200 @@
 _Route24CooltrainerM1YouBeatOurContestText::
-	text "Congratulations!"
-	line "You beat our 5"
-	cont "contest trainers!@"
+	text "Félicitations! Tu"
+	line "as battu nos 5"
+	cont "dresseurs du"
+	cont "concours!@"
 	text_end
 
 _Route24CooltrainerM1YouJustEarnedAPrizeText::
 	text_start
 
-	para "You just earned a"
-	line "fabulous prize!"
+	para "Tu viens de gagner"
+	line "un lot fabuleux!"
 	prompt
 
 _Route24CooltrainerM1ReceivedNuggetText::
-	text "<PLAYER> received"
-	line "a @"
+	text "<PLAYER> reçoit"
+	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
 _Route24CooltrainerM1NoRoomText::
-	text "You don't have"
-	line "any room!"
+	text "Tu n'as pas de"
+	line "place!"
 	done
 
 _Route24CooltrainerM1JoinTeamRocketText::
-	text "By the way, would"
-	line "you like to join"
-	cont "TEAM ROCKET?"
+	text "Au fait, tu"
+	line "voudrais rejoindre"
+	cont "la TEAM ROCKET?"
 
-	para "We're a group"
-	line "dedicated to evil"
-	cont "using #MON!"
+	para "Nous sommes un"
+	line "groupe voué au mal"
+	cont "grâce aux #MON!"
 
-	para "Want to join?"
+	para "Tu veux nous"
+	line "rejoindre?"
 
-	para "Are you sure?"
+	para "Tu es sûr?"
 
-	para "Come on, join us!"
+	para "Allez,"
+	line "rejoins-nous!"
 
-	para "I'm telling you"
-	line "to join!"
+	para "Je te dis de nous"
+	line "rejoindre!"
 
-	para "OK, you need"
-	line "convincing!"
+	para "OK, il faut te"
+	line "convaincre!"
 
-	para "I'll make you an"
-	line "offer you can't"
-	cont "refuse!"
+	para "Je vais te faire"
+	line "une offre que tu"
+	cont "ne peux pas"
+	cont "refuser!"
 	done
 
 _Route24CooltrainerM1DefeatedText::
-	text "Arrgh!"
-	line "You are good!"
+	text "Argh! Tu es fort!"
 	prompt
 
 _Route24CooltrainerM1YouCouldBecomeATopLeaderText::
-	text "With your ability,"
-	line "you could become"
-	cont "a top leader in"
-	cont "TEAM ROCKET!"
+	text "Avec tes talents,"
+	line "tu pourrais"
+	cont "devenir un grand"
+	cont "chef de la TEAM"
+	cont "ROCKET!"
 	done
 
 _Route24CooltrainerM2BattleText::
-	text "I saw your feat"
-	line "from the grass!"
+	text "J'ai vu ton"
+	line "exploit depuis"
+	cont "l'herbe!"
 	done
 
 _Route24CooltrainerM2EndBattleText::
-	text "I"
-	line "thought not!"
+	text "Je m'en doutais!"
 	prompt
 
 _Route24CooltrainerM2AfterBattleText::
-	text "I hid because the"
-	line "people on the"
-	cont "bridge scared me!"
+	text "Je me suis caché"
+	line "parce que les gens"
+	cont "sur le pont me"
+	cont "faisaient peur!"
 	done
 
 _Route24CooltrainerM3BattleText::
-	text "OK! I'm No. 5!"
-	line "I'll stomp you!"
+	text "OK! Je suis le No"
+	line "5! Je vais"
+	cont "t'écraser!"
 	done
 
 _Route24CooltrainerM3EndBattleText::
-	text "Whoa!"
-	line "Too much!"
+	text "Ouah! Trop fort!"
 	prompt
 
 _Route24CooltrainerM3AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, je n'ai"
+	cont "aucun regret!"
 	done
 
 _Route24CooltrainerF1BattleText::
-	text "I'm No. 4!"
-	line "Getting tired?"
+	text "Je suis la No 4!"
+	line "Tu fatigues?"
 	done
 
 _Route24CooltrainerF1EndBattleText::
-	text "I lost"
-	line "too!"
+	text "J'ai perdu aussi!"
 	prompt
 
 _Route24CooltrainerF1AfterBattleText::
-	text "I did my best, so"
-	line "I've no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, je n'ai"
+	cont "aucun regret!"
 	done
 
 _Route24Youngster1BattleText::
-	text "Here's No. 3!"
-	line "I won't be easy!"
+	text "Voici le No 3! Ca"
+	line "ne sera pas"
+	cont "facile!"
 	done
 
 _Route24Youngster1EndBattleText::
-	text "Ow!"
-	line "Stomped flat!"
+	text "Aïe! Ecrasé!"
 	prompt
 
 _Route24Youngster1AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, je n'ai"
+	cont "aucun regret!"
 	done
 
 _Route24CooltrainerF2BattleText::
-	text "I'm second!"
-	line "Now it's serious!"
+	text "Je suis la"
+	line "deuxième!"
+	cont "Maintenant, c'est"
+	cont "sérieux!"
 	done
 
 _Route24CooltrainerF2EndBattleText::
-	text "How could I"
-	line "lose?"
+	text "Comment ai-je pu"
+	line "perdre?"
 	prompt
 
 _Route24CooltrainerF2AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, je n'ai"
+	cont "aucun regret!"
 	done
 
 _Route24Youngster2BattleText::
-	text "This is NUGGET"
-	line "BRIDGE! Beat us 5"
-	cont "trainers and win"
-	cont "a fabulous prize!"
+	text "Voici le PONT"
+	line "PEPITE! Bats nos 5"
+	cont "dresseurs et gagne"
+	cont "un lot fabuleux!"
 
-	para "Think you got"
-	line "what it takes?"
+	para "Tu crois avoir ce"
+	line "qu'il faut?"
 	done
 
 _Route24Youngster2EndBattleText::
-	text "Whoo!"
-	line "Good stuff!"
+	text "Whoo! Pas mal!"
 	prompt
 
 _Route24Youngster2AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, je n'ai"
+	cont "aucun regret!"
 	done
 
 _Route24DamianText1::
-	text "I'm not good at"
-	line "raising #MON."
+	text "Je ne suis pas"
+	line "doué pour élever"
+	cont "les #MON."
 
-	para "I should release"
-	line "my CHARMANDER"
-	cont "because I haven't"
-	cont "raised it well..."
+	para "Je devrais"
+	line "relâcher mon"
+	cont "SALAMECHE parce"
+	cont "que je ne l'ai pas"
+	cont "bien élevé..."
 
-	para "If you promise me"
-	line "you'll care for"
-	cont "it, it's yours."
+	para "Si tu me promets"
+	line "d'en prendre soin,"
+	cont "il est à toi."
 	done
 
 _Route24DamianText2::
-	text "Take good care of"
-	line "my CHARMANDER!@"
+	text "Prends bien soin"
+	line "de mon SALAMECHE!@"
 	text_end
 
 _Route24DamianText3::
-	text "Oh... I'd better"
-	line "release it then."
+	text "Oh... Je ferais"
+	line "mieux de le"
+	cont "relâcher alors."
 	done
 
 _Route24DamianText4::
-	text "How's CHARMANDER"
-	line "doing?"
+	text "Comment va"
+	line "SALAMECHE?"
 	done

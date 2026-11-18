@@ -1,44 +1,49 @@
 _AgathaBeforeBattleText::
-	text "I am AGATHA of"
-	line "the ELITE FOUR!"
+	text "Je suis AGATHA du"
+	line "CONSEIL 4!"
 
-	para "OAK's taken a lot"
-	line "of interest in"
-	cont "you, child!"
+	para "CHEN s'intéresse"
+	line "beaucoup à toi,"
+	cont "mon petit!"
 
-	para "That old duff was"
-	line "once tough and"
-	cont "handsome! That"
-	cont "was decades ago!"
+	para "Ce vieux bougre"
+	line "était autrefois"
+	cont "fort et beau! Il y"
+	cont "a des décennies de"
+	cont "ça!"
 
-	para "Now he just wants"
-	line "to fiddle with"
-	cont "his #DEX! He's"
-	cont "wrong! #MON"
-	cont "are for fighting!"
+	para "Maintenant, il ne"
+	line "pense qu'à son"
+	cont "#DEX! Il a"
+	cont "tort! Les #MON"
+	cont "sont faits pour"
+	cont "combattre!"
 
-	para "<PLAYER>! I'll show"
-	line "you how a real"
-	cont "trainer fights!"
+	para "<PLAYER>! Je vais"
+	line "te montrer comment"
+	cont "se bat un vrai"
+	cont "dresseur!"
 	done
 
 _AgathaEndBattleText::
-	text "Woo-hoo!"
-	line "You're something"
-	cont "special, child!"
+	text "Hou hou! Tu as"
+	line "quelque chose de"
+	cont "spécial, mon"
+	cont "petit!"
 	prompt
 
 _AgathaAfterBattleText::
-	text "You win! I see"
-	line "what the old duff"
-	cont "sees in you now!"
+	text "Tu as gagné! Je"
+	line "comprends ce que"
+	cont "ce vieux bougre te"
+	cont "trouve!"
 
-	para "I have nothing"
-	line "else to say! Run"
-	cont "along now, child!"
+	para "Je n'ai rien"
+	line "d'autre à dire!"
+	cont "File, maintenant!"
 	done
 
 _AgathasRoomAgathaDontRunAwayText::
-	text "Someone's voice:"
-	line "Don't run away!"
+	text "Une voix: Ne"
+	line "t'enfuis pas!"
 	done

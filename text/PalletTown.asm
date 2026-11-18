@@ -1,68 +1,73 @@
 _PalletTownOakHeyWaitDontGoOutText::
-	text "OAK: Hey! Wait!"
-	line "Don't go out!@"
+	text "CHEN: Hé! Attends!"
+	line "Ne sors pas!@"
 	text_end
 
 _PalletTownOakThatWasCloseText::
-	text "OAK: That was"
-	line "close!"
+	text "CHEN: C'était"
+	line "moins une!"
 
-	para "Wild #MON live"
-	line "in tall grass!"
+	para "Des #MON"
+	line "sauvages vivent"
+	cont "dans les hautes"
+	cont "herbes!"
 	done
 
 _PalletTownOakWhewText::
-	text "OAK: Whew..."
+	text "CHEN: Ouf..."
 	done
 
 _PalletTownOakComeWithMe::
-	text "OAK: A #MON can"
-	line "appear anytime in"
-	cont "tall grass."
+	text "CHEN: Un #MON"
+	line "peut surgir à tout"
+	cont "moment dans les"
+	cont "hautes herbes."
 
-	para "You need your own"
-	line "#MON for your"
-	cont "protection."
-	cont "I know!"
+	para "Il te faut ton"
+	line "propre #MON"
+	cont "pour te protéger."
+	cont "J'y pense!"
 
-	para "Here, come with"
-	line "me!"
+	para "Viens avec moi!"
 	done
 
 _PalletTownGirlText::
-	text "I'm raising"
-	line "#MON too!"
+	text "J'élève des"
+	line "#MON aussi!"
 
-	para "When they get"
-	line "strong, they can"
-	cont "protect me!"
+	para "Quand ils seront"
+	line "forts, ils"
+	cont "pourront me"
+	cont "protéger!"
 	done
 
 _PalletTownFisherText::
-	text "Technology is"
-	line "incredible!"
+	text "La technologie est"
+	line "incroyable!"
 
-	para "You can now store"
-	line "and recall items"
-	cont "and #MON as"
-	cont "data via PC!"
+	para "On peut stocker et"
+	line "récupérer des"
+	cont "objets et des"
+	cont "#MON sous forme"
+	cont "de données sur PC!"
 	done
 
 _PalletTownOaksLabSignText::
-	text "OAK #MON"
-	line "RESEARCH LAB"
+	text "LABO DE RECHERCHE"
+	line "#MON DU"
+	cont "PROF.CHEN"
 	done
 
 _PalletTownSignText::
-	text "PALLET TOWN"
-	line "Shades of your"
-	cont "journey await!"
+	text "BOURG PALETTE Un"
+	line "monde de couleurs"
+	cont "t'attend!"
 	done
 
 _PalletTownPlayersHouseSignText::
-	text "<PLAYER>'s house "
+	text "Maison de <PLAYER>"
 	done
 
 _PalletTownRivalsHouseSignText::
-	text "<RIVAL>'s house "
+	text "Maison de <RIVAL>"
 	done

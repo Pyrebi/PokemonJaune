@@ -1,64 +1,69 @@
 _CinnabarLabMetronomeRoomScientist1Text::
-	text "Tch-tch-tch!"
-	line "I made a cool TM!"
+	text "Tch-tch-tch! J'ai"
+	line "fait une CT"
+	cont "géniale!"
 
-	para "It can cause all"
-	line "kinds of fun!"
+	para "Elle peut causer"
+	line "toutes sortes de"
+	cont "choses amusantes!"
 	prompt
 
 _CinnabarLabMetronomeRoomScientist1ReceivedTM35Text::
-	text "<PLAYER> received "
+	text "<PLAYER> reçoit"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
 _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
-	text "Tch-tch-tch!"
-	line "That's the sound"
-	cont "of a METRONOME!"
+	text "Tch-tch-tch! C'est"
+	line "le bruit d'un"
+	cont "METRONOME!"
 
-	para "It tweaks your"
-	line "#MON's brain"
-	cont "into using moves"
-	cont "it doesn't know!"
+	para "Il pousse ton"
+	line "#MON à utiliser"
+	cont "des capacités"
+	cont "qu'il ne connaît"
+	cont "pas!"
 	done
 
 _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
-	text "Your pack is"
-	line "crammed full!"
+	text "Ton sac est plein"
+	line "à craquer!"
 	done
 
 _CinnabarLabMetronomeRoomScientist2Text::
-	text "EEVEE can evolve"
-	line "into 1 of 3 kinds"
-	cont "of #MON."
+	text "EVOLI peut évoluer"
+	line "en 3 sortes de"
+	cont "#MON."
 	done
 
 _CinnabarLabMetronomeRoomPCText::
-	text "There's an e-mail"
-	line "message!"
+	text "Il y a un e-mail!"
 
 	para "..."
 
-	para "The 3 legendary"
-	line "bird #MON are"
-	cont "ARTICUNO, ZAPDOS"
-	cont "and MOLTRES."
+	para "Les 3 #MON"
+	line "oiseaux"
+	cont "légendaires sont"
+	cont "ARTIKODIN,"
+	cont "ELECTHOR et"
+	cont "SULFURA."
 
-	para "Their whereabouts"
-	line "are unknown."
+	para "On ignore où ils"
+	line "se trouvent."
 
-	para "We plan to explore"
-	line "the cavern close"
-	cont "to CERULEAN."
+	para "Nous prévoyons"
+	line "d'explorer la"
+	cont "caverne près"
+	cont "d'AZURIA."
 
-	para "From: #MON"
-	line "RESEARCH TEAM"
+	para "De: EQUIPE DE"
+	line "RECHERCHE #MON"
 
 	para "..."
 	done
 
 _CinnabarLabMetronomeRoomAmberPipeText::
-	text "An amber pipe!"
+	text "Un tuyau d'ambre!"
 	done

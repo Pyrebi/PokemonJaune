@@ -1,93 +1,98 @@
 _BillsHouseBillDontLeaveText::
-	text "Whoa, don't go"
-	line "anywhere, wait!"
+	text "Hé, ne pars pas,"
+	line "attends!"
 	done
 
 _BillsHouseBillImNotAPokemonText::
-	text "Hiya! I'm a"
-	line "#MON..."
-	cont "...No I'm not!"
+	text "Salut! Je suis un"
+	line "#MON... ...Mais"
+	cont "non!"
 
-	para "Call me BILL!"
-	line "I'm a true blue"
-	cont "#MANIAC! Hey!"
-	cont "What's with that"
-	cont "skeptical look?"
+	para "Appelle-moi LEO!"
+	line "Je suis un vrai"
+	cont "#MANIAQUE! Hé!"
+	cont "C'est quoi ce"
+	cont "regard sceptique?"
 
-	para "I'm not joshing"
-	line "you, I screwed up"
-	cont "an experiment and"
-	cont "got combined with"
-	cont "a #MON!"
+	para "Je ne blague pas,"
+	line "j'ai raté une"
+	cont "expérience et j'ai"
+	cont "fusionné avec un"
+	cont "#MON!"
 
-	para "So, how about it?"
-	line "Help me out here!"
+	para "Alors, tu veux"
+	line "bien? Aide-moi!"
 	done
 
 _BillsHouseBillUseSeparationSystemText::
-	text "When I'm in the"
-	line "TELEPORTER, go to"
-	cont "my PC and run the"
-	cont "Cell Separation"
-	cont "System!"
+	text "Quand je serai"
+	line "dans le"
+	cont "TELEPORTEUR, va"
+	cont "sur mon PC et"
+	cont "lance le"
+	cont "Séparateur de"
+	cont "Cellules!"
 	done
 
 _BillsHouseBillNoYouGottaHelpText::
-	text "No!? Come on, you"
-	line "gotta help a guy"
-	cont "in deep trouble!"
+	text "Non!? Allez, aide"
+	line "un pauvre gars"
+	cont "dans le pétrin!"
 
-	para "What do you say,"
-	line "chief? Please?"
-	cont "OK? All right!"
+	para "Qu'en dis-tu,"
+	line "chef? S'il te"
+	cont "plaît? OK? Super!"
 	prompt
 
 _BillsHouseBillThankYouText::
-	text "BILL: Yeehah!"
-	line "Thanks, bud! I"
-	cont "owe you one!"
+	text "LEO: Youpi! Merci,"
+	line "l'ami! Je te dois"
+	cont "une fière"
+	cont "chandelle!"
 
-	para "So, did you come"
-	line "to see my #MON"
-	cont "collection?"
-	cont "You didn't?"
-	cont "That's a bummer."
+	para "Alors, tu es venu"
+	line "voir ma collection"
+	cont "de #MON? Non?"
+	cont "Dommage."
 
-	para "I've got to thank"
-	line "you... Oh here,"
-	cont "maybe this'll do."
+	para "Je dois te"
+	line "remercier... Oh,"
+	cont "tiens, ça devrait"
+	cont "aller."
 	prompt
 
 _SSTicketReceivedText::
-	text "<PLAYER> received"
-	line "an @"
+	text "<PLAYER> reçoit"
+	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
 _SSTicketNoRoomText::
-	text "You've got too"
-	line "much stuff, bud!"
+	text "Tu as trop de"
+	line "choses, l'ami!"
 	done
 
 _BillsHouseBillWhyDontYouGoInsteadOfMeText::
-	text "That cruise ship,"
-	line "S.S.ANNE, is in"
-	cont "VERMILION CITY."
-	cont "Its passengers"
-	cont "are all trainers!"
+	text "Le paquebot"
+	line "L'OCEANE est à"
+	cont "CARMIN SUR MER."
+	cont "Tous ses passagers"
+	cont "sont des"
+	cont "dresseurs!"
 
-	para "They invited me"
-	line "to their party,"
-	cont "but I can't stand"
-	cont "fancy do's. Why"
-	cont "don't you go"
-	cont "instead of me?"
+	para "Ils m'ont invité à"
+	line "leur fête, mais je"
+	cont "déteste les"
+	cont "mondanités."
+	cont "Pourquoi"
+	cont "n'irais-tu pas à"
+	cont "ma place?"
 	done
 
 _BillsHouseBillCheckOutMyRarePokemonText::
-	text "BILL: Look, bud,"
-	line "just check out"
-	cont "some of my rare"
-	cont "#MON on my PC!"
+	text "LEO: Ecoute,"
+	line "l'ami, va voir mes"
+	cont "#MON rares sur"
+	cont "mon PC!"
 	done

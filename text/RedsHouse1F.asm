@@ -1,42 +1,46 @@
 _RedsHouse1FMomWakeUpText::
-	text "MOM: Right."
-	line "All boys leave"
-	cont "home someday."
-	cont "It said so on TV."
+	text "MAMAN: Eh oui."
+	line "Tous les garçons"
+	cont "quittent la maison"
+	cont "un jour. Ils l'ont"
+	cont "dit à la télé."
 
-	para "PROF.OAK, next"
-	line "door, is looking"
-	cont "for you."
+	para "Le PROF.CHEN, à"
+	line "côté, te cherche."
 	done
 
 _RedsHouse1FMomYouShouldRestText::
-	text "MOM: <PLAYER>, if"
-	line "you drive your"
-	cont "#MON too hard,"
-	cont "they'll dislike"
-	cont "you."
+	text "MAMAN: <PLAYER>, si"
+	line "tu pousses trop"
+	cont "tes #MON, ils"
+	cont "ne t'aimeront"
+	cont "plus."
 
-	para "You should take a"
-	line "rest."
+	para "Tu devrais te"
+	line "reposer."
 	prompt
 
 _RedsHouse1FMomLookingGreatText::
-	text "MOM: Oh good!"
-	line "You and your"
-	cont "#MON are"
-	cont "looking great!"
-	cont "Take care now!"
+	text "MAMAN: Ah, très"
+	line "bien! Toi et tes"
+	cont "#MON avez l'air"
+	cont "en pleine forme!"
+	cont "Prends soin de"
+	cont "toi!"
 	done
 
 _RedsHouse1FTVStandByMeMovieText::
-	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
-	cont "railroad tracks."
+	text "Il y a un film à"
+	line "la télé. Quatre"
+	cont "garçons marchent"
+	cont "sur une voie"
+	cont "ferrée."
 
-	para "I better go too."
+	para "Je ferais mieux"
+	line "d'y aller aussi."
 	done
 
 _RedsHouse1FTVWrongSideText::
-	text "Oops, wrong side."
+	text "Oups, mauvais"
+	line "côté."
 	done

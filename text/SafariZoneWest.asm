@@ -1,31 +1,32 @@
 _SafariZoneWestRestHouseSignText::
-	text "REST HOUSE"
+	text "MAISON DE REPOS"
 	done
 
 _SafariZoneWestFindWardensTeethSignText::
-	text "REQUEST NOTICE"
+	text "AVIS DE RECHERCHE"
 
-	para "Please find the"
-	line "SAFARI WARDEN's"
-	cont "lost GOLD TEETH."
-	cont "They're around"
-	cont "here somewhere."
+	para "Retrouvez la DENT"
+	line "D'OR perdue du"
+	cont "GARDIEN du SAFARI."
+	cont "Elle est quelque"
+	cont "part par ici."
 
-	para "Reward offered!"
-	line "Contact: WARDEN"
+	para "Récompense!"
+	line "Contact: GARDIEN"
 	done
 
 _SafariZoneWestTrainerTipsText::
-	text "TRAINER TIPS"
+	text "CONSEILS AUX"
+	line "DRESSEURS"
 
-	para "Zone Exploration"
-	line "Campaign!"
+	para "Campagne"
+	line "d'exploration!"
 
-	para "The Search for"
-	line "the SECRET HOUSE!"
+	para "A la recherche de"
+	line "la MAISON SECRETE!"
 	done
 
 _SafariZoneWestSignText::
-	text "AREA 3"
-	line "EAST: CENTER AREA"
+	text "ZONE 3 EST: ZONE"
+	line "CENTRALE"
 	done

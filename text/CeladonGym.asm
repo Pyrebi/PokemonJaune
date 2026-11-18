@@ -1,68 +1,76 @@
 _CeladonGymErikaPreBattleText::
-	text "Hello. Lovely"
-	line "weather isn't it?"
-	cont "It's so pleasant."
+	text "Bonjour. Quel beau"
+	line "temps, n'est-ce"
+	cont "pas? C'est si"
+	cont "agréable."
 
-	para "...Oh dear..."
-	line "I must have dozed"
-	cont "off. Welcome."
+	para "...Oh mon dieu..."
+	line "J'ai dû"
+	cont "m'assoupir."
+	cont "Bienvenue."
 
-	para "My name is ERIKA."
-	line "I am the LEADER"
-	cont "of CELADON GYM."
+	para "Je m'appelle"
+	line "ERIKA. Je suis la"
+	cont "CHAMPIONNE de"
+	cont "l'ARENE de"
+	cont "CELADOPOLE."
 
-	para "I teach the art of"
-	line "flower arranging."
-	cont "My #MON are of"
-	cont "the grass-type."
+	para "J'enseigne l'art"
+	line "floral. Mes"
+	cont "#MON sont de"
+	cont "type plante."
 
-	para "Oh, I'm sorry, I"
-	line "had no idea that"
-	cont "you wished to"
-	cont "challenge me."
+	para "Oh, pardon, je ne"
+	line "savais pas que tu"
+	cont "voulais me défier."
 
-	para "Very well, but I"
-	line "shall not lose."
+	para "Très bien, mais je"
+	line "ne perdrai pas."
 	done
 
 _CeladonGymErikaReceivedRainbowBadgeText::
-	text "Oh!"
-	line "I concede defeat."
+	text "Oh! Je m'avoue"
+	line "vaincue."
 
-	para "You are remarkably"
-	line "strong."
+	para "Tu es"
+	line "remarquablement"
+	cont "fort."
 
-	para "I must confer you"
-	line "the RAINBOWBADGE."
+	para "Je dois te"
+	line "remettre le BADGE"
+	cont "PRISME."
 	prompt
 
 _CeladonGymErikaPostBattleAdviceText::
-	text "You are cataloging"
-	line "#MON? I must"
-	cont "say I'm impressed."
+	text "Tu répertories les"
+	line "#MON? Je dois"
+	cont "dire que je suis"
+	cont "impressionnée."
 
-	para "I would never"
-	line "collect #MON"
-	cont "if they were"
-	cont "unattractive."
+	para "Je ne"
+	line "collectionnerais"
+	cont "jamais des #MON"
+	cont "qui ne sont pas"
+	cont "jolis."
 	done
 
 _CeladonGymRainbowBadgeInfoText::
-	text "The RAINBOWBADGE"
-	line "will make #MON"
-	cont "up to L50 obey."
+	text "Avec le BADGE"
+	line "PRISME, les"
+	cont "#MON jusqu'au"
+	cont "N.50 t'obéiront."
 
-	para "It also allows"
-	line "#MON to use"
-	cont "STRENGTH in and"
-	cont "out of battle."
+	para "Il permet aussi"
+	line "d'utiliser FORCE"
+	cont "hors des combats."
 
-	para "Please also take"
-	line "this with you."
+	para "Prends ceci"
+	line "également, je te"
+	cont "prie."
 	done
 
 _CeladonGymReceivedTM21Text::
-	text "<PLAYER> received"
+	text "<PLAYER> reçoit"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
@@ -71,150 +79,153 @@ _CeladonGymReceivedTM21Text::
 _TM21ExplanationText::
 	text_start
 
-	para "TM21 contains"
-	line "MEGA DRAIN."
+	para "La CT21 contient"
+	line "MEGA-SANGSUE."
 
-	para "Half the damage"
-	line "it inflicts is"
-	cont "drained to heal"
-	cont "your #MON!"
+	para "La moitié des"
+	line "dégâts infligés"
+	cont "soigne ton"
+	cont "#MON!"
 	done
 
 _CeladonGymTM21NoRoomText::
-	text "You should make"
-	line "room for this."
+	text "Tu devrais faire"
+	line "de la place pour"
+	cont "ça."
 	done
 
 _CeladonGymBattleText2::
-	text "Hey!"
+	text "Hé!"
 
-	para "You are not"
-	line "allowed in here!"
+	para "Tu n'as rien à"
+	line "faire ici!"
 	done
 
 _CeladonGymEndBattleText2::
-	text "You're"
-	line "too rough!"
+	text "Tu es trop brutal!"
 	prompt
 
 _CeladonGymAfterBattleText2::
-	text "Bleaah!"
-	line "I hope ERIKA"
-	cont "wipes you out!"
+	text "Beuh! J'espère"
+	line "qu'ERIKA va"
+	cont "t'écraser!"
 	done
 
 _CeladonGymBattleText3::
-	text "I was getting"
-	line "bored."
+	text "Je commençais à"
+	line "m'ennuyer."
 	done
 
 _CeladonGymEndBattleText3::
-	text "My"
-	line "makeup!"
+	text "Mon maquillage!"
 	prompt
 
 _CeladonGymAfterBattleText3::
-	text "Grass-type #MON"
-	line "are tough against"
-	cont "the water-type!"
+	text "Les #MON plante"
+	line "sont redoutables"
+	cont "contre le type"
+	cont "eau!"
 
-	para "They also have an"
-	line "edge on rock and"
-	cont "ground #MON!"
+	para "Ils ont aussi"
+	line "l'avantage contre"
+	cont "les #MON roche"
+	cont "et sol!"
 	done
 
 _CeladonGymBattleText4::
-	text "Aren't you the"
-	line "peeping Tom?"
+	text "Tu n'es pas le"
+	line "voyeur?"
 	done
 
 _CeladonGymEndBattleText4::
-	text "I'm"
-	line "in shock!"
+	text "Je suis choquée!"
 	prompt
 
 _CeladonGymAfterBattleText4::
-	text "Oh, you weren't"
-	line "peeping? We get a"
-	cont "lot of gawkers!"
+	text "Oh, tu"
+	line "n'espionnais pas?"
+	cont "On a beaucoup de"
+	cont "curieux!"
 	done
 
 _CeladonGymBattleText5::
-	text "Look at my grass"
-	line "#MON!"
+	text "Regarde mes"
+	line "#MON plante!"
 
-	para "They're so easy"
-	line "to raise!"
+	para "Ils sont si"
+	line "faciles à élever!"
 	done
 
 _CeladonGymEndBattleText5::
-	text "No!"
+	text "Non!"
 	prompt
 
 _CeladonGymAfterBattleText5::
-	text "We only use grass-"
-	line "type #MON at"
-	cont "our GYM!"
+	text "Notre ARENE"
+	line "n'utilise que des"
+	cont "#MON de type"
+	cont "plante!"
 
-	para "We also use them"
-	line "for making flower"
-	cont "arrangements!"
+	para "On s'en sert aussi"
+	line "pour faire des"
+	cont "bouquets!"
 	done
 
 _CeladonGymBattleText6::
-	text "Don't bring any"
-	line "bugs or fire"
-	cont "#MON in here!"
+	text "N'amène pas"
+	line "d'insectes ni de"
+	cont "#MON feu ici!"
 	done
 
 _CeladonGymEndBattleText6::
-	text "Oh!"
-	line "You!"
+	text "Oh! Toi!"
 	prompt
 
 _CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA,"
-	line "might be quiet,"
-	cont "but she's also"
-	cont "very skilled!"
+	text "Notre CHAMPIONNE,"
+	line "ERIKA, est"
+	cont "discrète, mais"
+	cont "très douée!"
 	done
 
 _CeladonGymBattleText7::
-	text "Pleased to meet"
-	line "you. My hobby is"
-	cont "#MON training."
+	text "Enchantée. Mon"
+	line "passe-temps, c'est"
+	cont "le dressage de"
+	cont "#MON."
 	done
 
 _CeladonGymEndBattleText7::
-	text "Oh!"
-	line "Splendid!"
+	text "Oh! Splendide!"
 	prompt
 
 _CeladonGymAfterBattleText7::
-	text "I have a blind"
-	line "date coming up."
-	cont "I have to learn"
-	cont "to be polite."
+	text "J'ai un"
+	line "rendez-vous galant"
+	cont "bientôt. Je dois"
+	cont "apprendre la"
+	cont "politesse."
 	done
 
 _CeladonGymBattleText8::
-	text "Welcome to"
-	line "CELADON GYM!"
+	text "Bienvenue à"
+	line "l'ARENE de"
+	cont "CELADOPOLE!"
 
-	para "You better not"
-	line "underestimate"
-	cont "girl power!"
+	para "Ne sous-estime pas"
+	line "le pouvoir des"
+	cont "filles!"
 	done
 
 _CeladonGymEndBattleText8::
-	text "Oh!"
-	line "Beaten!"
+	text "Oh! Battue!"
 	prompt
 
 _CeladonGymAfterBattleText8::
-	text "I didn't bring my"
-	line "best #MON!"
+	text "Je n'ai pas pris"
+	line "mes meilleurs"
+	cont "#MON!"
 
-	para "Wait 'til next"
-	line "time!"
+	para "Attends la"
+	line "prochaine fois!"
 	done

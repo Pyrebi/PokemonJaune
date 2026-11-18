@@ -1,30 +1,32 @@
 _CeladonMart4FSuperNerdText::
-	text "I'm getting a"
-	line "gift for COPYCAT"
-	cont "in CERULEAN CITY."
+	text "J'achète un cadeau"
+	line "pour la COPIEUSE"
+	cont "d'AZURIA."
 
-	para "It's got to be a"
-	line "# DOLL. They"
-	cont "are trendy!"
+	para "Ce sera une"
+	line "POKéPOUPEE. C'est"
+	cont "à la mode!"
 	done
 
 _CeladonMart4FYoungsterText::
-	text "I heard something"
-	line "useful."
+	text "J'ai appris un"
+	line "truc utile."
 
-	para "You can run from"
-	line "wild #MON by"
-	cont "distracting them"
-	cont "with a # DOLL!"
+	para "On peut fuir les"
+	line "#MON sauvages"
+	cont "en les distrayant"
+	cont "avec une"
+	cont "POKéPOUPEE!"
 	done
 
 _CeladonMart4FCurrentFloorSignText::
-	text "Express yourself"
-	line "with gifts!"
+	text "Exprimez-vous avec"
+	line "des cadeaux!"
 
-	para "4F: WISEMAN GIFTS"
+	para "3E: BOUTIQUE"
+	line "CADEAUX"
 
-	para "Evolution Special!"
-	line "Element STONEs on"
-	cont "sale now!"
+	para "Spécial évolution!"
+	line "PIERRES en"
+	cont "promotion!"
 	done

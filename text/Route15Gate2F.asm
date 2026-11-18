@@ -1,24 +1,24 @@
 _Route15Gate2FOaksAideExpAllText::
-	text "EXP.ALL gives"
-	line "EXP points to all"
-	cont "the #MON with"
-	cont "you, even if they"
-	cont "don't fight."
+	text "Le MULTI EXP donne"
+	line "des points EXP à"
+	cont "tous tes #MON,"
+	cont "même s'ils ne"
+	cont "combattent pas."
 
-	para "It does, however,"
-	line "reduce the amount"
-	cont "of EXP for each"
+	para "Mais il réduit la"
+	line "quantité d'EXP"
+	cont "pour chaque"
 	cont "#MON."
 
-	para "If you don't need"
-	line "it, you should "
-	cont "store it via PC."
+	para "Si tu n'en as pas"
+	line "besoin, stocke-le"
+	cont "sur le PC."
 	done
 
 _Route15Gate2FBinocularsText::
-	text "Looked into the"
-	line "binoculars."
+	text "Tu regardes dans"
+	line "les jumelles."
 
-	para "It looks like a"
-	line "small island!"
+	para "On dirait une"
+	line "petite île!"
 	done

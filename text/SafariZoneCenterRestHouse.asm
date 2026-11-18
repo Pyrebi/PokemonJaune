@@ -1,11 +1,11 @@
 _SafariZoneCenterRestHouseGirlText::
-	text "SARA: Where did"
-	line "my boy friend,"
-	cont "ERIK, go?"
+	text "SARA: Où est passé"
+	line "mon petit ami,"
+	cont "ERIK?"
 	done
 
 _SafariZoneCenterRestHouseScientistText::
-	text "I'm catching"
-	line "#MON to take"
-	cont "home as gifts!"
+	text "J'attrape des"
+	line "#MON pour les"
+	cont "offrir en cadeau!"
 	done

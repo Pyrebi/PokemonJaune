@@ -1,23 +1,24 @@
 _ViridianNicknameHouseBaldingGuyText::
-	text "Coming up with"
-	line "nicknames is fun,"
-	cont "but hard."
+	text "Trouver des"
+	line "surnoms, c'est"
+	cont "amusant, mais"
+	cont "difficile."
 
-	para "Simple names are"
-	line "the easiest to"
-	cont "remember."
+	para "Les noms simples"
+	line "sont les plus"
+	cont "faciles à retenir."
 	done
 
 _ViridianNicknameHouseLittleGirlText::
-	text "My Daddy loves"
-	line "#MON too."
+	text "Mon Papa adore"
+	line "aussi les #MON."
 	done
 
 _ViridianNicknameHouseSpearowText::
-	text "SPEARY: Tetweet!"
+	text "PIAFI: Piaaf!"
 	done
 
 _ViridianNicknameHouseSpearySignText::
-	text "SPEAROW"
-	line "Name: SPEARY"
+	text "PIAFABEC Nom:"
+	line "PIAFI"
 	done

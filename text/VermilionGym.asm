@@ -1,52 +1,61 @@
 _VermilionGymLTSurgePreBattleText::
-	text "Ten-hut! Welcome"
-	line "to VERMILION GYM!"
+	text "Garde-à-vous!"
+	line "Bienvenue à"
+	cont "l'ARENE de CARMIN"
+	cont "SUR MER!"
 
-	para "Will you look at"
-	line "that, a pint-size"
-	cont "challenger!"
+	para "Regardez-moi ça,"
+	line "un challenger de"
+	cont "poche!"
 
-	para "Hahaha! You've got"
-	line "big and brassy"
-	cont "nerves to take me"
-	cont "on with your puny"
-	cont "power!"
+	para "Hahaha! Tu as un"
+	line "sacré culot de"
+	cont "m'affronter avec"
+	cont "ta puissance"
+	cont "minable!"
 
-	para "A #MON battle"
-	line "is war! I'll show"
-	cont "you, civilian!"
+	para "Un combat #MON,"
+	line "c'est la guerre!"
+	cont "Je vais te"
+	cont "montrer, civil!"
 
-	para "I'll shock you"
-	line "into surrender!"
+	para "Je vais"
+	line "t'électrocuter"
+	cont "jusqu'à la"
+	cont "reddition!"
 	done
 
 _VermilionGymLTSurgePostBattleAdviceText::
-	text "A little word of"
-	line "advice, kid!"
+	text "Un petit conseil,"
+	line "petit!"
 
-	para "Electricity is"
-	line "sure powerful!"
+	para "L'électricité est"
+	line "très puissante!"
 
-	para "But, it's useless"
-	line "against ground-"
-	cont "type #MON!"
+	para "Mais elle est"
+	line "inutile contre les"
+	cont "#MON de type"
+	cont "sol!"
 	done
 
 _VermilionGymLTSurgeThunderBadgeInfoText::
-	text "The THUNDERBADGE"
-	line "cranks up your"
-	cont "#MON's SPEED!"
+	text "Le BADGE FOUDRE"
+	line "augmente la"
+	cont "VITESSE de tes"
+	cont "#MON!"
 
-	para "It also lets your"
-	line "#MON FLY any-"
-	cont "time, kid!"
+	para "Il permet aussi"
+	line "d'utiliser VOL"
+	cont "hors des combats,"
+	cont "petit!"
 
-	para "You're special,"
-	line "kid! Take this!"
+	para "Tu es spécial,"
+	line "petit! Prends"
+	cont "ceci!"
 	done
 
 _VermilionGymLTSurgeReceivedTM24Text::
-	text "<PLAYER> received "
+	text "<PLAYER> reçoit"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
@@ -55,113 +64,123 @@ _VermilionGymLTSurgeReceivedTM24Text::
 _TM24ExplanationText::
 	text_start
 
-	para "TM24 contains"
-	line "THUNDERBOLT!"
+	para "La CT24 contient"
+	line "TONNERRE!"
 
-	para "Teach it to an"
-	line "electric #MON!"
+	para "Apprends-la à un"
+	line "#MON électrik!"
 	done
 
 _VermilionGymLTSurgeTM24NoRoomText::
-	text "Yo kid, make room"
-	line "in your pack!"
+	text "Hé petit, fais de"
+	line "la place dans ton"
+	cont "sac!"
 	done
 
 _VermilionGymLTSurgeReceivedThunderBadgeText::
 	text "Whoa!"
 
-	para "You're the real"
-	line "deal, kid!"
+	para "Tu es un vrai de"
+	line "vrai, petit!"
 
-	para "Fine then, take"
-	line "the THUNDERBADGE!"
+	para "Très bien, prends"
+	line "le BADGE FOUDRE!"
 	prompt
 
 _VermilionGymGentlemanBattleText::
-	text "When I was in the"
-	line "Army, LT.SURGE"
-	cont "was my strict CO!"
+	text "Quand j'étais à"
+	line "l'armée, le MAJOR"
+	cont "BOB était mon"
+	cont "officier, très"
+	cont "strict!"
 	done
 
 _VermilionGymGentlemanEndBattleText::
-	text "Stop!"
-	line "You're very good!"
+	text "Stop! Tu es très"
+	line "fort!"
 	prompt
 
 _VermilionGymGentlemanAfterBattleText::
-	text "The door won't"
-	line "open?"
+	text "La porte ne"
+	line "s'ouvre pas?"
 
-	para "LT.SURGE always"
-	line "was cautious!"
+	para "Le MAJOR BOB a"
+	line "toujours été"
+	cont "prudent!"
 	done
 
 _VermilionGymSuperNerdBattleText::
-	text "I'm a lightweight,"
-	line "but I'm good with"
-	cont "electricity!"
+	text "Je suis un poids"
+	line "plume, mais je m'y"
+	cont "connais en"
+	cont "électricité!"
 	done
 
 _VermilionGymSuperNerdEndBattleText::
-	text "Fried!"
+	text "Grillé!"
 	prompt
 
 _VermilionGymSuperNerdAfterBattleText::
-	text "OK, I'll talk!"
+	text "OK, je parle!"
 
-	para "LT.SURGE said he"
-	line "hid door switches"
-	cont "inside something!"
+	para "Le MAJOR BOB a dit"
+	line "qu'il avait caché"
+	cont "les interrupteurs"
+	cont "dans quelque"
+	cont "chose!"
 	done
 
 _VermilionGymSailorBattleText::
-	text "This is no place"
-	line "for kids!"
+	text "Ce n'est pas un"
+	line "endroit pour les"
+	cont "enfants!"
 	done
 
 _VermilionGymSailorEndBattleText::
-	text "Wow!"
-	line "Surprised me!"
+	text "Waouh! Tu m'as"
+	line "surpris!"
 	prompt
 
 _VermilionGymSailorAfterBattleText::
-	text "LT.SURGE set up"
-	line "double locks!"
-	cont "Here's a hint!"
+	text "Le MAJOR BOB a"
+	line "installé un double"
+	cont "verrou! Voici un"
+	cont "indice!"
 
-	para "When you open the"
-	line "1st lock, the 2nd"
-	cont "lock is right"
-	cont "next to it!"
+	para "Quand tu ouvres le"
+	line "1er verrou, le 2e"
+	cont "est juste à côté!"
 	done
 
 _VermilionGymGymGuideChampInMakingText::
-	text "Yo! Champ in"
-	line "making!"
+	text "Yo! Futur"
+	line "champion!"
 
-	para "LT.SURGE has a"
-	line "nickname. People"
-	cont "refer to him as"
-	cont "the Lightning"
-	cont "American!"
+	para "Le MAJOR BOB a un"
+	line "surnom. On"
+	cont "l'appelle"
+	cont "l'Américain"
+	cont "Electrique!"
 
-	para "He's an expert on"
-	line "electric #MON!"
+	para "C'est un expert"
+	line "des #MON"
+	cont "électrik!"
 
-	para "Birds and water"
-	line "#MON are at"
-	cont "risk! Beware of"
-	cont "paralysis too!"
+	para "Les oiseaux et les"
+	line "#MON eau sont"
+	cont "en danger!"
+	cont "Attention à la"
+	cont "paralysie!"
 
-	para "LT.SURGE is very"
-	line "cautious!"
+	para "Le MAJOR BOB est"
+	line "très prudent!"
 
-	para "You'll have to"
-	line "break a code to"
-	cont "get to him!"
+	para "Tu devras"
+	line "déchiffrer un code"
+	cont "pour l'atteindre!"
 	done
 
 _VermilionGymGymGuideBeatLTSurgeText::
-	text "Whew! That match"
-	line "was electric!"
+	text "Ouf! Ce match"
+	line "était électrique!"
 	done

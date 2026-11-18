@@ -1,25 +1,27 @@
 _LavenderCuboneHouseCuboneText::
-	text "CUBONE: Kyarugoo!@"
+	text "OSSELAIT:"
+	line "Kyarugoo!@"
 	text_end
 
 _LavenderCuboneHouseBrunetteGirlPoorCubonesMotherText::
-	text "I hate those"
-	line "horrible ROCKETs!"
+	text "Je déteste ces"
+	line "horribles ROCKETS!"
 
-	para "That poor CUBONE's"
-	line "mother..."
+	para "La mère de ce"
+	line "pauvre OSSELAIT..."
 
-	para "It was killed"
-	line "trying to escape"
-	cont "from TEAM ROCKET!"
+	para "Elle a été tuée en"
+	line "essayant"
+	cont "d'échapper à la"
+	cont "TEAM ROCKET!"
 	done
 
 _LavenderCuboneHouseBrunetteGirlGhostIsGoneText::
-	text "The GHOST of"
-	line "#MON TOWER is"
-	cont "gone!"
+	text "Le SPECTRE de la"
+	line "TOUR #MON a"
+	cont "disparu!"
 
-	para "Someone must have"
-	line "soothed its"
-	cont "restless soul!"
+	para "Quelqu'un a dû"
+	line "apaiser son âme"
+	cont "tourmentée!"
 	done

@@ -1,29 +1,30 @@
 _PokemonTower6FGhostWasCubonesMotherText::
-	text "The GHOST was the"
-	line "restless soul of"
-	cont "CUBONE's mother!"
+	text "Le SPECTRE était"
+	line "l'âme tourmentée"
+	cont "de la mère"
+	cont "d'OSSELAIT!"
 	done
 
 _PokemonTower6FSoulWasCalmedText::
-	text "The mother's soul"
-	line "was calmed."
+	text "L'âme de la mère"
+	line "s'est apaisée."
 
-	para "It departed to"
-	line "the afterlife!"
+	para "Elle est partie"
+	line "dans l'au-delà!"
 	done
 
 _PokemonTower6FChanneler1BattleText::
-	text "Give...me..."
-	line "blood..."
+	text "Donne...moi..."
+	line "du...sang..."
 	done
 
 _PokemonTower6FChanneler1EndBattleText::
-	text "Groan!"
+	text "Argh!"
 	prompt
 
 _PokemonTower6FChanneler1AfterBattleText::
-	text "I feel anemic and"
-	line "weak..."
+	text "Je me sens anémiée"
+	line "et faible..."
 	done
 
 _PokemonTower6FChanneler2BattleText::
@@ -31,14 +32,15 @@ _PokemonTower6FChanneler2BattleText::
 	done
 
 _PokemonTower6FChanneler2EndBattleText::
-	text "Some-"
-	line "thing fell out!"
+	text "Quelque chose est"
+	line "tombé!"
 	prompt
 
 _PokemonTower6FChanneler2AfterBattleText::
-	text "Hair didn't fall"
-	line "out! It was an"
-	cont "evil spirit!"
+	text "Ce n'étaient pas"
+	line "mes cheveux!"
+	cont "C'était un esprit"
+	cont "maléfique!"
 	done
 
 _PokemonTower6FChanneler3BattleText::
@@ -51,11 +53,11 @@ _PokemonTower6FChanneler3EndBattleText::
 	prompt
 
 _PokemonTower6FChanneler3AfterBattleText::
-	text "What's going on"
-	line "here?"
+	text "Qu'est-ce qui se"
+	line "passe ici?"
 	done
 
 _PokemonTower6FBeGoneText::
-	text "Be gone..."
-	line "Intruders..."
+	text "Partez..."
+	line "Intrus..."
 	done

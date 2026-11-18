@@ -1,10 +1,9 @@
 _CeladonMansionRoofHouseHikerText::
-	text "I know everything"
-	line "about the world"
-	cont "of #MON in"
-	cont "your GAME BOY!"
+	text "Je sais tout du"
+	line "monde des #MON"
+	cont "dans ta GAME BOY!"
 
-	para "Get together with"
-	line "your friends and"
-	cont "trade #MON!"
+	para "Retrouve tes amis"
+	line "et échangez vos"
+	cont "#MON!"
 	done

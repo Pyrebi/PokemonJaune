@@ -1,136 +1,139 @@
 _Route9CooltrainerF1BattleText::
-	text "You have #MON"
-	line "with you!"
-	cont "You're mine!"
+	text "Tu as des #MON!"
+	line "Tu es à moi!"
 	done
 
 _Route9CooltrainerF1EndBattleText::
-	text "You"
-	line "deceived me!"
+	text "Tu m'as trompée!"
 	prompt
 
 _Route9CooltrainerF1AfterBattleText::
-	text "You need light to"
-	line "get through that"
-	cont "dark tunnel ahead."
+	text "Il te faut de la"
+	line "lumière pour"
+	cont "traverser ce"
+	cont "tunnel sombre."
 	done
 
 _Route9AJBattleText::
-	text "I aim to be the"
-	line "ultimate trainer!"
+	text "Je vise à devenir"
+	line "le dresseur"
+	cont "ultime!"
 	done
 
 _Route9AJEndBattleText::
-	text "My"
-	line "SANDSHREW lost?"
+	text "Mon SABELETTE a"
+	line "perdu?"
 	prompt
 
 _Route9AJAfterBattleText::
-	text "I'll restart my"
-	line "100-win streak"
-	cont "with SANDSHREW."
+	text "Je vais relancer"
+	line "ma série de 100"
+	cont "victoires avec"
+	cont "SABELETTE."
 	done
 
 _Route9CooltrainerM2BattleText::
-	text "I'm taking ROCK"
-	line "TUNNEL to go to"
-	cont "LAVENDER..."
+	text "Je passe par la"
+	line "GROTTE pour aller"
+	cont "à LAVANVILLE..."
 	done
 
 _Route9CooltrainerM2EndBattleText::
-	text "Can't"
-	line "measure up!"
+	text "Je ne suis pas à"
+	line "la hauteur!"
 	prompt
 
 _Route9CooltrainerM2AfterBattleText::
-	text "Are you off to"
-	line "ROCK TUNNEL too?"
+	text "Toi aussi tu vas à"
+	line "la GROTTE?"
 	done
 
 _Route9CooltrainerF2BattleText::
-	text "Don't you dare"
-	line "condescend me!"
+	text "Ne me prends pas"
+	line "de haut!"
 	done
 
 _Route9CooltrainerF2EndBattleText::
-	text "No!"
-	line "You're too much!"
+	text "Non! Tu es trop"
+	line "fort!"
 	prompt
 
 _Route9CooltrainerF2AfterBattleText::
-	text "You're obviously"
-	line "talented! Good"
-	cont "luck to you!"
+	text "Tu es clairement"
+	line "doué! Bonne"
+	cont "chance!"
 	done
 
 _Route9Hiker1BattleText::
-	text "Bwahaha!"
-	line "Great! I was"
-	cont "bored, eh!"
+	text "Bwahaha! Super! Je"
+	line "m'ennuyais, hein!"
 	done
 
 _Route9Hiker1EndBattleText::
-	text "Keep it"
-	line "coming, eh!"
+	text "Continue comme ça,"
+	line "hein!"
 
-	para "Oh wait. I'm out"
-	line "of #MON!"
+	para "Oh attends. Je"
+	line "n'ai plus de"
+	cont "#MON!"
 	prompt
 
 _Route9Hiker1AfterBattleText::
-	text "You sure had guts"
-	line "standing up to me"
-	cont "there, eh?"
+	text "Tu as eu du cran"
+	line "de me tenir tête,"
+	cont "hein?"
 	done
 
 _Route9Hiker2BattleText::
-	text "Hahaha!"
-	line "Aren't you a"
-	cont "little toughie!"
+	text "Hahaha! T'es un"
+	line "petit dur, toi!"
 	done
 
 _Route9Hiker2EndBattleText::
-	text "What's"
-	line "that?"
+	text "C'est quoi ça?"
 	prompt
 
 _Route9Hiker2AfterBattleText::
-	text "Hahaha! Kids"
-	line "should be tough!"
+	text "Hahaha! Les"
+	line "enfants doivent"
+	cont "être costauds!"
 	done
 
 _Route9Youngster1BattleText::
-	text "I got up early"
-	line "every day to"
-	cont "raise my #MON"
-	cont "from cocoons!"
+	text "Je me suis levé"
+	line "tôt tous les jours"
+	cont "pour élever mes"
+	cont "#MON depuis"
+	cont "leur cocon!"
 	done
 
 _Route9Youngster1EndBattleText::
-	text "WHAT?"
+	text "QUOI?"
 
-	para "What a total"
-	line "waste of time!"
+	para "Quelle perte de"
+	line "temps!"
 	prompt
 
 _Route9Youngster1AfterBattleText::
-	text "I have to collect"
-	line "more than bugs to"
-	cont "get stronger..."
+	text "Je dois"
+	line "collectionner plus"
+	cont "que des insectes"
+	cont "pour devenir plus"
+	cont "fort..."
 	done
 
 _Route9Hiker3BattleText::
-	text "Hahahaha!"
-	line "Come on, dude!"
+	text "Hahahaha! Allez,"
+	line "mec!"
 	done
 
 _Route9Hiker3EndBattleText::
-	text "Hahahaha!"
-	line "You beat me fair!"
+	text "Hahahaha! Tu m'as"
+	line "battu à la loyale!"
 	prompt
 
 _Route9Hiker3AfterBattleText::
-	text "Hahahaha!"
-	line "Us hearty guys"
-	cont "always laugh!"
+	text "Hahahaha! Nous,"
+	line "les costauds, on"
+	cont "rit toujours!"
 	done

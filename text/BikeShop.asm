@@ -1,71 +1,75 @@
 _BikeShopClerkWelcomeText::
-	text "Hi! Welcome to"
-	line "our BIKE SHOP."
+	text "Bonjour! Bienvenue"
+	line "au MAGASIN DE"
+	cont "VELOS."
 
-	para "Have we got just"
-	line "the BIKE for you!"
+	para "Nous avons le VELO"
+	line "qu'il vous faut!"
 	prompt
 
 _BikeShopClerkDoYouLikeItText::
-	text "It's a cool BIKE!"
-	line "Do you want it?"
+	text "C'est un super"
+	line "VELO! Tu le veux?"
 	done
 
 _BikeShopCantAffordText::
-	text "Sorry! You can't"
-	line "afford it!"
+	text "Désolé! Tu n'as"
+	line "pas les moyens!"
 	prompt
 
 _BikeShopClerkOhThatsAVoucherText::
-	text "Oh, that's..."
+	text "Oh, c'est..."
 
-	para "A BIKE VOUCHER!"
+	para "Un BON COMMANDE!"
 
-	para "OK! Here you go!"
+	para "OK! Le voici!"
 	prompt
 
 _BikeShopExchangedVoucherText::
-	text "<PLAYER> exchanged"
-	line "the BIKE VOUCHER"
-	cont "for a BICYCLE.@"
+	text "<PLAYER> échange le"
+	line "BON COMMANDE"
+	cont "contre une"
+	cont "BICYCLETTE.@"
 	text_end
 
 _BikeShopComeAgainText::
-	text "Come back again"
-	line "sometime!"
+	text "Reviens quand tu"
+	line "veux!"
 	done
 
 _BikeShopClerkHowDoYouLikeYourBicycleText::
-	text "How do you like"
-	line "your new BICYCLE?"
+	text "Tu aimes ta"
+	line "nouvelle"
+	cont "BICYCLETTE?"
 
-	para "You can take it"
-	line "on CYCLING ROAD"
-	cont "and in caves!"
+	para "Tu peux l'utiliser"
+	line "sur la PISTE"
+	cont "CYCLABLE et dans"
+	cont "les grottes!"
 	done
 
 _BikeShopBagFullText::
-	text "You better make"
-	line "room for this!"
+	text "Fais-lui un peu de"
+	line "place!"
 	done
 
 _BikeShopMiddleAgedWomanText::
-	text "A plain city BIKE"
-	line "is good enough"
-	cont "for me!"
+	text "Un simple VELO de"
+	line "ville, ça me"
+	cont "suffit!"
 
-	para "You can't put a"
-	line "shopping basket"
-	cont "on an MTB!"
+	para "On ne peut pas"
+	line "mettre de panier"
+	cont "sur un VTT!"
 	done
 
 _BikeShopYoungsterTheseBikesAreExpensiveText::
-	text "These BIKEs are"
-	line "cool, but they're"
-	cont "way expensive!"
+	text "Ces VELOS sont"
+	line "super, mais bien"
+	cont "trop chers!"
 	done
 
 _BikeShopYoungsterCoolBikeText::
-	text "Wow. Your BIKE is"
-	line "really cool!"
+	text "Waouh. Ton VELO"
+	line "est vraiment cool!"
 	done

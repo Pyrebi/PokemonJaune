@@ -1,37 +1,38 @@
 _PokemonTower5FChanneler1Text::
-	text "Come, child! I"
-	line "sealed this space"
-	cont "with white magic!"
+	text "Viens, mon enfant!"
+	line "J'ai scellé cet"
+	cont "endroit par magie"
+	cont "blanche!"
 
-	para "You can rest here!"
+	para "Tu peux te reposer"
+	line "ici!"
 	done
 
 _PokemonTower5FChanneler2BattleText::
-	text "Give...me..."
-	line "your...soul..."
+	text "Donne...moi..."
+	line "ton...âme..."
 	done
 
 _PokemonTower5FChanneler2EndBattleText::
-	text "Gasp!"
+	text "Ah!"
 	prompt
 
 _PokemonTower5FChanneler2AfterBattleText::
-	text "I was under"
-	line "possession!"
+	text "J'étais possédée!"
 	done
 
 _PokemonTower5FChanneler3BattleText::
-	text "You...shall..."
-	line "join...us..."
+	text "Tu...vas..."
+	line "nous..."
+	cont "rejoindre..."
 	done
 
 _PokemonTower5FChanneler3EndBattleText::
-	text "What"
-	line "a nightmare!"
+	text "Quel cauchemar!"
 	prompt
 
 _PokemonTower5FChanneler3AfterBattleText::
-	text "I was possessed!"
+	text "J'étais possédée!"
 	done
 
 _PokemonTower5FChanneler4BattleText::
@@ -39,17 +40,16 @@ _PokemonTower5FChanneler4BattleText::
 	done
 
 _PokemonTower5FChanneler4EndBattleText::
-	text "Ha?"
+	text "Hein?"
 	prompt
 
 _PokemonTower5FChanneler4AfterBattleText::
-	text "I regained my"
-	line "senses!"
+	text "J'ai repris mes"
+	line "esprits!"
 	done
 
 _PokemonTower5FChanneler5BattleText::
-	text "Urgah..."
-	line "Urff...."
+	text "Urgah... Urff...."
 	done
 
 _PokemonTower5FChanneler5EndBattleText::
@@ -57,15 +57,17 @@ _PokemonTower5FChanneler5EndBattleText::
 	prompt
 
 _PokemonTower5FChanneler5AfterBattleText::
-	text "I fell to evil"
-	line "spirits despite"
-	cont "my training!"
+	text "J'ai succombé aux"
+	line "esprits malgré mon"
+	cont "entraînement!"
 	done
 
 _PokemonTower5FPurifiedZoneText::
-	text "Entered purified,"
-	line "protected zone!"
+	text "Tu entres dans une"
+	line "zone purifiée et"
+	cont "protégée!"
 
-	para "<PLAYER>'s #MON"
-	line "are fully healed!"
+	para "Les #MON de"
+	line "<PLAYER> sont"
+	cont "soignés!"
 	done

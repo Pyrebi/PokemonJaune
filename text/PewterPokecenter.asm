@@ -1,27 +1,30 @@
 _PewterPokecenterGentlemanText::
-	text "What!?"
+	text "Quoi!?"
 
-	para "TEAM ROCKET is"
-	line "at MT.MOON? Huh?"
-	cont "I'm on the phone!"
+	para "La TEAM ROCKET est"
+	line "au MONT SELENITE?"
+	cont "Hein? Je suis au"
+	cont "téléphone!"
 
-	para "Scram!"
+	para "Dégage!"
 	done
 
 _PewterPokecenterText3::
-	text "#MON CENTERS"
-	line "are wonderful!"
+	text "Les CENTRES"
+	line "#MON sont"
+	cont "formidables!"
 
-	para "They heal #MON"
-	line "completely."
+	para "Ils soignent"
+	line "complètement les"
+	cont "#MON."
 
-	para "Even conditions"
-	line "like sleep, burn,"
-	cont "poison and others"
-	cont "are cured."
+	para "Même le sommeil,"
+	line "les brûlures, le"
+	cont "poison et le reste"
+	cont "sont guéris."
 	done
 
 _PewterPokecenterJigglypuffText::
-	text "JIGGLYPUFF: Puu"
-	line "pupuu!"
+	text "RONDOUDOU:"
+	line "Rondouuu!"
 	done

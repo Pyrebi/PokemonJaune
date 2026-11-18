@@ -1,118 +1,124 @@
 _CeladonMansion3FProgrammerText::
-	text "Me? I'm the"
-	line "programmer!"
+	text "Moi? Je suis le"
+	line "programmeur!"
 	done
 
 _CeladonMansion3FProgrammerText2::
-	text "Me? I'm the"
-	line "programmer!"
+	text "Moi? Je suis le"
+	line "programmeur!"
 
-	para "What a surprise!"
-	line "I never expected"
-	cont "anyone to fill a"
+	para "Quelle surprise!"
+	line "Je ne pensais pas"
+	cont "que quelqu'un"
+	cont "remplirait le"
 	cont "#DEX."
 	done
 
 _CeladonMansion3FGraphicArtistText::
-	text "I'm the graphic"
-	line "artist!"
-	cont "I drew you!"
+	text "Je suis le"
+	line "graphiste! C'est"
+	cont "moi qui t'ai"
+	cont "dessiné!"
 	done
 
 _CeladonMansion3FGraphicArtistText2::
-	text "I'm the graphic"
-	line "artist!"
+	text "Je suis le"
+	line "graphiste!"
 
-	para "Wow, you finished"
-	line "your #DEX!"
-	cont "Want me to PRINT"
-	cont "out a DIPLOMA"
-	cont "as proof?"
+	para "Waouh, tu as fini"
+	line "ton #DEX! Tu"
+	cont "veux que j'IMPRIME"
+	cont "un DIPLOME comme"
+	cont "preuve?"
 	done
 
 _CeladonMansion3FGraphicArtistText3::
-	text "Just tell me if"
-	line "you want to PRINT"
-	cont "out a DIPLOMA."
+	text "Dis-moi si tu veux"
+	line "IMPRIMER un"
+	cont "DIPLOME."
 	done
 
 _CeladonMansion3FGraphicArtistText4::
-	text "All done!"
+	text "Terminé!"
 	done
 
 _CeladonMansion3FGraphicArtistText5::
-	text "OK, let's not"
-	line "PRINT."
+	text "OK, on n'IMPRIME"
+	line "pas."
 	done
 
 _CeladonMansion3FWriterText::
-	text "I wrote the story!"
-	line "Isn't ERIKA cute?"
+	text "J'ai écrit le"
+	line "scénario! ERIKA"
+	cont "est mignonne, non?"
 
-	para "I like MISTY a"
-	line "lot too!"
+	para "J'aime beaucoup"
+	line "ONDINE aussi!"
 
-	para "Oh, and SABRINA,"
-	line "I like her!"
+	para "Oh, et MORGANE, je"
+	line "l'aime bien!"
 	done
 
 _CeladonMansion3FWriterText2::
-	text "I wrote the story!"
+	text "J'ai écrit le"
+	line "scénario!"
 
-	para "It's great you"
-	line "caught all the"
-	cont "#MON! Thanks!"
+	para "C'est génial que"
+	line "tu aies attrapé"
+	cont "tous les #MON!"
+	cont "Merci!"
 	done
 
 _CeladonMansion3FGameDesignerText::
-	text "Is that right?"
+	text "Ah bon?"
 
-	para "I'm the game"
+	para "Je suis le game"
 	line "designer!"
 
-	para "Filling up your"
-	line "#DEX is tough,"
-	cont "but don't quit!"
+	para "Remplir ton"
+	line "#DEX est"
+	cont "difficile, mais"
+	cont "n'abandonne pas!"
 
-	para "When you finish,"
-	line "come tell me!"
+	para "Quand tu auras"
+	line "fini, viens me le"
+	cont "dire!"
 	done
 
 _CeladonMansion3FGameDesignerCompletedDexText::
-	text "Wow! Excellent!"
-	line "You completed"
-	cont "your #DEX!"
-	cont "Congratulations!"
+	text "Waouh! Excellent!"
+	line "Tu as complété ton"
+	cont "#DEX!"
+	cont "Félicitations!"
 	cont "...@"
 	text_end
 
 _CeladonMansion3FGameDesignerCompletedDexText2::
-	text "Go show off your"
-	line "DIPLOMA to"
-	cont "the development"
-	cont "crew."
+	text "Va montrer ton"
+	line "DIPLOME à l'équipe"
+	cont "de développement."
 	done
 
 _CeladonMansion3FGameProgramPCText::
-	text "It's the game"
-	line "program! Messing"
-	cont "with it could bug"
-	cont "out the game!"
+	text "C'est le programme"
+	line "du jeu! Y toucher"
+	cont "pourrait créer des"
+	cont "bugs!"
 	done
 
 _CeladonMansion3FPlayingGamePCText::
-	text "Someone's playing"
-	line "a game instead of"
-	cont "working!"
+	text "Quelqu'un joue au"
+	line "lieu de"
+	cont "travailler!"
 	done
 
 _CeladonMansion3FGameScriptPCText::
-	text "It's the script!"
-	line "Better not look"
-	cont "at the ending!"
+	text "C'est le script!"
+	line "Mieux vaut ne pas"
+	cont "regarder la fin!"
 	done
 
 _CeladonMansion3FDevRoomSignText::
-	text "GAME FREAK"
-	line "Development Room"
+	text "GAME FREAK Salle"
+	line "de Développement"
 	done

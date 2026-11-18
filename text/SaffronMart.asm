@@ -1,13 +1,15 @@
 _SaffronMartSuperNerdText::
-	text "MAX REPEL lasts"
-	line "longer than SUPER"
-	cont "REPEL for keeping"
-	cont "weaker #MON"
-	cont "away!"
+	text "Le MAX REPOUSSE"
+	line "dure plus"
+	cont "longtemps que le"
+	cont "SUPEREPOUSSE pour"
+	cont "éloigner les"
+	cont "#MON faibles!"
 	done
 
 _SaffronMartCooltrainerFText::
-	text "REVIVE is costly,"
-	line "but it revives"
-	cont "fainted #MON!"
+	text "Le RAPPEL est"
+	line "cher, mais il"
+	cont "ranime les #MON"
+	cont "K.O.!"
 	done

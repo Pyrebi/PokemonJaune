@@ -1,35 +1,38 @@
 _Route4CooltrainerF1Text::
-	text "Ouch! I tripped"
-	line "over a rocky"
-	cont "#MON, GEODUDE!"
+	text "Aïe! J'ai trébuché"
+	line "sur un #MON"
+	cont "rocheux,"
+	cont "RACAILLOU!"
 	done
 
 _Route4CooltrainerF2BattleText::
-	text "I came to get my"
-	line "mushroom #MON!"
+	text "Je suis venue"
+	line "chercher mon"
+	cont "#MON"
+	cont "champignon!"
 	done
 
 _Route4CooltrainerF2EndBattleText::
-	text "Oh! My cute"
-	line "mushroom #MON!"
+	text "Oh! Mon mignon"
+	line "#MON"
+	cont "champignon!"
 	prompt
 
 _Route4CooltrainerF2AfterBattleText::
-	text "There might not"
-	line "be any more"
-	cont "mushrooms here."
+	text "Il n'y a peut-être"
+	line "plus de"
+	cont "champignons ici."
 
-	para "I think I got"
-	line "them all."
+	para "Je crois que je"
+	line "les ai tous pris."
 	done
 
 _Route4MtMoonSignText::
-	text "MT.MOON"
-	line "Tunnel Entrance"
+	text "MONT SELENITE"
+	line "Entrée du tunnel"
 	done
 
 _Route4SignText::
-	text "ROUTE 4"
-	line "MT.MOON -"
-	cont "CERULEAN CITY"
+	text "ROUTE 4 MONT"
+	line "SELENITE - AZURIA"
 	done

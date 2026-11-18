@@ -1,107 +1,120 @@
 _PokemonFanClubClefairyFanNormalText::
-	text "Won't you admire"
-	line "my CLEFAIRY's"
-	cont "adorable tail?"
+	text "Tu ne veux pas"
+	line "admirer l'adorable"
+	cont "queue de mon"
+	cont "MELOFEE?"
 	done
 
 _PokemonFanClubClefairyFanBetterText::
-	text "Humph! My CLEFAIRY"
-	line "is twice as cute"
-	cont "as that one!"
+	text "Hmpf! Mon MELOFEE"
+	line "est deux fois plus"
+	cont "mignon que"
+	cont "celui-là!"
 	done
 
 _PokemonFanClubClefairyFanText::
-	text "Our CHAIRMAN's new"
-	line "hobby is taking"
-	cont "#MON photos."
+	text "Le nouveau"
+	line "passe-temps de"
+	cont "notre PRESIDENT,"
+	cont "c'est de"
+	cont "photographier les"
+	cont "#MON."
 
-	para "He gave me a nice"
-	line "PRINT of my cute"
-	cont "CLEFAIRY."
+	para "Il m'a donné une"
+	line "jolie PHOTO de mon"
+	cont "mignon MELOFEE."
 	done
 
 _PokemonFanClubSeelFanNormalText::
-	text "I just love my"
-	line "SEEL!"
+	text "J'adore mon"
+	line "OTARIA!"
 
-	para "It squeals when I"
-	line "hug it!"
+	para "Il couine quand je"
+	line "le serre dans mes"
+	cont "bras!"
 	done
 
 _PokemonFanClubSeelFanBetterText::
-	text "Oh dear!"
+	text "Oh là là!"
 
-	para "My SEEL is far"
-	line "more attractive!"
+	para "Mon OTARIA est"
+	line "bien plus"
+	cont "séduisant!"
 	done
 
 _PokemonFanClubSeelFanText::
-	text "I'm going to hook"
-	line "up the cable to"
-	cont "get a photo PRINT"
-	cont "of my SEEL!"
+	text "Je vais brancher"
+	line "le câble pour"
+	cont "avoir une PHOTO de"
+	cont "mon OTARIA!"
 	done
 
 _PokemonFanClubClefairyText::
-	text "CLEFAIRY: Pippii!"
+	text "MELOFEE: Mélooo!"
 	done
 
 _PokemonFanClubSeelText::
-	text "SEEL: Kyuoo!"
+	text "OTARIA: Kyuoo!"
 	done
 
 _PokemonFanClubChairmanIntroText::
-	text "I chair the"
-	line "#MON Fan Club!"
+	text "Je suis le"
+	line "président du Fan"
+	cont "Club #MON!"
 
-	para "I have more than"
-	line "100 #MON. I"
-	cont "love them all!"
+	para "J'ai plus de 100"
+	line "#MON. Je les"
+	cont "aime tous!"
 
-	para "I'm very fussy"
-	line "when it comes to"
+	para "Je suis très"
+	line "exigeant en"
+	cont "matière de"
 	cont "#MON!"
 
-	para "So..."
+	para "Alors..."
 
-	para "Did you come to"
-	line "hear me brag"
-	cont "about my #MON?"
+	para "Tu es venu"
+	line "m'entendre me"
+	cont "vanter de mes"
+	cont "#MON?"
 	done
 
 _PokemonFanClubChairmanStoryText::
-	text "Good!"
-	line "Then listen up!"
+	text "Bien! Alors"
+	line "écoute!"
 
-	para "My favorite"
-	line "RAPIDASH..."
+	para "Mon GALOPA"
+	line "préféré..."
 
-	para "It...cute..."
-	line "lovely...smart..."
-	cont "plus...amazing..."
-	cont "you think so?..."
-	cont "oh yes...it..."
-	cont "stunning..."
-	cont "kindly..."
-	cont "love it!"
+	para "Il...mignon..."
+	line "adorable..."
+	cont "malin... en"
+	cont "plus...génial..."
+	cont "tu trouves?... oh"
+	cont "oui...il..."
+	cont "superbe..."
+	cont "gentil... je"
+	cont "l'adore!"
 
-	para "Hug it...when..."
-	line "sleeping...warm"
-	cont "and cuddly..."
-	cont "spectacular..."
-	cont "ravishing..."
-	cont "...Oops! Look at"
-	cont "the time! I kept"
-	cont "you too long!"
+	para "Le"
+	line "câliner...quand..."
+	cont "il dort...tout"
+	cont "chaud..."
+	cont "spectaculaire..."
+	cont "ravissant..."
+	cont "...Oups! Regarde"
+	cont "l'heure! Je t'ai"
+	cont "retenu trop"
+	cont "longtemps!"
 
-	para "Thanks for hearing"
-	line "me out! I want"
-	cont "you to have this!"
+	para "Merci de m'avoir"
+	line "écouté! Je veux"
+	cont "que tu aies ceci!"
 	prompt
 
 _PokemonFanClubReceivedBikeVoucherText::
-	text "<PLAYER> received"
-	line "a @"
+	text "<PLAYER> reçoit"
+	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
@@ -109,72 +122,75 @@ _PokemonFanClubReceivedBikeVoucherText::
 _PokemonFanClubExplainBikeVoucherText::
 	text_start
 
-	para "Exchange that for"
-	line "a BICYCLE!"
+	para "Echange-le contre"
+	line "une BICYCLETTE!"
 
-	para "Don't worry, my"
-	line "FEAROW will FLY"
-	cont "me anywhere!"
+	para "Pas de souci, mon"
+	line "RAPASDEPIC me"
+	cont "porte partout!"
 
-	para "So, I don't need a"
-	line "BICYCLE!"
+	para "Je n'ai donc pas"
+	line "besoin de VELO!"
 
-	para "I hope you like"
-	line "cycling!"
+	para "J'espère que tu"
+	line "aimes le vélo!"
 	done
 
 _PokemonFanClubNoStoryText::
-	text "Oh. Come back"
-	line "when you want to"
-	cont "hear my story!"
+	text "Oh. Reviens quand"
+	line "tu voudras"
+	cont "entendre mon"
+	cont "histoire!"
 	done
 
 _PokemonFanClubChairFinalText::
-	text "Hello, <PLAYER>!"
+	text "Bonjour, <PLAYER>!"
 
-	para "Did you come see"
-	line "me about my"
-	cont "#MON again?"
+	para "Tu reviens me"
+	line "parler de mes"
+	cont "#MON?"
 
-	para "No? Too bad!"
+	para "Non? Dommage!"
 	done
 
 _PokemonFanClubBagFullText::
-	text "Make room for"
-	line "this!"
+	text "Fais de la place"
+	line "pour ça!"
 	done
 
 FanClubChairPrintText1::
-	text "Hi there, <PLAYER>!"
-	line "Have you seen my"
-	cont "#MON photos?"
+	text "Salut, <PLAYER>! Tu"
+	line "as vu mes photos"
+	cont "de #MON?"
 
-	para "I have them framed"
-	line "up on that wall."
+	para "Je les ai"
+	line "encadrées sur ce"
+	cont "mur."
 
-	para "Ah, I know!"
+	para "Ah, j'y pense!"
 
-	para "Would you like me"
-	line "to take a photo"
-	cont "of your #MON?"
+	para "Tu veux que je"
+	line "prenne une photo"
+	cont "de ton #MON?"
 	done
 
 FanClubChairPrintText2::
-	text "No? That's really"
-	line "disappointing."
+	text "Non? Quelle"
+	line "déception."
 	done
 
 FanClubChairPrintText3::
-	text "OK, I'm done."
+	text "OK, c'est fait."
 	done
 
 FanClubChairPrintText4::
-	text "Maybe we won't"
-	line "PRINT this now."
+	text "On ne va peut-être"
+	line "pas IMPRIMER ça"
+	cont "maintenant."
 	done
 
 _PokemonFanClubReceptionistText::
-	text "Our CHAIRMAN is"
-	line "very vocal about"
+	text "Notre PRESIDENT"
+	line "parle beaucoup des"
 	cont "#MON."
 	done

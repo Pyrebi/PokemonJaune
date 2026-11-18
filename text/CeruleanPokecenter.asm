@@ -1,24 +1,25 @@
 _CeruleanPokecenterSuperNerdText::
-	text "That BILL!"
+	text "Ce LEO!"
 
-	para "I heard that"
-	line "he'll do whatever"
-	cont "it takes to get"
-	cont "rare #MON!"
+	para "Il paraît qu'il"
+	line "ferait n'importe"
+	cont "quoi pour avoir"
+	cont "des #MON rares!"
 	done
 
 _CeruleanPokecenterGentlemanText::
-	text "Have you heard"
-	line "about BILL?"
+	text "Tu as entendu"
+	line "parler de LEO?"
 
-	para "Everyone calls"
-	line "him a #MANIAC!"
+	para "Tout le monde le"
+	line "traite de"
+	cont "#MANIAQUE!"
 
-	para "I think people"
-	line "are just jealous"
-	cont "of BILL, though."
+	para "Je crois que les"
+	line "gens sont juste"
+	cont "jaloux de LEO."
 
-	para "Who wouldn't want"
-	line "to boast about"
-	cont "their #MON?"
+	para "Qui ne voudrait"
+	line "pas frimer avec"
+	cont "ses #MON?"
 	done

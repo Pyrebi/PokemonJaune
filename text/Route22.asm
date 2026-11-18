@@ -1,104 +1,110 @@
 _Route22Rival1DefeatedText::
-	text "Awww!"
-	line "You just lucked"
-	cont "out!"
+	text "Ooh! Tu as juste"
+	line "eu de la chance!"
 	prompt
 
 _Route22Rival1VictoryText::
-	text "<RIVAL>: What?"
-	line "Why do I have 2"
+	text "<RIVAL>: Quoi?"
+	line "Pourquoi j'ai 2"
 	cont "#MON?"
 
-	para "You should catch"
-	cont "some more too!"
+	para "Tu devrais en"
+	line "attraper d'autres"
+	cont "aussi!"
 	prompt
 
 _Route22Rival2DefeatedText::
-	text "What!?"
+	text "Quoi!?"
 
-	para "I was just"
-	line "careless!"
+	para "J'ai juste été"
+	line "négligent!"
 	prompt
 
 _Route22Rival2VictoryText::
 	text "<RIVAL>: Hahaha!"
-	line "<PLAYER>! That's"
-	cont "your best? You're"
-	cont "nowhere near as"
-	cont "good as me, pal!"
+	line "<PLAYER>! C'est"
+	cont "tout ce que tu"
+	cont "sais faire? Tu es"
+	cont "loin d'être aussi"
+	cont "bon que moi, mon"
+	cont "pote!"
 
-	para "Go train some"
-	line "more! You loser!"
+	para "Va t'entraîner"
+	line "encore! Minable!"
 	prompt
 
 _Route22RivalBeforeBattleText1::
-	text "<RIVAL>: Hey!"
+	text "<RIVAL>: Hé!"
 	line "<PLAYER>!"
 
-	para "You're going to"
-	line "#MON LEAGUE?"
+	para "Tu vas à la LIGUE"
+	line "#MON?"
 
-	para "Forget it! You"
-	line "probably don't"
-	cont "have any BADGEs!"
+	para "Laisse tomber! Tu"
+	line "n'as sûrement"
+	cont "aucun BADGE!"
 
-	para "The guard won't"
-	line "let you through!"
+	para "Le garde ne te"
+	line "laissera pas"
+	cont "passer!"
 
-	para "By the way, did"
-	line "your #MON"
-	cont "get any stronger?"
+	para "Au fait, tes"
+	line "#MON sont"
+	cont "devenus plus"
+	cont "forts?"
 	done
 
 _Route22RivalAfterBattleText1::
-	text "I heard #MON"
-	line "LEAGUE has many"
-	cont "tough trainers!"
+	text "Il paraît que la"
+	line "LIGUE #MON a"
+	cont "plein de dresseurs"
+	cont "coriaces!"
 
-	para "I have to figure"
-	line "out how to get"
-	cont "past them!"
+	para "Je dois trouver"
+	line "comment les"
+	cont "battre!"
 
-	para "You should quit"
-	line "dawdling and get"
-	cont "a move on!"
+	para "Arrête de traîner"
+	line "et bouge-toi!"
 	done
 
 _Route22RivalBeforeBattleText2::
-	text "<RIVAL>: What?"
-	line "<PLAYER>! What a"
-	cont "surprise to see"
-	cont "you here!"
+	text "<RIVAL>: Quoi?"
+	line "<PLAYER>! Quelle"
+	cont "surprise de te"
+	cont "voir ici!"
 
-	para "So you're going to"
-	line "#MON LEAGUE?"
+	para "Alors tu vas à la"
+	line "LIGUE #MON?"
 
-	para "You collected all"
-	line "the BADGEs too?"
-	cont "That's cool!"
+	para "Tu as aussi tous"
+	line "les BADGES? C'est"
+	cont "cool!"
 
-	para "Then I'll whip"
-	line "you, <PLAYER>, as"
-	cont "a warmup for"
-	cont "#MON LEAGUE!"
+	para "Alors je vais te"
+	line "battre, <PLAYER>,"
+	cont "pour m'échauffer"
+	cont "avant la LIGUE"
+	cont "#MON!"
 
-	para "Come on!"
+	para "Allez!"
 	done
 
 _Route22RivalAfterBattleText2::
-	text "That loosened me"
-	line "up! I'm ready for"
-	cont "#MON LEAGUE!"
+	text "Ca m'a détendu! Je"
+	line "suis prêt pour la"
+	cont "LIGUE #MON!"
 
-	para "<PLAYER>, you need"
-	line "more practice!"
+	para "<PLAYER>, il te"
+	line "faut plus"
+	cont "d'entraînement!"
 
-	para "But hey, you know"
-	line "that! I'm out of"
-	cont "here. Smell ya!"
+	para "Mais bon, tu le"
+	line "sais! Je file. A"
+	cont "plus, minable!"
 	done
 
 _Route22PokemonLeagueSignText::
-	text "#MON LEAGUE"
-	line "Front Gate"
+	text "LIGUE #MON"
+	line "Porte d'entrée"
 	done

@@ -1,12 +1,12 @@
 _LavenderPokecenterGentlemanText::
-	text "TEAM ROCKET will"
-	line "do anything for"
-	cont "the sake of gold!"
+	text "La TEAM ROCKET"
+	line "ferait n'importe"
+	cont "quoi pour de l'or!"
 	done
 
 _LavenderPokecenterLittleGirlText::
-	text "I saw CUBONE's"
-	line "mother die trying"
-	cont "to escape from"
-	cont "TEAM ROCKET!"
+	text "J'ai vu la mère"
+	line "d'OSSELAIT mourir"
+	cont "en fuyant la TEAM"
+	cont "ROCKET!"
 	done

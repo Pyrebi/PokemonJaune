@@ -1,64 +1,71 @@
 _LavenderTownLittleGirlDoYouBelieveInGhostsText::
-	text "Do you believe in"
-	line "GHOSTs?"
+	text "Tu crois aux"
+	line "SPECTRES?"
 	done
 
 _LavenderTownLittleGirlSoThereAreBelieversText::
-	text "Really? So there"
-	line "are believers..."
+	text "Vraiment? Alors il"
+	line "y a des gens qui y"
+	cont "croient..."
 	done
 
 _LavenderTownLittleGirlHaHaGuessNotText::
-	text "Hahaha, I guess"
-	line "not."
+	text "Hahaha, je pensais"
+	line "bien que non."
 
-	para "That white hand"
-	line "on your shoulder,"
-	cont "it's not real."
+	para "Cette main blanche"
+	line "sur ton épaule,"
+	cont "elle n'est pas"
+	cont "réelle."
 	done
 
 _LavenderTownCooltrainerMText::
-	text "This town is known"
-	line "as the grave site"
-	cont "of #MON."
+	text "Cette ville est"
+	line "connue comme le"
+	cont "cimetière des"
+	cont "#MON."
 
-	para "Memorial services"
-	line "are held in"
-	cont "#MON TOWER."
+	para "Des cérémonies ont"
+	line "lieu dans la TOUR"
+	cont "#MON."
 	done
 
 _LavenderTownSuperNerdText::
-	text "GHOSTs appeared"
-	line "in #MON TOWER."
+	text "Des SPECTRES sont"
+	line "apparus dans la"
+	cont "TOUR #MON."
 
-	para "I think they're"
-	line "the spirits of"
-	cont "#MON that the"
-	cont "ROCKETs killed."
+	para "Je crois que ce"
+	line "sont les esprits"
+	cont "des #MON tués"
+	cont "par les ROCKETS."
 	done
 
 _LavenderTownSignText::
-	text "LAVENDER TOWN"
-	line "The Noble Purple"
-	cont "Town"
+	text "LAVANVILLE La"
+	line "Noble Ville"
+	cont "Violette"
 	done
 
 _LavenderTownSilphScopeSignText::
-	text "New SILPH SCOPE!"
+	text "Nouveau SCOPE"
+	line "SYLPHE!"
 
-	para "Make the Invisible"
-	line "Plain to See!"
+	para "Rendez l'invisible"
+	line "visible!"
 
-	para "SILPH CO."
+	para "SYLPHE SARL"
 	done
 
 _LavenderTownPokemonHouseSignText::
-	text "LAVENDER VOLUNTEER"
-	line "#MON HOUSE"
+	text "MAISON #MON"
+	line "BENEVOLE DE"
+	cont "LAVANVILLE"
 	done
 
 _LavenderTownPokemonTowerSignText::
-	text "May the Souls of"
-	line "#MON Rest Easy"
-	cont "#MON TOWER"
+	text "Que les âmes des"
+	line "#MON reposent"
+	cont "en paix TOUR"
+	cont "#MON"
 	done

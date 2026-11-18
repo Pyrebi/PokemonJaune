@@ -1,68 +1,66 @@
 _SilphCo10FSilphWorkerFImScaredText::
-	text "Waaaaa!"
-	line "I'm scared!"
+	text "Ouiiin! J'ai peur!"
 	done
 
 _SilphCo10FSilphWorkerFQuietAboutMyCryingText::
-	text "Please keep quiet"
-	line "about my crying!"
+	text "Ne dis à personne"
+	line "que j'ai pleuré!"
 	done
 
 _SilphCo10FRocketBattleText::
-	text "Welcome to the"
-	line "10F! So good of"
-	cont "you to join me!"
+	text "Bienvenue au 9E!"
+	line "Ravi que tu me"
+	cont "rejoignes!"
 	done
 
 _SilphCo10FRocketEndBattleText::
-	text "I'm"
-	line "stunned!"
+	text "Je suis sidéré!"
 	prompt
 
 _SilphCo10FRocketAfterBattleText::
-	text "Nice try, but the"
-	line "boardroom is up"
-	cont "one more floor!"
+	text "Bien essayé, mais"
+	line "la salle du"
+	cont "conseil est un"
+	cont "étage plus haut!"
 	done
 
 _SilphCo10FScientistBattleText::
-	text "Enough of your"
-	line "silly games!"
+	text "Assez de tes"
+	line "enfantillages!"
 	done
 
 _SilphCo10FScientistEndBattleText::
-	text "No"
-	line "continues left!"
+	text "Plus de crédits!"
 	prompt
 
 _SilphCo10FScientistAfterBattleText::
-	text "Are you satisfied"
-	line "with beating me?"
-	cont "Then go on home!"
+	text "Content de m'avoir"
+	line "battu? Alors"
+	cont "rentre chez toi!"
 	done
 
 _SilphCoJessieJamesText1::
-	text "Hold it right"
-	line "there, brat!@"
+	text "Pas un pas de"
+	line "plus, morveux!@"
 	text_end
 
 _SilphCoJessieJamesText2::
-	text "Our BOSS is in a"
-	line "meeting!"
+	text "Notre BOSS est en"
+	line "réunion!"
 
-	para "You better not"
-	line "disturb him!"
+	para "Tu ferais mieux de"
+	line "ne pas le"
+	cont "déranger!"
 	done
 
 _SilphCoJessieJamesText3::
-	text "Like"
-	line "always..."
+	text "Comme toujours..."
 	prompt
 
 _SilphCoJessieJamesText4::
-	text "TEAM ROCKET, blast"
-	line "off at the speed"
-	cont "of light!"
+	text "La TEAM ROCKET"
+	line "s'envole vers"
+	cont "d'autres cieux!"
 
-	para "Again...@"
+	para "Encore...@"
 	text_end

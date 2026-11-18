@@ -1,32 +1,36 @@
 _Route16FlyHouseBrunetteGirlText::
-	text "Oh, you found my"
-	line "secret retreat!"
+	text "Oh, tu as trouvé"
+	line "ma retraite"
+	cont "secrète!"
 
-	para "Please don't tell"
-	line "anyone I'm here."
-	cont "I'll make it up"
-	cont "to you with this!"
+	para "Ne dis à personne"
+	line "que je suis ici,"
+	cont "s'il te plaît. Je"
+	cont "te récompenserai"
+	cont "avec ceci!"
 	prompt
 
 _Route16FlyHouseBrunetteGirlReceivedHM02Text::
-	text "<PLAYER> received"
-	line "HM02!@"
+	text "<PLAYER> reçoit la"
+	line "CS02!@"
 	text_end
 
 _Route16FlyHouseBrunetteGirlHM02ExplanationText::
-	text "HM02 is FLY."
-	line "It will take you"
-	cont "back to any town."
+	text "La CS02 contient"
+	line "VOL. Elle t'emmène"
+	cont "dans n'importe"
+	cont "quelle ville"
+	cont "visitée."
 
-	para "Put it to good"
-	line "use!"
+	para "Fais-en bon usage!"
 	done
 
 _Route16FlyHouseBrunetteGirlHM02NoRoomText::
-	text "You don't have any"
-	line "room for this."
+	text "Tu n'as pas de"
+	line "place pour ça."
 	done
 
 _Route16FlyHouseFearowText::
-	text "FEAROW: Kyueen!"
+	text "RAPASDEPIC:"
+	line "Kyuiii!"
 	done

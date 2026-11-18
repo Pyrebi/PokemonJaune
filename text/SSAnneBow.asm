@@ -1,52 +1,54 @@
 _SSAnneBowSuperNerdText::
-	text "The party's over."
-	line "The ship will be"
-	cont "departing soon."
+	text "La fête est finie."
+	line "Le navire va"
+	cont "bientôt partir."
 	done
 
 _SSAnneBowSailor1Text::
-	text "Scrubbing decks"
-	line "is hard work!"
+	text "Frotter le pont,"
+	line "c'est dur!"
 	done
 
 _SSAnneBowCooltrainerMText::
-	text "Urf. I feel ill."
+	text "Beurk. Je ne me"
+	line "sens pas bien."
 
-	para "I stepped out to"
-	line "get some air."
+	para "Je suis sorti"
+	line "prendre l'air."
 	done
 
 _SSAnneBowSailor2BattleText::
-	text "Hey matey!"
+	text "Ohé matelot!"
 
-	para "Let's do a little"
-	line "jig!"
+	para "Dansons une petite"
+	line "gigue!"
 	done
 
 _SSAnneBowSailor2EndBattleText::
-	text "You're"
-	line "impressive!"
+	text "Tu es"
+	line "impressionnant!"
 	prompt
 
 _SSAnneBowSailor2AfterBattleText::
-	text "How many kinds of"
-	line "#MON do you"
-	cont "think there are?"
+	text "Combien d'espèces"
+	line "de #MON y"
+	cont "a-t-il, à ton"
+	cont "avis?"
 	done
 
 _SSAnneBowSailor3BattleText::
-	text "Ahoy there!"
-	line "Are you seasick?"
+	text "Ohé! Tu as le mal"
+	line "de mer?"
 	done
 
 _SSAnneBowSailor3EndBattleText::
-	text "I was"
-	line "just careless!"
+	text "J'ai juste été"
+	line "négligent!"
 	prompt
 
 _SSAnneBowSailor3AfterBattleText::
-	text "My Pa said there"
-	line "are 100 kinds of"
-	cont "#MON. I think"
-	cont "there are more."
+	text "Mon père dit qu'il"
+	line "y a 100 espèces de"
+	cont "#MON. Je crois"
+	cont "qu'il y en a plus."
 	done

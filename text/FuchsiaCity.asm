@@ -1,29 +1,32 @@
 _FuchsiaCityYoungster1Text::
-	text "Did you try the"
-	line "SAFARI GAME? Some"
-	cont "#MON can only"
-	cont "be caught there."
+	text "Tu as essayé le"
+	line "SAFARI? Certains"
+	cont "#MON ne"
+	cont "s'attrapent que"
+	cont "là-bas."
 	done
 
 _FuchsiaCityGamblerText::
-	text "SAFARI ZONE has a"
-	line "zoo in front of"
-	cont "the entrance."
+	text "Le PARC SAFARI a"
+	line "un zoo devant"
+	cont "l'entrée."
 
-	para "Out back is the"
-	line "SAFARI GAME for"
-	cont "catching #MON."
+	para "Au fond, il y a le"
+	line "SAFARI pour"
+	cont "attraper des"
+	cont "#MON."
 	done
 
 _FuchsiaCityErikText::
-	text "ERIK: Where's"
-	line "SARA? I said I'd"
-	cont "meet her here."
+	text "ERIK: Où est SARA?"
+	line "On devait se"
+	cont "retrouver ici."
 	done
 
 _FuchsiaCityYoungster2Text::
-	text "That item ball in"
-	line "there is really a"
+	text "Cette Ball"
+	line "là-dedans, c'est"
+	cont "en fait un"
 	cont "#MON."
 	done
 
@@ -32,86 +35,90 @@ _FuchsiaCityPokemonText::
 	done
 
 _FuchsiaCitySignText::
-	text "FUCHSIA CITY"
-	line "Behold! It's"
-	cont "Passion Pink!"
+	text "PARMANIE"
+	line "Contemplez! C'est"
+	cont "la Passion Rose!"
 	done
 
 _FuchsiaCitySafariGameSignText::
-	text "SAFARI GAME"
-	line "#MON-U-CATCH!"
+	text "SAFARI #MON A"
+	line "ATTRAPER!"
 	done
 
 _FuchsiaCityWardensHomeSignText::
-	text "SAFARI ZONE"
-	line "WARDEN's HOME"
+	text "MAISON DU GARDIEN"
+	line "DU PARC SAFARI"
 	done
 
 _FuchsiaCitySafariZoneSignText::
-	text "#MON PARADISE"
-	line "SAFARI ZONE"
+	text "PARADIS #MON"
+	line "PARC SAFARI"
 	done
 
 _FuchsiaCityGymSignText::
-	text "FUCHSIA CITY"
-	line "#MON GYM"
-	cont "LEADER: KOGA"
+	text "ARENE #MON de"
+	line "PARMANIE CHAMPION:"
+	cont "KOGA"
 
-	para "The Poisonous"
-	line "Ninja Master!"
+	para "Le Maître Ninja"
+	line "Venimeux!"
 	done
 
 _FuchsiaCityChanseySignText::
-	text "Name: CHANSEY"
+	text "Nom: LEVEINARD"
 
-	para "Catching one is"
-	line "all up to chance."
+	para "En attraper un,"
+	line "c'est une question"
+	cont "de chance."
 	prompt
 
 _FuchsiaCityVoltorbSignText::
-	text "Name: VOLTORB"
+	text "Nom: VOLTORBE"
 
-	para "The very image of"
-	line "a # BALL."
+	para "Le portrait craché"
+	line "d'une POKé BALL."
 	prompt
 
 _FuchsiaCityKangaskhanSignText::
-	text "Name: KANGASKHAN"
+	text "Nom: KANGOUREX"
 
-	para "A maternal #MON"
-	line "that raises its"
-	cont "young in a pouch"
-	cont "on its belly."
+	para "Un #MON"
+	line "maternel qui élève"
+	cont "son petit dans une"
+	cont "poche sur son"
+	cont "ventre."
 	prompt
 
 _FuchsiaCitySlowpokeSignText::
-	text "Name: SLOWPOKE"
+	text "Nom: RAMOLOSS"
 
-	para "Friendly and very"
-	line "slow moving."
+	para "Amical et très"
+	line "lent."
 	prompt
 
 _FuchsiaCityLaprasSignText::
-	text "Name: LAPRAS"
+	text "Nom: LOKHLASS"
 
-	para "A.K.A. the king"
-	line "of the seas."
+	para "Surnommé le roi"
+	line "des mers."
 	prompt
 
 _FuchsiaCityFossilSignOmanyteText::
-	text "Name: OMANYTE"
+	text "Nom: AMONITA"
 
-	para "A #MON that"
-	line "was resurrected"
-	cont "from a fossil."
+	para "Un #MON"
+	line "ressuscité à"
+	cont "partir d'un"
+	cont "fossile."
 	prompt
 
 _FuchsiaCityFossilSignKabutoText::
-	text "Name: KABUTO"
+	text "Nom: KABUTO"
 
-	para "A #MON that"
-	line "was resurrected"
-	cont "from a fossil."
+	para "Un #MON"
+	line "ressuscité à"
+	cont "partir d'un"
+	cont "fossile."
 	prompt
 
 _FuchsiaCityFossilSignUndeterminedText::

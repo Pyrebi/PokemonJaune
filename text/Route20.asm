@@ -1,6 +1,6 @@
 _Route20Swimmer1BattleText::
-	text "The water is"
-	line "shallow here."
+	text "L'eau est peu"
+	line "profonde ici."
 	done
 
 _Route20Swimmer1EndBattleText::
@@ -8,148 +8,153 @@ _Route20Swimmer1EndBattleText::
 	prompt
 
 _Route20Swimmer1AfterBattleText::
-	text "I wish I could"
-	line "ride my #MON."
+	text "J'aimerais pouvoir"
+	line "monter sur mon"
+	cont "#MON."
 	done
 
 _Route20Swimmer2BattleText::
-	text "SEAFOAM is a"
-	line "quiet getaway!"
+	text "Les ILES ECUME,"
+	line "c'est un coin"
+	cont "tranquille!"
 	done
 
 _Route20Swimmer2EndBattleText::
-	text "Quit it!"
+	text "Arrête ça!"
 	prompt
 
 _Route20Swimmer2AfterBattleText::
-	text "There's a huge"
-	line "cavern underneath"
-	cont "this island."
+	text "Il y a une immense"
+	line "caverne sous cette"
+	cont "île."
 	done
 
 _Route20Swimmer3BattleText::
-	text "I love floating"
-	line "with the fishes!"
+	text "J'adore flotter"
+	line "avec les poissons!"
 	done
 
 _Route20Swimmer3EndBattleText::
-	text "Yowch!"
+	text "Aïe!"
 	prompt
 
 _Route20Swimmer3AfterBattleText::
-	text "Want to float"
-	line "with me?"
+	text "Tu veux flotter"
+	line "avec moi?"
 	done
 
 _Route20Swimmer4BattleText::
-	text "Are you on"
-	line "vacation too?"
+	text "Toi aussi tu es en"
+	line "vacances?"
 	done
 
 _Route20Swimmer4EndBattleText::
-	text "No"
-	line "mercy at all!"
+	text "Aucune pitié!"
 	prompt
 
 _Route20Swimmer4AfterBattleText::
-	text "SEAFOAM used to"
-	line "be one island!"
+	text "Les ILES ECUME ne"
+	line "formaient qu'une"
+	cont "seule île"
+	cont "autrefois!"
 	done
 
 _Route20Swimmer5BattleText::
-	text "Check out my buff"
-	line "physique!"
+	text "Admire ma"
+	line "musculature!"
 	done
 
 _Route20Swimmer5EndBattleText::
-	text "Wimpy!"
+	text "Mauviette!"
 	prompt
 
 _Route20Swimmer5AfterBattleText::
-	text "I should've been"
-	line "buffing up my"
-	cont "#MON, not me!"
+	text "J'aurais dû"
+	line "muscler mes"
+	cont "#MON, pas moi!"
 	done
 
 _Route20Swimmer6BattleText::
-	text "Why are you"
-	line "riding a #MON?"
-	cont "Can't you swim?"
+	text "Pourquoi tu montes"
+	line "un #MON? Tu ne"
+	cont "sais pas nager?"
 	done
 
 _Route20Swimmer6EndBattleText::
-	text "Ouch!"
-	line "Torpedoed!"
+	text "Aïe! Torpillé!"
 	prompt
 
 _Route20Swimmer6AfterBattleText::
-	text "Riding a #MON"
-	line "sure looks fun!"
+	text "Monter un #MON,"
+	line "ça a l'air"
+	cont "amusant!"
 	done
 
 _Route20CooltrainerMBattleText::
-	text "I rode my bird"
-	line "#MON here!"
+	text "Je suis venu ici"
+	line "sur mon #MON"
+	cont "oiseau!"
 	done
 
 _Route20CooltrainerMEndBattleText::
-	text "Oh"
-	line "no!"
+	text "Oh non!"
 	prompt
 
 _Route20CooltrainerMAfterBattleText::
-	text "My birds can't"
-	line "FLY me back!"
+	text "Mes oiseaux ne"
+	line "peuvent pas me"
+	cont "ramener en VOL!"
 	done
 
 _Route20Swimmer7BattleText::
-	text "My boy friend gave"
-	line "me big pearls!"
+	text "Mon petit ami m'a"
+	line "offert de grosses"
+	cont "perles!"
 	done
 
 _Route20Swimmer7EndBattleText::
-	text "Don't"
-	line "touch my pearls!"
+	text "Ne touche pas à"
+	line "mes perles!"
 	prompt
 
 _Route20Swimmer7AfterBattleText::
-	text "Will my pearls"
-	line "grow bigger"
-	cont "inside CLOYSTER?"
+	text "Mes perles"
+	line "vont-elles grossir"
+	cont "dans un CRUSTABRI?"
 	done
 
 _Route20Swimmer8BattleText::
-	text "I swam here from"
-	line "CINNABAR ISLAND!"
+	text "J'ai nagé depuis"
+	line "CRAMOIS'ILE!"
 	done
 
 _Route20Swimmer8EndBattleText::
-	text "I'm"
-	line "so disappointed!"
+	text "Je suis si déçu!"
 	prompt
 
 _Route20Swimmer8AfterBattleText::
-	text "#MON have"
-	line "taken over an"
-	cont "abandoned mansion"
-	cont "on CINNABAR!"
+	text "Des #MON ont"
+	line "envahi un manoir"
+	cont "abandonné à"
+	cont "CRAMOIS'ILE!"
 	done
 
 _Route20Swimmer9BattleText::
-	text "CINNABAR, in the"
-	line "west, has a LAB"
-	cont "for #MON."
+	text "CRAMOIS'ILE, à"
+	line "l'ouest, a un LABO"
+	cont "#MON."
 	done
 
 _Route20Swimmer9EndBattleText::
-	text "Wait!"
+	text "Attends!"
 	prompt
 
 _Route20Swimmer9AfterBattleText::
-	text "CINNABAR is a "
-	line "volcanic island!"
+	text "CRAMOIS'ILE est"
+	line "une île"
+	cont "volcanique!"
 	done
 
 _Route20SeafoamIslandsSignText::
-	text "SEAFOAM ISLANDS"
+	text "ILES ECUME"
 	done

@@ -1,124 +1,126 @@
 _SafariZoneGateSafariZoneWorker1Text::
-	text "Welcome to the"
-	line "SAFARI ZONE!"
+	text "Bienvenue au PARC"
+	line "SAFARI!"
 	done
 
 _SafariZoneGateSafariZoneWorker1LeavingEarlyText::
-	text "Leaving early?@"
+	text "Tu pars déjà?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1ReturnSafariBallsText::
-	text "Please return any"
-	line "SAFARI BALLs you"
-	cont "have left."
+	text "Rends-nous les"
+	line "SAFARI BALLS qu'il"
+	cont "te reste."
 	done
 
 _SafariZoneGateSafariZoneWorker1GoodLuckText::
-	text "Good Luck!"
+	text "Bonne chance!"
 	done
 
 _SafariZoneGateSafariZoneWorker1GoodHaulComeAgainText::
-	text "Did you get a"
-	line "good haul?"
-	cont "Come again!"
+	text "Bonne pêche?"
+	line "Reviens quand tu"
+	cont "veux!"
 	done
 
 _SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText::
-	text "For just ¥500,"
-	line "you can catch all"
-	cont "the #MON you"
-	cont "want in the park!"
+	text "Pour seulement"
+	line "¥500, tu peux"
+	cont "attraper autant de"
+	cont "#MON que tu"
+	cont "veux dans le parc!"
 
-	para "Would you like to"
-	line "join the hunt?@"
+	para "Tu veux participer"
+	line "à la chasse?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
-	text "That'll be ¥@"
+	text "Ca fera ¥@"
 	text_bcd wPriceTemp, $c3
 	text ","
-	line "please!"
+	line "s'il te plaît!"
 
-	para "We only use a"
-	line "special # BALL"
-	cont "here."
+	para "Nous n'utilisons"
+	line "que des BALLS"
+	cont "spéciales ici."
 
-	para "<PLAYER> received"
-	line "30 SAFARI BALLs!@"
+	para "<PLAYER> reçoit"
+	line "30 SAFARI BALLS!@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1CallYouOnThePAText::
 	text_start
 
-	para "We'll call you on"
-	line "the PA when you"
-	cont "run out of time"
-	cont "or SAFARI BALLs!"
+	para "On t'appellera"
+	line "au haut-parleur à"
+	cont "la fin du temps ou"
+	cont "des SAFARI BALLS!"
 	done
 
 _SafariZoneGateSafariZoneWorker1PleaseComeAgainText::
-	text "OK! Please come"
-	line "again!"
+	text "OK! Reviens quand"
+	line "tu veux!"
 	done
 
 _SafariZoneGateSafariZoneWorker1NotEnoughMoneyText::
-	text "Oops! Not enough"
-	line "money!"
+	text "Oups! Pas assez"
+	line "d'argent!"
 	done
 
 _SafariZoneGateSafariZoneWorker2FirstTimeHereText::
-	text "Hi! Is it your"
-	line "first time here?"
+	text "Salut! C'est ta"
+	line "première visite?"
 	done
 
 _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
-	text "SAFARI ZONE has 4"
-	line "zones in it."
+	text "Le PARC SAFARI a 4"
+	line "zones."
 
-	para "Each zone has"
-	line "different kinds"
-	cont "of #MON. Use"
-	cont "SAFARI BALLs to"
-	cont "catch them!"
+	para "Chaque zone a des"
+	line "#MON"
+	cont "différents."
+	cont "Utilise les SAFARI"
+	cont "BALLS pour les"
+	cont "attraper!"
 
-	para "When you run out"
-	line "of time or SAFARI"
-	cont "BALLs, it's game"
-	cont "over for you!"
+	para "Quand le temps ou"
+	line "les SAFARI BALLS"
+	cont "sont épuisés, la"
+	cont "partie est finie!"
 
-	para "Before you go,"
-	line "open an unused"
-	cont "#MON BOX so"
-	cont "there's room for"
-	cont "new #MON!"
+	para "Avant d'y aller,"
+	line "ouvre une BOITE"
+	cont "#MON vide pour"
+	cont "avoir de la place!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::
-	text "Sorry, you're a"
-	line "regular here!"
+	text "Désolé, tu es un"
+	line "habitué!"
 	done
 
 _SafariZoneLowCostText1::
 	text_start
 
-	para "Oh, all right, pay"
-	line "me what you have."
+	para "Bon, d'accord,"
+	line "paie ce que tu as."
 	prompt
 
 _SafariZoneLowCostText2::
-	text "But, I can't give"
-	line "you all 30 BALLs."
+	text "Mais je ne peux"
+	line "pas te donner les"
+	cont "30 BALLS."
 	done
 
 _SafariZoneLowCostText3::
 	text_start
 
-	para "You're persistent,"
-	line "aren't you?"
+	para "Tu es tenace,"
+	line "hein?"
 
-	para "OK, you can go in"
-	line "for free, but"
-	cont "just this once!@"
+	para "OK, tu peux entrer"
+	line "gratuitement, mais"
+	cont "juste cette fois!@"
 	text_end
 
 _SafariZoneLowCostText4::
@@ -126,22 +128,24 @@ _SafariZoneLowCostText4::
 	done
 
 _SafariZoneLowCostText5::
-	text "I'm sorry, but you"
-	line "have to pay to"
-	cont "enter."
+	text "Désolé, mais"
+	line "l'entrée est"
+	cont "payante."
 	done
 
 _SafariZoneLowCostText6::
-	text "You can't enter"
-	line "without paying!"
+	text "Tu ne peux pas"
+	line "entrer sans payer!"
 	done
 
 _SafariZoneLowCostText7::
-	text "I said, no money,"
-	line "no entry!"
+	text "J'ai dit: pas"
+	line "d'argent, pas"
+	cont "d'entrée!"
 	done
 
 _SafariZoneLowCostText8::
-	text "Read my lips, NO!"
-	line "Get it?"
+	text "Lis sur mes"
+	line "lèvres: NON!"
+	cont "Compris?"
 	done

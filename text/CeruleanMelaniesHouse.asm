@@ -1,46 +1,50 @@
 _MelanieText1::
-	text "I take care of"
-	line "injured #MON."
+	text "Je soigne les"
+	line "#MON blessés."
 
-	para "I nursed this"
-	line "BULBASAUR back to"
-	cont "health."
+	para "J'ai remis ce"
+	line "BULBIZARRE sur"
+	cont "pied."
 
-	para "It needs a good"
-	line "trainer to take"
-	cont "care of it now.@"
+	para "Il a maintenant"
+	line "besoin d'un bon"
+	cont "dresseur pour"
+	cont "s'occuper de lui.@"
 	text_end
 
 _MelanieText2::
-	text "I know! Would you"
-	line "take care of this"
-	cont "BULBASAUR?"
+	text "J'y pense!"
+	line "Voudrais-tu"
+	cont "prendre soin de ce"
+	cont "BULBIZARRE?"
 	done
 
 _MelanieText3::
-	text "Please take care"
-	line "of BULBASAUR!@"
+	text "Prends bien soin"
+	line "de BULBIZARRE!@"
 	text_end
 
 _MelanieText4::
-	text "Is BULBASAUR"
-	line "doing well?@"
+	text "BULBIZARRE va"
+	line "bien?@"
 	text_end
 
 _MelanieText5::
-	text "Oh..."
-	line "That's too bad...@"
+	text "Oh... C'est"
+	line "dommage...@"
 	text_end
 
 _CeruleanMelaniesHouseBulbasaurText::
-	text "BULBASAUR: Bubba!"
-	line "Zoar!@"
+	text "BULBIZARRE: Bulbi!"
+	line "Zarre!@"
 	text_end
 
 _CeruleanMelaniesHouseOddishText::
-	text "ODDISH: Orddissh!@"
+	text "MYSTHERBE:"
+	line "Mysthhh!@"
 	text_end
 
 _CeruleanMelaniesHouseSandshrewText::
-	text "SANDSHREW: Pikii!@"
+	text "SABELETTE:"
+	line "Sabiii!@"
 	text_end

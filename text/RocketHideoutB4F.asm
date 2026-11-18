@@ -1,67 +1,73 @@
 _RocketHideoutJessieJamesText1::
-	text "Not another step,"
-	line "brat!@"
+	text "Pas un pas de"
+	line "plus, morveux!@"
 	text_end
 
 _RocketHideoutJessieJamesText2::
-	text "How dare you"
-	line "humiliate us at"
-	cont "MT.MOON!"
+	text "Comment as-tu osé"
+	line "nous humilier au"
+	cont "MONT SELENITE!"
 
-	para "It's payback time,"
-	line "you brat!"
+	para "L'heure de la"
+	line "revanche a sonné,"
+	cont "morveux!"
 	done
 
 _RocketHideoutJessieJamesText3::
-	text "Such"
-	line "a dreadful twerp!"
+	text "Quel affreux"
+	line "microbe!"
 	prompt
 
 _RocketHideoutJessieJamesText4::
-	text "Looks like TEAM"
-	line "ROCKET's blasting"
-	cont "off again!@"
+	text "La TEAM ROCKET"
+	line "s'envole vers"
+	cont "d'autres cieux!@"
 	text_end
 
 _RocketHideoutB4FGiovanniImpressedYouGotHereText::
-	text "So! I must say, I"
-	line "am impressed you"
-	cont "got here!"
+	text "Eh bien! Je dois"
+	line "dire que je suis"
+	cont "impressionné que"
+	cont "tu sois arrivé"
+	cont "jusqu'ici!"
 	done
 
 _RocketHideoutB4FGiovanniWhatCannotBeText::
-	text "WHAT!"
-	line "This cannot be!"
+	text "QUOI! C'est"
+	line "impossible!"
 	prompt
 
 _RocketHideoutB4FGiovanniHopeWeMeetAgainText::
-	text "I see that you"
-	line "raise #MON"
-	cont "with utmost care."
+	text "Je vois que tu"
+	line "élèves tes #MON"
+	cont "avec le plus grand"
+	cont "soin."
 
-	para "A child like you"
-	line "would never"
-	cont "understand what I"
-	cont "hope to achieve."
+	para "Un enfant comme"
+	line "toi ne"
+	cont "comprendrait"
+	cont "jamais ce que je"
+	cont "veux accomplir."
 
-	para "I shall step"
-	line "aside this time!"
+	para "Je me retire pour"
+	line "cette fois!"
 
-	para "I hope we meet"
-	line "again..."
+	para "J'espère que nous"
+	line "nous reverrons..."
 	done
 
 _RocketHideoutB4FRocketBattleText::
-	text "The elevator"
-	line "doesn't work? Who"
-	cont "has the LIFT KEY?"
+	text "L'ascenseur ne"
+	line "marche pas? Qui a"
+	cont "la CLE ASCENS.?"
 	done
 
 _RocketHideoutB4FRocketEndBattleText::
-	text "No!"
+	text "Non!"
 	prompt
 
 _RocketHideoutB4FRocketAfterBattleText::
-	text "Oh no! I dropped"
-	line "the LIFT KEY!"
+	text "Oh non! J'ai fait"
+	line "tomber la CLE"
+	cont "ASCENS.!"
 	done

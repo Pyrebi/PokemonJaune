@@ -1,19 +1,20 @@
 _VermilionPokecenterFishingGuruText::
-	text "Even if they are"
-	line "the same level,"
-	cont "#MON can have"
-	cont "very different"
-	cont "abilities."
+	text "Même à niveau"
+	line "égal, des #MON"
+	cont "peuvent avoir des"
+	cont "capacités très"
+	cont "différentes."
 
-	para "A #MON raised"
-	line "by a trainer is"
-	cont "stronger than one"
-	cont "in the wild."
+	para "Un #MON élevé"
+	line "par un dresseur"
+	cont "est plus fort"
+	cont "qu'un #MON"
+	cont "sauvage."
 	done
 
 _VermilionPokecenterSailorText::
-	text "My #MON was"
-	line "poisoned! It"
-	cont "fainted while we"
-	cont "were walking!"
+	text "Mon #MON était"
+	line "empoisonné! Il est"
+	cont "tombé K.O. pendant"
+	cont "qu'on marchait!"
 	done
