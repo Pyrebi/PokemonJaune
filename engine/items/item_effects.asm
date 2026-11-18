@@ -1682,7 +1682,59 @@ ItemUseRepelCommon:
 	jp nz, ItemUseNotTime
 	ld a, b
 	ld [wRepelRemainingSteps], a
+	ld a, [wCurItem]
+	ld [wLastRepelUsed], a
 	jp PrintItemUseTextAndRemoveItem
+
+; fin d'un REPOUSSE : propose d'en utiliser un autre du même type
+RepelWoreOffPrompt::
+	ld hl, RepelWoreOffText
+	call PrintText
+	ld a, [wLastRepelUsed]
+	and a
+	ret z
+	ld b, a
+	push bc
+	call IsItemInBag
+	pop bc
+	ret z
+	ld a, b
+	ld [wNamedObjectIndex], a
+	push bc
+	call GetItemName
+	ld hl, .UseAnotherText
+	call PrintText
+	call YesNoChoice
+	pop bc
+	ld a, [wCurrentMenuItem]
+	and a
+	ret nz
+	ld a, b
+	ldh [hItemToRemoveID], a
+	push bc
+	callfar RemoveItemByID
+	pop bc
+	ld a, b
+	ld c, 100
+	cp REPEL
+	jr z, .setSteps
+	ld c, 200
+	cp SUPER_REPEL
+	jr z, .setSteps
+	ld c, 250
+.setSteps
+	ld a, c
+	ld [wRepelRemainingSteps], a
+	ld hl, .UsedText
+	jp PrintText
+
+.UseAnotherText:
+	text_far _UseAnotherRepelText
+	text_end
+
+.UsedText:
+	text_far _UsedAnotherRepelText
+	text_end
 
 ; handles X Accuracy item
 ItemUseXAccuracy:

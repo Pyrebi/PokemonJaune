@@ -28,6 +28,20 @@ _RepelWoreOffText::
 	cont "dissipé."
 	done
 
+_UseAnotherRepelText::
+	text "Utiliser un autre"
+	line "@"
+	text_ram wNameBuffer
+	text "?"
+	done
+
+_UsedAnotherRepelText::
+	text "<PLAYER> utilise"
+	line "@"
+	text_ram wNameBuffer
+	text "!"
+	done
+
 _PokemartBuyingGreetingText::
 	text "Prends ton temps."
 	done

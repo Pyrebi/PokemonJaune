@@ -1940,7 +1940,8 @@ wOptions:: db
 
 wObtainedBadges:: flag_array NUM_BADGES
 
-wUnusedObtainedBadges:: db
+; dernier REPOUSSE utilisé (pour proposer d'en reprendre un)
+wLastRepelUsed:: db
 
 wLetterPrintingDelayFlags:: db
 
