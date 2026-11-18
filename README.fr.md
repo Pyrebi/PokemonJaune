@@ -44,6 +44,10 @@ Le ROM n'est plus identique à l'original (`make compare` échoue, c'est normal)
 
 ## Jouer dans le navigateur
 
+Le lecteur utilise l'émulateur [binjgb](https://github.com/binji/binjgb) (licence MIT,
+voir `web/LICENSE-binjgb.txt`), rapide et précis. Pour générer la page autonome :
+`python3 tools/make_standalone.py pokeyellow.gbc web/pokemon_jaune.html`.
+
 ```bash
 make web
 ```

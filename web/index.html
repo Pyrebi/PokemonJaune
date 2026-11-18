@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Lecteur GBC</title>
 <style>
-  :root { --bg:#f4f1e8; --fg:#222; --panel:#fff; --accent:#d8b100; --btn:#3a3a3a; --btnfg:#fff; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#16161a; --fg:#eee; --panel:#222228; --accent:#f2cf2b; --btn:#55555e; } }
-  * { box-sizing:border-box; }
+  :root { --bg:#f4f1e8; --fg:#222; --accent:#d8b100; --btn:#3a3a3a; --btnfg:#fff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16161a; --fg:#eee; --accent:#f2cf2b; --btn:#55555e; } }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,sans-serif;
          display:flex; flex-direction:column; align-items:center; padding:16px; gap:12px; }
   h1 { font-size:1.1rem; margin:0; }
@@ -15,7 +15,7 @@
            background:#000; border:4px solid var(--accent); border-radius:6px; }
   .bar { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
   button, label.file { background:var(--btn); color:var(--btnfg); border:0; border-radius:6px;
-           padding:8px 12px; font-size:.9rem; cursor:pointer; }
+           padding:8px 12px; font-size:.9rem; cursor:pointer; touch-action:manipulation; }
   #status { font-size:.85rem; opacity:.8; min-height:1.2em; text-align:center; }
   .pad { display:grid; grid-template-columns:repeat(3,52px); grid-template-rows:repeat(3,52px); gap:4px; }
   .pad button, .ab button { padding:0; font-weight:bold; touch-action:none; user-select:none; }
@@ -35,80 +35,170 @@
   <button id="save">Sauver état</button>
   <button id="load">Charger état</button>
   <button id="fast">Vitesse x1</button>
+  <button id="sound">Son : oui</button>
 </div>
 <div class="controls">
   <div class="pad">
-    <span></span><button data-k="UP">▲</button><span></span>
-    <button data-k="LEFT">◀</button><span></span><button data-k="RIGHT">▶</button>
-    <span></span><button data-k="DOWN">▼</button><span></span>
+    <span></span><button data-k="up">▲</button><span></span>
+    <button data-k="left">◀</button><span></span><button data-k="right">▶</button>
+    <span></span><button data-k="down">▼</button><span></span>
   </div>
   <div class="ab"><button data-k="B">B</button><button data-k="A">A</button></div>
 </div>
-<div class="ss"><button data-k="SELECT">SELECT</button><button data-k="START">START</button></div>
+<div class="ss"><button data-k="select">SELECT</button><button data-k="start">START</button></div>
 <p class="help">Clavier : flèches = croix · X = A · Z (ou W) = B · Entrée = Start · Maj droite / Retour arrière = Select.<br>
-La sauvegarde en jeu est conservée dans le navigateur (IndexedDB).</p>
+La sauvegarde en jeu est conservée dans le navigateur.</p>
 
-<script src="https://cdn.jsdelivr.net/npm/wasmboy@0.7.1/dist/wasmboy.wasm.iife.js"></script>
+<!-- Émulateur binjgb (c) Ben Smith, licence MIT : https://github.com/binji/binjgb -->
+<script src="binjgb.js"></script>
 <script>
-const W = window.WasmBoy.WasmBoy || window.WasmBoy;
+const CPU_TICKS_PER_SECOND = 4194304;
+const EVENT_NEW_FRAME = 1, EVENT_AUDIO_BUFFER_FULL = 2;
+const AUDIO_FRAMES = 4096, AUDIO_LATENCY_SEC = 0.1, MAX_UPDATE_SEC = 5 / 60;
 const statusEl = document.getElementById('status');
 const say = t => statusEl.textContent = t;
-const state = { UP:false, DOWN:false, LEFT:false, RIGHT:false, A:false, B:false, START:false, SELECT:false };
-const push = () => { try { W.setJoypadState(state); } catch (e) {} };
-let speed = 1, ready = false;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
+};
+const toB64 = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
+const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
-const keymap = { ArrowUp:'UP', ArrowDown:'DOWN', ArrowLeft:'LEFT', ArrowRight:'RIGHT',
-  KeyX:'A', KeyZ:'B', KeyW:'B', Enter:'START', ShiftRight:'SELECT', Backspace:'SELECT' };
-addEventListener('keydown', e => { const k = keymap[e.code]; if (k) { state[k] = true; push(); e.preventDefault(); W.resumeAudioContext && W.resumeAudioContext(); } });
-addEventListener('keyup',   e => { const k = keymap[e.code]; if (k) { state[k] = false; push(); e.preventDefault(); } });
+let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true;
+let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
+
+function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
+
+function withFileData(ptr, cb) {
+  const buf = heap(M._get_file_data_ptr(ptr), M._get_file_data_size(ptr));
+  const r = cb(ptr, buf); M._file_data_delete(ptr); return r;
+}
+
+function saveBattery() {
+  if (!e) return;
+  withFileData(M._ext_ram_file_data_new(e), (p, buf) => {
+    M._emulator_write_ext_ram(e, p);
+    store.set(romKey + ':sram', toB64(buf));
+  });
+}
+
+function loadBattery() {
+  const s = store.get(romKey + ':sram'); if (!s) return;
+  const data = fromB64(s);
+  withFileData(M._ext_ram_file_data_new(e), (p, buf) => {
+    if (buf.length === data.length) { buf.set(data); M._emulator_read_ext_ram(e, p); }
+  });
+}
+
+function pushAudio() {
+  if (!soundOn || !audioCtx || audioCtx.state !== 'running') return;
+  const now = audioCtx.currentTime;
+  if (audioStart < now) audioStart = now + AUDIO_LATENCY_SEC;
+  const b = audioCtx.createBuffer(2, AUDIO_FRAMES, audioCtx.sampleRate);
+  const c0 = b.getChannelData(0), c1 = b.getChannelData(1);
+  for (let i = 0; i < AUDIO_FRAMES; i++) { c0[i] = audioBuf[2 * i] / 255 * 0.5; c1[i] = audioBuf[2 * i + 1] / 255 * 0.5; }
+  const src = audioCtx.createBufferSource(); src.buffer = b; src.connect(audioCtx.destination); src.start(audioStart);
+  audioStart += AUDIO_FRAMES / audioCtx.sampleRate;
+}
+
+function frame(ms) {
+  if (!running) return;
+  requestAnimationFrame(frame);
+  const now = ms / 1000;
+  const delta = Math.min(Math.max(now - (lastRaf || now), 0), MAX_UPDATE_SEC) * speed;
+  lastRaf = now;
+  const until = M._emulator_get_ticks_f64(e) + delta * CPU_TICKS_PER_SECOND - leftover;
+  let newFrame = false;
+  for (let guard = 0; guard < 1000; guard++) {
+    const ev = M._emulator_run_until_f64(e, until);
+    if (ev & EVENT_NEW_FRAME) newFrame = true;
+    if (ev & EVENT_AUDIO_BUFFER_FULL) { if (speed === 1) pushAudio(); }
+    if (M._emulator_get_ticks_f64(e) >= until) break;
+  }
+  leftover = M._emulator_get_ticks_f64(e) - until;
+  if (newFrame) { imageData.data.set(frameBuf); ctx2d.putImageData(imageData, 0, 0); }
+  if (M._emulator_was_ext_ram_updated(e)) saveBattery();
+}
+
+async function start(bytes, name) {
+  say('Démarrage…');
+  if (!M) M = await Binjgb(window.BINJGB_WASM ? {
+    instantiateWasm(imports, receive) {
+      WebAssembly.instantiate(window.BINJGB_WASM, imports).then(r => receive(r.instance));
+      return {};
+    } } : {});
+  if (e) { running = false; M._emulator_delete(e); e = 0; }
+  if (!audioCtx) { try { audioCtx = new AudioContext(); } catch (err) { audioCtx = null; } }
+  const size = (bytes.length + 0x7fff) & ~0x7fff;
+  const romPtr = M._malloc(size);
+  heap(romPtr, size).fill(0).set(bytes);
+  e = M._emulator_new_simple(romPtr, size, audioCtx ? audioCtx.sampleRate : 44100, AUDIO_FRAMES, 2);
+  if (!e) { say('ROM invalide.'); return; }
+  M._emulator_set_default_joypad_callback(e, M._joypad_new()); // nécessaire pour les touches
+  romKey = 'gbc:' + name + ':' + bytes.length;
+  frameBuf = heap(M._get_frame_buffer_ptr(e), M._get_frame_buffer_size(e));
+  audioBuf = heap(M._get_audio_buffer_ptr(e), M._get_audio_buffer_capacity(e));
+  ctx2d = document.getElementById('screen').getContext('2d');
+  imageData = ctx2d.createImageData(160, 144);
+  loadBattery();
+  running = true; lastRaf = 0; leftover = 0;
+  requestAnimationFrame(frame);
+  say('En jeu : ' + name);
+}
+
+// ----- touches -----
+const setKey = (k, v) => { if (e) M['_set_joyp_' + k](e, v ? 1 : 0); };
+const keymap = { ArrowUp:'up', ArrowDown:'down', ArrowLeft:'left', ArrowRight:'right',
+  KeyX:'A', KeyZ:'B', KeyW:'B', Enter:'start', ShiftRight:'select', Backspace:'select' };
+const resumeAudio = () => { if (audioCtx && audioCtx.state !== 'running') audioCtx.resume(); };
+addEventListener('keydown', ev => { const k = keymap[ev.code]; if (k) { setKey(k, true); ev.preventDefault(); resumeAudio(); } });
+addEventListener('keyup',   ev => { const k = keymap[ev.code]; if (k) { setKey(k, false); ev.preventDefault(); } });
 document.querySelectorAll('[data-k]').forEach(b => {
   const k = b.dataset.k;
-  const on  = e => { e.preventDefault(); state[k] = true;  push(); W.resumeAudioContext && W.resumeAudioContext(); };
-  const off = e => { e.preventDefault(); state[k] = false; push(); };
+  const on  = ev => { ev.preventDefault(); setKey(k, true); resumeAudio(); };
+  const off = ev => { ev.preventDefault(); setKey(k, false); };
   b.addEventListener('pointerdown', on); b.addEventListener('pointerup', off);
   b.addEventListener('pointerleave', off); b.addEventListener('pointercancel', off);
 });
+addEventListener('visibilitychange', () => { if (document.hidden) saveBattery(); });
+addEventListener('pagehide', saveBattery);
 
-async function start(bytes, name) {
-  say('Démarrage de ' + name + '…');
-  await W.config({
-    isGbcEnabled: true, isAudioEnabled: true, frameSkip: 0,
-    gameboyFrameRate: 60, saveStateCallback: s => s,
-    onPlay: () => say('En jeu : ' + name), onPause: () => say('En pause'),
-  }, document.getElementById('screen'));
-  W.disableDefaultJoypad();
-  await W.loadROM(bytes);
-  await W.play();
-  ready = true;
-}
-
-document.getElementById('file').addEventListener('change', async e => {
-  const f = e.target.files[0]; if (!f) return;
-  start(new Uint8Array(await f.arrayBuffer()), f.name);
+// ----- boutons -----
+document.getElementById('file').addEventListener('change', async ev => {
+  const f = ev.target.files[0]; if (f) start(new Uint8Array(await f.arrayBuffer()), f.name);
 });
-document.getElementById('pause').onclick = async () => {
-  if (!ready) return;
-  if (W.isPlaying()) await W.pause(); else await W.play();
+document.getElementById('pause').onclick = ev => {
+  if (!e) return;
+  running = !running; ev.target.textContent = running ? 'Pause' : 'Reprendre';
+  if (running) { lastRaf = 0; requestAnimationFrame(frame); say('En jeu'); } else { saveBattery(); say('En pause'); }
 };
-document.getElementById('save').onclick = async () => {
-  if (!ready) return; await W.saveState(); await W.play(); say('État sauvegardé');
+document.getElementById('save').onclick = () => {
+  if (!e) return;
+  withFileData(M._state_file_data_new(e), (p, buf) => {
+    M._emulator_write_state(e, p);
+    say(store.set(romKey + ':state', toB64(buf)) ? 'État sauvegardé' : 'Impossible de sauvegarder l\'état');
+  });
 };
-document.getElementById('load').onclick = async () => {
-  if (!ready) return;
-  const states = await W.getSaveStates();
-  if (!states || !states.length) return say('Aucun état sauvegardé');
-  states.sort((a, b) => b.date - a.date);
-  await W.loadState(states[0]); await W.play(); say('État chargé');
+document.getElementById('load').onclick = () => {
+  if (!e) return;
+  const s = store.get(romKey + ':state'); if (!s) return say('Aucun état sauvegardé');
+  const data = fromB64(s);
+  withFileData(M._state_file_data_new(e), (p, buf) => {
+    if (buf.length !== data.length) return say('État incompatible');
+    buf.set(data); M._emulator_read_state(e, p); say('État chargé');
+  });
 };
-document.getElementById('fast').onclick = e => {
-  speed = speed === 1 ? 2 : speed === 2 ? 4 : 1;
-  W.setSpeed(speed); e.target.textContent = 'Vitesse x' + speed;
+document.getElementById('fast').onclick = ev => {
+  speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; ev.target.textContent = 'Vitesse x' + speed;
+};
+document.getElementById('sound').onclick = ev => {
+  soundOn = !soundOn; ev.target.textContent = 'Son : ' + (soundOn ? 'oui' : 'non'); resumeAudio();
 };
 
 // Si le ROM compilé est servi à côté de la page (make web), on le lance directement.
 fetch('pokeyellow.gbc').then(r => r.ok ? r.arrayBuffer() : Promise.reject())
   .then(b => start(new Uint8Array(b), 'pokeyellow.gbc'))
-  .catch(e => { if (e) console.error(e); say('Choisis le fichier pokeyellow.gbc compilé pour commencer.'); });
+  .catch(err => { if (err) console.error(err); say('Choisis le fichier pokeyellow.gbc compilé pour commencer.'); });
 </script>
 </body>
 </html>
