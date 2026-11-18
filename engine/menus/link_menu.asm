@@ -547,29 +547,29 @@ ColosseumCupRulesTextPointers:
 	dw PetitCupRulesText
 
 PokeCupRulesText:
-	db   "LVs of 3<PKMN>:50-55"
-	next "Sum of LVs:155 MAX"
-	next "MEW can't attend.@"
+	db   "3<PKMN> N.50 à 55"
+	next "Total N.:155 MAX"
+	next "MEW interdit.@"
 
 PikaCupRulesText:
-	db   "LVs of 3<PKMN>:15-20"
-	next "Sum of LVs:50 MAX"
-	next "MEW can't attend.@"
+	db   "3<PKMN> N.15 à 20"
+	next "Total N.:50 MAX"
+	next "MEW interdit.@"
 
 PetitCupRulesText:
-	db   "3 Basic <PKMN>.LV25-30"
-	next "Sum of LVs:80 MAX"
+	db   "3<PKMN> base N.25-30"
+	next "Total N.:80 MAX"
 	next "6’8” and 44lb MAX@"
 
 ColosseumMenuText:
-	db   "View"
-	next "Rules@"
+	db   "Voir"
+	next "Règles@"
 
 ColosseumCupsMenuText:
-	db   "# Cup"
-	next "Pika Cup"
-	next "Petit Cup"
-	next "CANCEL@"
+	db   "Coupe #"
+	next "Coupe Pika"
+	next "Coupe Petit"
+	next "RETOUR@"
 
 Colosseum3MonsText:
 	text_far _Colosseum3MonsText
@@ -915,7 +915,7 @@ ColosseumClearText:
 	text_end
 
 TradeCenterText:
-	db   "TRADE CENTER"
-	next "COLOSSEUM"
-	next "COLOSSEUM2"
-	next "CANCEL@"
+	db   "CENTRE TROC"
+	next "COLISEE"
+	next "COLISEE2"
+	next "RETOUR@"

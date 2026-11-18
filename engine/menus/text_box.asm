@@ -475,8 +475,8 @@ INCLUDE "data/moves/field_move_names.asm"
 
 PokemonMenuEntries:
 	db   "STATS"
-	next "SWITCH"
-	next "CANCEL@"
+	next "ORDRE"
+	next "RETOUR@"
 
 GetMonFieldMoves:
 	ld a, [wWhichPokemon]

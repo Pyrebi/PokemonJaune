@@ -52,14 +52,14 @@ DiplomaText:
 	db CIRCLE_TILE_ID, "Diploma", CIRCLE_TILE_ID, "@"
 
 DiplomaPlayer:
-	db "Player@"
+	db "Joueur@"
 
 DiplomaCongrats:
-	db   "Congrats! This"
-	next "diploma certifies"
-	next "that you have"
-	next "completed your"
+	db   "Bravo! Ce diplôme"
+	next "certifie que tu"
+	next "as complété ton"
 	next "#DEX.@"
+	next "@"
 
 DiplomaGameFreak:
 	db "GAME FREAK@"
@@ -120,7 +120,7 @@ DiplomaMewTiles:
 INCBIN "gfx/diploma/diploma_mew.tilemap"
 
 DiplomaPlayTime:
-	db "PLAY TIME@"
+	db "TEMPS JEU@"
 
 DiplomaDrawHorizontalBorder:
 	ld c, SCREEN_WIDTH / 2

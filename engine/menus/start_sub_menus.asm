@@ -387,7 +387,7 @@ StartMenu_Item::
 	ld hl, wTopMenuItemY
 	ld a, 11
 	ld [hli], a ; top menu item Y
-	ld a, 14
+	ld a, 13
 	ld [hli], a ; top menu item X
 	xor a
 	ld [hli], a ; current menu item ID
@@ -610,9 +610,9 @@ TrainerInfo_FarCopyData:
 	jp FarCopyData
 
 TrainerInfo_NameMoneyTimeText:
-	db   "NAME/"
-	next "MONEY/"
-	next "TIME/@"
+	db   "NOM/"
+	next "ARGENT/"
+	next "TEMPS/@"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:

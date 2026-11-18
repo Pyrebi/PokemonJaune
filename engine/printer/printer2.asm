@@ -162,15 +162,15 @@ Printer_GetMonStats:
 	ret
 
 .OT:
-	db "OT/@"
+	db "DO/@"
 
 .IDNo:
 	db "<ID>№/@"
 
 .Stats:
-	db   "ATTACK"
+	db   "ATTAQUE"
 	next "DEFENSE"
-	next "SPEED"
+	next "VITESSE"
 	next "SPECIAL@"
 
 .Blank:
