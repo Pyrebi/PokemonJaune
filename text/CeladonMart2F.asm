@@ -1,7 +1,8 @@
 _CeladonMart2FMiddleAgedManText::
 	text "Le SUPEREPOUSSE"
 	line "éloigne les"
-	cont "#MON faibles..."
+	cont "#MON"
+	cont "faibles..."
 
 	para "C'est un REPOUSSE"
 	line "plus puissant!"

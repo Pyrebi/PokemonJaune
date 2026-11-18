@@ -7,9 +7,9 @@ _BluesHouseDaisyRivalAtLabText::
 
 _BluesHouseDaisyOfferMapText::
 	text "Grand-père t'a"
-	line "confié une course?"
-	cont "Tiens, ceci va"
-	cont "t'aider!"
+	line "confié une"
+	cont "course? Tiens,"
+	cont "ceci va t'aider!"
 	prompt
 
 _GotMapText::
@@ -39,5 +39,6 @@ _BluesHouseDaisyWalkingText::
 
 _BluesHouseTownMapText::
 	text "C'est une grande"
-	line "carte! Très utile!"
+	line "carte! Très"
+	cont "utile!"
 	done

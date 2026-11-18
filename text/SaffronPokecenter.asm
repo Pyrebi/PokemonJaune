@@ -1,8 +1,9 @@
 _SaffronPokecenterBeautyText::
 	text "Les #MON"
 	line "grandissent à des"
-	cont "rythmes différents"
-	cont "selon l'espèce."
+	cont "rythmes"
+	cont "différents selon"
+	cont "l'espèce."
 	done
 
 _SaffronPokecenterGentlemanText::

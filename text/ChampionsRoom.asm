@@ -1,8 +1,8 @@
 _ChampionsRoomRivalIntroText::
 	text "<RIVAL>: Hé!"
 
-	para "J'avais hâte de te"
-	line "voir, <PLAYER>!"
+	para "J'avais hâte de"
+	line "te voir, <PLAYER>!"
 
 	para "Mon rival doit"
 	line "être fort pour me"
@@ -17,9 +17,9 @@ _ChampionsRoomRivalIntroText::
 	para "Et ce n'est pas"
 	line "tout, j'ai formé"
 	cont "des équipes"
-	cont "capables de battre"
-	cont "n'importe quel"
-	cont "type!"
+	cont "capables de"
+	cont "battre n'importe"
+	cont "quel type!"
 
 	para "Et maintenant!"
 
@@ -36,7 +36,8 @@ _ChampionsRoomRivalIntroText::
 
 	para "Je suis le"
 	line "dresseur le plus"
-	cont "puissant du monde!"
+	cont "puissant du"
+	cont "monde!"
 	done
 
 _RivalDefeatedText::
@@ -48,30 +49,34 @@ _RivalDefeatedText::
 	line "travail pour"
 	cont "devenir champion?"
 
-	para "Mon règne est déjà"
-	line "fini? C'est pas"
-	cont "juste!"
+	para "Mon règne est"
+	line "déjà fini? C'est"
+	cont "pas juste!"
 	prompt
 
 _RivalVictoryText::
 	text "Hahaha! J'ai"
-	line "gagné, j'ai gagné!"
+	line "gagné, j'ai"
+	cont "gagné!"
 
 	para "Je suis trop fort"
-	line "pour toi, <PLAYER>!"
+	line "pour toi,"
+	cont "<PLAYER>!"
 
 	para "Tu as bien fait"
 	line "d'arriver jusqu'à"
 	cont "moi, <RIVAL>, le"
-	cont "génie des #MON!"
+	cont "génie des"
+	cont "#MON!"
 
 	para "Bien essayé,"
 	line "minable! Hahaha!"
 	prompt
 
 _ChampionsRoomRivalAfterBattleText::
-	text "Pourquoi? Pourquoi"
-	line "ai-je perdu?"
+	text "Pourquoi?"
+	line "Pourquoi ai-je"
+	cont "perdu?"
 
 	para "Je n'ai jamais"
 	line "fait d'erreur en"
@@ -93,7 +98,7 @@ _ChampionsRoomOakText::
 	done
 
 _ChampionsRoomOakCongratulatesPlayerText::
-	text "CHEN: Tu as gagné!"
+	text "CHEN: Bravo!"
 	line "Félicitations!"
 	cont "Tu es le nouveau"
 	cont "champion de la"
@@ -147,8 +152,9 @@ _ChampionsRoomOakComeWithMeText::
 	cont "pas seulement ton"
 	cont "oeuvre!"
 
-	para "Le lien qui t'unit"
-	line "à tes #MON est"
+	para "Le lien qui"
+	line "t'unit à tes"
+	cont "#MON est"
 	cont "merveilleux!"
 
 	para "<PLAYER>! Viens"

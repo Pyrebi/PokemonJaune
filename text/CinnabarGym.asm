@@ -8,8 +8,8 @@ _CinnabarGymBlainePreBattleText::
 
 	para "Mes #MON"
 	line "ardents vont"
-	cont "réduire en cendres"
-	cont "tous les"
+	cont "réduire en"
+	cont "cendres tous les"
 	cont "challengers!"
 
 	para "Hah! J'espère que"
@@ -29,9 +29,9 @@ _CinnabarGymBlainePostBattleAdviceText::
 	line "l'attaque de feu"
 	cont "ultime!"
 
-	para "Ne la gaspille pas"
-	line "contre des #MON"
-	cont "eau!"
+	para "Ne la gaspille"
+	line "pas contre des"
+	cont "#MON eau!"
 	done
 
 _CinnabarGymBlaineVolcanoBadgeInfoText::
@@ -42,8 +42,8 @@ _CinnabarGymBlaineVolcanoBadgeInfoText::
 	cont "SPECIAL de tes"
 	cont "#MON!"
 
-	para "Tiens, prends ceci"
-	line "aussi!"
+	para "Tiens, prends"
+	line "ceci aussi!"
 	done
 
 _CinnabarGymBlaineReceivedTM38Text::
@@ -76,12 +76,13 @@ _CinnabarGymSuperNerd1BattleText::
 	text "Sais-tu à quel"
 	line "point le souffle"
 	cont "de feu d'un"
-	cont "#MON est chaud?"
+	cont "#MON est"
+	cont "chaud?"
 	done
 
 _CinnabarGymSuperNerd1EndBattleText::
-	text "Aïe! Chaud, chaud,"
-	line "chaud!"
+	text "Aïe! Chaud,"
+	line "chaud, chaud!"
 	prompt
 
 _CinnabarGymSuperNerd1AfterBattleText::
@@ -94,10 +95,10 @@ _CinnabarGymSuperNerd1AfterBattleText::
 	done
 
 _CinnabarGymSuperNerd2BattleText::
-	text "J'étais un voleur,"
-	line "mais je suis"
-	cont "devenu un honnête"
-	cont "dresseur!"
+	text "J'étais un"
+	line "voleur, mais je"
+	cont "suis devenu un"
+	cont "honnête dresseur!"
 	done
 
 _CinnabarGymSuperNerd2EndBattleText::
@@ -148,8 +149,8 @@ _CinnabarGymSuperNerd4AfterBattleText::
 
 _CinnabarGymSuperNerd5BattleText::
 	text "Je sais pourquoi"
-	line "AUGUSTE est devenu"
-	cont "dresseur!"
+	line "AUGUSTE est"
+	cont "devenu dresseur!"
 	done
 
 _CinnabarGymSuperNerd5EndBattleText::
@@ -199,8 +200,8 @@ _CinnabarGymSuperNerd7EndBattleText::
 _CinnabarGymSuperNerd7AfterBattleText::
 	text "L'eau bat le feu!"
 	line "Mais le feu fait"
-	cont "fondre les #MON"
-	cont "glace!"
+	cont "fondre les"
+	cont "#MON glace!"
 	done
 
 _CinnabarGymGymGuideChampInMakingText::
@@ -208,8 +209,9 @@ _CinnabarGymGymGuideChampInMakingText::
 	line "champion!"
 
 	para "Le bouillant"
-	line "AUGUSTE est un pro"
-	cont "des #MON feu!"
+	line "AUGUSTE est un"
+	cont "pro des #MON"
+	cont "feu!"
 
 	para "Refroidis ses"
 	line "ardeurs avec de"
@@ -229,18 +231,20 @@ _CinnabarGymText_1::
 	line "aussi appelée"
 	cont "l'ARENE QUIZ."
 
-	para "Tu dois répondre à"
-	line "un quiz si tu veux"
-	cont "voir AUGUSTE."
+	para "Tu dois répondre"
+	line "à un quiz si tu"
+	cont "veux voir"
+	cont "AUGUSTE."
 
 	para "Si tu réponds"
-	line "juste, tu n'as pas"
-	cont "à nous combattre."
+	line "juste, tu n'as"
+	cont "pas à nous"
+	cont "combattre."
 	done
 
 _CinnabarGymText_2::
-	text "Tu crois pouvoir y"
-	line "arriver?"
+	text "Tu crois pouvoir"
+	line "y arriver?"
 	done
 
 _CinnabarGymText_3::

@@ -10,19 +10,20 @@ _IndigoPlateauLobbyGymGuideText::
 
 	para "Si tu perds, tu"
 	line "dois tout"
-	cont "recommencer! C'est"
-	cont "le moment! Fonce!"
+	cont "recommencer!"
+	cont "C'est le moment!"
+	cont "Fonce!"
 	done
 
 _IndigoPlateauLobbyCooltrainerFText::
-	text "A partir d'ici, tu"
-	line "affrontes le"
+	text "A partir d'ici,"
+	line "tu affrontes le"
 	cont "CONSEIL 4 un par"
 	cont "un!"
 
 	para "Si tu gagnes, une"
-	line "porte s'ouvre vers"
-	cont "le dresseur"
+	line "porte s'ouvre"
+	cont "vers le dresseur"
 	cont "suivant! Bonne"
 	cont "chance!"
 	done

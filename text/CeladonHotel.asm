@@ -1,7 +1,7 @@
 _CeladonHotelGrannyText::
 	text "Des #MON? Non,"
-	line "cet hôtel est pour"
-	cont "les humains."
+	line "cet hôtel est"
+	cont "pour les humains."
 
 	para "Nous sommes"
 	line "complets."
@@ -10,11 +10,12 @@ _CeladonHotelGrannyText::
 _CeladonHotelBeautyText::
 	text "Je suis en"
 	line "vacances avec mon"
-	cont "frère et mon petit"
-	cont "ami."
+	cont "frère et mon"
+	cont "petit ami."
 
-	para "CELADOPOLE est une"
-	line "si jolie ville!"
+	para "CELADOPOLE est"
+	line "une si jolie"
+	cont "ville!"
 	done
 
 _CeladonHotelSuperNerdText::

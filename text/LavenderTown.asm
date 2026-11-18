@@ -4,19 +4,20 @@ _LavenderTownLittleGirlDoYouBelieveInGhostsText::
 	done
 
 _LavenderTownLittleGirlSoThereAreBelieversText::
-	text "Vraiment? Alors il"
-	line "y a des gens qui y"
-	cont "croient..."
+	text "Vraiment? Alors"
+	line "il y a des gens"
+	cont "qui y croient..."
 	done
 
 _LavenderTownLittleGirlHaHaGuessNotText::
-	text "Hahaha, je pensais"
-	line "bien que non."
+	text "Hahaha, je"
+	line "pensais bien que"
+	cont "non."
 
-	para "Cette main blanche"
-	line "sur ton épaule,"
-	cont "elle n'est pas"
-	cont "réelle."
+	para "Cette main"
+	line "blanche sur ton"
+	cont "épaule, elle"
+	cont "n'est pas réelle."
 	done
 
 _LavenderTownCooltrainerMText::
@@ -25,9 +26,9 @@ _LavenderTownCooltrainerMText::
 	cont "cimetière des"
 	cont "#MON."
 
-	para "Des cérémonies ont"
-	line "lieu dans la TOUR"
-	cont "#MON."
+	para "Des cérémonies"
+	line "ont lieu dans la"
+	cont "TOUR #MON."
 	done
 
 _LavenderTownSuperNerdText::
@@ -51,8 +52,9 @@ _LavenderTownSilphScopeSignText::
 	text "Nouveau SCOPE"
 	line "SYLPHE!"
 
-	para "Rendez l'invisible"
-	line "visible!"
+	para "Rendez"
+	line "l'invisible"
+	cont "visible!"
 
 	para "SYLPHE SARL"
 	done

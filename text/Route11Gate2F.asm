@@ -9,8 +9,9 @@ _Route11Gate2FOaksAideItemfinderDescriptionText::
 
 	para "Il ne peut pas le"
 	line "localiser"
-	cont "précisément, alors"
-	cont "tu dois chercher"
+	cont "précisément,"
+	cont "alors tu dois"
+	cont "chercher"
 	cont "toi-même!"
 	done
 
@@ -35,8 +36,8 @@ _Route11Gate2FRightBinocularsText::
 	line "les jumelles."
 
 	para "Le seul moyen"
-	line "d'aller d'AZURIA à"
-	cont "LAVANVILLE est de"
-	cont "passer par la"
+	line "d'aller d'AZURIA"
+	cont "à LAVANVILLE est"
+	cont "de passer par la"
 	cont "GROTTE."
 	done

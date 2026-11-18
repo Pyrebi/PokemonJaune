@@ -5,10 +5,11 @@ _CeruleanCityRivalPreBattleText::
 	para "Tu traînes encore"
 	line "par ici?"
 
-	para "Moi, tout va bien!"
-	line "J'ai attrapé plein"
-	cont "de #MON forts"
-	cont "et malins!"
+	para "Moi, tout va"
+	line "bien! J'ai"
+	cont "attrapé plein de"
+	cont "#MON forts et"
+	cont "malins!"
 
 	para "Allez, montre-moi"
 	line "ce que tu as"
@@ -32,8 +33,8 @@ _CeruleanCityRivalIWentToBillsText::
 
 	para "Je suis allé chez"
 	line "LEO et il m'a"
-	cont "montré ses #MON"
-	cont "rares!"
+	cont "montré ses"
+	cont "#MON rares!"
 
 	para "Ca a ajouté plein"
 	line "de pages à mon"
@@ -42,7 +43,8 @@ _CeruleanCityRivalIWentToBillsText::
 	para "Après tout, LEO"
 	line "est un"
 	cont "#MANIAQUE de"
-	cont "renommée mondiale!"
+	cont "renommée"
+	cont "mondiale!"
 
 	para "Il a inventé le"
 	line "Système de"
@@ -50,8 +52,8 @@ _CeruleanCityRivalIWentToBillsText::
 	cont "sur PC!"
 
 	para "Comme tu utilises"
-	line "son système, va le"
-	cont "remercier!"
+	line "son système, va"
+	cont "le remercier!"
 
 	para "Bon, faut que j'y"
 	line "aille! A plus,"
@@ -63,9 +65,10 @@ _CeruleanCityRocketText::
 	line "pas ton jardin!"
 	cont "Hein? Moi?"
 
-	para "Je suis un passant"
-	line "innocent! Tu ne me"
-	cont "crois pas?"
+	para "Je suis un"
+	line "passant innocent!"
+	cont "Tu ne me crois"
+	cont "pas?"
 	done
 
 _CeruleanCityRocketReceivedTM28Text::
@@ -90,22 +93,25 @@ _CeruleanCityRocketTM28NoRoomText::
 	done
 
 _CeruleanCityRocketIGiveUpText::
-	text "Stop! J'abandonne!"
-	line "Je pars sans faire"
+	text "Stop!"
+	line "J'abandonne! Je"
+	cont "pars sans faire"
 	cont "d'histoires!"
 	prompt
 
 _CeruleanCityRocketIllReturnTheTMText::
-	text "OK! Je rends la CT"
-	line "que j'ai volée!"
+	text "OK! Je rends la"
+	line "CT que j'ai"
+	cont "volée!"
 	prompt
 
 _CeruleanCityCooltrainerMText::
 	text "Toi aussi, tu es"
 	line "dresseur?"
 	cont "Capturer,"
-	cont "combattre... c'est"
-	cont "une vie difficile."
+	cont "combattre..."
+	cont "c'est une vie"
+	cont "difficile."
 	done
 
 _CeruleanCitySuperNerd1Text::
@@ -120,8 +126,8 @@ _CeruleanCitySuperNerd1Text::
 _CeruleanCitySuperNerd2Text::
 	text "Tu fais une"
 	line "encyclopédie sur"
-	cont "les #MON? C'est"
-	cont "amusant."
+	cont "les #MON?"
+	cont "C'est amusant."
 	done
 
 _CeruleanCityGuardText::
@@ -130,8 +136,9 @@ _CeruleanCityGuardText::
 	cont "cambriolés."
 
 	para "Nous sommes sûrs"
-	line "que la TEAM ROCKET"
-	cont "est derrière ce"
+	line "que la TEAM"
+	cont "ROCKET est"
+	cont "derrière ce"
 	cont "méfait."
 
 	para "Même notre POLICE"
@@ -141,14 +148,16 @@ _CeruleanCityGuardText::
 
 _CeruleanCityCooltrainerF1ElectrodeUseSonicboomText::
 	text "OK! ELECTRODE!"
-	line "SONICBOOM! S'il te"
-	cont "plaît ELECTRODE,"
+	line "SONICBOOM! S'il"
+	cont "te plaît"
+	cont "ELECTRODE,"
 	cont "concentre-toi!"
 	done
 
 _CeruleanCityCooltrainerF1ElectrodePunchText::
-	text "ELECTRODE, CHARGE!"
-	line "Non! Encore raté!"
+	text "ELECTRODE,"
+	line "CHARGE! Non!"
+	cont "Encore raté!"
 	done
 
 _CeruleanCityCooltrainerF1ElectrodeWithdrawText::
@@ -161,14 +170,15 @@ _CeruleanCityCooltrainerF1ElectrodeWithdrawText::
 	cont "difficile!"
 
 	para "L'obéissance de"
-	line "tes #MON dépend"
-	cont "de tes talents de"
+	line "tes #MON"
+	cont "dépend de tes"
+	cont "talents de"
 	cont "dresseur!"
 	done
 
 _CeruleanCityElectrodeTookASnoozeText::
-	text "ELECTRODE fait une"
-	line "sieste..."
+	text "ELECTRODE fait"
+	line "une sieste..."
 	done
 
 _CeruleanCityElectrodeIsLoafingAroundText::
@@ -200,13 +210,13 @@ _CeruleanCitySuperNerd3Text::
 	text "C'est la CAVE"
 	line "AZUREE! Des"
 	cont "#MON"
-	cont "terriblement forts"
-	cont "y vivent!"
+	cont "terriblement"
+	cont "forts y vivent!"
 
 	para "Seul le champion"
 	line "de la LIGUE"
-	cont "#MON a le droit"
-	cont "d'y entrer!"
+	cont "#MON a le"
+	cont "droit d'y entrer!"
 	done
 
 _CeruleanCitySignText::
@@ -234,7 +244,8 @@ _CeruleanCityBikeShopSign::
 _CeruleanCityGymSign::
 	text "ARENE #MON"
 	line "d'AZURIA"
-	cont "CHAMPIONNE: ONDINE"
+	cont "CHAMPIONNE:"
+	cont "ONDINE"
 
 	para "La Sirène Garçon"
 	line "Manqué!"

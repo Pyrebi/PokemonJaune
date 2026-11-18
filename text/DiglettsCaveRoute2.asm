@@ -5,7 +5,7 @@ _DiglettsCaveRoute2FishingGuruText::
 	cont "fait peur."
 
 	para "Si seulement le"
-	line "FLASH d'un #MON"
-	cont "pouvait"
+	line "FLASH d'un"
+	cont "#MON pouvait"
 	cont "l'éclairer..."
 	done

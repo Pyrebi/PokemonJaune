@@ -1,8 +1,8 @@
 _FuchsiaBillsGrandpasHouseMiddleAgedWomanText::
-	text "Le GARDIEN du PARC"
-	line "SAFARI est vieux,"
-	cont "mais toujours"
-	cont "actif!"
+	text "Le GARDIEN du"
+	line "PARC SAFARI est"
+	cont "vieux, mais"
+	cont "toujours actif!"
 
 	para "Il a un dentier,"
 	line "par contre."
@@ -15,16 +15,17 @@ _FuchsiaBillsGrandpasHouseBillsGrandpaText::
 	para "C'est mon"
 	line "petit-fils!"
 
-	para "Il a toujours aimé"
-	line "collectionner,"
+	para "Il a toujours"
+	line "aimé"
+	cont "collectionner,"
 	cont "même enfant!"
 	done
 
 _FuchsiaBillsGrandpasHouseYoungsterText::
-	text "LEO enregistre ses"
-	line "propres données"
-	cont "#MON sur son"
-	cont "PC!"
+	text "LEO enregistre"
+	line "ses propres"
+	cont "données #MON"
+	cont "sur son PC!"
 
 	para "Il te les a"
 	line "montrées?"

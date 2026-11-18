@@ -1,6 +1,6 @@
 _RockTunnel1FHiker1BattleText::
-	text "Ce tunnel est très"
-	line "long, petit!"
+	text "Ce tunnel est"
+	line "très long, petit!"
 	done
 
 _RockTunnel1FHiker1EndBattleText::
@@ -15,7 +15,8 @@ _RockTunnel1FHiker1AfterBattleText::
 
 _RockTunnel1FHiker2BattleText::
 	text "Hmm. Je suis"
-	line "peut-être perdu..."
+	line "peut-être"
+	cont "perdu..."
 	done
 
 _RockTunnel1FHiker2EndBattleText::
@@ -26,10 +27,11 @@ _RockTunnel1FHiker2EndBattleText::
 	prompt
 
 _RockTunnel1FHiker2AfterBattleText::
-	text "Ce #MON endormi"
-	line "sur la ROUTE 12"
-	cont "m'a forcé à faire"
-	cont "ce détour."
+	text "Ce #MON"
+	line "endormi sur la"
+	cont "ROUTE 12 m'a"
+	cont "forcé à faire ce"
+	cont "détour."
 	done
 
 _RockTunnel1FHiker3BattleText::
@@ -44,7 +46,8 @@ _RockTunnel1FHiker3EndBattleText::
 
 _RockTunnel1FHiker3AfterBattleText::
 	text "Tu es assez doué"
-	line "pour la randonnée!"
+	line "pour la"
+	cont "randonnée!"
 	done
 
 _RockTunnel1FSuperNerdBattleText::
@@ -81,8 +84,8 @@ _RockTunnel1FCooltrainerF1AfterBattleText::
 
 _RockTunnel1FCooltrainerF2BattleText::
 	text "Je suis venue"
-	line "jusqu'ici pour les"
-	cont "#MON!"
+	line "jusqu'ici pour"
+	cont "les #MON!"
 	done
 
 _RockTunnel1FCooltrainerF2EndBattleText::
@@ -97,17 +100,19 @@ _RockTunnel1FCooltrainerF2AfterBattleText::
 	done
 
 _RockTunnel1FCooltrainerF3BattleText::
-	text "Tu as des #MON!"
-	line "C'est parti!"
+	text "Tu as des"
+	line "#MON! C'est"
+	cont "parti!"
 	done
 
 _RockTunnel1FCooltrainerF3EndBattleText::
-	text "Tu ne lâches rien!"
+	text "Tu ne lâches"
+	line "rien!"
 	prompt
 
 _RockTunnel1FCooltrainerF3AfterBattleText::
-	text "Ouf! Je suis toute"
-	line "en sueur!"
+	text "Ouf! Je suis"
+	line "toute en sueur!"
 	done
 
 _RockTunnel1FSignText::

@@ -5,8 +5,8 @@ _Route11Gate1FGuardText::
 	cont "trouver des noms,"
 	cont "non?"
 
-	para "A LAVANVILLE, il y"
-	line "a un homme qui"
+	para "A LAVANVILLE, il"
+	line "y a un homme qui"
 	cont "juge les surnoms"
 	cont "des #MON."
 

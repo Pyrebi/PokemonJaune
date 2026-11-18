@@ -97,7 +97,7 @@ _MadeWhirlwindText::
 
 _TookInSunlightText::
 	text_start
-	line "absorbe le soleil!"
+	line "prend le soleil!"
 	prompt
 
 _LoweredItsHeadText::
@@ -161,7 +161,8 @@ _DidntAffectText::
 
 _IsUnaffectedText::
 	text "<TARGET>"
-	line "n'est pas affecté!"
+	line "n'est pas"
+	cont "affecté!"
 	prompt
 
 _ParalyzedMayNotAttackText::
@@ -172,7 +173,8 @@ _ParalyzedMayNotAttackText::
 	prompt
 
 _SubstituteText::
-	text "Un CLONE est créé!"
+	text "Un CLONE est"
+	line "créé!"
 	prompt
 
 _HasSubstituteText::
@@ -192,7 +194,8 @@ _WasSeededText::
 
 _EvadedAttackText::
 	text "<TARGET>"
-	line "esquive l'attaque!"
+	line "esquive"
+	cont "l'attaque!"
 	prompt
 
 _HitWithRecoilText::
@@ -244,8 +247,9 @@ _TransformedText::
 
 _LightScreenProtectedText::
 	text "<USER>"
-	line "est protégé contre"
-	cont "les attaques"
+	line "est protégé"
+	cont "contre les"
+	cont "attaques"
 	cont "spéciales!"
 	prompt
 
@@ -269,7 +273,8 @@ _CoinsScatteredText::
 
 _SuckedHealthText::
 	text "<TARGET>"
-	line "perd de l'énergie!"
+	line "perd de"
+	cont "l'énergie!"
 	prompt
 
 _DreamWasEatenText::

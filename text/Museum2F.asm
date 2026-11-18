@@ -11,9 +11,9 @@ _Museum2FGrampsText::
 	para "Le 1er pas sur la"
 	line "Lune!"
 
-	para "J'avais acheté une"
-	line "télé couleur pour"
-	cont "le voir!"
+	para "J'avais acheté"
+	line "une télé couleur"
+	cont "pour le voir!"
 	done
 
 _Museum2FScientistText::
@@ -27,8 +27,8 @@ _Museum2FBrunetteGirlText::
 	line "PIKACHU! Il est"
 	cont "trop mignon!"
 
-	para "J'ai demandé à mon"
-	line "Papa de m'en"
+	para "J'ai demandé à"
+	line "mon Papa de m'en"
 	cont "attraper un!"
 	done
 
@@ -45,10 +45,10 @@ _Museum2FHikerText2::
 	done
 
 _Museum2FHikerText3::
-	text "J'aimerais bien ce"
-	line "PIKACHU, mais il"
-	cont "est trop attaché à"
-	cont "toi."
+	text "J'aimerais bien"
+	line "ce PIKACHU, mais"
+	cont "il est trop"
+	cont "attaché à toi."
 	done
 
 _Museum2FSpaceShuttleSignText::

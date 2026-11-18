@@ -5,7 +5,8 @@ _CeladonCityLittleGirlText::
 	para "On s'entend bien"
 	line "maintenant, parce"
 	cont "que j'ai été très"
-	cont "gentille avec lui!"
+	cont "gentille avec"
+	cont "lui!"
 	done
 
 _CeladonCityGramps1Text::
@@ -23,8 +24,8 @@ _CeladonCityGirlText::
 
 _CeladonCityGramps2Text::
 	text "Ouille! J'ai tout"
-	line "perdu aux machines"
-	cont "à sous!"
+	line "perdu aux"
+	cont "machines à sous!"
 
 	para "J'aurais dû"
 	line "échanger mes"
@@ -88,8 +89,8 @@ _CeladonCityRocket1Text::
 
 _CeladonCityRocket2Text::
 	text "Ne te mets pas en"
-	line "travers de la TEAM"
-	cont "ROCKET!"
+	line "travers de la"
+	cont "TEAM ROCKET!"
 	done
 
 _CeladonCitySignText::
@@ -103,8 +104,8 @@ _CeladonCityGymSignText::
 	line "CELADOPOLE"
 	cont "CHAMPIONNE: ERIKA"
 
-	para "La Princesse de la"
-	line "Nature!"
+	para "La Princesse de"
+	line "la Nature!"
 	done
 
 _CeladonCityMansionSignText::
@@ -113,9 +114,10 @@ _CeladonCityMansionSignText::
 
 _CeladonCityDeptStoreSignText::
 	text "Trouvez tout ce"
-	line "qu'il vous faut au"
-	cont "CENTRE COMMERCIAL"
-	cont "de CELADOPOLE!"
+	line "qu'il vous faut"
+	cont "au CENTRE"
+	cont "COMMERCIAL de"
+	cont "CELADOPOLE!"
 	done
 
 _CeladonCityTrainerTips2Text::
@@ -124,13 +126,13 @@ _CeladonCityTrainerTips2Text::
 
 	para "DEFENSE SPEC"
 	line "protège les"
-	cont "#MON contre les"
-	cont "attaques SPECIALES"
-	cont "comme le feu ou"
-	cont "l'eau!"
+	cont "#MON contre"
+	cont "les attaques"
+	cont "SPECIALES comme"
+	cont "le feu ou l'eau!"
 
-	para "Achetez vos objets"
-	line "au CENTRE"
+	para "Achetez vos"
+	line "objets au CENTRE"
 	cont "COMMERCIAL de"
 	cont "CELADOPOLE!"
 	done
@@ -138,14 +140,14 @@ _CeladonCityTrainerTips2Text::
 _CeladonCityPrizeExchangeSignText::
 	text "Echangez vos"
 	line "jetons contre des"
-	cont "lots! BOUTIQUE DES"
-	cont "LOTS"
+	cont "lots! BOUTIQUE"
+	cont "DES LOTS"
 	done
 
 _CeladonCityGameCornerSignText::
 	text "CASINO ROCKET Le"
-	line "terrain de jeu des"
-	cont "adultes!"
+	line "terrain de jeu"
+	cont "des adultes!"
 	done
 
 _CeladonCityTrainerTips1Text::
@@ -161,8 +163,8 @@ _CeladonCityTrainerTips1Text::
 	line "les chances de"
 	cont "coup critique!"
 
-	para "Achetez vos objets"
-	line "au CENTRE"
+	para "Achetez vos"
+	line "objets au CENTRE"
 	cont "COMMERCIAL de"
 	cont "CELADOPOLE!"
 	done

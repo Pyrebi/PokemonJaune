@@ -4,8 +4,8 @@ _SilphCo11FSilphPresidentText::
 	cont "SYLPHE!"
 
 	para "Je n'oublierai"
-	line "jamais que tu nous"
-	cont "as sauvés du"
+	line "jamais que tu"
+	cont "nous as sauvés du"
 	cont "péril!"
 
 	para "Je dois te"
@@ -55,8 +55,8 @@ _SilphCo11FSilphPresidentNoRoomText::
 
 _SilphCo11FBeautyText::
 	text "SECRETAIRE: Merci"
-	line "de nous avoir tous"
-	cont "sauvés!"
+	line "de nous avoir"
+	cont "tous sauvés!"
 
 	para "Nous admirons ton"
 	line "courage."
@@ -71,8 +71,8 @@ _SilphCo11FGiovanniText::
 	cont "d'une affaire"
 	cont "capitale."
 
-	para "Ne te mêle pas des"
-	line "affaires des"
+	para "Ne te mêle pas"
+	line "des affaires des"
 	cont "grands..."
 
 	para "ou tu vas"
@@ -80,14 +80,15 @@ _SilphCo11FGiovanniText::
 	done
 
 _SilphCo11FGiovanniILostAgainText::
-	text "Argh!! J'ai encore"
-	line "perdu!?"
+	text "Argh!! J'ai"
+	line "encore perdu!?"
 	prompt
 
 _SilphCo11FGiovanniYouRuinedOurPlansText::
-	text "Maudit sois-tu! Tu"
-	line "as ruiné nos plans"
-	cont "pour SYLPHE!"
+	text "Maudit sois-tu!"
+	line "Tu as ruiné nos"
+	cont "plans pour"
+	cont "SYLPHE!"
 
 	para "Mais la TEAM"
 	line "ROCKET ne tombera"

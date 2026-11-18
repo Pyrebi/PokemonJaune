@@ -27,8 +27,8 @@ _SaffronCityRocket5Text::
 	done
 
 _SaffronCityRocket6Text::
-	text "Aïe! Regarde où tu"
-	line "marches!"
+	text "Aïe! Regarde où"
+	line "tu marches!"
 	done
 
 _SaffronCityRocket7Text::
@@ -47,13 +47,15 @@ _SaffronCityScientistText::
 
 _SaffronCitySilphWorkerMText::
 	text "Ouais! La TEAM"
-	line "ROCKET est partie!"
-	cont "On peut ressortir!"
+	line "ROCKET est"
+	cont "partie! On peut"
+	cont "ressortir!"
 	done
 
 _SaffronCitySilphWorkerFText::
-	text "Les gens devraient"
-	line "revenir en masse à"
+	text "Les gens"
+	line "devraient revenir"
+	cont "en masse à"
 	cont "SAFRANIA"
 	cont "maintenant."
 	done
@@ -76,8 +78,9 @@ _SaffronCityPidgeotText::
 
 _SaffronCityRockerText::
 	text "J'ai vu le BOSS"
-	line "ROCKET s'enfuir de"
-	cont "l'immeuble SYLPHE."
+	line "ROCKET s'enfuir"
+	cont "de l'immeuble"
+	cont "SYLPHE."
 	done
 
 _SaffronCityRocket8Text::
@@ -120,9 +123,10 @@ _SaffronCityTrainerTips1Text::
 	line "DRESSEURS"
 
 	para "TOTAL SOIN guérit"
-	line "tous les problèmes"
-	cont "comme le sommeil"
-	cont "et les brûlures."
+	line "tous les"
+	cont "problèmes comme"
+	cont "le sommeil et les"
+	cont "brûlures."
 
 	para "C'est un peu plus"
 	line "cher, mais plus"
@@ -134,12 +138,14 @@ _SaffronCityTrainerTips2Text::
 	line "DRESSEURS"
 
 	para "La nouvelle SUPER"
-	line "BALL attrape mieux"
-	cont "les #MON."
+	line "BALL attrape"
+	cont "mieux les"
+	cont "#MON."
 
 	para "Essaie-la sur les"
-	line "#MON difficiles"
-	cont "à attraper."
+	line "#MON"
+	cont "difficiles à"
+	cont "attraper."
 	done
 
 _SaffronCitySilphCoSignText::
@@ -153,8 +159,8 @@ _SaffronCityMrPsychicsHouseSignText::
 	done
 
 _SaffronCitySilphCoLatestProductSignText::
-	text "Le dernier produit"
-	line "SYLPHE!"
+	text "Le dernier"
+	line "produit SYLPHE!"
 
 	para "Date de sortie à"
 	line "déterminer..."

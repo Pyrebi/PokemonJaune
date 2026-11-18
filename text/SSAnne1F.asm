@@ -13,8 +13,8 @@ _SSAnne1FWaiterText::
 	done
 
 _SSAnne1FSailorText::
-	text "Les passagers sont"
-	line "agités!"
+	text "Les passagers"
+	line "sont agités!"
 
 	para "Les plus"
 	line "désoeuvrés"

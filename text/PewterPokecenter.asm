@@ -1,9 +1,10 @@
 _PewterPokecenterGentlemanText::
 	text "Quoi!?"
 
-	para "La TEAM ROCKET est"
-	line "au MONT SELENITE?"
-	cont "Hein? Je suis au"
+	para "La TEAM ROCKET"
+	line "est au MONT"
+	cont "SELENITE? Hein?"
+	cont "Je suis au"
 	cont "téléphone!"
 
 	para "Dégage!"
@@ -20,8 +21,9 @@ _PewterPokecenterText3::
 
 	para "Même le sommeil,"
 	line "les brûlures, le"
-	cont "poison et le reste"
-	cont "sont guéris."
+	cont "poison et le"
+	cont "reste sont"
+	cont "guéris."
 	done
 
 _PewterPokecenterJigglypuffText::

@@ -1,6 +1,7 @@
 _PokemonMansionB1FBurglarBattleText::
-	text "Oh oh. Où suis-je,"
-	line "maintenant?"
+	text "Oh oh. Où"
+	line "suis-je,"
+	cont "maintenant?"
 	done
 
 _PokemonMansionB1FBurglarEndBattleText::
@@ -9,8 +10,9 @@ _PokemonMansionB1FBurglarEndBattleText::
 
 _PokemonMansionB1FBurglarAfterBattleText::
 	text "On trouve des"
-	line "trucs qui traînent"
-	cont "un peu partout."
+	line "trucs qui"
+	cont "traînent un peu"
+	cont "partout."
 	done
 
 _PokemonMansionB1FScientistBattleText::
@@ -31,12 +33,14 @@ _PokemonMansionB1FScientistAfterBattleText::
 	done
 
 _PokemonMansionB1FDiaryText::
-	text "Journal: 1er sept."
-	line "MEWTWO est bien"
-	cont "trop puissant."
+	text "Journal: 1er"
+	line "sept. MEWTWO est"
+	cont "bien trop"
+	cont "puissant."
 
 	para "Nous n'avons pas"
-	line "réussi à maîtriser"
-	cont "sa nature"
+	line "réussi à"
+	cont "maîtriser sa"
+	cont "nature"
 	cont "violente..."
 	done

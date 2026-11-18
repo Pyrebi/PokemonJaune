@@ -1,5 +1,6 @@
 _SilphCo10FSilphWorkerFImScaredText::
-	text "Ouiiin! J'ai peur!"
+	text "Ouiiin! J'ai"
+	line "peur!"
 	done
 
 _SilphCo10FSilphWorkerFQuietAboutMyCryingText::
@@ -34,9 +35,10 @@ _SilphCo10FScientistEndBattleText::
 	prompt
 
 _SilphCo10FScientistAfterBattleText::
-	text "Content de m'avoir"
-	line "battu? Alors"
-	cont "rentre chez toi!"
+	text "Content de"
+	line "m'avoir battu?"
+	cont "Alors rentre chez"
+	cont "toi!"
 	done
 
 _SilphCoJessieJamesText1::
@@ -48,8 +50,8 @@ _SilphCoJessieJamesText2::
 	text "Notre BOSS est en"
 	line "réunion!"
 
-	para "Tu ferais mieux de"
-	line "ne pas le"
+	para "Tu ferais mieux"
+	line "de ne pas le"
 	cont "déranger!"
 	done
 

@@ -1,8 +1,8 @@
 _CeladonMart1FReceptionistText::
-	text "Bonjour! Bienvenue"
-	line "au CENTRE"
-	cont "COMMERCIAL de"
-	cont "CELADOPOLE."
+	text "Bonjour!"
+	line "Bienvenue au"
+	cont "CENTRE COMMERCIAL"
+	cont "de CELADOPOLE."
 
 	para "Le panneau à"
 	line "droite indique le"

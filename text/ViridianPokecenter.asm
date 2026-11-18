@@ -4,8 +4,8 @@ _ViridianPokecenterGentlemanText::
 	cont "coin."
 
 	para "C'est l'hôtesse"
-	line "qui me l'a dit. Si"
-	cont "gentille!"
+	line "qui me l'a dit."
+	cont "Si gentille!"
 	done
 
 _ViridianPokecenterCooltrainerMText::

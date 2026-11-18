@@ -7,9 +7,10 @@ _SafariZoneWestFindWardensTeethSignText::
 
 	para "Retrouvez la DENT"
 	line "D'OR perdue du"
-	cont "GARDIEN du SAFARI."
-	cont "Elle est quelque"
-	cont "part par ici."
+	cont "GARDIEN du"
+	cont "SAFARI. Elle est"
+	cont "quelque part par"
+	cont "ici."
 
 	para "Récompense!"
 	line "Contact: GARDIEN"
@@ -23,7 +24,8 @@ _SafariZoneWestTrainerTipsText::
 	line "d'exploration!"
 
 	para "A la recherche de"
-	line "la MAISON SECRETE!"
+	line "la MAISON"
+	cont "SECRETE!"
 	done
 
 _SafariZoneWestSignText::

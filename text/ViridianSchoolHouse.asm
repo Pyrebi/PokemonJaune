@@ -7,9 +7,9 @@ _ViridianSchoolHouseBrunetteGirlText::
 _ViridianSchoolHouseLittleGirlText::
 	text "Ma soeur dit que"
 	line "les #MON"
-	cont "deviennent dociles"
-	cont "si on les traite"
-	cont "bien."
+	cont "deviennent"
+	cont "dociles si on les"
+	cont "traite bien."
 	done
 
 _ViridianSchoolHouseCooltrainerFText::

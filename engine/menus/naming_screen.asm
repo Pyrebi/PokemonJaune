@@ -501,7 +501,7 @@ YourTextString:
 	db "TON @"
 
 RivalsTextString:
-	db "NOM DU @"
+	db "SON @"
 
 NameTextString:
 	db "NOM?@"

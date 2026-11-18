@@ -39,31 +39,33 @@ _CeladonMansion1Text7::
 	done
 
 _CeladonMansion1Text8::
-	text "Tu devrais prendre"
-	line "plus soin de"
-	cont "PIKACHU."
+	text "Tu devrais"
+	line "prendre plus soin"
+	cont "de PIKACHU."
 	done
 
 _CeladonMansion1Text9::
 	text "Tu dois être"
-	line "heureux d'avoir un"
-	cont "#MON si mignon."
+	line "heureux d'avoir"
+	cont "un #MON si"
+	cont "mignon."
 	done
 
 _CeladonMansion1Text10::
-	text "Ton PIKACHU semble"
-	line "apprivoisé."
+	text "Ton PIKACHU"
+	line "semble"
+	cont "apprivoisé."
 	done
 
 _CeladonMansion1Text11::
 	text "Ton PIKACHU a"
-	line "l'air heureux avec"
-	cont "toi."
+	line "l'air heureux"
+	cont "avec toi."
 	done
 
 _CeladonMansion1Text12::
-	text "Vous faites un duo"
-	line "fantastique."
+	text "Vous faites un"
+	line "duo fantastique."
 
 	para "Tu me rends"
 	line "jalouse!"

@@ -1,6 +1,7 @@
 _SaffronGateGuardGeeImThirstyText::
-	text "Je monte la garde."
-	line "Mais qu'est-ce que"
+	text "Je monte la"
+	line "garde. Mais"
+	cont "qu'est-ce que"
 	cont "j'ai soif!"
 
 	para "Oh, attends, la"
@@ -9,9 +10,10 @@ _SaffronGateGuardGeeImThirstyText::
 
 _SaffronGateGuardImParchedText::
 	text "Ouah! Je meurs de"
-	line "soif! ... Hein? Je"
-	cont "peux avoir cette"
-	cont "boisson? Merci!@"
+	line "soif! ... Hein?"
+	cont "Je peux avoir"
+	cont "cette boisson?"
+	cont "Merci!@"
 	text_end
 
 _SaffronGateGuardYouCanGoOnThroughText::

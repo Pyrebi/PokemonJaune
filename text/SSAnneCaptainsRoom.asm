@@ -31,8 +31,9 @@ _SSAnneCaptainsRoomCaptainIFeelMuchBetterText::
 
 	para "Apprends-la à ton"
 	line "#MON et tu"
-	cont "pourras voir COUPE"
-	cont "quand tu veux!"
+	cont "pourras voir"
+	cont "COUPE quand tu"
+	cont "veux!"
 	prompt
 
 _SSAnneCaptainsRoomCaptainReceivedHM01Text::
@@ -63,7 +64,8 @@ _SSAnneCaptainsRoomTrashText::
 	done
 
 _SSAnneCaptainsRoomSeasickBookText::
-	text "Comment vaincre le"
-	line "mal de mer... Le"
-	cont "CAPITAINE lit ça!"
+	text "Comment vaincre"
+	line "le mal de mer..."
+	cont "Le CAPITAINE lit"
+	cont "ça!"
 	done

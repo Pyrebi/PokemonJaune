@@ -8,8 +8,9 @@ _Route21Fisher1EndBattleText::
 	prompt
 
 _Route21Fisher1AfterBattleText::
-	text "Je n'arrive à rien"
-	line "attraper de bien!"
+	text "Je n'arrive à"
+	line "rien attraper de"
+	cont "bien!"
 	done
 
 _Route21Fisher2BattleText::
@@ -19,7 +20,8 @@ _Route21Fisher2BattleText::
 	done
 
 _Route21Fisher2EndBattleText::
-	text "Satanés MAGICARPE!"
+	text "Satanés"
+	line "MAGICARPE!"
 	prompt
 
 _Route21Fisher2AfterBattleText::
@@ -29,8 +31,9 @@ _Route21Fisher2AfterBattleText::
 	done
 
 _Route21Swimmer1BattleText::
-	text "La mer purifie mon"
-	line "corps et mon âme!"
+	text "La mer purifie"
+	line "mon corps et mon"
+	cont "âme!"
 	done
 
 _Route21Swimmer1EndBattleText::
@@ -93,7 +96,8 @@ _Route21Swimmer4AfterBattleText::
 
 _Route21Swimmer5BattleText::
 	text "Ahh! Sens le"
-	line "soleil et le vent!"
+	line "soleil et le"
+	cont "vent!"
 	done
 
 _Route21Swimmer5EndBattleText::
@@ -109,7 +113,8 @@ _Route21Swimmer5AfterBattleText::
 
 _Route21Fisher3BattleText::
 	text "Hé, ne fais pas"
-	line "fuir les poissons!"
+	line "fuir les"
+	cont "poissons!"
 	done
 
 _Route21Fisher3EndBattleText::

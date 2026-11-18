@@ -16,7 +16,8 @@ _Route15CooltrainerF1AfterBattleText::
 	cont "par échange."
 
 	para "Seul son Dresseur"
-	line "d'Origine le peut."
+	line "d'Origine le"
+	cont "peut."
 	done
 
 _Route15CooltrainerF2BattleText::
@@ -33,8 +34,8 @@ _Route15CooltrainerF2EndBattleText::
 _Route15CooltrainerF2AfterBattleText::
 	text "J'ai peur des"
 	line "MOTARDS, ils ont"
-	cont "l'air si moches et"
-	cont "méchants!"
+	cont "l'air si moches"
+	cont "et méchants!"
 	done
 
 _Route15CooltrainerM1BattleText::
@@ -50,8 +51,9 @@ _Route15CooltrainerM1EndBattleText::
 
 _Route15CooltrainerM1AfterBattleText::
 	text "Je ne suis"
-	line "peut-être pas fait"
-	cont "pour les combats."
+	line "peut-être pas"
+	cont "fait pour les"
+	cont "combats."
 	done
 
 _Route15CooltrainerM2BattleText::
@@ -67,14 +69,14 @@ _Route15CooltrainerM2EndBattleText::
 _Route15CooltrainerM2AfterBattleText::
 	text "Tu savais que les"
 	line "capacités comme"
-	cont "SEISME n'ont aucun"
-	cont "effet sur les"
-	cont "oiseaux?"
+	cont "SEISME n'ont"
+	cont "aucun effet sur"
+	cont "les oiseaux?"
 	done
 
 _Route15Beauty1BattleText::
-	text "Oh, tu es un petit"
-	line "mignon!"
+	text "Oh, tu es un"
+	line "petit mignon!"
 	done
 
 _Route15Beauty1EndBattleText::
@@ -83,8 +85,8 @@ _Route15Beauty1EndBattleText::
 	prompt
 
 _Route15Beauty1AfterBattleText::
-	text "Je te pardonne! Je"
-	line "l'encaisse!"
+	text "Je te pardonne!"
+	line "Je l'encaisse!"
 	done
 
 _Route15Beauty2BattleText::
@@ -117,14 +119,15 @@ _Route15Biker1EndBattleText::
 
 _Route15Biker1AfterBattleText::
 	text "On ne vit qu'une"
-	line "fois, alors je vis"
-	cont "hors-la-loi! VIVE"
-	cont "LA TEAM ROCKET!"
+	line "fois, alors je"
+	cont "vis hors-la-loi!"
+	cont "VIVE LA TEAM"
+	cont "ROCKET!"
 	done
 
 _Route15Biker2BattleText::
-	text "Donne-moi tout ton"
-	line "fric quand tu"
+	text "Donne-moi tout"
+	line "ton fric quand tu"
 	cont "perdras, petit!"
 	done
 
@@ -139,12 +142,13 @@ _Route15Biker2AfterBattleText::
 
 _Route15CooltrainerF3BattleText::
 	text "Qu'est-ce qui est"
-	line "cool? Echanger des"
-	cont "#MON!"
+	line "cool? Echanger"
+	cont "des #MON!"
 	done
 
 _Route15CooltrainerF3EndBattleText::
-	text "J'ai dit échanger!"
+	text "J'ai dit"
+	line "échanger!"
 	prompt
 
 _Route15CooltrainerF3AfterBattleText::
@@ -154,8 +158,8 @@ _Route15CooltrainerF3AfterBattleText::
 	done
 
 _Route15CooltrainerF4BattleText::
-	text "Tu veux jouer avec"
-	line "mes #MON?"
+	text "Tu veux jouer"
+	line "avec mes #MON?"
 	done
 
 _Route15CooltrainerF4EndBattleText::

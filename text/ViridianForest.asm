@@ -9,18 +9,20 @@ _ViridianForestYoungster1Text::
 
 _ViridianForestYoungster2BattleText::
 	text "Hé! Tu as des"
-	line "#MON! Allez! On"
-	cont "se bat!"
+	line "#MON! Allez!"
+	cont "On se bat!"
 	done
 
 _ViridianForestYoungster2EndBattleText::
 	text "Non! CHENIPAN ne"
-	line "fait pas le poids!"
+	line "fait pas le"
+	cont "poids!"
 	prompt
 
 _ViridianForestYoungster2AfterBattleText::
-	text "Chut! Tu vas faire"
-	line "fuir les insectes!"
+	text "Chut! Tu vas"
+	line "faire fuir les"
+	cont "insectes!"
 	done
 
 _ViridianForestYoungster3BattleText::
@@ -31,8 +33,8 @@ _ViridianForestYoungster3BattleText::
 	done
 
 _ViridianForestYoungster3EndBattleText::
-	text "Hein? Je n'ai plus"
-	line "de #MON!"
+	text "Hein? Je n'ai"
+	line "plus de #MON!"
 	prompt
 
 _ViridianForestYoungster3AfterBattleText::
@@ -48,14 +50,14 @@ _ViridianForestYoungster4BattleText::
 	done
 
 _ViridianForestYoungster4EndBattleText::
-	text "J'abandonne! Tu es"
-	line "doué!"
+	text "J'abandonne! Tu"
+	line "es doué!"
 	prompt
 
 _ViridianForestYoungster4AfterBattleText::
-	text "Parfois, on trouve"
-	line "des trucs par"
-	cont "terre!"
+	text "Parfois, on"
+	line "trouve des trucs"
+	cont "par terre!"
 
 	para "Je cherche ce que"
 	line "j'ai fait tomber!"
@@ -72,9 +74,10 @@ _ViridianForestCooltrainerFEndBattleText::
 
 _ViridianForestCooltrainerFAfterBattleText::
 	text "J'ai cherché"
-	line "longtemps, mais je"
-	cont "n'ai jamais trouvé"
-	cont "de PIKACHU ici!"
+	line "longtemps, mais"
+	cont "je n'ai jamais"
+	cont "trouvé de PIKACHU"
+	cont "ici!"
 	done
 
 _ViridianForestYoungster5BattleText::
@@ -91,9 +94,9 @@ _ViridianForestYoungster5EndBattleText::
 
 _ViridianForestYoungster5AfterBattleText::
 	text "CHRYSACIER est"
-	line "cool parce que son"
-	cont "attaque, c'est sa"
-	cont "défense!"
+	line "cool parce que"
+	cont "son attaque,"
+	cont "c'est sa défense!"
 	done
 
 _ViridianForestYoungster6Text::
@@ -111,15 +114,17 @@ _ViridianForestTrainerTips1Text::
 	line "DRESSEURS"
 
 	para "Pour éviter les"
-	line "combats, évite les"
-	cont "hautes herbes!"
+	line "combats, évite"
+	cont "les hautes"
+	cont "herbes!"
 	done
 
 _ViridianForestUseAntidoteSignText::
 	text "Contre le poison,"
 	line "utilise un"
-	cont "ANTIDOTE! En vente"
-	cont "dans les BOUTIQUES"
+	cont "ANTIDOTE! En"
+	cont "vente dans les"
+	cont "BOUTIQUES"
 	cont "#MON!"
 	done
 
@@ -129,8 +134,9 @@ _ViridianForestTrainerTips2Text::
 
 	para "Contacte le"
 	line "PROF.CHEN par PC"
-	cont "pour faire évaluer"
-	cont "ton #DEX!"
+	cont "pour faire"
+	cont "évaluer ton"
+	cont "#DEX!"
 	done
 
 _ViridianForestTrainerTips3Text::
@@ -138,8 +144,8 @@ _ViridianForestTrainerTips3Text::
 	line "DRESSEURS"
 
 	para "Ne vole pas les"
-	line "#MON des autres"
-	cont "dresseurs!"
+	line "#MON des"
+	cont "autres dresseurs!"
 	cont "N'attrape que des"
 	cont "#MON sauvages!"
 	done
@@ -159,7 +165,8 @@ _ViridianForestTrainerTips4Text::
 	done
 
 _ViridianForestLeavingSignText::
-	text "SORTIE DE LA FORET"
-	line "DE JADE ARGENTA"
-	cont "DROIT DEVANT"
+	text "SORTIE DE LA"
+	line "FORET DE JADE"
+	cont "ARGENTA DROIT"
+	cont "DEVANT"
 	done

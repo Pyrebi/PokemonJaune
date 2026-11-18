@@ -1,6 +1,6 @@
 _ItemUseBallText00::
-	text "Le #MON a dévié"
-	line "la BALL!"
+	text "Le #MON a"
+	line "dévié la BALL!"
 
 	para "Impossible de"
 	line "capturer ce"
@@ -24,8 +24,8 @@ _ItemUseBallText03::
 	prompt
 
 _ItemUseBallText04::
-	text "Raah! C'était tout"
-	line "près!"
+	text "Raah! C'était"
+	line "tout près!"
 	prompt
 
 _ItemUseBallText05::
@@ -114,8 +114,8 @@ _FluteWokeUpText::
 	prompt
 
 _PlayedFluteHadEffectText::
-	text "<PLAYER> joue de la"
-	line "POKéFLUTE.@"
+	text "<PLAYER> joue de"
+	line "la POKéFLUTE.@"
 	text_end
 
 _CoinCaseNumCoinsText::
@@ -172,11 +172,13 @@ _PPRestoredText::
 	prompt
 
 _BootedUpTMText::
-	text "Tu allumes une CT!"
+	text "Tu allumes une"
+	line "CT!"
 	prompt
 
 _BootedUpHMText::
-	text "Tu allumes une CS!"
+	text "Tu allumes une"
+	line "CS!"
 	prompt
 
 _TeachMachineMoveText::
@@ -268,7 +270,8 @@ _ItemUseText002::
 	done
 
 _GotOnBicycleText1::
-	text "<PLAYER> monte sur@"
+	text "<PLAYER> monte"
+	line "sur@"
 	text_end
 
 _GotOnBicycleText2::
@@ -347,7 +350,7 @@ _NoTrade1Text::
 	done
 
 _WrongMon1Text::
-	text "Quoi? Ce n'est pas"
+	text "Quoi? C'est pas"
 	line "@"
 	text_ram wInGameTradeGiveMonName
 	text "!"
@@ -380,12 +383,12 @@ _WannaTrade2Text::
 	done
 
 _NoTrade2Text::
-	text "Bon, si tu ne veux"
-	line "pas..."
+	text "Bon, si tu ne"
+	line "veux pas..."
 	done
 
 _WrongMon2Text::
-	text "Hmmm? Ce n'est pas"
+	text "Hmm? Ce n'est pas"
 	line "@"
 	text_ram wInGameTradeGiveMonName
 	text "."

@@ -12,7 +12,7 @@ quels et seulement vérifiés.
 import re
 import sys
 
-WIDTH = 18
+WIDTH = 17
 STR_RE = re.compile(r'^(\s*)(text|line|cont|para|next)\s+"(.*)"\s*(;.*)?$')
 CMD_RE = re.compile(r'^\s*([a-z_]+)\b')
 LABEL_RE = re.compile(r'^[A-Za-z_.][\w.]*:{1,2}\s*$')
@@ -21,7 +21,7 @@ TERMS = {'done', 'prompt', 'text_end'}
 # largeur à l'écran des symboles spéciaux
 SPECIAL = {
     '#': 4, '<PLAYER>': 7, '<RIVAL>': 7, '<PKMN>': 2, '<PC>': 2, '<TM>': 2,
-    '<TRAINER>': 7, '<ROCKET>': 6, '<USER>': 17, '<TARGET>': 17, '<……>': 2,
+    '<TRAINER>': 7, '<ROCKET>': 6, '<USER>': 16, '<TARGET>': 16, '<……>': 2,
     '<LV>': 1, '<ID>': 1, '<to>': 1, '<DOT>': 1, '<COLON>': 1,
 }
 TOKEN_RE = re.compile(r'<[^>]*>|.')

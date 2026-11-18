@@ -13,9 +13,9 @@ _ViridianForestNorthGateSuperNerdText::
 	done
 
 _ViridianForestNorthGateGrampsText::
-	text "Tu as remarqué les"
-	line "buissons au bord"
-	cont "de la route?"
+	text "Tu as remarqué"
+	line "les buissons au"
+	cont "bord de la route?"
 
 	para "Une capacité"
 	line "#MON spéciale"

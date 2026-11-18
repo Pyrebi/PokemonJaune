@@ -10,7 +10,8 @@ _Route19CooltrainerM1EndBattleText::
 
 _Route19CooltrainerM1AfterBattleText::
 	text "Merci, petit! Je"
-	line "suis prêt à nager!"
+	line "suis prêt à"
+	cont "nager!"
 	done
 
 _Route19CooltrainerM2BattleText::
@@ -38,8 +39,9 @@ _Route19Swimmer1EndBattleText::
 	prompt
 
 _Route19Swimmer1AfterBattleText::
-	text "Je peux battre des"
-	line "#MON à la nage!"
+	text "Je peux battre"
+	line "des #MON à la"
+	cont "nage!"
 	done
 
 _Route19Swimmer2BattleText::
@@ -81,7 +83,8 @@ _Route19Swimmer4BattleText::
 	done
 
 _Route19Swimmer4EndBattleText::
-	text "Ooh! Traumatisant!"
+	text "Ooh!"
+	line "Traumatisant!"
 	prompt
 
 _Route19Swimmer4AfterBattleText::
@@ -138,8 +141,8 @@ _Route19Swimmer7AfterBattleText::
 
 _Route19Swimmer8BattleText::
 	text "J'ai nagé"
-	line "jusqu'ici, mais je"
-	cont "suis fatigué."
+	line "jusqu'ici, mais"
+	cont "je suis fatigué."
 	done
 
 _Route19Swimmer8EndBattleText::

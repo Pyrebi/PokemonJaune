@@ -27,14 +27,15 @@ _CeladonMansion3FGraphicArtistText2::
 
 	para "Waouh, tu as fini"
 	line "ton #DEX! Tu"
-	cont "veux que j'IMPRIME"
-	cont "un DIPLOME comme"
+	cont "veux que"
+	cont "j'IMPRIME un"
+	cont "DIPLOME comme"
 	cont "preuve?"
 	done
 
 _CeladonMansion3FGraphicArtistText3::
-	text "Dis-moi si tu veux"
-	line "IMPRIMER un"
+	text "Dis-moi si tu"
+	line "veux IMPRIMER un"
 	cont "DIPLOME."
 	done
 
@@ -50,13 +51,14 @@ _CeladonMansion3FGraphicArtistText5::
 _CeladonMansion3FWriterText::
 	text "J'ai écrit le"
 	line "scénario! ERIKA"
-	cont "est mignonne, non?"
+	cont "est mignonne,"
+	cont "non?"
 
 	para "J'aime beaucoup"
 	line "ONDINE aussi!"
 
-	para "Oh, et MORGANE, je"
-	line "l'aime bien!"
+	para "Oh, et MORGANE,"
+	line "je l'aime bien!"
 	done
 
 _CeladonMansion3FWriterText2::
@@ -87,23 +89,25 @@ _CeladonMansion3FGameDesignerText::
 
 _CeladonMansion3FGameDesignerCompletedDexText::
 	text "Waouh! Excellent!"
-	line "Tu as complété ton"
-	cont "#DEX!"
+	line "Tu as complété"
+	cont "ton #DEX!"
 	cont "Félicitations!"
 	cont "...@"
 	text_end
 
 _CeladonMansion3FGameDesignerCompletedDexText2::
 	text "Va montrer ton"
-	line "DIPLOME à l'équipe"
-	cont "de développement."
+	line "DIPLOME à"
+	cont "l'équipe de"
+	cont "développement."
 	done
 
 _CeladonMansion3FGameProgramPCText::
-	text "C'est le programme"
-	line "du jeu! Y toucher"
-	cont "pourrait créer des"
-	cont "bugs!"
+	text "C'est le"
+	line "programme du jeu!"
+	cont "Y toucher"
+	cont "pourrait créer"
+	cont "des bugs!"
 	done
 
 _CeladonMansion3FPlayingGamePCText::

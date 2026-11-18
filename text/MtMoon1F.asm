@@ -1,7 +1,8 @@
 _MtMoon1FHikerBattleText::
-	text "WOAH! Tu m'as fait"
-	line "peur! Oh, ce n'est"
-	cont "qu'un enfant!"
+	text "WOAH! Tu m'as"
+	line "fait peur! Oh, ce"
+	cont "n'est qu'un"
+	cont "enfant!"
 	done
 
 _MtMoon1FHikerEndBattleText::
@@ -16,18 +17,20 @@ _MtMoon1FHikerAfterBattleText::
 	done
 
 _MtMoon1FYoungster1BattleText::
-	text "Toi aussi tu viens"
-	line "explorer?"
+	text "Toi aussi tu"
+	line "viens explorer?"
 	done
 
 _MtMoon1FYoungster1EndBattleText::
-	text "Perdre, c'est nul!"
+	text "Perdre, c'est"
+	line "nul!"
 	prompt
 
 _MtMoon1FYoungster1AfterBattleText::
 	text "Je suis venu ici"
-	line "pour impressionner"
-	cont "les filles."
+	line "pour"
+	cont "impressionner les"
+	cont "filles."
 	done
 
 _MtMoon1FCooltrainerF1BattleText::
@@ -108,12 +111,13 @@ _MtMoon1FYoungster3EndBattleText::
 _MtMoon1FYoungster3AfterBattleText::
 	text "NOSFERAPTI est"
 	line "coriace! Mais il"
-	cont "peut être utile si"
-	cont "tu en attrapes un."
+	cont "peut être utile"
+	cont "si tu en attrapes"
+	cont "un."
 	done
 
 _MtMoon1FBewareZubatSign::
 	text "Attention!"
-	line "NOSFERAPTI suce le"
-	cont "sang!"
+	line "NOSFERAPTI suce"
+	cont "le sang!"
 	done

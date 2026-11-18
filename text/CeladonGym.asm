@@ -1,7 +1,8 @@
 _CeladonGymErikaPreBattleText::
-	text "Bonjour. Quel beau"
-	line "temps, n'est-ce"
-	cont "pas? C'est si"
+	text "Bonjour. Quel"
+	line "beau temps,"
+	cont "n'est-ce pas?"
+	cont "C'est si"
 	cont "agréable."
 
 	para "...Oh mon dieu..."
@@ -22,10 +23,12 @@ _CeladonGymErikaPreBattleText::
 
 	para "Oh, pardon, je ne"
 	line "savais pas que tu"
-	cont "voulais me défier."
+	cont "voulais me"
+	cont "défier."
 
-	para "Très bien, mais je"
-	line "ne perdrai pas."
+	para "Très bien, mais"
+	line "je ne perdrai"
+	cont "pas."
 	done
 
 _CeladonGymErikaReceivedRainbowBadgeText::
@@ -42,16 +45,17 @@ _CeladonGymErikaReceivedRainbowBadgeText::
 	prompt
 
 _CeladonGymErikaPostBattleAdviceText::
-	text "Tu répertories les"
-	line "#MON? Je dois"
-	cont "dire que je suis"
+	text "Tu répertories"
+	line "les #MON? Je"
+	cont "dois dire que je"
+	cont "suis"
 	cont "impressionnée."
 
 	para "Je ne"
 	line "collectionnerais"
-	cont "jamais des #MON"
-	cont "qui ne sont pas"
-	cont "jolis."
+	cont "jamais des"
+	cont "#MON qui ne"
+	cont "sont pas jolis."
 	done
 
 _CeladonGymRainbowBadgeInfoText::
@@ -102,7 +106,8 @@ _CeladonGymBattleText2::
 	done
 
 _CeladonGymEndBattleText2::
-	text "Tu es trop brutal!"
+	text "Tu es trop"
+	line "brutal!"
 	prompt
 
 _CeladonGymAfterBattleText2::
@@ -121,8 +126,9 @@ _CeladonGymEndBattleText3::
 	prompt
 
 _CeladonGymAfterBattleText3::
-	text "Les #MON plante"
-	line "sont redoutables"
+	text "Les #MON"
+	line "plante sont"
+	cont "redoutables"
 	cont "contre le type"
 	cont "eau!"
 
@@ -166,9 +172,9 @@ _CeladonGymAfterBattleText5::
 	cont "#MON de type"
 	cont "plante!"
 
-	para "On s'en sert aussi"
-	line "pour faire des"
-	cont "bouquets!"
+	para "On s'en sert"
+	line "aussi pour faire"
+	cont "des bouquets!"
 	done
 
 _CeladonGymBattleText6::
@@ -190,9 +196,9 @@ _CeladonGymAfterBattleText6::
 
 _CeladonGymBattleText7::
 	text "Enchantée. Mon"
-	line "passe-temps, c'est"
-	cont "le dressage de"
-	cont "#MON."
+	line "passe-temps,"
+	cont "c'est le dressage"
+	cont "de #MON."
 	done
 
 _CeladonGymEndBattleText7::
@@ -201,10 +207,10 @@ _CeladonGymEndBattleText7::
 
 _CeladonGymAfterBattleText7::
 	text "J'ai un"
-	line "rendez-vous galant"
-	cont "bientôt. Je dois"
-	cont "apprendre la"
-	cont "politesse."
+	line "rendez-vous"
+	cont "galant bientôt."
+	cont "Je dois apprendre"
+	cont "la politesse."
 	done
 
 _CeladonGymBattleText8::
@@ -212,9 +218,9 @@ _CeladonGymBattleText8::
 	line "l'ARENE de"
 	cont "CELADOPOLE!"
 
-	para "Ne sous-estime pas"
-	line "le pouvoir des"
-	cont "filles!"
+	para "Ne sous-estime"
+	line "pas le pouvoir"
+	cont "des filles!"
 	done
 
 _CeladonGymEndBattleText8::

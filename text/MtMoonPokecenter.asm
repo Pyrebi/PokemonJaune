@@ -25,7 +25,8 @@ _MtMoonPokecenterClipboardText::
 _MtMoonPokecenterMagikarpSalesmanIGotADealText::
 	text "HOMME: Bonjour!"
 	line "J'ai une affaire"
-	cont "rien que pour toi!"
+	cont "rien que pour"
+	cont "toi!"
 
 	para "Je te cède un"
 	line "super MAGICARPE"
@@ -36,8 +37,9 @@ _MtMoonPokecenterMagikarpSalesmanIGotADealText::
 
 _MtMoonPokecenterMagikarpSalesmanNoText::
 	text "Non? Je fais ça"
-	line "uniquement pour te"
-	cont "rendre service!"
+	line "uniquement pour"
+	cont "te rendre"
+	cont "service!"
 	done
 
 _MtMoonPokecenterMagikarpSalesmanNoMoneyText::

@@ -7,13 +7,15 @@ _PokemonTower1FReceptionistText::
 
 _PokemonTower1FMiddleAgedWomanText::
 	text "Tu es venu te"
-	line "recueillir? Que le"
-	cont "ciel te bénisse!"
+	line "recueillir? Que"
+	cont "le ciel te"
+	cont "bénisse!"
 	done
 
 _PokemonTower1FBaldingGuyText::
-	text "Je suis venu prier"
-	line "pour mon MELOFEE."
+	text "Je suis venu"
+	line "prier pour mon"
+	cont "MELOFEE."
 
 	para "Snif! Je n'arrête"
 	line "pas de pleurer..."

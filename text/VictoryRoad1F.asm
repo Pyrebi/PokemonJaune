@@ -26,6 +26,7 @@ _VictoryRoad1FCooltrainerMEndBattleText::
 	prompt
 
 _VictoryRoad1FCooltrainerMAfterBattleText::
-	text "Je l'admets, tu es"
-	line "meilleur que moi!"
+	text "Je l'admets, tu"
+	line "es meilleur que"
+	cont "moi!"
 	done

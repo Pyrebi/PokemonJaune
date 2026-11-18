@@ -6,46 +6,48 @@ _ViridianCityOldManYouNeedToWeakenTheTargetText::
 
 _ViridianCityOldManHadMyCoffeeNowText::
 	text "Ahh, j'ai bu mon"
-	line "café et je me sens"
-	cont "en pleine forme!"
+	line "café et je me"
+	cont "sens en pleine"
+	cont "forme!"
 
 	para "Bien sûr, tu peux"
 	line "passer!"
 
-	para "Désolé d'avoir été"
-	line "si grossier!"
+	para "Désolé d'avoir"
+	line "été si grossier!"
 
 	para "Je vois que tu as"
 	line "un #DEX."
 
-	para "Pour m'excuser, je"
-	line "vais te montrer"
-	cont "comment attraper"
-	cont "des #MON."
+	para "Pour m'excuser,"
+	line "je vais te"
+	cont "montrer comment"
+	cont "attraper des"
+	cont "#MON."
 	done
 
 _ViridianCityOldManLosingMyTouchText::
-	text "Ca n'a pas marché!"
-	line "Je dois perdre la"
-	cont "main."
+	text "Ca n'a pas"
+	line "marché! Je dois"
+	cont "perdre la main."
 
 	para "Je n'ai plus de"
 	line "POKé BALLS non"
 	cont "plus."
 
-	para "Je dois en acheter"
-	line "à la BOUTIQUE"
-	cont "#MON."
+	para "Je dois en"
+	line "acheter à la"
+	cont "BOUTIQUE #MON."
 	done
 
 _ViridianCityYoungster1Text::
 	text "Ces POKé BALLS à"
-	line "ta ceinture! Tu as"
-	cont "des #MON!"
+	line "ta ceinture! Tu"
+	cont "as des #MON!"
 
 	para "C'est génial de"
-	line "pouvoir emmener et"
-	cont "utiliser des"
+	line "pouvoir emmener"
+	cont "et utiliser des"
 	cont "#MON partout,"
 	cont "tout le temps!"
 	done
@@ -78,9 +80,9 @@ ViridianCityYoungster2OkThenText::
 	done
 
 ViridianCityYoungster2CaterpieAndWeedleDescriptionText::
-	text "CHENIPAN n'est pas"
-	line "venimeux, mais"
-	cont "ASPICOT oui."
+	text "CHENIPAN n'est"
+	line "pas venimeux,"
+	cont "mais ASPICOT oui."
 
 	para "Attention à son"
 	line "DARD-VENIN!"
@@ -97,10 +99,10 @@ _ViridianCityGirlHasntHadHisCoffeeYetText::
 _ViridianCityGirlWhenIGoShopText::
 	text "Quand je vais"
 	line "faire les courses"
-	cont "à ARGENTA, je dois"
-	cont "prendre le chemin"
-	cont "sinueux de la"
-	cont "FORET DE JADE."
+	cont "à ARGENTA, je"
+	cont "dois prendre le"
+	cont "chemin sinueux de"
+	cont "la FORET DE JADE."
 	done
 
 _ViridianCityOldManSleepyPrivatePropertyText::
@@ -117,10 +119,11 @@ ViridianCityFisherYouCanHaveThisText::
 	cont "soleil."
 
 	para "J'ai rêvé qu'un"
-	line "SOPORIFIK mangeait"
-	cont "mon rêve. C'est"
-	cont "quoi ça? D'où"
-	cont "vient cette CT?"
+	line "SOPORIFIK"
+	cont "mangeait mon"
+	cont "rêve. C'est quoi"
+	cont "ça? D'où vient"
+	cont "cette CT?"
 
 	para "C'est flippant!"
 	line "Tiens, tu peux"
@@ -139,8 +142,8 @@ _ViridianCityFisherTM42ExplanationText::
 	done
 
 _ViridianCityFisherTM42NoRoomText::
-	text "Tu as déjà trop de"
-	line "choses."
+	text "Tu as déjà trop"
+	line "de choses."
 	done
 
 _ViridianCityOldManWantMeToShowYouAgainText::
@@ -165,7 +168,8 @@ _ViridianCityOldManNotGoodEnoughForYouText::
 _ViridianCitySignText::
 	text "JADIELLE Le"
 	line "Paradis"
-	cont "Eternellement Vert"
+	cont "Eternellement"
+	cont "Vert"
 	done
 
 _ViridianCityTrainerTips1Text::
@@ -188,15 +192,15 @@ _ViridianCityTrainerTips2Text::
 
 	para "Les capacités des"
 	line "#MON sont"
-	cont "limitées par leurs"
-	cont "POINTS DE POUVOIR,"
-	cont "les PP."
+	cont "limitées par"
+	cont "leurs POINTS DE"
+	cont "POUVOIR, les PP."
 
-	para "Pour restaurer les"
-	line "PP, repose tes"
-	cont "#MON fatigués"
-	cont "dans un CENTRE"
-	cont "#MON!"
+	para "Pour restaurer"
+	line "les PP, repose"
+	cont "tes #MON"
+	cont "fatigués dans un"
+	cont "CENTRE #MON!"
 	done
 
 _ViridianCityGymSignText::

@@ -3,8 +3,9 @@ _RocketHideoutB1FRocket5EndBattleText::
 	text_end
 
 _RocketHideoutB1FRocket1BattleText::
-	text "Qui es-tu? Comment"
-	line "es-tu arrivé ici?"
+	text "Qui es-tu?"
+	line "Comment es-tu"
+	cont "arrivé ici?"
 	done
 
 _RocketHideoutB1FRocket1EndBattleText::
@@ -12,8 +13,8 @@ _RocketHideoutB1FRocket1EndBattleText::
 	prompt
 
 _RocketHideoutB1FRocket1AfterBattleText::
-	text "Tu te moques de la"
-	line "TEAM ROCKET?"
+	text "Tu te moques de"
+	line "la TEAM ROCKET?"
 	done
 
 _RocketHideoutB1FRocket2BattleText::
@@ -27,9 +28,9 @@ _RocketHideoutB1FRocket2EndBattleText::
 	prompt
 
 _RocketHideoutB1FRocket2AfterBattleText::
-	text "Tu ne t'en tireras"
-	line "pas comme ça,"
-	cont "morveux!"
+	text "Tu ne t'en"
+	line "tireras pas comme"
+	cont "ça, morveux!"
 	done
 
 _RocketHideoutB1FRocket3BattleText::
@@ -37,7 +38,8 @@ _RocketHideoutB1FRocket3BattleText::
 	done
 
 _RocketHideoutB1FRocket3EndBattleText::
-	text "Je n'y arrive pas!"
+	text "Je n'y arrive"
+	line "pas!"
 	prompt
 
 _RocketHideoutB1FRocket3AfterBattleText::
@@ -58,9 +60,9 @@ _RocketHideoutB1FRocket4EndBattleText::
 
 _RocketHideoutB1FRocket4AfterBattleText::
 	text "OK, je parle!"
-	line "Prends l'ascenseur"
-	cont "pour voir mon"
-	cont "BOSS!"
+	line "Prends"
+	cont "l'ascenseur pour"
+	cont "voir mon BOSS!"
 	done
 
 _RocketHideoutB1FRocket5BattleText::
@@ -69,6 +71,7 @@ _RocketHideoutB1FRocket5BattleText::
 	done
 
 _RocketHideoutB1FRocket5AfterBattleText::
-	text "Oh oh, ce combat a"
-	line "ouvert la porte!"
+	text "Oh oh, ce combat"
+	line "a ouvert la"
+	cont "porte!"
 	done

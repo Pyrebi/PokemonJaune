@@ -90,8 +90,8 @@ _CeladonMartRoofLittleGirlNoRoomText::
 
 _CeladonMartRoofLittleGirlImNotThirstyText::
 	text "Non merci!"
-	line "Finalement je n'ai"
-	cont "pas soif!@"
+	line "Finalement je"
+	cont "n'ai pas soif!@"
 	text_end
 
 _CeladonMartRoofSuperNerdText::
@@ -105,15 +105,15 @@ _CeladonMartRoofSuperNerdText::
 	done
 
 _CeladonMartRoofLittleGirlImThirstyText::
-	text "J'ai soif! Je veux"
-	line "quelque chose à"
-	cont "boire!"
+	text "J'ai soif! Je"
+	line "veux quelque"
+	cont "chose à boire!"
 	done
 
 _CeladonMartRoofLittleGirlGiveHerADrinkText::
-	text "J'ai soif! Je veux"
-	line "quelque chose à"
-	cont "boire!"
+	text "J'ai soif! Je"
+	line "veux quelque"
+	cont "chose à boire!"
 
 	para "Lui donner à"
 	line "boire?"
@@ -141,8 +141,9 @@ _VendingMachineText5::
 	done
 
 _VendingMachineText6::
-	text "Plus de place pour"
-	line "d'autres objets!"
+	text "Plus de place"
+	line "pour d'autres"
+	cont "objets!"
 	done
 
 _VendingMachineText7::

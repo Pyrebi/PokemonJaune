@@ -20,6 +20,7 @@ _VermilionMartCooltrainerFText::
 	text "Je pense que les"
 	line "#MON peuvent"
 	cont "être bons ou"
-	cont "mauvais. Ca dépend"
-	cont "du dresseur."
+	cont "mauvais. Ca"
+	cont "dépend du"
+	cont "dresseur."
 	done

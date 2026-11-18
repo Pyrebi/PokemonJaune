@@ -14,7 +14,8 @@ _VermilionPokecenterFishingGuruText::
 
 _VermilionPokecenterSailorText::
 	text "Mon #MON était"
-	line "empoisonné! Il est"
-	cont "tombé K.O. pendant"
-	cont "qu'on marchait!"
+	line "empoisonné! Il"
+	cont "est tombé K.O."
+	cont "pendant qu'on"
+	cont "marchait!"
 	done

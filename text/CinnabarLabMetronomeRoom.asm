@@ -16,15 +16,15 @@ _CinnabarLabMetronomeRoomScientist1ReceivedTM35Text::
 	text_end
 
 _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
-	text "Tch-tch-tch! C'est"
-	line "le bruit d'un"
-	cont "METRONOME!"
+	text "Tch-tch-tch!"
+	line "C'est le bruit"
+	cont "d'un METRONOME!"
 
 	para "Il pousse ton"
-	line "#MON à utiliser"
-	cont "des capacités"
-	cont "qu'il ne connaît"
-	cont "pas!"
+	line "#MON à"
+	cont "utiliser des"
+	cont "capacités qu'il"
+	cont "ne connaît pas!"
 	done
 
 _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
@@ -33,8 +33,9 @@ _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
 	done
 
 _CinnabarLabMetronomeRoomScientist2Text::
-	text "EVOLI peut évoluer"
-	line "en 3 sortes de"
+	text "EVOLI peut"
+	line "évoluer en 3"
+	cont "sortes de"
 	cont "#MON."
 	done
 

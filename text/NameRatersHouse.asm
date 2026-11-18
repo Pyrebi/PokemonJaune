@@ -1,7 +1,8 @@
 _NameRatersHouseNameRaterWantMeToRateText::
 	text "Bonjour, bonjour!"
 	line "Je suis le JUGE"
-	cont "DES NOMS officiel!"
+	cont "DES NOMS"
+	cont "officiel!"
 
 	para "Veux-tu que je"
 	line "juge les surnoms"

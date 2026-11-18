@@ -113,7 +113,8 @@ _NotEnoughCoinsSlotMachineText::
 	prompt
 
 _OneMoreGoSlotMachineText::
-	text "Encore une partie?"
+	text "Encore une"
+	line "partie?"
 	done
 
 _LinedUpText::
@@ -205,8 +206,8 @@ _LavenderPokecenterGuyText::
 
 	para "Il y a des gens"
 	line "qui paieraient"
-	cont "cher pour en avoir"
-	cont "un!"
+	cont "cher pour en"
+	cont "avoir un!"
 	done
 
 _MtMoonPokecenterBenchGuyText::
@@ -236,8 +237,8 @@ _UnusedBenchGuyText2::
 
 _UnusedBenchGuyText3::
 	text "Le directeur de"
-	line "SYLPHE se cache au"
-	cont "PARC SAFARI."
+	line "SYLPHE se cache"
+	cont "au PARC SAFARI."
 	done
 
 _VermilionPokecenterGuyText::
@@ -259,13 +260,14 @@ _VermilionPokecenterGuyText::
 _CeladonCityPokecenterGuyText::
 	text "Si j'avais un"
 	line "vélo, j'irais sur"
-	cont "la PISTE CYCLABLE!"
+	cont "la PISTE"
+	cont "CYCLABLE!"
 	done
 
 _FuchsiaCityPokecenterGuyText::
 	text "Si tu étudies les"
-	line "#MON, visite le"
-	cont "PARC SAFARI."
+	line "#MON, visite"
+	cont "le PARC SAFARI."
 
 	para "On y trouve plein"
 	line "de #MON rares."
@@ -279,8 +281,8 @@ _CinnabarPokecenterGuyText::
 	cont "évolution."
 
 	para "L'évolution peut"
-	line "attendre qu'il ait"
-	cont "appris de"
+	line "attendre qu'il"
+	cont "ait appris de"
 	cont "nouvelles"
 	cont "capacités."
 	done
@@ -293,15 +295,16 @@ _SaffronCityPokecenterGuyText1::
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "La TEAM ROCKET est"
-	line "partie! On peut"
-	cont "ressortir sans"
-	cont "crainte! Génial!"
+	text "La TEAM ROCKET"
+	line "est partie! On"
+	cont "peut ressortir"
+	cont "sans crainte!"
+	cont "Génial!"
 	done
 
 _CeladonCityHotelText::
-	text "C'est ma soeur qui"
-	line "m'a emmené en"
+	text "C'est ma soeur"
+	line "qui m'a emmené en"
 	cont "vacances!"
 	done
 
@@ -377,7 +380,8 @@ _CinnabarGymQuizIntroText::
 	para "Mauvaise réponse:"
 	line "tu affrontes le"
 	cont "dresseur qui"
-	cont "bloque le passage!"
+	cont "bloque le"
+	cont "passage!"
 
 	para "Pour garder tes"
 	line "#MON en forme"
@@ -399,14 +403,15 @@ _CinnabarGymQuizShortIntroText::
 	done
 
 _CinnabarQuizQuestionsText1::
-	text "CHENIPAN évolue en"
-	line "PAPILUSION?"
+	text "CHENIPAN évolue"
+	line "en PAPILUSION?"
 	done
 
 _CinnabarQuizQuestionsText2::
-	text "Il existe 9 BADGES"
-	line "officiels de la"
-	cont "LIGUE #MON?"
+	text "Il existe 9"
+	line "BADGES officiels"
+	cont "de la LIGUE"
+	cont "#MON?"
 	done
 
 _CinnabarQuizQuestionsText3::
@@ -527,8 +532,8 @@ _GameCornerOutOfOrderText::
 	done
 
 _GameCornerOutToLunchText::
-	text "PARTI MANGER Cette"
-	line "place est"
+	text "PARTI MANGER"
+	line "Cette place est"
 	cont "réservée."
 	done
 
@@ -543,17 +548,18 @@ _JustAMomentText::
 	done
 
 TMNotebookText::
-	text "C'est une brochure"
-	line "sur les CT."
+	text "C'est une"
+	line "brochure sur les"
+	cont "CT."
 
 	para "..."
 
-	para "Il existe 50 CT en"
-	line "tout."
+	para "Il existe 50 CT"
+	line "en tout."
 
 	para "Il existe aussi 5"
-	line "CS réutilisables à"
-	cont "volonté."
+	line "CS réutilisables"
+	cont "à volonté."
 
 	para "SYLPHE SARL@"
 	text_end
@@ -575,11 +581,13 @@ _ViridianSchoolNotebookText1::
 	para "Première page..."
 
 	para "Les POKé BALLS"
-	line "servent à attraper"
-	cont "les #MON."
+	line "servent à"
+	cont "attraper les"
+	cont "#MON."
 
 	para "On peut porter"
-	line "jusqu'à 6 #MON."
+	line "jusqu'à 6"
+	cont "#MON."
 
 	para "Ceux qui élèvent"
 	line "et font combattre"
@@ -597,9 +605,9 @@ _ViridianSchoolNotebookText2::
 	cont "d'abord!"
 
 	para "Le poison, les"
-	line "brûlures et autres"
-	cont "dégâts sont"
-	cont "efficaces!"
+	line "brûlures et"
+	cont "autres dégâts"
+	cont "sont efficaces!"
 	prompt
 
 _ViridianSchoolNotebookText3::
@@ -607,8 +615,9 @@ _ViridianSchoolNotebookText3::
 
 	para "Les dresseurs de"
 	line "#MON cherchent"
-	cont "d'autres dresseurs"
-	cont "à affronter."
+	cont "d'autres"
+	cont "dresseurs à"
+	cont "affronter."
 
 	para "Des combats ont"
 	line "lieu sans cesse"
@@ -622,14 +631,15 @@ _ViridianSchoolNotebookText4::
 	para "Le but des"
 	line "dresseurs est de"
 	cont "battre les 8"
-	cont "CHAMPIONS d'ARENE."
+	cont "CHAMPIONS"
+	cont "d'ARENE."
 
 	para "Ils gagnent alors"
 	line "le droit"
 	cont "d'affronter..."
 
-	para "Le CONSEIL 4 de la"
-	line "LIGUE #MON!"
+	para "Le CONSEIL 4 de"
+	line "la LIGUE #MON!"
 	prompt
 
 _EnemiesOnEverySideText::
@@ -653,9 +663,9 @@ _IndigoPlateauHQText::
 
 _RedBedroomSNESText::
 	text "<PLAYER> joue à la"
-	line "SUPER NES! ...Bon!"
-	cont "Il est temps d'y"
-	cont "aller!"
+	line "SUPER NES!"
+	cont "...Bon! Il est"
+	cont "temps d'y aller!"
 	done
 
 _Route15UpstairsBinocularsText::
@@ -669,8 +679,8 @@ _Route15UpstairsBinocularsText::
 
 _AerodactylFossilText::
 	text "Fossile de PTERA"
-	line "Un #MON rare et"
-	cont "préhistorique."
+	line "Un #MON rare"
+	cont "et préhistorique."
 	done
 
 _KabutopsFossilText::
@@ -699,8 +709,8 @@ _LinkCableHelpText1::
 	prompt
 
 _LinkCableHelpText2::
-	text "Quel sujet veux-tu"
-	line "lire?"
+	text "Quel sujet"
+	line "veux-tu lire?"
 	done
 
 _LinkCableInfoText1::
@@ -726,26 +736,28 @@ _LinkCableInfoText3::
 
 _ViridianSchoolBlackboardText1::
 	text "Le tableau décrit"
-	line "les changements de"
-	cont "STATUT en combat."
+	line "les changements"
+	cont "de STATUT en"
+	cont "combat."
 	prompt
 
 _ViridianSchoolBlackboardText2::
-	text "Quel sujet veux-tu"
-	line "lire?"
+	text "Quel sujet"
+	line "veux-tu lire?"
 	done
 
 _ViridianBlackboardSleepText::
-	text "Un #MON endormi"
-	line "ne peut pas"
-	cont "attaquer!"
+	text "Un #MON"
+	line "endormi ne peut"
+	cont "pas attaquer!"
 
 	para "Il reste endormi"
 	line "même après le"
 	cont "combat."
 
 	para "Utilise un REVEIL"
-	line "pour le réveiller!"
+	line "pour le"
+	cont "réveiller!"
 	prompt
 
 _ViridianBlackboardPoisonText::
@@ -753,8 +765,9 @@ _ViridianBlackboardPoisonText::
 	line "#MON perd des"
 	cont "PV petit à petit."
 
-	para "Le poison persiste"
-	line "après le combat."
+	para "Le poison"
+	line "persiste après le"
+	cont "combat."
 
 	para "Utilise un"
 	line "ANTIDOTE pour le"
@@ -776,17 +789,19 @@ _ViridianBlackboardPrlzText::
 	prompt
 
 _ViridianBlackboardBurnText::
-	text "Une brûlure réduit"
-	line "la puissance et la"
-	cont "vitesse et inflige"
-	cont "des dégâts."
+	text "Une brûlure"
+	line "réduit la"
+	cont "puissance et la"
+	cont "vitesse et"
+	cont "inflige des"
+	cont "dégâts."
 
 	para "Elle persiste"
 	line "après le combat."
 
 	para "Utilise un"
-	line "ANTI-BRULE pour la"
-	cont "soigner!"
+	line "ANTI-BRULE pour"
+	cont "la soigner!"
 	prompt
 
 _ViridianBlackboardFrozenText::
@@ -794,11 +809,13 @@ _ViridianBlackboardFrozenText::
 	line "ne peut plus"
 	cont "bouger du tout!"
 
-	para "Il reste gelé même"
-	line "après le combat."
+	para "Il reste gelé"
+	line "même après le"
+	cont "combat."
 
-	para "Utilise un ANTIGEL"
-	line "pour le dégeler!"
+	para "Utilise un"
+	line "ANTIGEL pour le"
+	cont "dégeler!"
 	prompt
 
 _VermilionGymTrashText::
@@ -819,8 +836,9 @@ _VermilionGymTrashSuccessText1::
 
 _VermilionGymTrashSuccessText2::
 	text "Hé! Il y a un"
-	line "autre interrupteur"
-	cont "sous les ordures!"
+	line "autre"
+	cont "interrupteur sous"
+	cont "les ordures!"
 	cont "Allumons-le!"
 	prompt
 
@@ -829,8 +847,9 @@ _VermilionGymTrashSuccessText3::
 	line "électrique"
 	cont "s'ouvre!"
 
-	para "La porte motorisée"
-	line "s'ouvre!@"
+	para "La porte"
+	line "motorisée"
+	cont "s'ouvre!@"
 	text_end
 
 _VermilionGymTrashFailText::
@@ -850,8 +869,9 @@ _FoundHiddenItemText::
 
 _HiddenItemBagFullText::
 	text "Mais <PLAYER> n'a"
-	line "plus de place pour"
-	cont "d'autres objets!"
+	line "plus de place"
+	cont "pour d'autres"
+	cont "objets!"
 	done
 
 _FoundHiddenCoinsText::
@@ -938,7 +958,8 @@ _EnemyRanText::
 
 _HurtByPoisonText::
 	text "<USER>"
-	line "souffre du poison!"
+	line "souffre du"
+	cont "poison!"
 	prompt
 
 _HurtByBurnText::
@@ -948,8 +969,9 @@ _HurtByBurnText::
 	prompt
 
 _HurtByLeechSeedText::
-	text "VAMPIGRAINE draine"
-	line "<USER>!"
+	text "VAMPIGRAINE"
+	line "draine"
+	cont "<USER>!"
 	prompt
 
 _EnemyMonFaintedText::
@@ -984,9 +1006,9 @@ _UseNextMonText::
 	done
 
 _Rival1WinText::
-	text "<RIVAL>: Ouais! Je"
-	line "suis trop fort,"
-	cont "hein?"
+	text "<RIVAL>: Ouais!"
+	line "Je suis trop"
+	cont "fort, hein?"
 	prompt
 
 _PlayerBlackedOutText2::
@@ -1076,7 +1098,7 @@ _MoveDisabledText::
 _NoMovesLeftText::
 	text_ram wBattleMonNick
 	text " n'a"
-	line "plus de capacités!"
+	line "plus d'attaques!"
 	done
 
 _MultiHitText::
@@ -1093,13 +1115,15 @@ _ScaredText::
 	prompt
 
 _GetOutText::
-	text "SPECTRE: Dehors..."
+	text "SPECTRE:"
 	line "Dehors..."
+	cont "Dehors..."
 	prompt
 
 _FastAsleepText::
 	text "<USER>"
-	line "dort profondément!"
+	line "dort"
+	cont "profondément!"
 	prompt
 
 _WokeUpText::
@@ -1146,7 +1170,8 @@ _HurtItselfText::
 
 _ConfusedNoMoreText::
 	text "<USER>"
-	line "n'est plus confus!"
+	line "n'est plus"
+	cont "confus!"
 	prompt
 
 _SavingEnergyText::
@@ -1243,7 +1268,8 @@ _KeptGoingAndCrashedText::
 
 _UnaffectedText::
 	text "<TARGET>"
-	line "n'est pas affecté!"
+	line "n'est pas"
+	cont "affecté!"
 	prompt
 
 _DoesntAffectMonText::
@@ -1286,7 +1312,7 @@ _TurnedAwayText::
 _IgnoredOrdersText::
 	text_ram wBattleMonNick
 	text_start
-	line "ignore les ordres!"
+	line "ignore l'ordre!"
 	prompt
 
 _SubstituteTookDamageText::

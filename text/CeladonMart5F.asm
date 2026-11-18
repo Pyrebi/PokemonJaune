@@ -2,7 +2,8 @@ _CeladonMart5FGentlemanText::
 	text "Les objets qui"
 	line "améliorent les"
 	cont "#MON ne"
-	cont "s'achètent qu'ici."
+	cont "s'achètent"
+	cont "qu'ici."
 
 	para "Le CALCIUM"
 	line "augmente le"
@@ -23,8 +24,8 @@ _CeladonMart5FSailorText::
 	line "augmente"
 	cont "l'ATTAQUE."
 
-	para "Le FER augmente la"
-	line "DEFENSE!"
+	para "Le FER augmente"
+	line "la DEFENSE!"
 	done
 
 _CeladonMart5FCurrentFloorSignText::

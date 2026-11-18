@@ -33,6 +33,6 @@ _SafariZoneNorthTrainerTips3Text::
 	line "DRESSEURS"
 
 	para "Gagne une CS en"
-	line "trouvant la MAISON"
-	cont "SECRETE!"
+	line "trouvant la"
+	cont "MAISON SECRETE!"
 	done

@@ -11,21 +11,21 @@ _CinnabarLabFishingGuruText::
 
 _CinnabarLabPhotoText::
 	text "Une photo du"
-	line "fondateur du LABO,"
-	cont "le DR FUJI!"
+	line "fondateur du"
+	cont "LABO, le DR FUJI!"
 	done
 
 _CinnabarLabMeetingRoomSignText::
-	text "LABO #MON Salle"
-	line "de Réunion"
+	text "LABO #MON"
+	line "Salle de Réunion"
 	done
 
 _CinnabarLabRAndDSignText::
-	text "LABO #MON Salle"
-	line "de R-D"
+	text "LABO #MON"
+	line "Salle de R-D"
 	done
 
 _CinnabarLabTestingRoomSignText::
-	text "LABO #MON Salle"
-	line "des Essais"
+	text "LABO #MON"
+	line "Salle des Essais"
 	done

@@ -5,7 +5,8 @@ _Route25Youngster1BattleText::
 	done
 
 _Route25Youngster1EndBattleText::
-	text "Tu te débrouilles."
+	text "Tu te"
+	line "débrouilles."
 	prompt
 
 _Route25Youngster1AfterBattleText::
@@ -19,9 +20,9 @@ _Route25Youngster1AfterBattleText::
 
 _Route25Youngster2BattleText::
 	text "Papa m'a emmené à"
-	line "une super fête sur"
-	cont "L'OCEANE à CARMIN"
-	cont "SUR MER!"
+	line "une super fête"
+	cont "sur L'OCEANE à"
+	cont "CARMIN SUR MER!"
 	done
 
 _Route25Youngster2EndBattleText::
@@ -30,9 +31,10 @@ _Route25Youngster2EndBattleText::
 	prompt
 
 _Route25Youngster2AfterBattleText::
-	text "Sur L'OCEANE, j'ai"
-	line "vu des dresseurs"
-	cont "du monde entier."
+	text "Sur L'OCEANE,"
+	line "j'ai vu des"
+	cont "dresseurs du"
+	cont "monde entier."
 	done
 
 _Route25CooltrainerMBattleText::
@@ -63,9 +65,10 @@ _Route25CooltrainerF1EndBattleText::
 	prompt
 
 _Route25CooltrainerF1AfterBattleText::
-	text "J'aimerais que mon"
-	line "copain soit aussi"
-	cont "bon que toi!"
+	text "J'aimerais que"
+	line "mon copain soit"
+	cont "aussi bon que"
+	cont "toi!"
 	done
 
 _Route25Youngster3BattleText::
@@ -81,26 +84,29 @@ _Route25Youngster3EndBattleText::
 	prompt
 
 _Route25Youngster3AfterBattleText::
-	text "Si ton #MON est"
-	line "confus ou endormi,"
+	text "Si ton #MON"
+	line "est confus ou"
+	cont "endormi,"
 	cont "change-le!"
 	done
 
 _Route25CooltrainerF2BattleText::
 	text "Mon amie a un"
-	line "#MON mignon. Je"
-	cont "suis trop jalouse!"
+	line "#MON mignon."
+	cont "Je suis trop"
+	cont "jalouse!"
 	done
 
 _Route25CooltrainerF2EndBattleText::
-	text "Je ne suis plus si"
-	line "jalouse!"
+	text "Je ne suis plus"
+	line "si jalouse!"
 	prompt
 
 _Route25CooltrainerF2AfterBattleText::
 	text "Tu viens du MONT"
 	line "SELENITE? Tu me"
-	cont "donnes un MELOFEE?"
+	cont "donnes un"
+	cont "MELOFEE?"
 	done
 
 _Route25Hiker1BattleText::
@@ -116,9 +122,9 @@ _Route25Hiker1EndBattleText::
 	prompt
 
 _Route25Hiker1AfterBattleText::
-	text "Zut! Un NOSFERAPTI"
-	line "m'a mordu"
-	cont "là-dedans."
+	text "Zut! Un"
+	line "NOSFERAPTI m'a"
+	cont "mordu là-dedans."
 	done
 
 _Route25Hiker2BattleText::
@@ -133,8 +139,8 @@ _Route25Hiker2EndBattleText::
 
 _Route25Hiker2AfterBattleText::
 	text "Le collectionneur"
-	line "a plein de #MON"
-	cont "rares."
+	line "a plein de"
+	cont "#MON rares."
 	done
 
 _Route25Hiker3BattleText::

@@ -5,8 +5,8 @@ _MrFujisHouseSuperNerdMrFujiIsntHereText::
 	done
 
 _MrFujisHouseSuperNerdMrFujiHadBeenPrayingText::
-	text "M.FUJI priait seul"
-	line "pour la mère"
+	text "M.FUJI priait"
+	line "seul pour la mère"
 	cont "d'OSSELAIT."
 	done
 
@@ -18,8 +18,9 @@ _MrFujisHouseLittleGirlThisIsMrFujisHouseText::
 	line "gentil!"
 
 	para "Il s'occupe des"
-	line "#MON abandonnés"
-	cont "et orphelins!"
+	line "#MON"
+	cont "abandonnés et"
+	cont "orphelins!"
 	done
 
 _MrFujisHouseLittleGirlPokemonAreNiceToHugText::
@@ -30,7 +31,8 @@ _MrFujisHouseLittleGirlPokemonAreNiceToHugText::
 	done
 
 _MrFujisHousePsyduckText::
-	text "PSYKOKWAK: Kwaak!@"
+	text "PSYKOKWAK:"
+	line "Kwaak!@"
 	text_end
 
 _MrFujisHouseNidorinoText::

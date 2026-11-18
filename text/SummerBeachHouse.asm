@@ -6,16 +6,18 @@ _SummerBeachHouseSurfinDudeText1::
 	cont "ne suis pas"
 	cont "seul..."
 
-	para "Super! Tu as gagné"
-	line "le droit de SURFER"
-	cont "avec le SURFEUR!"
+	para "Super! Tu as"
+	line "gagné le droit de"
+	cont "SURFER avec le"
+	cont "SURFEUR!"
 
 	para "Tu essaies?"
 	done
 
 _SummerBeachHouseSurfinDudeText2::
-	text "Viens SURFER quand"
-	line "tu veux, mon ami!"
+	text "Viens SURFER"
+	line "quand tu veux,"
+	cont "mon ami!"
 	done
 
 _SummerBeachHouseSurfinDudeText3::
@@ -33,11 +35,11 @@ _SummerBeachHousePikachuText::
 	done
 
 _SummerBeachHousePoster1Text1::
-	text "Les gribouillis du"
-	line "SURFEUR..."
+	text "Les gribouillis"
+	line "du SURFEUR..."
 
-	para "Quand je suis dans"
-	line "le tube, la"
+	para "Quand je suis"
+	line "dans le tube, la"
 	cont "musique est dans"
 	cont "le groove!"
 	done
@@ -48,12 +50,14 @@ _SummerBeachHousePoster1Text2::
 	done
 
 _SummerBeachHousePoster2Text1::
-	text "CONSEIL DE SURF 1!"
+	text "CONSEIL DE SURF"
+	line "1!"
 
 	para "Après une figure,"
 	line "aligne ta planche"
-	cont "sur une vague pour"
-	cont "un effet cool!"
+	cont "sur une vague"
+	cont "pour un effet"
+	cont "cool!"
 	done
 
 _SummerBeachHousePoster2Text2::
@@ -63,21 +67,24 @@ _SummerBeachHousePoster2Text2::
 	done
 
 _SummerBeachHousePoster3Text1::
-	text "CONSEIL DE SURF 2!"
+	text "CONSEIL DE SURF"
+	line "2!"
 
 	para "Faire des figures"
 	line "pendant un saut,"
-	cont "c'est trop génial!"
+	cont "c'est trop"
+	cont "génial!"
 	done
 
 _SummerBeachHousePoster3Text2::
 	text "La mer nous unit"
-	line "tous dans le surf!"
+	line "tous dans le"
+	cont "surf!"
 	done
 
 _SummerBeachHousePrinterText1::
-	text "C'est une sorte de"
-	line "machine...@"
+	text "C'est une sorte"
+	line "de machine...@"
 	text_end
 
 _SummerBeachHousePrinterText2::

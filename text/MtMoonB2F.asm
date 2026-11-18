@@ -24,8 +24,8 @@ _MtMoonJessieJamesText4::
 	text_end
 
 _MtMoonB2FDomeFossilYouWantText::
-	text "Tu veux le FOSSILE"
-	line "DOME?"
+	text "Tu veux le"
+	line "FOSSILE DOME?"
 	done
 
 _MtMoonB2FHelixFossilYouWantText::
@@ -50,8 +50,8 @@ _MtMoonB2FSuperNerdTheyreBothMineText::
 
 	para "C'est moi qui ai"
 	line "trouvé ces"
-	cont "fossiles! Ils sont"
-	cont "à moi!"
+	cont "fossiles! Ils"
+	cont "sont à moi!"
 	done
 
 _MtMoonB2FSuperNerdOkIllShareText::
@@ -67,7 +67,8 @@ _MtMoonB2fSuperNerdEachTakeOneText::
 _MtMoonB2FSuperNerdTheresAPokemonLabText::
 	text "Loin d'ici, sur"
 	line "CRAMOIS'ILE, il y"
-	cont "a un LABO #MON."
+	cont "a un LABO"
+	cont "#MON."
 
 	para "Ils font des"
 	line "recherches pour"
@@ -83,8 +84,9 @@ _MtMoonB2FSuperNerdThenThisIsMineText::
 
 _MtMoonB2FRocket2BattleText::
 	text "Nous, la TEAM"
-	line "ROCKET, sommes des"
-	cont "gangsters #MON!"
+	line "ROCKET, sommes"
+	cont "des gangsters"
+	cont "#MON!"
 	done
 
 _MtMoonB2FRocket2EndBattleText::
@@ -94,17 +96,19 @@ _MtMoonB2FRocket2EndBattleText::
 _MtMoonB2FRocket2AfterBattleText::
 	text "Zut! Mes associés"
 	line "ne vont pas"
-	cont "laisser passer ça!"
+	cont "laisser passer"
+	cont "ça!"
 	done
 
 _MtMoonB2FRocket3BattleText::
-	text "On prépare un gros"
-	line "coup ici! Dégage,"
-	cont "gamin!"
+	text "On prépare un"
+	line "gros coup ici!"
+	cont "Dégage, gamin!"
 	done
 
 _MtMoonB2FRocket3EndBattleText::
-	text "Alors, tu es doué."
+	text "Alors, tu es"
+	line "doué."
 	prompt
 
 _MtMoonB2FRocket3AfterBattleText::

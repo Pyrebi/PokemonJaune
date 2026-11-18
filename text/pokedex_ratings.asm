@@ -22,10 +22,11 @@ _DexRatingText_Own0To9::
 	done
 
 _DexRatingText_Own10To19::
-	text "Tu es sur la bonne"
-	line "voie! Va chercher"
-	cont "la CS FLASH auprès"
-	cont "de mon assistant!"
+	text "Tu es sur la"
+	line "bonne voie! Va"
+	cont "chercher la CS"
+	cont "FLASH auprès de"
+	cont "mon assistant!"
 	done
 
 _DexRatingText_Own20To29::
@@ -45,10 +46,10 @@ _DexRatingText_Own30To39::
 	done
 
 _DexRatingText_Own40To49::
-	text "Ca avance bien! Va"
-	line "voir mon assistant"
-	cont "quand tu en auras"
-	cont "50!"
+	text "Ca avance bien!"
+	line "Va voir mon"
+	cont "assistant quand"
+	cont "tu en auras 50!"
 	done
 
 _DexRatingText_Own50To59::
@@ -66,8 +67,8 @@ _DexRatingText_Own60To69::
 
 _DexRatingText_Own70To79::
 	text "Très bien! Va"
-	line "pêcher des #MON"
-	cont "marins!"
+	line "pêcher des"
+	cont "#MON marins!"
 	done
 
 _DexRatingText_Own80To89::
@@ -78,15 +79,17 @@ _DexRatingText_Own80To89::
 
 _DexRatingText_Own90To99::
 	text "Je suis"
-	line "impressionné! Ca a"
-	cont "dû être difficile!"
+	line "impressionné! Ca"
+	cont "a dû être"
+	cont "difficile!"
 	done
 
 _DexRatingText_Own100To109::
 	text "Tu as enfin au"
-	line "moins 100 espèces!"
-	cont "Je n'en reviens"
-	cont "pas de ton talent!"
+	line "moins 100"
+	cont "espèces! Je n'en"
+	cont "reviens pas de"
+	cont "ton talent!"
 	done
 
 _DexRatingText_Own110To119::
@@ -97,14 +100,15 @@ _DexRatingText_Own110To119::
 	done
 
 _DexRatingText_Own120To129::
-	text "Excellent! Echange"
-	line "avec des amis pour"
-	cont "en avoir plus!"
+	text "Excellent!"
+	line "Echange avec des"
+	cont "amis pour en"
+	cont "avoir plus!"
 	done
 
 _DexRatingText_Own130To139::
-	text "Remarquable! Tu es"
-	line "devenu un vrai"
+	text "Remarquable! Tu"
+	line "es devenu un vrai"
 	cont "pro!"
 	done
 

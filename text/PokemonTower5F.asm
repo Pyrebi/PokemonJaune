@@ -1,11 +1,12 @@
 _PokemonTower5FChanneler1Text::
-	text "Viens, mon enfant!"
-	line "J'ai scellé cet"
+	text "Viens, mon"
+	line "enfant! J'ai"
+	cont "scellé cet"
 	cont "endroit par magie"
 	cont "blanche!"
 
-	para "Tu peux te reposer"
-	line "ici!"
+	para "Tu peux te"
+	line "reposer ici!"
 	done
 
 _PokemonTower5FChanneler2BattleText::
@@ -58,14 +59,14 @@ _PokemonTower5FChanneler5EndBattleText::
 
 _PokemonTower5FChanneler5AfterBattleText::
 	text "J'ai succombé aux"
-	line "esprits malgré mon"
-	cont "entraînement!"
+	line "esprits malgré"
+	cont "mon entraînement!"
 	done
 
 _PokemonTower5FPurifiedZoneText::
-	text "Tu entres dans une"
-	line "zone purifiée et"
-	cont "protégée!"
+	text "Tu entres dans"
+	line "une zone purifiée"
+	cont "et protégée!"
 
 	para "Les #MON de"
 	line "<PLAYER> sont"

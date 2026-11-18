@@ -5,7 +5,7 @@ _CardKeySuccessText1::
 _CardKeySuccessText2::
 	text_start
 	line "La CARTE MAGN."
-	cont "a ouvert la porte!"
+	cont "ouvre la porte!"
 	done
 
 _CardKeyFailText::
@@ -68,8 +68,8 @@ _FoundItemText::
 	text_end
 
 _NoMoreRoomForItemText::
-	text "Plus de place pour"
-	line "les objets!"
+	text "Plus de place"
+	line "pour les objets!"
 	done
 
 _OaksAideHiText::
@@ -102,7 +102,7 @@ _OaksAideUhOhText::
 	cont "attrapé que @"
 	text_decimal hOaksAideNumMonsOwned, 1, 3
 	text_start
-	cont "sortes de #MON!"
+	cont "sortes!"
 
 	para "Il en faut @"
 	text_decimal hOaksAideRequirement, 1, 3

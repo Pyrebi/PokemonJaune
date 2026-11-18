@@ -5,13 +5,15 @@ _LancesRoomLanceBeforeBattleText::
 
 	para "Je dirige le"
 	line "CONSEIL 4!"
-	cont "Appelle-moi PETER,"
-	cont "le dresseur de"
+	cont "Appelle-moi"
+	cont "PETER, le"
+	cont "dresseur de"
 	cont "dragons!"
 
 	para "Tu sais que les"
 	line "dragons sont des"
-	cont "#MON mythiques!"
+	cont "#MON"
+	cont "mythiques!"
 
 	para "Ils sont durs à"
 	line "attraper et à"
@@ -19,15 +21,17 @@ _LancesRoomLanceBeforeBattleText::
 	cont "puissance est"
 	cont "supérieure!"
 
-	para "Ils sont quasiment"
-	line "indestructibles!"
+	para "Ils sont"
+	line "quasiment"
+	cont "indestructibles!"
 
 	para "Alors, prêt à"
 	line "perdre?"
 
 	para "Ton défi de la"
 	line "LIGUE s'arrête"
-	cont "avec moi, <PLAYER>!"
+	cont "avec moi,"
+	cont "<PLAYER>!"
 	done
 
 _LancesRoomLanceEndBattleText::
@@ -43,25 +47,26 @@ _LancesRoomLanceAfterBattleText::
 	text "Je n'arrive"
 	line "toujours pas à"
 	cont "croire que mes"
-	cont "dragons ont perdu,"
-	cont "<PLAYER>!"
+	cont "dragons ont"
+	cont "perdu, <PLAYER>!"
 
 	para "Tu es maintenant"
 	line "le champion de la"
 	cont "LIGUE #MON!"
 
 	para "...Enfin, tu"
-	line "l'aurais été, mais"
-	cont "il te reste un"
-	cont "défi."
+	line "l'aurais été,"
+	cont "mais il te reste"
+	cont "un défi."
 
 	para "Tu dois affronter"
-	line "un autre dresseur!"
-	cont "Son nom est..."
+	line "un autre"
+	cont "dresseur! Son nom"
+	cont "est..."
 
 	para "<RIVAL>! Il a"
-	line "battu le CONSEIL 4"
-	cont "avant toi!"
+	line "battu le CONSEIL"
+	cont "4 avant toi!"
 
 	para "C'est lui le vrai"
 	line "champion de la"

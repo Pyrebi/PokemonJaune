@@ -6,12 +6,14 @@ _CeruleanTrashedHouseFishingGuruTheyStoleATMText::
 	line "ont fait!"
 
 	para "Ils ont volé une"
-	line "CT qui apprend aux"
-	cont "#MON à creuser"
-	cont "des TUNNELS!"
+	line "CT qui apprend"
+	cont "aux #MON à"
+	cont "creuser des"
+	cont "TUNNELS!"
 
-	para "Elle m'avait coûté"
-	line "une fortune!"
+	para "Elle m'avait"
+	line "coûté une"
+	cont "fortune!"
 	done
 
 _CeruleanTrashedHouseFishingGuruWhatsLostIsLostText::
@@ -19,8 +21,9 @@ _CeruleanTrashedHouseFishingGuruWhatsLostIsLostText::
 	line "est perdu!"
 
 	para "J'ai décidé"
-	line "d'apprendre TUNNEL"
-	cont "à TAUPIQUEUR sans"
+	line "d'apprendre"
+	cont "TUNNEL à"
+	cont "TAUPIQUEUR sans"
 	cont "CT!"
 	done
 
@@ -33,5 +36,6 @@ _CeruleanTrashedHouseGirlText::
 
 _CeruleanTrashedHouseWallHoleText::
 	text "La TEAM ROCKET a"
-	line "laissé une sortie!"
+	line "laissé une"
+	cont "sortie!"
 	done

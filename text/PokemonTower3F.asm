@@ -16,12 +16,13 @@ _PokemonTower3FChanneler1AfterBattleText::
 	done
 
 _PokemonTower3FChanneler2BattleText::
-	text "Kekeke.... Kwaaah!"
+	text "Kekeke...."
+	line "Kwaaah!"
 	done
 
 _PokemonTower3FChanneler2EndBattleText::
-	text "Hmm? Qu'est-ce que"
-	line "je fais?"
+	text "Hmm? Qu'est-ce"
+	line "que je fais?"
 	prompt
 
 _PokemonTower3FChanneler2AfterBattleText::

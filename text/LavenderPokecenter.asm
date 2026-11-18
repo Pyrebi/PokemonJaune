@@ -1,7 +1,8 @@
 _LavenderPokecenterGentlemanText::
 	text "La TEAM ROCKET"
 	line "ferait n'importe"
-	cont "quoi pour de l'or!"
+	cont "quoi pour de"
+	cont "l'or!"
 	done
 
 _LavenderPokecenterLittleGirlText::

@@ -1,8 +1,8 @@
 _Route2TradeHouseScientistText::
-	text "Un #MON K.O. ne"
-	line "peut pas"
-	cont "combattre. Mais il"
-	cont "peut utiliser des"
-	cont "capacités comme"
-	cont "COUPE!"
+	text "Un #MON K.O."
+	line "ne peut pas"
+	cont "combattre. Mais"
+	cont "il peut utiliser"
+	cont "des capacités"
+	cont "comme COUPE!"
 	done

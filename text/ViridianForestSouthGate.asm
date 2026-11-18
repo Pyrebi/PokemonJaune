@@ -7,12 +7,14 @@ _ViridianForestSouthGateGirlText::
 	done
 
 _ViridianForestSouthGateLittleGirlText::
-	text "Il faut aller loin"
-	line "pour trouver de"
-	cont "nouvelles espèces"
-	cont "de #MON."
+	text "Il faut aller"
+	line "loin pour trouver"
+	cont "de nouvelles"
+	cont "espèces de"
+	cont "#MON."
 
 	para "Cherche d'autres"
-	line "types en dehors de"
-	cont "la FORET DE JADE."
+	line "types en dehors"
+	cont "de la FORET DE"
+	cont "JADE."
 	done

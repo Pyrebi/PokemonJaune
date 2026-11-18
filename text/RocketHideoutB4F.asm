@@ -39,9 +39,9 @@ _RocketHideoutB4FGiovanniWhatCannotBeText::
 
 _RocketHideoutB4FGiovanniHopeWeMeetAgainText::
 	text "Je vois que tu"
-	line "élèves tes #MON"
-	cont "avec le plus grand"
-	cont "soin."
+	line "élèves tes"
+	cont "#MON avec le"
+	cont "plus grand soin."
 
 	para "Un enfant comme"
 	line "toi ne"

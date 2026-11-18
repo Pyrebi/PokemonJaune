@@ -7,14 +7,14 @@ _CeruleanMartCooltrainerMText::
 
 	para "Mets ton #MON"
 	line "le plus fort en"
-	cont "tête de liste pour"
-	cont "un meilleur"
+	cont "tête de liste"
+	cont "pour un meilleur"
 	cont "résultat!"
 	done
 
 _CeruleanMartCooltrainerFText::
-	text "Tu as vu des SUPER"
-	line "BONBONS?"
+	text "Tu as vu des"
+	line "SUPER BONBONS?"
 
 	para "Il paraît qu'ils"
 	line "font monter les"

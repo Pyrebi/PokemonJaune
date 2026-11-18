@@ -36,17 +36,17 @@ _VermilionCitySailor1DoYouHaveATicketText::
 	prompt
 
 _VermilionCitySailor1FlashedTicketText::
-	text "<PLAYER> montre son"
-	line "PASSE BATEAU!"
+	text "<PLAYER> montre"
+	line "son PASSE BATEAU!"
 
-	para "Parfait! Bienvenue"
-	line "à bord de"
-	cont "L'OCEANE!"
+	para "Parfait!"
+	line "Bienvenue à bord"
+	cont "de L'OCEANE!"
 	done
 
 _VermilionCitySailor1YouNeedATicketText::
-	text "<PLAYER> n'a pas le"
-	line "PASSE BATEAU"
+	text "<PLAYER> n'a pas"
+	line "le PASSE BATEAU"
 	cont "nécessaire."
 
 	para "Désolé!"
@@ -62,8 +62,9 @@ _VermilionCitySailor1ShipSetSailText::
 	done
 
 _VermilionCityGambler2Text::
-	text "Je fais construire"
-	line "un bâtiment sur ce"
+	text "Je fais"
+	line "construire un"
+	cont "bâtiment sur ce"
 	cont "terrain."
 
 	para "Mon #MON tasse"
@@ -98,11 +99,12 @@ _OfficerJennyText1::
 	text "Je viens"
 	line "d'attraper un"
 	cont "CARAPUCE qui"
-	cont "faisait sans cesse"
-	cont "des bêtises."
+	cont "faisait sans"
+	cont "cesse des"
+	cont "bêtises."
 
-	para "Je pense qu'il lui"
-	line "faut un bon"
+	para "Je pense qu'il"
+	line "lui faut un bon"
 	cont "dresseur pour le"
 	cont "remettre dans le"
 	cont "droit chemin."
@@ -118,8 +120,9 @@ _OfficerJennyText2::
 	para "Je viens"
 	line "d'attraper un"
 	cont "CARAPUCE qui"
-	cont "faisait sans cesse"
-	cont "des bêtises."
+	cont "faisait sans"
+	cont "cesse des"
+	cont "bêtises."
 
 	para "Veux-tu bien t'en"
 	line "occuper?"
@@ -127,7 +130,8 @@ _OfficerJennyText2::
 
 _OfficerJennyText3::
 	text "OK! Prends bien"
-	line "soin de CARAPUCE!@"
+	line "soin de"
+	cont "CARAPUCE!@"
 	text_end
 
 _OfficerJennyText4::
@@ -180,6 +184,6 @@ _VermilionCityGymSignText::
 	done
 
 _VermilionCityHarborSignText::
-	text "PORT DE CARMIN SUR"
-	line "MER"
+	text "PORT DE CARMIN"
+	line "SUR MER"
 	done

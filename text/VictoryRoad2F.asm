@@ -15,8 +15,9 @@ _VictoryRoad2FHikerEndBattleText::
 
 _VictoryRoad2FHikerAfterBattleText::
 	text "Si tu es coincé,"
-	line "essaie de déplacer"
-	cont "des rochers!"
+	line "essaie de"
+	cont "déplacer des"
+	cont "rochers!"
 	done
 
 _VictoryRoad2FSuperNerd1BattleText::
@@ -45,8 +46,8 @@ _VictoryRoad2FCooltrainerMEndBattleText::
 
 _VictoryRoad2FCooltrainerMAfterBattleText::
 	text "Tu as mérité ta"
-	line "place sur la ROUTE"
-	cont "VICTOIRE!"
+	line "place sur la"
+	cont "ROUTE VICTOIRE!"
 	done
 
 _VictoryRoad2FSuperNerd2BattleText::

@@ -8,7 +8,8 @@ _SafariZoneEastRestHouseRockerText::
 	text "J'ai attrapé un"
 	line "LEVEINARD!"
 
-	para "Ca valait le coup!"
+	para "Ca valait le"
+	line "coup!"
 	done
 
 _SafariZoneEastRestHouseSilphWorkerMText::

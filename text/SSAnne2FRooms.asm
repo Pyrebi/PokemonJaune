@@ -5,8 +5,8 @@ _SSAnne2FRoomsGentleman3Text::
 	cont "#MON dormir"
 	cont "comme celui-là!"
 
-	para "C'était à peu près"
-	line "comme ça!"
+	para "C'était à peu"
+	line "près comme ça!"
 	prompt
 
 _SSAnne2FRoomsGentleman4Text::
@@ -18,8 +18,9 @@ _SSAnne2FRoomsGentleman4Text::
 
 _SSAnne2FRoomsGrampsText::
 	text "Les #MON"
-	line "peuvent COUPER les"
-	cont "petits arbustes."
+	line "peuvent COUPER"
+	cont "les petits"
+	cont "arbustes."
 	done
 
 _SSAnne2FRoomsGentleman1BattleText::
@@ -45,7 +46,8 @@ _SSAnne2FRoomsFisherBattleText::
 	done
 
 _SSAnne2FRoomsFisherEndBattleText::
-	text "Je n'ai plus rien!"
+	text "Je n'ai plus"
+	line "rien!"
 	prompt
 
 _SSAnne2FRoomsFisherAfterBattleText::
@@ -60,7 +62,8 @@ _SSAnne2FRoomsFisherAfterBattleText::
 _SSAnne2FRoomsGentleman2BattleText::
 	text "Tu préfères les"
 	line "#MON forts ou"
-	cont "les #MON rares?"
+	cont "les #MON"
+	cont "rares?"
 	done
 
 _SSAnne2FRoomsGentleman2EndBattleText::
@@ -89,12 +92,13 @@ _SSAnne2FRoomsCooltrainerFAfterBattleText::
 	done
 
 _SSAnne2FRoomsGentleman5Text::
-	text "Tu es allé au PARC"
-	line "SAFARI de"
+	text "Tu es allé au"
+	line "PARC SAFARI de"
 	cont "PARMANIE?"
 
 	para "Il y avait plein"
-	line "de #MON rares!!"
+	line "de #MON"
+	cont "rares!!"
 	done
 
 _SSAnne2FRoomsLittleBoyText::
@@ -104,13 +108,14 @@ _SSAnne2FRoomsLittleBoyText::
 	done
 
 _SSAnne2FRoomsBrunetteGirlText::
-	text "Le CAPITAINE avait"
-	line "l'air très malade"
-	cont "et pâle!"
+	text "Le CAPITAINE"
+	line "avait l'air très"
+	cont "malade et pâle!"
 	done
 
 _SSAnne2FRoomsBeautyText::
 	text "Il paraît que"
 	line "beaucoup de gens"
-	cont "ont le mal de mer!"
+	cont "ont le mal de"
+	cont "mer!"
 	done

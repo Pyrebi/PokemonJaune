@@ -41,8 +41,8 @@ _SilphCo6FSilphWorkerF2TeamRocketConquerWorldText::
 
 _SilphCo6FSilphWorkerF2TeamRocketRanText::
 	text "La TEAM ROCKET"
-	line "s'est enfuie grâce"
-	cont "à toi!"
+	line "s'est enfuie"
+	cont "grâce à toi!"
 	done
 
 _SilphCo6FSilphWorkerM3TargetedSilphText::
@@ -58,8 +58,8 @@ _SilphCo6FSilphWorkerM3WorkForSilphText::
 	done
 
 _SilphCo6FRocket1BattleText::
-	text "Je suis l'un des 4"
-	line "FRERES ROCKET!"
+	text "Je suis l'un des"
+	line "4 FRERES ROCKET!"
 	done
 
 _SilphCo6FRocket1EndBattleText::
@@ -76,8 +76,8 @@ _SilphCo6FScientistBattleText::
 	text "Ce PRESIDENT"
 	line "pourri!"
 
-	para "Il n'aurait pas dû"
-	line "m'envoyer à la"
+	para "Il n'aurait pas"
+	line "dû m'envoyer à la"
 	cont "FILIALE de TIKSI!"
 	done
 
@@ -103,6 +103,6 @@ _SilphCo6FRocket2EndBattleText::
 
 _SilphCo6FRocket2AfterBattleText::
 	text "Si tu défends la"
-	line "justice, tu trahis"
-	cont "le mal!"
+	line "justice, tu"
+	cont "trahis le mal!"
 	done

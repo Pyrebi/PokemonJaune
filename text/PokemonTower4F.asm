@@ -4,7 +4,8 @@ _PokemonTower4FChanneler1BattleText::
 	done
 
 _PokemonTower4FChanneler1EndBattleText::
-	text "Où est le SPECTRE?"
+	text "Où est le"
+	line "SPECTRE?"
 	prompt
 
 _PokemonTower4FChanneler1AfterBattleText::

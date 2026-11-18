@@ -9,14 +9,15 @@ _MelanieText1::
 	para "Il a maintenant"
 	line "besoin d'un bon"
 	cont "dresseur pour"
-	cont "s'occuper de lui.@"
+	cont "s'occuper de"
+	cont "lui.@"
 	text_end
 
 _MelanieText2::
 	text "J'y pense!"
 	line "Voudrais-tu"
-	cont "prendre soin de ce"
-	cont "BULBIZARRE?"
+	cont "prendre soin de"
+	cont "ce BULBIZARRE?"
 	done
 
 _MelanieText3::
@@ -35,8 +36,8 @@ _MelanieText5::
 	text_end
 
 _CeruleanMelaniesHouseBulbasaurText::
-	text "BULBIZARRE: Bulbi!"
-	line "Zarre!@"
+	text "BULBIZARRE:"
+	line "Bulbi! Zarre!@"
 	text_end
 
 _CeruleanMelaniesHouseOddishText::

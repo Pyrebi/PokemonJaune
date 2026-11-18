@@ -6,7 +6,8 @@ _SilphCo4FSilphWorkerMImHidingText::
 
 _SilphCo4FSilphWorkerMTeamRocketIsGoneText::
 	text "Hein? La TEAM"
-	line "ROCKET est partie?"
+	line "ROCKET est"
+	cont "partie?"
 	done
 
 _SilphCo4FRocket1BattleText::

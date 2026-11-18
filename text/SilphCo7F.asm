@@ -1,40 +1,43 @@
 _SilphCo7FSilphWorkerM1HaveThisPokemonText::
-	text "Oh! Salut! Tu n'es"
-	line "pas un ROCKET! Tu"
-	cont "viens nous sauver?"
+	text "Oh! Salut! Tu"
+	line "n'es pas un"
+	cont "ROCKET! Tu viens"
+	cont "nous sauver?"
 	cont "Merci!"
 
 	para "Je veux te donner"
 	line "ce #MON pour"
-	cont "nous avoir sauvés."
+	cont "nous avoir"
+	cont "sauvés."
 	prompt
 
 _SilphCo7FSilphWorkerM1LaprasDescriptionText::
-	text "C'est LOKHLASS. Il"
-	line "est très"
+	text "C'est LOKHLASS."
+	line "Il est très"
 	cont "intelligent."
 
 	para "On le gardait au"
-	line "labo, mais il sera"
-	cont "bien mieux avec"
-	cont "toi!"
+	line "labo, mais il"
+	cont "sera bien mieux"
+	cont "avec toi!"
 
 	para "Je pense que tu"
 	line "seras un bon"
 	cont "dresseur pour"
 	cont "LOKHLASS!"
 
-	para "Il nage très bien."
-	line "Il te"
+	para "Il nage très"
+	line "bien. Il te"
 	cont "transportera!"
 	done
 
 _SilphCo7FSilphWorkerM1IsOurPresidentOkText::
-	text "Le BOSS de la TEAM"
-	line "ROCKET est allé"
-	cont "dans la salle du"
-	cont "conseil! Notre"
-	cont "PRESIDENT va bien?"
+	text "Le BOSS de la"
+	line "TEAM ROCKET est"
+	cont "allé dans la"
+	cont "salle du conseil!"
+	cont "Notre PRESIDENT"
+	cont "va bien?"
 	done
 
 _SilphCo7FSilphWorkerM1SavedText::
@@ -52,14 +55,15 @@ _SilphCo7FSilphWorkerM2AfterTheMasterBallText::
 
 _SilphCo7FSilphWorkerM2CancelledMasterBallText::
 	text "On a annulé le"
-	line "projet MASTER BALL"
-	cont "à cause de la TEAM"
-	cont "ROCKET."
+	line "projet MASTER"
+	cont "BALL à cause de"
+	cont "la TEAM ROCKET."
 	done
 
 _SilphCo7FSilphWorkerM3ItWouldBeBadText::
-	text "Ce serait terrible"
-	line "si la TEAM ROCKET"
+	text "Ce serait"
+	line "terrible si la"
+	cont "TEAM ROCKET"
 	cont "s'emparait de"
 	cont "SYLPHE ou de nos"
 	cont "#MON!"
@@ -73,15 +77,16 @@ _SilphCo7FSilphWorkerM3YouChasedOffTeamRocketText::
 
 _SilphCo7FSilphWorkerM4ItsReallyDangerousHereText::
 	text "Toi! C'est"
-	line "vraiment dangereux"
-	cont "ici! Tu viens me"
-	cont "sauver?"
+	line "vraiment"
+	cont "dangereux ici! Tu"
+	cont "viens me sauver?"
 	cont "Impossible!"
 	done
 
 _SilphCo7FSilphWorkerM4SafeAtLastText::
-	text "Enfin en sécurité!"
-	line "Oh merci!"
+	text "Enfin en"
+	line "sécurité! Oh"
+	cont "merci!"
 	done
 
 _SilphCo7FRocket1BattleText::
@@ -113,14 +118,14 @@ _SilphCo7FScientistEndBattleText::
 	prompt
 
 _SilphCo7FScientistAfterBattleText::
-	text "Malgré ton âge, tu"
-	line "es un dresseur"
+	text "Malgré ton âge,"
+	line "tu es un dresseur"
 	cont "doué!"
 	done
 
 _SilphCo7FRocket2BattleText::
-	text "Je suis l'un des 4"
-	line "FRERES ROCKET!"
+	text "Je suis l'un des"
+	line "4 FRERES ROCKET!"
 	done
 
 _SilphCo7FRocket2EndBattleText::
@@ -130,8 +135,9 @@ _SilphCo7FRocket2EndBattleText::
 
 _SilphCo7FRocket2AfterBattleText::
 	text "Peu importe. Mes"
-	line "frères me rendront"
-	cont "la pareille!"
+	line "frères me"
+	cont "rendront la"
+	cont "pareille!"
 	done
 
 _SilphCo7FRocket3BattleText::
@@ -145,14 +151,14 @@ _SilphCo7FRocket3EndBattleText::
 
 _SilphCo7FRocket3AfterBattleText::
 	text "Rentre chez toi"
-	line "avant que mon BOSS"
-	cont "ne s'énerve!"
+	line "avant que mon"
+	cont "BOSS ne s'énerve!"
 	done
 
 _SilphCo7FRivalText::
-	text "<RIVAL>: Qu'est-ce"
-	line "qui t'a retenu,"
-	cont "<PLAYER>?"
+	text "<RIVAL>:"
+	line "Qu'est-ce qui t'a"
+	cont "retenu, <PLAYER>?"
 	done
 
 _SilphCo7FRivalWaitedHereText::
@@ -161,22 +167,23 @@ _SilphCo7FRivalWaitedHereText::
 	cont "viendrais si"
 	cont "j'attendais ici!"
 
-	para "La TEAM ROCKET t'a"
-	line "ralenti,"
-	cont "j'imagine! Pas que"
-	cont "ça m'intéresse!"
+	para "La TEAM ROCKET"
+	line "t'a ralenti,"
+	cont "j'imagine! Pas"
+	cont "que ça"
+	cont "m'intéresse!"
 
 	para "Je t'ai vu à"
 	line "SAFRANIA, alors"
-	cont "j'ai voulu voir si"
-	cont "tu avais"
+	cont "j'ai voulu voir"
+	cont "si tu avais"
 	cont "progressé!"
 	done
 
 _SilphCo7FRivalDefeatedText::
-	text "Oh oh! Alors tu es"
-	line "prêt pour le BOSS"
-	cont "ROCKET!"
+	text "Oh oh! Alors tu"
+	line "es prêt pour le"
+	cont "BOSS ROCKET!"
 	prompt
 
 _SilphCo7FRivalVictoryText::
@@ -201,16 +208,18 @@ _SilphCo7FRivalGoodLuckToYouText::
 	cont "comment ils"
 	cont "évoluent!"
 
-	para "Je vais à la LIGUE"
-	line "#MON pour virer"
-	cont "le CONSEIL 4!"
+	para "Je vais à la"
+	line "LIGUE #MON"
+	cont "pour virer le"
+	cont "CONSEIL 4!"
 
 	para "Je deviendrai le"
 	line "dresseur le plus"
-	cont "puissant du monde!"
+	cont "puissant du"
+	cont "monde!"
 
 	para "<PLAYER>, bonne"
-	line "chance à toi! T'en"
-	cont "fais pas! A plus,"
-	cont "minable!"
+	line "chance à toi!"
+	cont "T'en fais pas! A"
+	cont "plus, minable!"
 	done

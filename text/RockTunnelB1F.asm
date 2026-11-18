@@ -2,12 +2,13 @@ _RockTunnelB1FCooltrainerF1BattleText::
 	text "Les randonneurs"
 	line "laissent des"
 	cont "brindilles pour"
-	cont "baliser le chemin."
+	cont "baliser le"
+	cont "chemin."
 	done
 
 _RockTunnelB1FCooltrainerF1EndBattleText::
-	text "Ohhh! J'ai fait de"
-	line "mon mieux!"
+	text "Ohhh! J'ai fait"
+	line "de mon mieux!"
 	prompt
 
 _RockTunnelB1FCooltrainerF1AfterBattleText::
@@ -27,8 +28,9 @@ _RockTunnelB1FHiker1EndBattleText::
 
 _RockTunnelB1FHiker1AfterBattleText::
 	text "Je mise sur la"
-	line "force parce que je"
-	cont "déteste réfléchir!"
+	line "force parce que"
+	cont "je déteste"
+	cont "réfléchir!"
 	done
 
 _RockTunnelB1FSuperNerd1BattleText::
@@ -59,8 +61,8 @@ _RockTunnelB1FSuperNerd2EndBattleText::
 	prompt
 
 _RockTunnelB1FSuperNerd2AfterBattleText::
-	text "Les cosplayeurs se"
-	line "déguisent en"
+	text "Les cosplayeurs"
+	line "se déguisent en"
 	cont "#MON pour"
 	cont "s'amuser."
 	done
@@ -72,16 +74,16 @@ _RockTunnelB1FHiker2BattleText::
 	done
 
 _RockTunnelB1FHiker2EndBattleText::
-	text "J'abandonne! Tu es"
-	line "meilleur"
+	text "J'abandonne! Tu"
+	line "es meilleur"
 	cont "technicien!"
 	prompt
 
 _RockTunnelB1FHiker2AfterBattleText::
 	text "En montagne, on"
-	line "trouve souvent des"
-	cont "#MON de type"
-	cont "roche."
+	line "trouve souvent"
+	cont "des #MON de"
+	cont "type roche."
 	done
 
 _RockTunnelB1FCooltrainerF2BattleText::
@@ -98,7 +100,8 @@ _RockTunnelB1FCooltrainerF2EndBattleText::
 _RockTunnelB1FCooltrainerF2AfterBattleText::
 	text "J'aime les petits"
 	line "#MON, les gros"
-	cont "me font trop peur!"
+	cont "me font trop"
+	cont "peur!"
 	done
 
 _RockTunnelB1FHiker3BattleText::

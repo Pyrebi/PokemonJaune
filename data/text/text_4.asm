@@ -5,8 +5,8 @@ _FileDataDestroyedText::
 	prompt
 
 _WouldYouLikeToSaveText::
-	text "Voulez-vous SAUVER"
-	line "la partie?"
+	text "Voulez-vous"
+	line "SAUVER la partie?"
 	done
 
 _SavingText::
@@ -14,20 +14,22 @@ _SavingText::
 	done
 
 _GameSavedText::
-	text "<PLAYER> a sauvé la"
-	line "partie!"
+	text "<PLAYER> a sauvé"
+	line "la partie!"
 	done
 
 _OlderFileWillBeErasedText::
 	text "L'ancienne"
 	line "sauvegarde sera"
-	cont "effacée. D'accord?"
+	cont "effacée."
+	cont "D'accord?"
 	done
 
 _WhenYouChangeBoxText::
 	text "Changer de BOITE"
-	line "#MON sauvegarde"
-	cont "la partie."
+	line "#MON"
+	cont "sauvegarde la"
+	cont "partie."
 
 	para "D'accord?"
 	done

@@ -61,10 +61,11 @@ _Museum1FGamblerText::
 	done
 
 _Museum1FScientist2TakeThisToAPokemonLabText::
-	text "Chut! Je pense que"
-	line "ce morceau d'AMBRE"
-	cont "contient de l'ADN"
-	cont "de #MON!"
+	text "Chut! Je pense"
+	line "que ce morceau"
+	cont "d'AMBRE contient"
+	cont "de l'ADN de"
+	cont "#MON!"
 
 	para "Ce serait génial"
 	line "de pouvoir"
@@ -72,8 +73,9 @@ _Museum1FScientist2TakeThisToAPokemonLabText::
 	cont "#MON grâce à"
 	cont "lui!"
 
-	para "Mais mes collègues"
-	line "m'ignorent!"
+	para "Mais mes"
+	line "collègues"
+	cont "m'ignorent!"
 
 	para "Alors, j'ai un"
 	line "service à te"
@@ -81,7 +83,8 @@ _Museum1FScientist2TakeThisToAPokemonLabText::
 
 	para "Apporte ceci à un"
 	line "LABO #MON pour"
-	cont "le faire examiner!"
+	cont "le faire"
+	cont "examiner!"
 	prompt
 
 _Museum1FScientist2ReceivedOldAmberText::

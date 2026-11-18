@@ -11,5 +11,6 @@ _FuchsiaMartCooltrainerFText::
 	text "Tu as essayé"
 	line "VITESSE +? Ca"
 	cont "accélère un"
-	cont "#MON en combat!"
+	cont "#MON en"
+	cont "combat!"
 	done

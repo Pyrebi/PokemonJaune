@@ -1,10 +1,12 @@
 _Route1Youngster1MartSampleText::
 	text "Salut! Je"
-	line "travaille dans une"
-	cont "BOUTIQUE #MON."
+	line "travaille dans"
+	cont "une BOUTIQUE"
+	cont "#MON."
 
-	para "C'est une boutique"
-	line "pratique, alors"
+	para "C'est une"
+	line "boutique"
+	cont "pratique, alors"
 	cont "viens nous voir à"
 	cont "JADIELLE."
 
@@ -22,9 +24,10 @@ _Route1Youngster1GotPotionText::
 	text_end
 
 _Route1Youngster1AlsoGotPokeballsText::
-	text "Nous vendons aussi"
-	line "des POKé BALLS"
-	cont "pour attraper des"
+	text "Nous vendons"
+	line "aussi des POKé"
+	cont "BALLS pour"
+	cont "attraper des"
 	cont "#MON!"
 	done
 
@@ -39,15 +42,17 @@ _Route1Youngster2Text::
 	cont "de la route?"
 
 	para "Ca fait un peu"
-	line "peur, mais tu peux"
-	cont "sauter en bas."
+	line "peur, mais tu"
+	cont "peux sauter en"
+	cont "bas."
 
-	para "Tu reviendras plus"
-	line "vite à BOURG"
+	para "Tu reviendras"
+	line "plus vite à BOURG"
 	cont "PALETTE comme ça."
 	done
 
 _Route1SignText::
 	text "ROUTE 1 BOURG"
-	line "PALETTE - JADIELLE"
+	line "PALETTE -"
+	cont "JADIELLE"
 	done

@@ -8,9 +8,9 @@ _AgathaBeforeBattleText::
 
 	para "Ce vieux bougre"
 	line "était autrefois"
-	cont "fort et beau! Il y"
-	cont "a des décennies de"
-	cont "ça!"
+	cont "fort et beau! Il"
+	cont "y a des décennies"
+	cont "de ça!"
 
 	para "Maintenant, il ne"
 	line "pense qu'à son"
@@ -20,9 +20,9 @@ _AgathaBeforeBattleText::
 	cont "combattre!"
 
 	para "<PLAYER>! Je vais"
-	line "te montrer comment"
-	cont "se bat un vrai"
-	cont "dresseur!"
+	line "te montrer"
+	cont "comment se bat un"
+	cont "vrai dresseur!"
 	done
 
 _AgathaEndBattleText::
@@ -35,8 +35,8 @@ _AgathaEndBattleText::
 _AgathaAfterBattleText::
 	text "Tu as gagné! Je"
 	line "comprends ce que"
-	cont "ce vieux bougre te"
-	cont "trouve!"
+	cont "ce vieux bougre"
+	cont "te trouve!"
 
 	para "Je n'ai rien"
 	line "d'autre à dire!"

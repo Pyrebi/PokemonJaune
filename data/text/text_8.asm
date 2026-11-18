@@ -11,8 +11,8 @@ IF DEF(_YELLOW_VC)
 	db   "osed because of"
 	cont "inactivity."
 ELSE
-	text "La connexion a été"
-	line "coupée pour cause"
+	text "Connexion coupée"
+	line "pour cause"
 	cont "d'inactivité."
 ENDC
 	vc_patch_end
@@ -34,8 +34,9 @@ _CableClubNPCMakingPreparationsText::
 	done
 
 _FlashLightsAreaText::
-	text "Un FLASH aveuglant"
-	line "éclaire les lieux!"
+	text "Un FLASH"
+	line "aveuglant éclaire"
+	cont "les lieux!"
 	prompt
 
 _WarpToLastPokemonCenterText::
@@ -110,8 +111,8 @@ _GotMonText::
 	text_end
 
 _SentToBoxText::
-	text "Plus de place pour"
-	line "les #MON!"
+	text "Plus de place"
+	line "pour les #MON!"
 	cont "@"
 	text_ram wBoxMonNicks
 	text " est"
@@ -122,8 +123,8 @@ _SentToBoxText::
 	done
 
 _BoxIsFullText::
-	text "Plus de place pour"
-	line "les #MON!"
+	text "Plus de place"
+	line "pour les #MON!"
 
 	para "La BOITE #MON"
 	line "est pleine!"

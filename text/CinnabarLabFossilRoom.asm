@@ -13,12 +13,13 @@ _CinnabarLabFossilRoomScientist1Text::
 	prompt
 
 _CinnabarLabFossilRoomScientist1NoFossilsText::
-	text "Non! Trop dommage!"
+	text "Non! Trop"
+	line "dommage!"
 	done
 
 _CinnabarLabFossilRoomScientist1GoForAWalkText::
-	text "Moi prendre un peu"
-	line "de temps!"
+	text "Moi prendre un"
+	line "peu de temps!"
 
 	para "Toi aller te"
 	line "promener un peu!"
@@ -51,8 +52,8 @@ _CinnabarLabFossilRoomScientist1SeesFossilText::
 
 	para "Ma Machine de"
 	line "Résurrection va"
-	cont "ramener ce #MON"
-	cont "à la vie!"
+	cont "rendre la vie"
+	cont "à ce #MON!"
 	done
 
 _CinnabarLabFossilRoomScientist1TakesFossilText::
@@ -66,8 +67,8 @@ _CinnabarLabFossilRoomScientist1TakesFossilText::
 	prompt
 
 _CinnabarLabFossilRoomScientist1GoForAWalkText2::
-	text "Moi prendre un peu"
-	line "de temps!"
+	text "Moi prendre un"
+	line "peu de temps!"
 
 	para "Toi aller te"
 	line "promener un peu!"

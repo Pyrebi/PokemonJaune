@@ -15,8 +15,8 @@ SilphCo9FNurseThankYouText::
 
 _SilphCo9FRocket1BattleText::
 	text "Tes #MON ont"
-	line "l'air de t'adorer,"
-	cont "petit!"
+	line "l'air de"
+	cont "t'adorer, petit!"
 	done
 
 _SilphCo9FRocket1EndBattleText::
@@ -48,8 +48,8 @@ _SilphCo9FScientistAfterBattleText::
 	done
 
 _SilphCo9FRocket2BattleText::
-	text "Je suis l'un des 4"
-	line "FRERES ROCKET!"
+	text "Je suis l'un des"
+	line "4 FRERES ROCKET!"
 	done
 
 _SilphCo9FRocket2EndBattleText::

@@ -11,13 +11,15 @@ _Route6CooltrainerM1EndBattleText::
 
 _Route6CooltrainerM1AfterBattleText::
 	text "Mon amour va me"
-	line "quitter, dégoûtée."
+	line "quitter,"
+	cont "dégoûtée."
 	done
 
 _Route6CooltrainerF1BattleText::
-	text "Je m'entraîne pour"
-	line "mon amour. Ne me"
-	cont "dérange pas!"
+	text "Je m'entraîne"
+	line "pour mon amour."
+	cont "Ne me dérange"
+	cont "pas!"
 	done
 
 _Route6CooltrainerF1EndBattleText::
@@ -28,8 +30,9 @@ _Route6CooltrainerF1EndBattleText::
 _Route6CooltrainerF1AfterBattleText::
 	text "Je comprends, les"
 	line "#MON ne sont"
-	cont "pas qu'une affaire"
-	cont "de calculs."
+	cont "pas qu'une"
+	cont "affaire de"
+	cont "calculs."
 	done
 
 _Route6Youngster1BattleText::
@@ -74,7 +77,8 @@ _Route6CooltrainerF2BattleText::
 	done
 
 _Route6CooltrainerF2EndBattleText::
-	text "Ca n'a pas marché!"
+	text "Ca n'a pas"
+	line "marché!"
 	prompt
 
 _Route6CooltrainerF2AfterBattleText::

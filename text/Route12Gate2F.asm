@@ -1,7 +1,8 @@
 _Route12Gate2FBrunetteGirlYouCanHaveThisText::
-	text "Les cendres de mon"
-	line "#MON reposent à"
-	cont "la TOUR #MON."
+	text "Les cendres de"
+	line "mon #MON"
+	cont "reposent à la"
+	cont "TOUR #MON."
 
 	para "Tu peux prendre"
 	line "cette CT. Je n'en"
@@ -21,8 +22,8 @@ _Route12Gate2FBrunetteGirlTM39ExplanationText::
 	para "Elle est très"
 	line "précise,"
 	cont "utilise-la dans"
-	cont "les combats que tu"
-	cont "ne peux pas"
+	cont "les combats que"
+	cont "tu ne peux pas"
 	cont "perdre."
 	done
 

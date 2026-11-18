@@ -1,8 +1,8 @@
 _CinnabarMartSilphWorkerFText::
 	text "Ils n'ont pas"
-	line "d'ATTAQUE +? C'est"
-	cont "bien pour les"
-	cont "combats!"
+	line "d'ATTAQUE +?"
+	cont "C'est bien pour"
+	cont "les combats!"
 	done
 
 _CinnabarMartScientistText::

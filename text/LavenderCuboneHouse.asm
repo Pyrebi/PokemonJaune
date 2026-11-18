@@ -5,13 +5,15 @@ _LavenderCuboneHouseCuboneText::
 
 _LavenderCuboneHouseBrunetteGirlPoorCubonesMotherText::
 	text "Je déteste ces"
-	line "horribles ROCKETS!"
+	line "horribles"
+	cont "ROCKETS!"
 
 	para "La mère de ce"
-	line "pauvre OSSELAIT..."
+	line "pauvre"
+	cont "OSSELAIT..."
 
-	para "Elle a été tuée en"
-	line "essayant"
+	para "Elle a été tuée"
+	line "en essayant"
 	cont "d'échapper à la"
 	cont "TEAM ROCKET!"
 	done

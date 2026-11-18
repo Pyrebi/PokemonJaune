@@ -11,7 +11,8 @@ _SSAnne1FRoomsGentleman1BattleText::
 	done
 
 _SSAnne1FRoomsGentleman1EndBattleText::
-	text "Mes... mes amis..."
+	text "Mes... mes"
+	line "amis..."
 	prompt
 
 _SSAnne1FRoomsGentleman1AfterBattleText::
@@ -33,7 +34,8 @@ _SSAnne1FRoomsGentleman2EndBattleText::
 
 _SSAnne1FRoomsGentleman2AfterBattleText::
 	text "Je veux qu'on me"
-	line "laisse tranquille!"
+	line "laisse"
+	cont "tranquille!"
 	cont "Dehors!"
 	done
 
@@ -48,12 +50,12 @@ _SSAnne1FRoomsYoungsterEndBattleText::
 	prompt
 
 _SSAnne1FRoomsYoungsterAfterBattleText::
-	text "On peut être amis,"
-	line "OK?"
+	text "On peut être"
+	line "amis, OK?"
 
-	para "Comme ça on pourra"
-	line "échanger des"
-	cont "#MON!"
+	para "Comme ça on"
+	line "pourra échanger"
+	cont "des #MON!"
 	done
 
 _SSAnne1FRoomsCooltrainerFBattleText::
@@ -73,16 +75,17 @@ _SSAnne1FRoomsCooltrainerFAfterBattleText::
 	line "pauvres #MON"
 	cont "globe-trotteurs!"
 
-	para "J'exige que tu les"
-	line "soignes dans un"
-	cont "CENTRE #MON!"
+	para "J'exige que tu"
+	line "les soignes dans"
+	cont "un CENTRE"
+	cont "#MON!"
 	done
 
 _SSAnne1FRoomsGirl1Text::
 	text "Serveur, je"
-	line "voudrais une tarte"
-	cont "aux cerises s'il"
-	cont "vous plaît!"
+	line "voudrais une"
+	cont "tarte aux cerises"
+	cont "s'il vous plaît!"
 	done
 
 _SSAnne1FRoomsMiddleAgedManText::
@@ -92,8 +95,9 @@ _SSAnne1FRoomsMiddleAgedManText::
 	done
 
 _SSAnne1FRoomsLittleGirlText::
-	text "Je voyage toujours"
-	line "avec GRODOUDOU!"
+	text "Je voyage"
+	line "toujours avec"
+	cont "GRODOUDOU!"
 	done
 
 _SSAnne1FRoomsGirl2Text::
@@ -104,7 +108,8 @@ _SSAnne1FRoomsGirl2Text::
 
 _SSAnne1FRoomsGentleman3Text::
 	text "Chut! Je suis un"
-	line "agent de la POLICE"
+	line "agent de la"
+	cont "POLICE"
 	cont "INTERNATIONALE!"
 
 	para "Je suis sur la"

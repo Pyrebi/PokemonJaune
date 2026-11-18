@@ -1,6 +1,6 @@
 _SSAnneKitchenCook1Text::
-	text "Toi, petit! On est"
-	line "occupés ici!"
+	text "Toi, petit! On"
+	line "est occupés ici!"
 	cont "Pousse-toi!"
 	done
 
@@ -26,7 +26,8 @@ _SSAnneKitchenCook4Text::
 
 _SSAnneKitchenCook5Text::
 	text "Tu as entendu"
-	line "parler de RONFLEX?"
+	line "parler de"
+	cont "RONFLEX?"
 
 	para "Il ne fait que"
 	line "manger et dormir!"
@@ -37,7 +38,8 @@ _SSAnneKitchenCook6Text::
 
 	para "Je n'ai le droit"
 	line "qu'd'éplucher des"
-	cont "oignons... Snif..."
+	cont "oignons..."
+	cont "Snif..."
 	done
 
 _SSAnneKitchenCook7MainCourseIsText::

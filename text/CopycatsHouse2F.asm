@@ -1,6 +1,7 @@
 _CopycatsHouse2FCopycatDoYouLikePokemonText::
-	text "<PLAYER>: Salut! Tu"
-	line "aimes les #MON?"
+	text "<PLAYER>: Salut!"
+	line "Tu aimes les"
+	cont "#MON?"
 
 	para "<PLAYER>: Euh non,"
 	line "c'est moi qui"
@@ -38,7 +39,7 @@ _CopycatsHouse2FCopycatTM31Explanation1Text::
 	text_start
 
 	para "La CT31 contient"
-	line "mon favori, COPIE!"
+	line "COPIE, ma chérie!"
 
 	para "Utilise-la sur un"
 	line "bon #MON!@"
@@ -62,7 +63,8 @@ _CopycatsHouse2FCopycatTM31Explanation2Text::
 	done
 
 _CopycatsHouse2FCopycatTM31NoRoomText::
-	text "Tu n'en veux pas?@"
+	text "Tu n'en veux"
+	line "pas?@"
 	text_end
 
 _CopycatsHouse2FDoduoText::
@@ -92,8 +94,9 @@ _CopycatsHouse2FPCMySecretsText::
 
 	para "Mes Secrets!"
 
-	para "Talent: Imitation!"
-	line "Passe-temps:"
+	para "Talent:"
+	line "Imitation!"
+	cont "Passe-temps:"
 	cont "Collectionner des"
 	cont "poupées! #MON"
 	cont "préféré: MELOFEE!"

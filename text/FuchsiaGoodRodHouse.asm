@@ -10,7 +10,7 @@ _FuchsiaGoodRodHouseFishingGuruText::
 	done
 
 _FuchsiaGoodRodHouseFishingGuruReceivedGoodRodText::
-	text "Formidable! J'aime"
+	text "Super! J'aime"
 	line "ton style!"
 
 	para "Prends ceci et"

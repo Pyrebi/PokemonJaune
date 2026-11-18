@@ -13,8 +13,8 @@ _Route10SuperNerd1EndBattleText::
 
 _Route10SuperNerd1AfterBattleText::
 	text "J'ai d'autres"
-	line "#MON rares à la"
-	cont "maison!"
+	line "#MON rares à"
+	cont "la maison!"
 	done
 
 _Route10Hiker1BattleText::
@@ -22,9 +22,9 @@ _Route10Hiker1BattleText::
 	done
 
 _Route10Hiker1EndBattleText::
-	text "Ha-haha! Je ne ris"
-	line "pas! Ha-rhume des"
-	cont "foins!"
+	text "Ha-haha! Je ne"
+	line "ris pas! Ha-rhume"
+	cont "des foins!"
 	cont "Haha-atchoum!"
 	prompt
 
@@ -52,11 +52,12 @@ _Route10SuperNerd2AfterBattleText::
 	done
 
 _Route10CooltrainerF1BattleText::
-	text "Je suis allée dans"
-	line "une ARENE #MON"
-	cont "plusieurs fois."
-	cont "Mais j'ai perdu à"
-	cont "chaque fois."
+	text "Je suis allée"
+	line "dans une ARENE"
+	cont "#MON plusieurs"
+	cont "fois. Mais j'ai"
+	cont "perdu à chaque"
+	cont "fois."
 	done
 
 _Route10CooltrainerF1EndBattleText::
@@ -83,7 +84,8 @@ _Route10Hiker2EndBattleText::
 
 _Route10Hiker2AfterBattleText::
 	text "J'ai trop respiré"
-	line "d'air de montagne!"
+	line "d'air de"
+	cont "montagne!"
 	done
 
 _Route10CooltrainerF2BattleText::

@@ -10,6 +10,6 @@ _SaffronMartSuperNerdText::
 _SaffronMartCooltrainerFText::
 	text "Le RAPPEL est"
 	line "cher, mais il"
-	cont "ranime les #MON"
-	cont "K.O.!"
+	cont "ranime les"
+	cont "#MON K.O.!"
 	done

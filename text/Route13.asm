@@ -6,7 +6,8 @@ _Route13CooltrainerM1BattleText::
 
 _Route13CooltrainerM1EndBattleText::
 	text "Mon combo"
-	line "d'oiseaux a perdu?"
+	line "d'oiseaux a"
+	cont "perdu?"
 	prompt
 
 _Route13CooltrainerM1AfterBattleText::
@@ -17,9 +18,9 @@ _Route13CooltrainerM1AfterBattleText::
 	done
 
 _Route13CooltrainerF1BattleText::
-	text "On dit que je suis"
-	line "douée pour mon"
-	cont "âge!"
+	text "On dit que je"
+	line "suis douée pour"
+	cont "mon âge!"
 	done
 
 _Route13CooltrainerF1EndBattleText::
@@ -29,8 +30,9 @@ _Route13CooltrainerF1EndBattleText::
 _Route13CooltrainerF1AfterBattleText::
 	text "Je veux devenir"
 	line "une bonne"
-	cont "dresseuse. Je vais"
-	cont "m'entraîner dur."
+	cont "dresseuse. Je"
+	cont "vais m'entraîner"
+	cont "dur."
 	done
 
 _Route13CooltrainerF2BattleText::
@@ -45,8 +47,9 @@ _Route13CooltrainerF2EndBattleText::
 _Route13CooltrainerF2AfterBattleText::
 	text "Tu as eu ces"
 	line "BADGES grâce aux"
-	cont "CHAMPIONS d'ARENE."
-	cont "Je le sais!"
+	cont "CHAMPIONS"
+	cont "d'ARENE. Je le"
+	cont "sais!"
 	done
 
 _Route13CooltrainerF3BattleText::
@@ -57,8 +60,9 @@ _Route13CooltrainerF3BattleText::
 	done
 
 _Route13CooltrainerF3EndBattleText::
-	text "Waouh! Tu as gagné"
-	line "haut la main!"
+	text "Waouh! Tu as"
+	line "gagné haut la"
+	cont "main!"
 	prompt
 
 _Route13CooltrainerF3AfterBattleText::
@@ -86,8 +90,8 @@ _Route13CooltrainerF4AfterBattleText::
 	done
 
 _Route13CooltrainerM2BattleText::
-	text "Le vent souffle en"
-	line "ma faveur!"
+	text "Le vent souffle"
+	line "en ma faveur!"
 	done
 
 _Route13CooltrainerM2EndBattleText::

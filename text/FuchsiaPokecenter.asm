@@ -3,10 +3,10 @@ _FuchsiaPokecenterRockerText::
 	line "avec un seul"
 	cont "#MON fort."
 
-	para "C'est dur, mais il"
-	line "faut les entraîner"
-	cont "de façon"
-	cont "équilibrée."
+	para "C'est dur, mais"
+	line "il faut les"
+	cont "entraîner de"
+	cont "façon équilibrée."
 	done
 
 _FuchsiaPokecenterCooltrainerFText::

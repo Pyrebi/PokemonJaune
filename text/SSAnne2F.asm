@@ -6,7 +6,8 @@ _SSAnne2FWaiterText::
 	para "A chaque escale,"
 	line "nous donnons des"
 	cont "fêtes avec des"
-	cont "dresseurs invités!"
+	cont "dresseurs"
+	cont "invités!"
 	done
 
 _SSAnne2FRivalText::
@@ -26,8 +27,9 @@ _SSAnne2FRivalText::
 	line "40 espèces, mon"
 	cont "pote!"
 
-	para "Il y a des espèces"
-	line "différentes"
+	para "Il y a des"
+	line "espèces"
+	cont "différentes"
 	cont "partout!"
 
 	para "Fouille bien les"
@@ -52,10 +54,10 @@ _SSAnne2FRivalVictoryText::
 	prompt
 
 _SSAnne2FRivalCutMasterText::
-	text "<RIVAL>: Il paraît"
-	line "qu'il y a un"
-	cont "maître de COUPE à"
-	cont "bord."
+	text "<RIVAL>: Il"
+	line "paraît qu'il y a"
+	cont "un maître de"
+	cont "COUPE à bord."
 
 	para "Mais c'est juste"
 	line "un vieux qui a le"

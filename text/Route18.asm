@@ -16,8 +16,9 @@ _Route18CooltrainerM1AfterBattleText::
 	done
 
 _Route18CooltrainerM2BattleText::
-	text "Kurukkoo! Tu aimes"
-	line "mon cri d'oiseau?"
+	text "Kurukkoo! Tu"
+	line "aimes mon cri"
+	cont "d'oiseau?"
 	done
 
 _Route18CooltrainerM2EndBattleText::
@@ -44,8 +45,8 @@ _Route18CooltrainerM3EndBattleText::
 
 _Route18CooltrainerM3AfterBattleText::
 	text "C'est mon coin de"
-	line "chasse aux #MON"
-	cont "préféré!"
+	line "chasse aux"
+	cont "#MON préféré!"
 	done
 
 _Route18SignText::

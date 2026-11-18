@@ -9,9 +9,10 @@ _Route11Gambler1EndBattleText::
 	prompt
 
 _Route11Gambler1AfterBattleText::
-	text "Les #MON, c'est"
-	line "la vie! Et vivre,"
-	cont "c'est parier!"
+	text "Les #MON,"
+	line "c'est la vie! Et"
+	cont "vivre, c'est"
+	cont "parier!"
 	done
 
 _Route11Gambler2BattleText::
@@ -26,13 +27,14 @@ _Route11Gambler2EndBattleText::
 
 _Route11Gambler2AfterBattleText::
 	text "On ne peut pas"
-	line "être lâche dans le"
-	cont "monde des #MON!"
+	line "être lâche dans"
+	cont "le monde des"
+	cont "#MON!"
 	done
 
 _Route11Youngster1BattleText::
-	text "Allons-y, mais pas"
-	line "de triche!"
+	text "Allons-y, mais"
+	line "pas de triche!"
 	done
 
 _Route11Youngster1EndBattleText::
@@ -47,8 +49,8 @@ _Route11Youngster1AfterBattleText::
 	done
 
 _Route11SuperNerd1BattleText::
-	text "Attention! Je pose"
-	line "des câbles!"
+	text "Attention! Je"
+	line "pose des câbles!"
 	done
 
 _Route11SuperNerd1EndBattleText::
@@ -120,8 +122,9 @@ _Route11Youngster3BattleText::
 
 _Route11Youngster3EndBattleText::
 	text "Zut! Je dois"
-	line "rendre mes #MON"
-	cont "plus forts!"
+	line "rendre mes"
+	cont "#MON plus"
+	cont "forts!"
 	prompt
 
 _Route11Youngster3AfterBattleText::
@@ -130,18 +133,20 @@ _Route11Youngster3AfterBattleText::
 	cont "descend des"
 	cont "montagnes."
 
-	para "Il est fort, si tu"
-	line "arrives à l'avoir."
+	para "Il est fort, si"
+	line "tu arrives à"
+	cont "l'avoir."
 	done
 
 _Route11SuperNerd2BattleText::
-	text "Attention aux fils"
-	line "électriques!"
+	text "Attention aux"
+	line "fils électriques!"
 	done
 
 _Route11SuperNerd2EndBattleText::
 	text "Waouh! Une vraie"
-	line "bougie d'allumage!"
+	line "bougie"
+	cont "d'allumage!"
 	prompt
 
 _Route11SuperNerd2AfterBattleText::

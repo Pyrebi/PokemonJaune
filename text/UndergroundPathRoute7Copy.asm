@@ -1,7 +1,8 @@
 _UndergroundPathRoute7CopyUnusedGirlText::
 	text "Je veux faire les"
 	line "magasins à"
-	cont "CELADOPOLE mais..."
+	cont "CELADOPOLE"
+	cont "mais..."
 
 	para "Il y a tant de"
 	line "gens louches"
@@ -16,8 +17,8 @@ _UndergroundPathRoute7CopyUnusedTeamRocketHadAHideoutText::
 	done
 
 _UndergroundPathRoute7CopyUnusedMiddleAgedManText::
-	text "Tu viens faire les"
-	line "magasins à"
+	text "Tu viens faire"
+	line "les magasins à"
 	cont "CELADOPOLE?"
 
 	para "Sors et va vers"
@@ -27,12 +28,12 @@ _UndergroundPathRoute7CopyUnusedMiddleAgedManText::
 _UndergroundPathRoute7CopyUnusedGoesUnderSaffronText::
 	text "Le SOUTERRAIN"
 	line "passe sous"
-	cont "SAFRANIA et mène à"
-	cont "LAVANVILLE."
+	cont "SAFRANIA et mène"
+	cont "à LAVANVILLE."
 
 	para "Si tu vas à"
-	line "AZURIA, va dans le"
-	cont "bâtiment de"
-	cont "l'autre côté de la"
-	cont "route."
+	line "AZURIA, va dans"
+	cont "le bâtiment de"
+	cont "l'autre côté de"
+	cont "la route."
 	done

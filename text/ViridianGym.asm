@@ -32,28 +32,29 @@ _ViridianGymGiovanniPostBattleAdviceText::
 	text "Après cette"
 	line "défaite, je ne"
 	cont "peux plus faire"
-	cont "face à mes sbires!"
-	cont "La TEAM ROCKET est"
-	cont "finie pour"
-	cont "toujours!"
+	cont "face à mes"
+	cont "sbires! La TEAM"
+	cont "ROCKET est finie"
+	cont "pour toujours!"
 
 	para "Je vais consacrer"
 	line "ma vie à l'étude"
 	cont "des #MON!"
 
 	para "Nous nous"
-	line "reverrons un jour!"
-	cont "Adieu!@"
+	line "reverrons un"
+	cont "jour! Adieu!@"
 	text_end
 
 _ViridianGymGiovanniEarthBadgeInfoText::
 	text "Avec le BADGE"
-	line "TERRE, les #MON"
-	cont "de tout niveau"
+	line "TERRE, les"
+	cont "#MON de tout"
+	cont "niveau"
 	cont "t'obéiront!"
 
-	para "C'est la preuve de"
-	line "ta maîtrise en"
+	para "C'est la preuve"
+	line "de ta maîtrise en"
 	cont "tant que dresseur"
 	cont "#MON!"
 
@@ -62,8 +63,8 @@ _ViridianGymGiovanniEarthBadgeInfoText::
 	cont "LIGUE #MON!"
 
 	para "Voici mon cadeau"
-	line "pour ton défi à la"
-	cont "LIGUE #MON!"
+	line "pour ton défi à"
+	cont "la LIGUE #MON!"
 	done
 
 _ViridianGymGiovanniReceivedTM27Text::
@@ -80,8 +81,8 @@ _ViridianGymGiovanniTM27ExplanationText::
 	cont "en un seul coup!"
 
 	para "Je l'ai créée"
-	line "quand je dirigeais"
-	cont "l'ARENE, il y a..."
+	line "en dirigeant"
+	cont "l'ARENE, jadis..."
 	done
 
 _ViridianGymGiovanniTM27NoRoomText::
@@ -90,8 +91,9 @@ _ViridianGymGiovanniTM27NoRoomText::
 	done
 
 _ViridianGymCooltrainerM1BattleText::
-	text "Héhé! Tu dois être"
-	line "à bout de souffle"
+	text "Héhé! Tu dois"
+	line "être à bout de"
+	cont "souffle"
 	cont "maintenant!"
 	done
 
@@ -102,8 +104,8 @@ _ViridianGymCooltrainerM1EndBattleText::
 _ViridianGymCooltrainerM1AfterBattleText::
 	text "Il faut de la"
 	line "puissance pour"
-	cont "tenir face à notre"
-	cont "CHAMPION!"
+	cont "tenir face à"
+	cont "notre CHAMPION!"
 	done
 
 _ViridianGymHiker1BattleText::
@@ -123,8 +125,8 @@ _ViridianGymHiker1AfterBattleText::
 
 _ViridianGymRocker1BattleText::
 	text "Mes #MON et"
-	line "moi, on fait de la"
-	cont "super musique"
+	line "moi, on fait de"
+	cont "la super musique"
 	cont "ensemble!"
 	done
 
@@ -151,8 +153,8 @@ _ViridianGymHiker2EndBattleText::
 
 _ViridianGymHiker2AfterBattleText::
 	text "Si mes #MON"
-	line "étaient aussi bons"
-	cont "que moi au"
+	line "étaient aussi"
+	cont "bons que moi au"
 	cont "karaté..."
 	done
 
@@ -173,9 +175,9 @@ _ViridianGymCooltrainerM2AfterBattleText::
 
 _ViridianGymHiker3BattleText::
 	text "Je suis le ROI DU"
-	line "KARATE! Ton destin"
-	cont "est entre mes"
-	cont "mains!"
+	line "KARATE! Ton"
+	cont "destin est entre"
+	cont "mes mains!"
 	done
 
 _ViridianGymHiker3EndBattleText::
@@ -210,9 +212,9 @@ _ViridianGymCooltrainerM3BattleText::
 	text "L'ARENE de"
 	line "JADIELLE a"
 	cont "longtemps été"
-	cont "fermée, mais notre"
-	cont "CHAMPION est de"
-	cont "retour!"
+	cont "fermée, mais"
+	cont "notre CHAMPION"
+	cont "est de retour!"
 	done
 
 _ViridianGymCooltrainerM3EndBattleText::
@@ -220,10 +222,11 @@ _ViridianGymCooltrainerM3EndBattleText::
 	prompt
 
 _ViridianGymCooltrainerM3AfterBattleText::
-	text "Tu ne peux aller à"
-	line "la LIGUE #MON"
-	cont "qu'en battant"
-	cont "notre CHAMPION!"
+	text "Tu ne peux aller"
+	line "à la LIGUE"
+	cont "#MON qu'en"
+	cont "battant notre"
+	cont "CHAMPION!"
 	done
 
 _ViridianGymGuidePreBattleText::
@@ -243,8 +246,9 @@ _ViridianGymGuidePreBattleText::
 
 	para "Il paraît que les"
 	line "dresseurs d'ici"
-	cont "aiment les #MON"
-	cont "de type sol!"
+	cont "aiment les"
+	cont "#MON de type"
+	cont "sol!"
 	done
 
 _ViridianGymGuidePostBattleText::

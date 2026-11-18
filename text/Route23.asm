@@ -5,12 +5,12 @@ _Route23YouDontHaveTheBadgeYetText::
 	text_ram wNameBuffer
 	text "!"
 
-	para "Tu n'as pas encore"
+	para "Tu n'as pas"
 	line "le @"
 	text_ram wNameBuffer
 	text "!"
 
-	para "Il te le faut pour"
+	para "Il te le faut"
 	line "aller à la"
 	cont "LIGUE #MON!@"
 	text_end

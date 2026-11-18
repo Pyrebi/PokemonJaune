@@ -1,8 +1,8 @@
 _CeladonDinerCookText::
 	text "Salut!"
 
-	para "On fait une pause,"
-	line "là."
+	para "On fait une"
+	line "pause, là."
 	done
 
 _CeladonDinerMiddleAgedWomanText::
@@ -22,9 +22,9 @@ _CeladonDinerFisherText::
 	text "Miam..."
 
 	para "L'homme à cette"
-	line "table a tout perdu"
-	cont "aux machines à"
-	cont "sous."
+	line "table a tout"
+	cont "perdu aux"
+	cont "machines à sous."
 	done
 
 _CeladonDinerGymGuideImFlatOutBustedText::
@@ -39,7 +39,8 @@ _CeladonDinerGymGuideImFlatOutBustedText::
 	cont "range!"
 
 	para "Tiens! Je n'en"
-	line "aurai plus besoin!"
+	line "aurai plus"
+	cont "besoin!"
 	prompt
 
 _CeladonDinerGymGuideReceivedCoinCaseText::

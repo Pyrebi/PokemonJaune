@@ -11,16 +11,16 @@ _FuchsiaCityGamblerText::
 	line "un zoo devant"
 	cont "l'entrée."
 
-	para "Au fond, il y a le"
-	line "SAFARI pour"
+	para "Au fond, il y a"
+	line "le SAFARI pour"
 	cont "attraper des"
 	cont "#MON."
 	done
 
 _FuchsiaCityErikText::
-	text "ERIK: Où est SARA?"
-	line "On devait se"
-	cont "retrouver ici."
+	text "ERIK: Où est"
+	line "SARA? On devait"
+	cont "se retrouver ici."
 	done
 
 _FuchsiaCityYoungster2Text::
@@ -57,8 +57,8 @@ _FuchsiaCitySafariZoneSignText::
 
 _FuchsiaCityGymSignText::
 	text "ARENE #MON de"
-	line "PARMANIE CHAMPION:"
-	cont "KOGA"
+	line "PARMANIE"
+	cont "CHAMPION: KOGA"
 
 	para "Le Maître Ninja"
 	line "Venimeux!"
@@ -68,25 +68,27 @@ _FuchsiaCityChanseySignText::
 	text "Nom: LEVEINARD"
 
 	para "En attraper un,"
-	line "c'est une question"
-	cont "de chance."
+	line "c'est une"
+	cont "question de"
+	cont "chance."
 	prompt
 
 _FuchsiaCityVoltorbSignText::
 	text "Nom: VOLTORBE"
 
-	para "Le portrait craché"
-	line "d'une POKé BALL."
+	para "Le portrait"
+	line "craché d'une POKé"
+	cont "BALL."
 	prompt
 
 _FuchsiaCityKangaskhanSignText::
 	text "Nom: KANGOUREX"
 
 	para "Un #MON"
-	line "maternel qui élève"
-	cont "son petit dans une"
-	cont "poche sur son"
-	cont "ventre."
+	line "maternel qui"
+	cont "élève son petit"
+	cont "dans une poche"
+	cont "sur son ventre."
 	prompt
 
 _FuchsiaCitySlowpokeSignText::

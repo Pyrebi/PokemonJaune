@@ -7,8 +7,9 @@ _CeruleanBadgeHouseMiddleAgedManText::
 	para "Je vois que tu en"
 	line "as au moins un."
 
-	para "Ces BADGES cachent"
-	line "d'incroyables"
+	para "Ces BADGES"
+	line "cachent"
+	cont "d'incroyables"
 	cont "secrets!"
 	prompt
 
@@ -16,8 +17,8 @@ _CeruleanBadgeHouseMiddleAgedManWhichBadgeText::
 	text "Bon..."
 
 	para "Lequel des 8"
-	line "BADGES veux-tu que"
-	cont "je décrive?"
+	line "BADGES veux-tu"
+	cont "que je décrive?"
 	done
 
 _CeruleanBadgeHouseMiddleAgedManVisitAnyTimeText::
@@ -50,8 +51,8 @@ _CeruleanBadgeHouseCascadeBadgeText::
 	prompt
 
 _CeruleanBadgeHouseThunderBadgeText::
-	text "La VITESSE de tous"
-	line "les #MON"
+	text "La VITESSE de"
+	line "tous les #MON"
 	cont "augmente un peu."
 
 	para "Il permet aussi"

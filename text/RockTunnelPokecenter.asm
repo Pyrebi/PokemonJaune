@@ -3,8 +3,8 @@ _RockTunnelPokecenterGentlemanText::
 	line "#MON le rend"
 	cont "plus fort contre"
 	cont "certains types et"
-	cont "plus faible contre"
-	cont "d'autres!"
+	cont "plus faible"
+	cont "contre d'autres!"
 	done
 
 _RockTunnelPokecenterFisherText::

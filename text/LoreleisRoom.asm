@@ -5,17 +5,17 @@ _LoreleisRoomLoreleiBeforeBattleText::
 	para "Je suis OLGA du"
 	line "CONSEIL 4!"
 
-	para "Personne ne me bat"
-	line "avec des #MON"
-	cont "de glace!"
+	para "Personne ne me"
+	line "bat avec des"
+	cont "#MON de glace!"
 
 	para "Les attaques"
 	line "gelantes sont"
 	cont "puissantes!"
 
-	para "Tes #MON seront"
-	line "à ma merci une"
-	cont "fois gelés!"
+	para "Tes #MON"
+	line "seront à ma merci"
+	cont "une fois gelés!"
 
 	para "Hahaha! Tu es"
 	line "prêt?"
@@ -26,8 +26,9 @@ _LoreleisRoomLoreleiEndBattleText::
 	prompt
 
 _LoreleisRoomLoreleiAfterBattleText::
-	text "Tu es meilleur que"
-	line "je ne pensais!"
+	text "Tu es meilleur"
+	line "que je ne"
+	cont "pensais!"
 	cont "Continue!"
 
 	para "Tu n'as eu qu'un"

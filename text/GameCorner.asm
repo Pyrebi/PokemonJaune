@@ -3,8 +3,8 @@ _GameCornerBeauty1Text::
 
 	para "Tu peux échanger"
 	line "tes jetons contre"
-	cont "de fabuleux lots à"
-	cont "côté."
+	cont "de fabuleux lots"
+	cont "à côté."
 	done
 
 _GameCornerClerkDoYouNeedSomeGameCoinsText::
@@ -14,8 +14,8 @@ _GameCornerClerkDoYouNeedSomeGameCoinsText::
 	para "Tu as besoin de"
 	line "jetons?"
 
-	para "C'est ¥1000 les 50"
-	line "jetons. Tu en"
+	para "C'est ¥1000 les"
+	line "50 jetons. Tu en"
 	cont "veux?"
 	done
 
@@ -25,8 +25,9 @@ _GameCornerClerkThanksHereAre50CoinsText::
 	done
 
 _GameCornerClerkPleaseComePlaySometimeText::
-	text "Non? Reviens jouer"
-	line "quand tu veux!"
+	text "Non? Reviens"
+	line "jouer quand tu"
+	cont "veux!"
 	done
 
 _GameCornerClerkCantAffordTheCoinsText::
@@ -45,19 +46,20 @@ _GameCornerClerkDontHaveCoinCaseText::
 	done
 
 _GameCornerMiddleAgedMan1Text::
-	text "Garde ça pour toi."
+	text "Garde ça pour"
+	line "toi."
 
 	para "On dit que cet"
-	line "endroit est dirigé"
-	cont "par la TEAM"
-	cont "ROCKET."
+	line "endroit est"
+	cont "dirigé par la"
+	cont "TEAM ROCKET."
 	done
 
 _GameCornerBeauty2Text::
 	text "Je crois que ces"
-	line "machines n'ont pas"
-	cont "toutes les mêmes"
-	cont "chances."
+	line "machines n'ont"
+	cont "pas toutes les"
+	cont "mêmes chances."
 	done
 
 _GameCornerFishingGuru1WantToPlayText::
@@ -71,8 +73,9 @@ _GameCornerFishingGuru1Received10CoinsText::
 	text_end
 
 _GameCornerFishingGuru1DontNeedMyCoinsText::
-	text "Tu n'as pas besoin"
-	line "de mes jetons!"
+	text "Tu n'as pas"
+	line "besoin de mes"
+	cont "jetons!"
 	done
 
 _GameCornerFishingGuru1WinsComeAndGoText::
@@ -107,7 +110,8 @@ _GameCornerGymGuideChampInMakingText::
 _GameCornerGymGuideTheyOfferRarePokemonText::
 	text "Ils proposent des"
 	line "#MON rares en"
-	cont "échange de jetons."
+	cont "échange de"
+	cont "jetons."
 
 	para "Mais je n'arrive"
 	line "pas à gagner!"
@@ -144,8 +148,8 @@ _GameCornerMiddleAgedMan2INeedMoreCoinsText::
 _GameCornerFishingGuru2ThrowingMeOffText::
 	text "Hé, quoi? Tu me"
 	line "déconcentres!"
-	cont "Tiens, des jetons,"
-	cont "du balai!"
+	cont "Tiens, des"
+	cont "jetons, du balai!"
 	prompt
 
 _GameCornerFishingGuru2Received20CoinsText::
@@ -159,9 +163,9 @@ _GameCornerFishingGuru2YouGotYourOwnCoinsText::
 	done
 
 _GameCornerFishingGuru2CloselyWatchTheReelsText::
-	text "L'astuce, c'est de"
-	line "bien regarder les"
-	cont "rouleaux!"
+	text "L'astuce, c'est"
+	line "de bien regarder"
+	cont "les rouleaux!"
 	done
 
 _GameCornerRocketImGuardingThisPosterText::
@@ -177,8 +181,9 @@ _GameCornerRocketBattleEndText::
 _GameCornerRocketAfterBattleText::
 	text "Notre repaire"
 	line "risque d'être"
-	cont "découvert! Je dois"
-	cont "prévenir le BOSS!"
+	cont "découvert! Je"
+	cont "dois prévenir le"
+	cont "BOSS!"
 	done
 
 _GameCornerPosterSwitchBehindPosterText::

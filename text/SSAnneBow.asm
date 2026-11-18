@@ -1,7 +1,8 @@
 _SSAnneBowSuperNerdText::
-	text "La fête est finie."
-	line "Le navire va"
-	cont "bientôt partir."
+	text "La fête est"
+	line "finie. Le navire"
+	cont "va bientôt"
+	cont "partir."
 	done
 
 _SSAnneBowSailor1Text::
@@ -20,8 +21,8 @@ _SSAnneBowCooltrainerMText::
 _SSAnneBowSailor2BattleText::
 	text "Ohé matelot!"
 
-	para "Dansons une petite"
-	line "gigue!"
+	para "Dansons une"
+	line "petite gigue!"
 	done
 
 _SSAnneBowSailor2EndBattleText::
@@ -47,8 +48,10 @@ _SSAnneBowSailor3EndBattleText::
 	prompt
 
 _SSAnneBowSailor3AfterBattleText::
-	text "Mon père dit qu'il"
-	line "y a 100 espèces de"
+	text "Mon père dit"
+	line "qu'il y a 100"
+	cont "espèces de"
 	cont "#MON. Je crois"
-	cont "qu'il y en a plus."
+	cont "qu'il y en a"
+	cont "plus."
 	done

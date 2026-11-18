@@ -25,7 +25,8 @@ _PokemonMansion3FScientistEndBattleText::
 _PokemonMansion3FScientistAfterBattleText::
 	text "Alors, tu es"
 	line "coincé? Essaie de"
-	cont "sauter par là-bas!"
+	cont "sauter par"
+	cont "là-bas!"
 	done
 
 _PokemonMansion3FDiaryText::

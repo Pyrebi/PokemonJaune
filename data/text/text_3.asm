@@ -75,8 +75,8 @@ _PickUpPayDayMoneyText::
 	prompt
 
 _ClearSaveDataText::
-	text "Effacer toutes les"
-	line "données?"
+	text "Effacer toutes"
+	line "les données?"
 	done
 
 _WhichFloorText::
@@ -85,7 +85,8 @@ _WhichFloorText::
 	done
 
 _SleepingPikachuText1::
-	text "Aucune réaction..."
+	text "Aucune"
+	line "réaction..."
 	prompt
 
 _PartyMenuNormalText::
@@ -175,8 +176,8 @@ _TurnedOnPC1Text::
 	prompt
 
 _AccessedBillsPCText::
-	text "Connexion au PC de"
-	line "LEO."
+	text "Connexion au PC"
+	line "de LEO."
 
 	para "Système de"
 	line "stockage #MON"
@@ -184,8 +185,8 @@ _AccessedBillsPCText::
 	prompt
 
 _AccessedSomeonesPCText::
-	text "Connexion au PC de"
-	line "quelqu'un."
+	text "Connexion au PC"
+	line "de quelqu'un."
 
 	para "Système de"
 	line "stockage #MON"
@@ -207,7 +208,8 @@ _TurnedOnPC2Text::
 	prompt
 
 _WhatDoYouWantText::
-	text "Que veux-tu faire?"
+	text "Que veux-tu"
+	line "faire?"
 	done
 
 _WhatToDepositText::
@@ -231,8 +233,8 @@ _NothingToDepositText::
 	prompt
 
 _NoRoomToStoreText::
-	text "Plus de place pour"
-	line "stocker des"
+	text "Plus de place"
+	line "pour stocker des"
 	cont "objets."
 	prompt
 
@@ -263,7 +265,8 @@ _CantCarryMoreText::
 	prompt
 
 _WhatToTossText::
-	text "Que veux-tu jeter?"
+	text "Que veux-tu"
+	line "jeter?"
 	done
 
 _TossHowManyText::
@@ -280,7 +283,8 @@ _AccessedHoFPCText::
 	prompt
 
 _SleepingPikachuText2::
-	text "Aucune réaction..."
+	text "Aucune"
+	line "réaction..."
 	prompt
 
 _SwitchOnText::
@@ -327,7 +331,8 @@ _MonIsTakenOutText::
 
 _NoMonText::
 	text "Quoi? Il n'y a"
-	line "aucun #MON ici!"
+	line "aucun #MON"
+	cont "ici!"
 	prompt
 
 _CantTakeMonText::
@@ -335,14 +340,14 @@ _CantTakeMonText::
 	line "prendre de"
 	cont "#MON."
 
-	para "Stocke d'abord des"
-	line "#MON."
+	para "Stocke d'abord"
+	line "des #MON."
 	prompt
 
 _PikachuUnhappyText::
 	text_ram wNameBuffer
 	text " n'a"
-	line "pas l'air content!"
+	line "pas l'air ravi!"
 	prompt
 
 _ReleaseWhichMonText::
@@ -394,8 +399,9 @@ _SoYouWantPrizeText::
 	done
 
 _SorryNeedMoreCoinsText::
-	text "Désolé, il te faut"
-	line "plus de jetons.@"
+	text "Désolé, il te"
+	line "faut plus de"
+	cont "jetons.@"
 	text_end
 
 _OopsYouDontHaveEnoughRoomText::
@@ -420,8 +426,8 @@ _ClosedOaksPCText::
 	text_end
 
 _AccessedOaksPCText::
-	text "Connexion au PC du"
-	line "PROF.CHEN."
+	text "Connexion au PC"
+	line "du PROF.CHEN."
 
 	para "Système"
 	line "d'évaluation du"
@@ -442,19 +448,22 @@ _NotEnoughMemoryText::
 	done
 
 _OakSpeechText1::
-	text "Bonjour! Bienvenue"
-	line "dans le monde des"
+	text "Bonjour!"
+	line "Bienvenue dans le"
+	cont "monde des"
 	cont "#MON!"
 
-	para "Je m'appelle CHEN!"
-	line "On m'appelle le"
-	cont "PROF des #MON!"
+	para "Je m'appelle"
+	line "CHEN! On"
+	cont "m'appelle le PROF"
+	cont "des #MON!"
 	prompt
 
 _OakSpeechText2A::
 	text "Ce monde est"
 	line "peuplé de"
-	cont "créatures appelées"
+	cont "créatures"
+	cont "appelées"
 	cont "#MON!@"
 	text_end
 
@@ -471,7 +480,7 @@ _OakSpeechText2B::
 	para "Pour ma part..."
 
 	para "J'étudie les"
-	line "#MON, c'est mon"
+	line "#MON, c'est"
 	cont "métier."
 	prompt
 
@@ -484,8 +493,8 @@ _IntroduceRivalText::
 	text "Voici mon"
 	line "petit-fils. C'est"
 	cont "ton rival depuis"
-	cont "que vous êtes tout"
-	cont "petits."
+	cont "que vous êtes"
+	cont "tout petits."
 
 	para "...Euh, comment"
 	line "s'appelle-t-il"
@@ -523,7 +532,8 @@ _YourNameIsText::
 _HisNameIsText::
 	text "Ah oui! Je me"
 	line "souviens! Il"
-	cont "s'appelle <RIVAL>!"
+	cont "s'appelle"
+	cont "<RIVAL>!"
 	prompt
 
 _WillBeTradedText::
@@ -608,19 +618,19 @@ _ColosseumTotalL50Text::
 _ColosseumHeightText::
 	text_ram wNameBuffer
 	text " mesure"
-	line "plus de 2m!"
+	line "plus de 2,0 m!"
 	prompt
 
 _ColosseumWeightText::
 	text_ram wNameBuffer
 	text " pèse"
-	line "plus de 20 kg!"
+	line "plus de 20,0 kg!"
 	prompt
 
 _ColosseumEvolvedText::
 	text_ram wNameBuffer
 	text " est"
-	line "un #MON évolué!"
+	line "un #MON évolué"
 	prompt
 
 _ColosseumIneligibleText::

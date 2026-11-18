@@ -9,7 +9,7 @@ _VermilionOldRodHouseFishingGuruDoYouLikeToFishText::
 	done
 
 _VermilionOldRodHouseFishingGuruTakeThisText::
-	text "Formidable! J'aime"
+	text "Super! J'aime"
 	line "ton style!"
 
 	para "Prends ceci et"

@@ -10,8 +10,8 @@ _SSAnneB1FRoomsSailor1BattleText::
 	done
 
 _SSAnneB1FRoomsSailor1EndBattleText::
-	text "Bien! Beau combat,"
-	line "matelot!"
+	text "Bien! Beau"
+	line "combat, matelot!"
 	prompt
 
 _SSAnneB1FRoomsSailor1AfterBattleText::
@@ -31,9 +31,9 @@ _SSAnneB1FRoomsSailor2EndBattleText::
 	prompt
 
 _SSAnneB1FRoomsSailor2AfterBattleText::
-	text "Tu as vu le MAITRE"
-	line "PECHEUR à CARMIN"
-	cont "SUR MER?"
+	text "Tu as vu le"
+	line "MAITRE PECHEUR à"
+	cont "CARMIN SUR MER?"
 	done
 
 _SSAnneB1FRoomsSailor3BattleText::
@@ -64,21 +64,22 @@ _SSAnneB1FRoomsSailor4EndBattleText::
 	prompt
 
 _SSAnneB1FRoomsSailor4AfterBattleText::
-	text "Les #MON marins"
-	line "vivent en eau"
-	cont "profonde. Il te"
-	cont "faudra une CANNE!"
+	text "Les #MON"
+	line "marins vivent en"
+	cont "eau profonde. Il"
+	cont "te faudra une"
+	cont "CANNE!"
 	done
 
 _SSAnneB1FRoomsSailor5BattleText::
-	text "Matelot, tu passes"
-	line "par-dessus bord si"
-	cont "tu perds!"
+	text "Matelot, tu"
+	line "passes par-dessus"
+	cont "bord si tu perds!"
 	done
 
 _SSAnneB1FRoomsSailor5EndBattleText::
-	text "Argh! Battu par un"
-	line "gamin!"
+	text "Argh! Battu par"
+	line "un gamin!"
 	prompt
 
 _SSAnneB1FRoomsSailor5AfterBattleText::
@@ -89,8 +90,9 @@ _SSAnneB1FRoomsSailor5AfterBattleText::
 	done
 
 _SSAnneB1FRoomsFisherBattleText::
-	text "Bonjour, étranger!"
-	line "Arrête-toi pour"
+	text "Bonjour,"
+	line "étranger!"
+	cont "Arrête-toi pour"
 	cont "bavarder!"
 
 	para "Tous mes #MON"

@@ -1,7 +1,7 @@
 _CopycatsHouse1FMiddleAgedWomanText::
 	text "Ma fille est si"
-	line "égocentrique. Elle"
-	cont "n'a que peu"
+	line "égocentrique."
+	cont "Elle n'a que peu"
 	cont "d'amis."
 	done
 

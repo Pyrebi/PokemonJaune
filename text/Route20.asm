@@ -8,9 +8,9 @@ _Route20Swimmer1EndBattleText::
 	prompt
 
 _Route20Swimmer1AfterBattleText::
-	text "J'aimerais pouvoir"
-	line "monter sur mon"
-	cont "#MON."
+	text "J'aimerais"
+	line "pouvoir monter"
+	cont "sur mon #MON."
 	done
 
 _Route20Swimmer2BattleText::
@@ -24,14 +24,15 @@ _Route20Swimmer2EndBattleText::
 	prompt
 
 _Route20Swimmer2AfterBattleText::
-	text "Il y a une immense"
-	line "caverne sous cette"
-	cont "île."
+	text "Il y a une"
+	line "immense caverne"
+	cont "sous cette île."
 	done
 
 _Route20Swimmer3BattleText::
 	text "J'adore flotter"
-	line "avec les poissons!"
+	line "avec les"
+	cont "poissons!"
 	done
 
 _Route20Swimmer3EndBattleText::
@@ -44,8 +45,8 @@ _Route20Swimmer3AfterBattleText::
 	done
 
 _Route20Swimmer4BattleText::
-	text "Toi aussi tu es en"
-	line "vacances?"
+	text "Toi aussi tu es"
+	line "en vacances?"
 	done
 
 _Route20Swimmer4EndBattleText::
@@ -75,8 +76,9 @@ _Route20Swimmer5AfterBattleText::
 	done
 
 _Route20Swimmer6BattleText::
-	text "Pourquoi tu montes"
-	line "un #MON? Tu ne"
+	text "Pourquoi tu"
+	line "montes un"
+	cont "#MON? Tu ne"
 	cont "sais pas nager?"
 	done
 
@@ -85,9 +87,9 @@ _Route20Swimmer6EndBattleText::
 	prompt
 
 _Route20Swimmer6AfterBattleText::
-	text "Monter un #MON,"
-	line "ça a l'air"
-	cont "amusant!"
+	text "Monter un"
+	line "#MON, ça a"
+	cont "l'air amusant!"
 	done
 
 _Route20CooltrainerMBattleText::
@@ -119,8 +121,9 @@ _Route20Swimmer7EndBattleText::
 
 _Route20Swimmer7AfterBattleText::
 	text "Mes perles"
-	line "vont-elles grossir"
-	cont "dans un CRUSTABRI?"
+	line "vont-elles"
+	cont "grossir dans un"
+	cont "CRUSTABRI?"
 	done
 
 _Route20Swimmer8BattleText::
@@ -141,8 +144,8 @@ _Route20Swimmer8AfterBattleText::
 
 _Route20Swimmer9BattleText::
 	text "CRAMOIS'ILE, à"
-	line "l'ouest, a un LABO"
-	cont "#MON."
+	line "l'ouest, a un"
+	cont "LABO #MON."
 	done
 
 _Route20Swimmer9EndBattleText::

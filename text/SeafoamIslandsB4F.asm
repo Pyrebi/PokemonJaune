@@ -4,8 +4,9 @@ _SeafoamIslandsB4FArticunoBattleText::
 
 _SeafoamIslandsB4FBouldersSignText::
 	text "Les rochers"
-	line "peuvent changer le"
-	cont "cours de l'eau!"
+	line "peuvent changer"
+	cont "le cours de"
+	cont "l'eau!"
 	done
 
 _SeafoamIslandsB4FDangerSignText::

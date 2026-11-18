@@ -1,6 +1,6 @@
 _CeruleanBadgeHouseSoulBadgeText::
-	text "La DEFENSE de tous"
-	line "les #MON"
+	text "La DEFENSE de"
+	line "tous les #MON"
 	cont "augmente un peu."
 
 	para "Il permet aussi"
@@ -19,8 +19,8 @@ _CeruleanBadgeHouseMarshBadgeText::
 	prompt
 
 _CeruleanBadgeHouseVolcanoBadgeText::
-	text "Le SPECIAL de tous"
-	line "tes #MON"
+	text "Le SPECIAL de"
+	line "tous tes #MON"
 	cont "augmente un peu."
 	prompt
 

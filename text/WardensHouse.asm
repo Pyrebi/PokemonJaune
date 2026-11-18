@@ -13,8 +13,8 @@ _WardensHouseWardenGibberish2Text::
 	done
 
 _WardensHouseWardenGibberish3Text::
-	text "Ha? He ohay heh ha"
-	line "hoo ee haheh!"
+	text "Ha? He ohay heh"
+	line "ha hoo ee haheh!"
 	done
 
 _WardensHouseWardenGaveTheGoldTeethText::
@@ -32,9 +32,9 @@ _WardensHouseWardenTeethPoppedInHisTeethText::
 
 _WardensHouseWardenThanksText::
 	text "GARDIEN: Merci,"
-	line "petit! Personne ne"
-	cont "comprenait un mot"
-	cont "de ce que je"
+	line "petit! Personne"
+	cont "ne comprenait un"
+	cont "mot de ce que je"
 	cont "disais."
 
 	para "Je ne pouvais pas"
@@ -79,8 +79,9 @@ _WardensHouseWardenHM04NoRoomText::
 	done
 
 _WardensHouseDisplayPhotosAndFossilsText::
-	text "Photos et fossiles"
-	line "de #MON."
+	text "Photos et"
+	line "fossiles de"
+	cont "#MON."
 	done
 
 _WardensHouseDisplayMerchandiseText::

@@ -9,13 +9,14 @@ _Route8SuperNerd1EndBattleText::
 	prompt
 
 _Route8SuperNerd1AfterBattleText::
-	text "Je suis meilleur à"
-	line "l'école qu'à ça!"
+	text "Je suis meilleur"
+	line "à l'école qu'à"
+	cont "ça!"
 	done
 
 _Route8Gambler1BattleText::
-	text "Très bien! Lançons"
-	line "les dés!"
+	text "Très bien!"
+	line "Lançons les dés!"
 	done
 
 _Route8Gambler1EndBattleText::
@@ -42,7 +43,7 @@ _Route8SuperNerd2EndBattleText::
 _Route8SuperNerd2AfterBattleText::
 	text "D'abord"
 	line "TADMORV...et..."
-	cont "...et...ensuite..."
+	cont "...et..ensuite..."
 	done
 
 _Route8CooltrainerF1BattleText::
@@ -59,9 +60,10 @@ _Route8CooltrainerF1EndBattleText::
 _Route8CooltrainerF1AfterBattleText::
 	text "Quand les #MON"
 	line "grandissent, ils"
-	cont "deviennent moches!"
-	cont "Ils ne devraient"
-	cont "pas évoluer!"
+	cont "deviennent"
+	cont "moches! Ils ne"
+	cont "devraient pas"
+	cont "évoluer!"
 	done
 
 _Route8SuperNerd3BattleText::
@@ -71,15 +73,15 @@ _Route8SuperNerd3BattleText::
 	done
 
 _Route8SuperNerd3EndBattleText::
-	text "Je vais m'en tenir"
-	line "à l'école."
+	text "Je vais m'en"
+	line "tenir à l'école."
 	prompt
 
 _Route8SuperNerd3AfterBattleText::
-	text "On est bloqués ici"
-	line "à cause des postes"
-	cont "de garde de"
-	cont "SAFRANIA."
+	text "On est bloqués"
+	line "ici à cause des"
+	cont "postes de garde"
+	cont "de SAFRANIA."
 	done
 
 _Route8CooltrainerF2BattleText::
@@ -94,9 +96,9 @@ _Route8CooltrainerF2EndBattleText::
 
 _Route8CooltrainerF2AfterBattleText::
 	text "Je trouve que"
-	line "ROUCOOL et RATTATA"
-	cont "sont mignons"
-	cont "aussi!"
+	line "ROUCOOL et"
+	cont "RATTATA sont"
+	cont "mignons aussi!"
 	done
 
 _Route8CooltrainerF3BattleText::
@@ -114,8 +116,9 @@ _Route8CooltrainerF3EndBattleText::
 _Route8CooltrainerF3AfterBattleText::
 	text "Le garde de"
 	line "SAFRANIA ne nous"
-	cont "laisse pas passer."
-	cont "Il est si méchant!"
+	cont "laisse pas"
+	cont "passer. Il est si"
+	cont "méchant!"
 	done
 
 _Route8Gambler2BattleText::

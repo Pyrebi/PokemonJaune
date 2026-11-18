@@ -4,14 +4,14 @@ _Route16Biker1BattleText::
 	done
 
 _Route16Biker1EndBattleText::
-	text "T'as pas intérêt à"
-	line "rire!"
+	text "T'as pas intérêt"
+	line "à rire!"
 	prompt
 
 _Route16Biker1AfterBattleText::
 	text "On aime traîner"
-	line "ici, ça te pose un"
-	cont "problème?"
+	line "ici, ça te pose"
+	cont "un problème?"
 	done
 
 _Route16Biker2BattleText::
@@ -24,9 +24,9 @@ _Route16Biker2EndBattleText::
 	prompt
 
 _Route16Biker2AfterBattleText::
-	text "Laisse tomber, qui"
-	line "a besoin de ton"
-	cont "VELO!"
+	text "Laisse tomber,"
+	line "qui a besoin de"
+	cont "ton VELO!"
 	done
 
 _Route16Biker3BattleText::
@@ -39,8 +39,8 @@ _Route16Biker3EndBattleText::
 	prompt
 
 _Route16Biker3AfterBattleText::
-	text "Je déteste perdre!"
-	line "Va-t'en!"
+	text "Je déteste"
+	line "perdre! Va-t'en!"
 	done
 
 _Route16biker4BattleText::
@@ -71,9 +71,9 @@ _Route16Biker5EndBattleText::
 	prompt
 
 _Route16Biker5AfterBattleText::
-	text "J'aime mes #MON"
-	line "féroces! Ils"
-	cont "déchiquettent"
+	text "J'aime mes"
+	line "#MON féroces!"
+	cont "Ils déchiquettent"
 	cont "leurs ennemis!"
 	done
 
@@ -93,8 +93,9 @@ _Route16Biker6AfterBattleText::
 	done
 
 _Route16Text7::
-	text "Un #MON endormi"
-	line "bloque le passage!"
+	text "Un #MON"
+	line "endormi bloque le"
+	cont "passage!"
 	done
 
 _Route16SnorlaxWokeUpText::

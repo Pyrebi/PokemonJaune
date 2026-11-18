@@ -1,6 +1,7 @@
 _Route12SuperRodHouseFishingGuruDoYouLikeToFishText::
 	text "Je suis le frère"
-	line "du MAITRE PECHEUR!"
+	line "du MAITRE"
+	cont "PECHEUR!"
 
 	para "J'adoooore la"
 	line "pêche!"
@@ -9,7 +10,7 @@ _Route12SuperRodHouseFishingGuruDoYouLikeToFishText::
 	done
 
 _Route12SuperRodHouseFishingGuruReceivedSuperRodText::
-	text "Formidable! J'aime"
+	text "Super! J'aime"
 	line "ton style!"
 
 	para "Prends ceci et"
@@ -46,7 +47,8 @@ _Route12SuperRodHouseFishingGuruTryFishingText::
 	cont "n'importe quelle"
 	cont "eau! Tu peux"
 	cont "attraper toutes"
-	cont "sortes de #MON."
+	cont "sortes de"
+	cont "#MON."
 
 	para "Pêche partout où"
 	line "tu peux!"
@@ -57,5 +59,6 @@ _Route12SuperRodHouseFishingGuruNoRoomText::
 
 	para "J'avais un cadeau"
 	line "pour toi, mais tu"
-	cont "n'as pas de place!"
+	cont "n'as pas de"
+	cont "place!"
 	done

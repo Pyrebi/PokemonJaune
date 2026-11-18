@@ -10,12 +10,13 @@ _SilphCo8FSilphWorkerMThanksForSavingUsText::
 	done
 
 _SilphCo8FRocket1BattleText::
-	text "Tu n'iras pas plus"
-	line "loin!"
+	text "Tu n'iras pas"
+	line "plus loin!"
 	done
 
 _SilphCo8FRocket1EndBattleText::
-	text "Pas assez de cran!"
+	text "Pas assez de"
+	line "cran!"
 	prompt
 
 _SilphCo8FRocket1AfterBattleText::
@@ -26,8 +27,8 @@ _SilphCo8FRocket1AfterBattleText::
 	done
 
 _SilphCo8FScientistBattleText::
-	text "Tu nous causes des"
-	line "problèmes!"
+	text "Tu nous causes"
+	line "des problèmes!"
 	done
 
 _SilphCo8FScientistEndBattleText::
@@ -38,12 +39,13 @@ _SilphCo8FScientistAfterBattleText::
 	text "Alors, que"
 	line "penses-tu du"
 	cont "labyrinthe de"
-	cont "l'immeuble SYLPHE?"
+	cont "l'immeuble"
+	cont "SYLPHE?"
 	done
 
 _SilphCo8FRocket2BattleText::
-	text "Je suis l'un des 4"
-	line "FRERES ROCKET!"
+	text "Je suis l'un des"
+	line "4 FRERES ROCKET!"
 	done
 
 _SilphCo8FRocket2EndBattleText::
@@ -52,6 +54,6 @@ _SilphCo8FRocket2EndBattleText::
 	prompt
 
 _SilphCo8FRocket2AfterBattleText::
-	text "Je te laisse à mes"
-	line "frères!"
+	text "Je te laisse à"
+	line "mes frères!"
 	done

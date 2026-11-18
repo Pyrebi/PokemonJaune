@@ -1,7 +1,7 @@
 _ViridianMartClerkSayHiToOakText::
-	text "OK! Dis bonjour au"
-	line "PROF.CHEN de ma"
-	cont "part!"
+	text "OK! Dis bonjour"
+	line "au PROF.CHEN de"
+	cont "ma part!"
 	done
 
 _ViridianMartClerkYouCameFromPalletTownText::

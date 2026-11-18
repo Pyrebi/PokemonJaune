@@ -11,7 +11,8 @@ _Route17Biker1EndBattleText::
 _Route17Biker1AfterBattleText::
 	text "On trouve de"
 	line "bonnes choses sur"
-	cont "la PISTE CYCLABLE!"
+	cont "la PISTE"
+	cont "CYCLABLE!"
 	done
 
 _Route17Biker2BattleText::
@@ -30,7 +31,8 @@ _Route17Biker2AfterBattleText::
 	done
 
 _Route17Biker3BattleText::
-	text "Tu vas à PARMANIE?"
+	text "Tu vas à"
+	line "PARMANIE?"
 	done
 
 _Route17Biker3EndBattleText::
@@ -44,8 +46,9 @@ _Route17Biker3AfterBattleText::
 
 _Route17Biker4BattleText::
 	text "On est des"
-	line "MOTARDS! Les stars"
-	cont "de la route!"
+	line "MOTARDS! Les"
+	cont "stars de la"
+	cont "route!"
 	done
 
 _Route17Biker4EndBattleText::
@@ -153,7 +156,8 @@ _Route17NoticeSign1Text::
 	text "C'est un avis!"
 
 	para "Attention aux"
-	line "objets abandonnés!"
+	line "objets"
+	cont "abandonnés!"
 	done
 
 _Route17TrainerTips1Text::
@@ -165,8 +169,9 @@ _Route17TrainerTips1Text::
 
 	para "Même des #MON"
 	line "de même type et"
-	cont "niveau grandissent"
-	cont "à des rythmes"
+	cont "niveau"
+	cont "grandissent à des"
+	cont "rythmes"
 	cont "différents."
 	done
 
@@ -196,6 +201,6 @@ _Route17NoticeSign2Text::
 	done
 
 _Route17CyclingRoadEndsSignText::
-	text "PISTE CYCLABLE Fin"
-	line "de la pente!"
+	text "PISTE CYCLABLE"
+	line "Fin de la pente!"
 	done

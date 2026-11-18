@@ -3,16 +3,18 @@ _LavenderMartBaldingGuyText::
 	line "objets qui"
 	cont "augmentent les"
 	cont "capacités des"
-	cont "#MON pendant un"
-	cont "combat."
+	cont "#MON pendant"
+	cont "un combat."
 
-	para "ATTAQUE +, DEFENSE"
-	line "+, VITESSE + et"
+	para "ATTAQUE +,"
+	line "DEFENSE +,"
+	cont "VITESSE + et"
 	cont "SPECIAL +, voilà"
-	cont "ce que je cherche."
+	cont "ce que je"
+	cont "cherche."
 
-	para "Tu sais où je peux"
-	line "les trouver?"
+	para "Tu sais où je"
+	line "peux les trouver?"
 	done
 
 _LavenderMartCooltrainerMReviveText::
@@ -27,8 +29,9 @@ _LavenderMartCooltrainerMNuggetText::
 	line "PEPITE dans la"
 	cont "montagne."
 
-	para "Je pensais qu'elle"
-	line "ne valait rien,"
-	cont "mais je l'ai"
-	cont "vendue ¥5000!"
+	para "Je pensais"
+	line "qu'elle ne valait"
+	cont "rien, mais je"
+	cont "l'ai vendue"
+	cont "¥5000!"
 	done

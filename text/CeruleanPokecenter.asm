@@ -4,7 +4,8 @@ _CeruleanPokecenterSuperNerdText::
 	para "Il paraît qu'il"
 	line "ferait n'importe"
 	cont "quoi pour avoir"
-	cont "des #MON rares!"
+	cont "des #MON"
+	cont "rares!"
 	done
 
 _CeruleanPokecenterGentlemanText::

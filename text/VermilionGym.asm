@@ -14,10 +14,11 @@ _VermilionGymLTSurgePreBattleText::
 	cont "ta puissance"
 	cont "minable!"
 
-	para "Un combat #MON,"
-	line "c'est la guerre!"
-	cont "Je vais te"
-	cont "montrer, civil!"
+	para "Un combat"
+	line "#MON, c'est la"
+	cont "guerre! Je vais"
+	cont "te montrer,"
+	cont "civil!"
 
 	para "Je vais"
 	line "t'électrocuter"
@@ -33,9 +34,9 @@ _VermilionGymLTSurgePostBattleAdviceText::
 	line "très puissante!"
 
 	para "Mais elle est"
-	line "inutile contre les"
-	cont "#MON de type"
-	cont "sol!"
+	line "inutile contre"
+	cont "les #MON de"
+	cont "type sol!"
 	done
 
 _VermilionGymLTSurgeThunderBadgeInfoText::
@@ -111,8 +112,8 @@ _VermilionGymGentlemanAfterBattleText::
 
 _VermilionGymSuperNerdBattleText::
 	text "Je suis un poids"
-	line "plume, mais je m'y"
-	cont "connais en"
+	line "plume, mais je"
+	cont "m'y connais en"
 	cont "électricité!"
 	done
 
@@ -123,9 +124,10 @@ _VermilionGymSuperNerdEndBattleText::
 _VermilionGymSuperNerdAfterBattleText::
 	text "OK, je parle!"
 
-	para "Le MAJOR BOB a dit"
-	line "qu'il avait caché"
-	cont "les interrupteurs"
+	para "Le MAJOR BOB a"
+	line "dit qu'il avait"
+	cont "caché les"
+	cont "interrupteurs"
 	cont "dans quelque"
 	cont "chose!"
 	done
@@ -143,13 +145,14 @@ _VermilionGymSailorEndBattleText::
 
 _VermilionGymSailorAfterBattleText::
 	text "Le MAJOR BOB a"
-	line "installé un double"
-	cont "verrou! Voici un"
-	cont "indice!"
+	line "installé un"
+	cont "double verrou!"
+	cont "Voici un indice!"
 
-	para "Quand tu ouvres le"
-	line "1er verrou, le 2e"
-	cont "est juste à côté!"
+	para "Quand tu ouvres"
+	line "le 1er verrou, le"
+	cont "2e est juste à"
+	cont "côté!"
 	done
 
 _VermilionGymGymGuideChampInMakingText::
@@ -166,9 +169,9 @@ _VermilionGymGymGuideChampInMakingText::
 	line "des #MON"
 	cont "électrik!"
 
-	para "Les oiseaux et les"
-	line "#MON eau sont"
-	cont "en danger!"
+	para "Les oiseaux et"
+	line "les #MON eau"
+	cont "sont en danger!"
 	cont "Attention à la"
 	cont "paralysie!"
 
@@ -176,8 +179,9 @@ _VermilionGymGymGuideChampInMakingText::
 	line "très prudent!"
 
 	para "Tu devras"
-	line "déchiffrer un code"
-	cont "pour l'atteindre!"
+	line "déchiffrer un"
+	cont "code pour"
+	cont "l'atteindre!"
 	done
 
 _VermilionGymGymGuideBeatLTSurgeText::

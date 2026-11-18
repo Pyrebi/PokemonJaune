@@ -20,10 +20,10 @@ _SilphCo3FRocketEndBattleText::
 	prompt
 
 _SilphCo3FRocketAfterBattleText::
-	text "Un indice? Tu peux"
-	line "ouvrir les portes"
-	cont "avec une CARTE"
-	cont "MAGN.!"
+	text "Un indice? Tu"
+	line "peux ouvrir les"
+	cont "portes avec une"
+	cont "CARTE MAGN.!"
 	done
 
 _SilphCo3FScientistBattleText::
@@ -39,9 +39,9 @@ _SilphCo3FScientistEndBattleText::
 _SilphCo3FScientistAfterBattleText::
 	text "Hmpf..."
 
-	para "La TEAM ROCKET m'a"
-	line "promis que si je"
-	cont "l'aidais, je"
+	para "La TEAM ROCKET"
+	line "m'a promis que si"
+	cont "je l'aidais, je"
 	cont "pourrais étudier"
 	cont "les #MON!"
 	done

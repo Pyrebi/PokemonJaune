@@ -1,7 +1,7 @@
 _VictoryRoad3FCooltrainerM1BattleText::
 	text "J'ai entendu"
-	line "parler d'un enfant"
-	cont "prodige!"
+	line "parler d'un"
+	cont "enfant prodige!"
 	done
 
 _VictoryRoad3FCooltrainerM1EndBattleText::
@@ -16,8 +16,9 @@ _VictoryRoad3FCooltrainerM1AfterBattleText::
 	done
 
 _VictoryRoad3FCooltrainerF1BattleText::
-	text "Je vais te montrer"
-	line "ce que tu vaux!"
+	text "Je vais te"
+	line "montrer ce que tu"
+	cont "vaux!"
 	done
 
 _VictoryRoad3FCooltrainerF1EndBattleText::
@@ -40,10 +41,11 @@ _VictoryRoad3FCooltrainerM2EndBattleText::
 	prompt
 
 _VictoryRoad3FCooltrainerM2AfterBattleText::
-	text "Tous les dresseurs"
-	line "ici vont à la"
-	cont "LIGUE #MON!"
-	cont "Sois prudent!"
+	text "Tous les"
+	line "dresseurs ici"
+	cont "vont à la LIGUE"
+	cont "#MON! Sois"
+	cont "prudent!"
 	done
 
 _VictoryRoad3FCooltrainerF2BattleText::
@@ -62,5 +64,6 @@ _VictoryRoad3FCooltrainerF2AfterBattleText::
 	text "En livrant des"
 	line "combats"
 	cont "difficiles, on"
-	cont "devient plus fort!"
+	cont "devient plus"
+	cont "fort!"
 	done

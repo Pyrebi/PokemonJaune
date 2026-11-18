@@ -9,9 +9,9 @@ _SafariZoneWestRestHouseScientistText::
 	done
 
 _SafariZoneWestRestHouseCooltrainerMText::
-	text "Avec un APPAT, les"
-	line "#MON sont plus"
-	cont "faciles à"
+	text "Avec un APPAT,"
+	line "les #MON sont"
+	cont "plus faciles à"
 	cont "attraper."
 	done
 

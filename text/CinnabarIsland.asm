@@ -8,8 +8,9 @@ _CinnabarIslandGirlText::
 	line "l'ARENE de"
 	cont "CRAMOIS'ILE, est"
 	cont "un drôle de type"
-	cont "qui vit ici depuis"
-	cont "des décennies."
+	cont "qui vit ici"
+	cont "depuis des"
+	cont "décennies."
 	done
 
 _CinnabarIslandGamblerText::

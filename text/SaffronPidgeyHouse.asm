@@ -8,7 +8,8 @@ _SaffronPidgeyHouseBrunetteGirlText::
 	done
 
 _SaffronPidgeyHousePidgeyText::
-	text "ROUCOOL: Roucouu!@"
+	text "ROUCOOL:"
+	line "Roucouu!@"
 	text_end
 
 _SaffronPidgeyHouseYoungsterText::

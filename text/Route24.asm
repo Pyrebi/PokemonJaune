@@ -8,7 +8,7 @@ _Route24CooltrainerM1YouBeatOurContestText::
 _Route24CooltrainerM1YouJustEarnedAPrizeText::
 	text_start
 
-	para "Tu viens de gagner"
+	para "Tu as gagné"
 	line "un lot fabuleux!"
 	prompt
 
@@ -26,12 +26,14 @@ _Route24CooltrainerM1NoRoomText::
 
 _Route24CooltrainerM1JoinTeamRocketText::
 	text "Au fait, tu"
-	line "voudrais rejoindre"
-	cont "la TEAM ROCKET?"
+	line "voudrais"
+	cont "rejoindre la TEAM"
+	cont "ROCKET?"
 
 	para "Nous sommes un"
-	line "groupe voué au mal"
-	cont "grâce aux #MON!"
+	line "groupe voué au"
+	cont "mal grâce aux"
+	cont "#MON!"
 
 	para "Tu veux nous"
 	line "rejoindre?"
@@ -77,9 +79,10 @@ _Route24CooltrainerM2EndBattleText::
 
 _Route24CooltrainerM2AfterBattleText::
 	text "Je me suis caché"
-	line "parce que les gens"
-	cont "sur le pont me"
-	cont "faisaient peur!"
+	line "parce que les"
+	cont "gens sur le pont"
+	cont "me faisaient"
+	cont "peur!"
 	done
 
 _Route24CooltrainerM3BattleText::
@@ -149,9 +152,10 @@ _Route24CooltrainerF2AfterBattleText::
 
 _Route24Youngster2BattleText::
 	text "Voici le PONT"
-	line "PEPITE! Bats nos 5"
-	cont "dresseurs et gagne"
-	cont "un lot fabuleux!"
+	line "PEPITE! Bats nos"
+	cont "5 dresseurs et"
+	cont "gagne un lot"
+	cont "fabuleux!"
 
 	para "Tu crois avoir ce"
 	line "qu'il faut?"
@@ -175,17 +179,19 @@ _Route24DamianText1::
 	para "Je devrais"
 	line "relâcher mon"
 	cont "SALAMECHE parce"
-	cont "que je ne l'ai pas"
-	cont "bien élevé..."
+	cont "que je ne l'ai"
+	cont "pas bien élevé..."
 
 	para "Si tu me promets"
-	line "d'en prendre soin,"
-	cont "il est à toi."
+	line "d'en prendre"
+	cont "soin, il est à"
+	cont "toi."
 	done
 
 _Route24DamianText2::
 	text "Prends bien soin"
-	line "de mon SALAMECHE!@"
+	line "de mon"
+	cont "SALAMECHE!@"
 	text_end
 
 _Route24DamianText3::

@@ -1,8 +1,8 @@
 _SafariZoneSecretHouseFishingGuruYouHaveWonText::
 	text "Ah! Enfin!"
 
-	para "Tu es le premier à"
-	line "atteindre la"
+	para "Tu es le premier"
+	line "à atteindre la"
 	cont "MAISON SECRETE!"
 
 	para "Je commençais à"

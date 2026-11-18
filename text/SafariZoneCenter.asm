@@ -7,6 +7,6 @@ _SafariZoneCenterTrainerTipsSignText::
 	line "DRESSEURS"
 
 	para "Appuie sur START"
-	line "pour voir le temps"
-	cont "restant!"
+	line "pour voir le"
+	cont "temps restant!"
 	done

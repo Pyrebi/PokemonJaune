@@ -6,12 +6,14 @@ _ViridianNicknameHouseBaldingGuyText::
 
 	para "Les noms simples"
 	line "sont les plus"
-	cont "faciles à retenir."
+	cont "faciles à"
+	cont "retenir."
 	done
 
 _ViridianNicknameHouseLittleGirlText::
 	text "Mon Papa adore"
-	line "aussi les #MON."
+	line "aussi les"
+	cont "#MON."
 	done
 
 _ViridianNicknameHouseSpearowText::

@@ -2,8 +2,8 @@ _FightingDojoKarateMasterText::
 	text "Grrr!"
 
 	para "Je suis le MAITRE"
-	line "KARATE! Je suis le"
-	cont "CHEF ici!"
+	line "KARATE! Je suis"
+	cont "le CHEF ici!"
 
 	para "Tu veux nous"
 	line "défier? Pas de"
@@ -21,9 +21,10 @@ _FightingDojoKarateMasterIWillGiveYouAPokemonText::
 	line "perdu!"
 
 	para "Mais je t'en"
-	line "supplie, ne prends"
-	cont "pas notre emblème"
-	cont "comme trophée!"
+	line "supplie, ne"
+	cont "prends pas notre"
+	cont "emblème comme"
+	cont "trophée!"
 
 	para "En échange, je te"
 	line "donnerai un"
@@ -43,8 +44,8 @@ _FightingDojoKarateMasterStayAndTrainWithUsText::
 	done
 
 _FightingDojoBlackbelt1BattleText::
-	text "Hoargh! Enlève tes"
-	line "chaussures!"
+	text "Hoargh! Enlève"
+	line "tes chaussures!"
 	done
 
 _FightingDojoBlackbelt1EndBattleText::
@@ -72,11 +73,13 @@ _FightingDojoBlackbelt2EndBattleText::
 
 _FightingDojoBlackbelt2AfterBattleText::
 	text "Notre Maître est"
-	line "un combattant pro!"
+	line "un combattant"
+	cont "pro!"
 	done
 
 _FightingDojoBlackbelt3BattleText::
-	text "Rien ne m'effraie!"
+	text "Rien ne"
+	line "m'effraie!"
 
 	para "Je brise des"
 	line "rochers pour"
@@ -88,8 +91,8 @@ _FightingDojoBlackbelt3EndBattleText::
 	prompt
 
 _FightingDojoBlackbelt3AfterBattleText::
-	text "La seule chose qui"
-	line "nous effraie,"
+	text "La seule chose"
+	line "qui nous effraie,"
 	cont "c'est le pouvoir"
 	cont "psychique!"
 	done
@@ -98,8 +101,8 @@ _FightingDojoBlackbelt4BattleText::
 	text "Hoohah!"
 
 	para "Tu t'introduis"
-	line "dans notre DOJO DE"
-	cont "COMBAT!"
+	line "dans notre DOJO"
+	cont "DE COMBAT!"
 	done
 
 _FightingDojoBlackbelt4EndBattleText::
@@ -120,8 +123,8 @@ _FightingDojoHitmonleePokeBallText::
 	done
 
 _FightingDojoHitmonchanPokeBallText::
-	text "Tu veux TYGNON, le"
-	line "roi du coup de"
+	text "Tu veux TYGNON,"
+	line "le roi du coup de"
 	cont "poing?"
 	done
 

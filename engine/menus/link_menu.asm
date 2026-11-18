@@ -363,23 +363,14 @@ CheckPetitCupRules:
 	ld a, [hli]
 	cp '@'
 	jr nz, .loop2
-	ld a, [hli]
-	cp $7
+	ld a, [hli] ; taille en décimètres
+	cp 21 ; 2,0 m maximum
 	jp nc, HeightAbove6Feet8Inches
-	add a
-	add a
-	ld b, a
-	add a
-	add b
-	ld b, a
-	ld a, [hli]
-	add b
-	cp $51
-	jp nc, HeightAbove6Feet8Inches
-	ld a, [hli]
-	sub $b9
+	inc hl ; octet inutilisé
+	ld a, [hli] ; poids en hectogrammes
+	sub LOW(201)
 	ld a, [hl]
-	sbc $1
+	sbc HIGH(201) ; 20,0 kg maximum
 	jp nc, WeightAbove44Pounds
 	pop af
 	pop bc

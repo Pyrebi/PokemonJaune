@@ -98,7 +98,7 @@ _LearnedMove1Text::
 
 _WhichMoveToForgetText::
 	text "Quelle capacité"
-	next "doit être oubliée?"
+	next "faut-il oublier?"
 	done
 
 _AbandonLearningText::
@@ -128,8 +128,8 @@ _TryingToLearnText::
 	para "Mais @"
 	text_ram wLearnMoveMonName
 	text_start
-	line "ne peut avoir plus"
-	cont "de 4 capacités!"
+	line "ne peut connaître"
+	cont "que 4 capacités!"
 
 	para "Oublier une"
 	line "capacité pour"
@@ -186,9 +186,9 @@ _NeedYourPokemonText::
 	done
 
 _PokemonFightingFitText::
-	text "Merci! Vos #MON"
-	line "sont en pleine"
-	cont "forme!"
+	text "Merci! Vos"
+	line "#MON sont en"
+	cont "pleine forme!"
 	prompt
 
 _PokemonCenterFarewellText::
@@ -217,7 +217,7 @@ _CableClubNPCPleaseApplyHereHaveToSaveText::
 	text "Inscris-toi ici."
 
 	para "Avant la"
-	line "connexion, il faut"
-	cont "sauvegarder la"
-	cont "partie."
+	line "connexion, il"
+	cont "faut sauvegarder"
+	cont "la partie."
 	done

@@ -1,6 +1,6 @@
 _MrPsychicsHouseMrPsychicYouWantedThisText::
-	text "...Attends! Ne dis"
-	line "rien!"
+	text "...Attends! Ne"
+	line "dis rien!"
 
 	para "Tu voulais ceci!"
 	prompt

@@ -1,6 +1,6 @@
 _SafariZoneNorthRestHouseScientistText::
-	text "Tu peux garder les"
-	line "objets que tu"
+	text "Tu peux garder"
+	line "les objets que tu"
 	cont "trouves au sol"
 	cont "ici."
 
@@ -11,14 +11,14 @@ _SafariZoneNorthRestHouseScientistText::
 	done
 
 _SafariZoneNorthRestHouseSafariZoneWorkerText::
-	text "Va au fond du PARC"
-	line "SAFARI. Tu"
+	text "Va au fond du"
+	line "PARC SAFARI. Tu"
 	cont "gagneras un lot!"
 	done
 
 _SafariZoneNorthRestHouseGentlemanText::
-	text "Mon EVOLI a évolué"
-	line "en PYROLI!"
+	text "Mon EVOLI a"
+	line "évolué en PYROLI!"
 
 	para "Mais l'EVOLI d'un"
 	line "ami est devenu"

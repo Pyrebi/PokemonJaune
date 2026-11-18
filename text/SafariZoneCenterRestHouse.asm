@@ -1,7 +1,7 @@
 _SafariZoneCenterRestHouseGirlText::
-	text "SARA: Où est passé"
-	line "mon petit ami,"
-	cont "ERIK?"
+	text "SARA: Où est"
+	line "passé mon petit"
+	cont "ami, ERIK?"
 	done
 
 _SafariZoneCenterRestHouseScientistText::

@@ -4,5 +4,6 @@ _SSAnne3FSailorText::
 	cont "sabre!"
 
 	para "Il apprend même"
-	line "COUPE aux #MON!"
+	line "COUPE aux"
+	cont "#MON!"
 	done

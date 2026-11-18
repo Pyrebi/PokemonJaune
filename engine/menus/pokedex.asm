@@ -481,8 +481,8 @@ ShowPokedexDataInternal:
 	ret
 
 HeightWeightText:
-	db   "HT  ?′??″"
-	next "WT   ???lb@"
+	db   "TAI  ?<DOT>?m"
+	next "PDS  ???kg@"
 
 ; leftover from JPN Pokedex, where species have the suffix "Pokemon"
 PokeText: ; unreferenced
@@ -596,24 +596,28 @@ DrawDexEntryOnScreen:
 	and a
 	ret z ; if the pokemon has not been owned, don't print the height, weight, or description
 
-	inc de ; de = address of feet (height)
-	ld a, [de] ; reads feet, but a is overwritten without being used
-	hlcoord 12, 6
-	lb bc, 1, 2
-	call PrintNumber ; print feet (height)
-	ld a, '′'
-	ld [hl], a
-	inc de
-	inc de ; de = address of inches (height)
+	inc de ; de = taille (en décimètres)
+	push de
+	hlcoord 13, 6
+	lb bc, 1, 3
+	call PrintNumber ; taille sur 3 chiffres (colonnes 13-15)
+	pop de
+	push de
+	ld a, [de]
+	cp 10
+	jr nc, .heightDot
+	hlcoord 14, 6
+	ld [hl], '0' ; moins d'un mètre : afficher 0.x
+.heightDot
 	hlcoord 15, 6
-	lb bc, LEADING_ZEROES | 1, 2
-	call PrintNumber ; print inches (height)
-	ld a, '″'
-	ld [hl], a
-; now print the weight (note that weight is stored in tenths of pounds internally)
+	ld a, [hli]
+	ld [hld], a ; décaler le dernier chiffre
+	ld [hl], '<DOT>' ; virgule décimale
+	pop de
+; poids en dixièmes de kilogramme
 	inc de
 	inc de
-	inc de ; de = address of upper byte of weight
+	inc de ; de = octet de poids fort
 	push de
 ; put weight in big-endian order at hDexWeight
 	ld hl, hDexWeight

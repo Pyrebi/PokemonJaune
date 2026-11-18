@@ -1,14 +1,14 @@
 _PokemonFanClubClefairyFanNormalText::
 	text "Tu ne veux pas"
-	line "admirer l'adorable"
-	cont "queue de mon"
-	cont "MELOFEE?"
+	line "admirer"
+	cont "l'adorable queue"
+	cont "de mon MELOFEE?"
 	done
 
 _PokemonFanClubClefairyFanBetterText::
 	text "Hmpf! Mon MELOFEE"
-	line "est deux fois plus"
-	cont "mignon que"
+	line "est deux fois"
+	cont "plus mignon que"
 	cont "celui-là!"
 	done
 
@@ -21,17 +21,18 @@ _PokemonFanClubClefairyFanText::
 	cont "#MON."
 
 	para "Il m'a donné une"
-	line "jolie PHOTO de mon"
-	cont "mignon MELOFEE."
+	line "jolie PHOTO de"
+	cont "mon mignon"
+	cont "MELOFEE."
 	done
 
 _PokemonFanClubSeelFanNormalText::
 	text "J'adore mon"
 	line "OTARIA!"
 
-	para "Il couine quand je"
-	line "le serre dans mes"
-	cont "bras!"
+	para "Il couine quand"
+	line "je le serre dans"
+	cont "mes bras!"
 	done
 
 _PokemonFanClubSeelFanBetterText::
@@ -45,8 +46,8 @@ _PokemonFanClubSeelFanBetterText::
 _PokemonFanClubSeelFanText::
 	text "Je vais brancher"
 	line "le câble pour"
-	cont "avoir une PHOTO de"
-	cont "mon OTARIA!"
+	cont "avoir une PHOTO"
+	cont "de mon OTARIA!"
 	done
 
 _PokemonFanClubClefairyText::
@@ -97,7 +98,7 @@ _PokemonFanClubChairmanStoryText::
 	cont "l'adore!"
 
 	para "Le"
-	line "câliner...quand..."
+	line "câliner...quand.."
 	cont "il dort...tout"
 	cont "chaud..."
 	cont "spectaculaire..."
@@ -159,9 +160,10 @@ _PokemonFanClubBagFullText::
 	done
 
 FanClubChairPrintText1::
-	text "Salut, <PLAYER>! Tu"
-	line "as vu mes photos"
-	cont "de #MON?"
+	text "Salut, <PLAYER>!"
+	line "Tu as vu mes"
+	cont "photos de"
+	cont "#MON?"
 
 	para "Je les ai"
 	line "encadrées sur ce"
@@ -184,13 +186,14 @@ FanClubChairPrintText3::
 	done
 
 FanClubChairPrintText4::
-	text "On ne va peut-être"
-	line "pas IMPRIMER ça"
+	text "On ne va"
+	line "peut-être pas"
+	cont "IMPRIMER ça"
 	cont "maintenant."
 	done
 
 _PokemonFanClubReceptionistText::
 	text "Notre PRESIDENT"
-	line "parle beaucoup des"
-	cont "#MON."
+	line "parle beaucoup"
+	cont "des #MON."
 	done

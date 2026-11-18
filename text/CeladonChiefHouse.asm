@@ -10,8 +10,8 @@ _CeladonChiefHouseRocketText::
 
 	para "On vient"
 	line "d'expédier 2000"
-	cont "#MON comme lots"
-	cont "du casino!"
+	cont "#MON comme"
+	cont "lots du casino!"
 	done
 
 _CeladonChiefHouseSailorText::

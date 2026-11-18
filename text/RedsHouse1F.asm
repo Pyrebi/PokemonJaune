@@ -1,19 +1,20 @@
 _RedsHouse1FMomWakeUpText::
 	text "MAMAN: Eh oui."
 	line "Tous les garçons"
-	cont "quittent la maison"
-	cont "un jour. Ils l'ont"
-	cont "dit à la télé."
+	cont "quittent la"
+	cont "maison un jour."
+	cont "Ils l'ont dit à"
+	cont "la télé."
 
 	para "Le PROF.CHEN, à"
 	line "côté, te cherche."
 	done
 
 _RedsHouse1FMomYouShouldRestText::
-	text "MAMAN: <PLAYER>, si"
-	line "tu pousses trop"
-	cont "tes #MON, ils"
-	cont "ne t'aimeront"
+	text "MAMAN: <PLAYER>,"
+	line "si tu pousses"
+	cont "trop tes #MON,"
+	cont "ils ne t'aimeront"
 	cont "plus."
 
 	para "Tu devrais te"
@@ -23,10 +24,10 @@ _RedsHouse1FMomYouShouldRestText::
 _RedsHouse1FMomLookingGreatText::
 	text "MAMAN: Ah, très"
 	line "bien! Toi et tes"
-	cont "#MON avez l'air"
-	cont "en pleine forme!"
-	cont "Prends soin de"
-	cont "toi!"
+	cont "#MON avez"
+	cont "l'air en pleine"
+	cont "forme! Prends"
+	cont "soin de toi!"
 	done
 
 _RedsHouse1FTVStandByMeMovieText::

@@ -11,9 +11,9 @@ _Route14CooltrainerM1EndBattleText::
 	prompt
 
 _Route14CooltrainerM1AfterBattleText::
-	text "Tu as des CS, non?"
-	line "Les #MON ne"
-	cont "peuvent jamais"
+	text "Tu as des CS,"
+	line "non? Les #MON"
+	cont "ne peuvent jamais"
 	cont "oublier ces"
 	cont "capacités."
 	done
@@ -56,8 +56,8 @@ _Route14CooltrainerM3AfterBattleText::
 	done
 
 _Route14CooltrainerM4BattleText::
-	text "Tu as appris VOL à"
-	line "tes #MON"
+	text "Tu as appris VOL"
+	line "à tes #MON"
 	cont "oiseaux?"
 	done
 
@@ -74,13 +74,15 @@ _Route14CooltrainerM4AfterBattleText::
 
 _Route14CooltrainerM5BattleText::
 	text "Tu as entendu"
-	line "parler des #MON"
+	line "parler des"
+	cont "#MON"
 	cont "légendaires?"
 	done
 
 _Route14CooltrainerM5EndBattleText::
-	text "Pourquoi? Pourquoi"
-	line "ai-je perdu?"
+	text "Pourquoi?"
+	line "Pourquoi ai-je"
+	cont "perdu?"
 	prompt
 
 _Route14CooltrainerM5AfterBattleText::
@@ -91,8 +93,9 @@ _Route14CooltrainerM5AfterBattleText::
 	done
 
 _Route14CooltrainerM6BattleText::
-	text "Ca ne me dit rien,"
-	line "mais OK! Allons-y!"
+	text "Ca ne me dit"
+	line "rien, mais OK!"
+	cont "Allons-y!"
 	done
 
 _Route14CooltrainerM6EndBattleText::
@@ -100,15 +103,15 @@ _Route14CooltrainerM6EndBattleText::
 	prompt
 
 _Route14CooltrainerM6AfterBattleText::
-	text "Gagner, perdre, au"
-	line "final ça ne compte"
-	cont "pas!"
+	text "Gagner, perdre,"
+	line "au final ça ne"
+	cont "compte pas!"
 	done
 
 _Route14Biker1BattleText::
-	text "Allez, allez. On y"
-	line "va, on y va, on y"
-	cont "va!"
+	text "Allez, allez. On"
+	line "y va, on y va, on"
+	cont "y va!"
 	done
 
 _Route14Biker1EndBattleText::
@@ -138,9 +141,9 @@ _Route14Biker2AfterBattleText::
 	done
 
 _Route14Biker3BattleText::
-	text "On roule ici parce"
-	line "qu'il y a plus de"
-	cont "place!"
+	text "On roule ici"
+	line "parce qu'il y a"
+	cont "plus de place!"
 	done
 
 _Route14Biker3EndBattleText::
@@ -152,8 +155,9 @@ _Route14Biker3AfterBattleText::
 	line "aies rendu tes"
 	cont "#MON si forts!"
 
-	para "La force fait loi!"
-	line "Et tu le sais!"
+	para "La force fait"
+	line "loi! Et tu le"
+	cont "sais!"
 	done
 
 _Route14Biker4BattleText::

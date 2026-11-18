@@ -1,5 +1,20 @@
 # Pokémon Jaune — copie de travail
 
+## Modifications par rapport à l'original
+
+- **Traduction française** : dialogues, menus, combats, noms (Pokémon, attaques,
+  objets, lieux, dresseurs) et Pokédex (tailles et poids en mètres / kilogrammes).
+  La police a reçu les lettres accentuées à â ç è ê ë î ï ô ù û et le signe +.
+- **151 Pokémon accessibles** : nouvelles rencontres sauvages pour ceux qui manquaient
+  à la version Jaune (Aspicot, Abo, Miaouss, Smogo, Lippoutou, Elektek, Magmar,
+  Raichu, Mew…) ainsi que pour Evoli, Kicklee/Tygnon et les fossiles
+  (Amonita/Kabuto à la Méga Canne à Cramois'Ile).
+- **Evolutions par échange remplacées par le niveau** : Kadabra (N.36),
+  Machopeur (N.40), Gravalanch (N.40), Spectrum (N.38).
+
+Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
+dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
+
 Copie du désassemblage [pret/pokeyellow](https://github.com/pret/pokeyellow)
 (commit `b452f2ab07185075140061c5084ab866d5e4a794`), avec un lecteur HTML pour jouer au ROM compilé.
 
@@ -11,7 +26,7 @@ Il faut [rgbds 1.0.4](https://rgbds.gbdev.io/install), `make` et `gcc` (voir `IN
 make
 ```
 
-Le ROM `pokeyellow.gbc` produit doit avoir le SHA-1 `cc7d03262ebfaf2f06772c1a480c7d9d5f4a38e1` tant que rien n'est modifié (`make compare`).
+Le ROM n'est plus identique à l'original (`make compare` échoue, c'est normal).
 
 ## Jouer dans le navigateur
 

@@ -1,6 +1,7 @@
 _Route9CooltrainerF1BattleText::
-	text "Tu as des #MON!"
-	line "Tu es à moi!"
+	text "Tu as des"
+	line "#MON! Tu es à"
+	cont "moi!"
 	done
 
 _Route9CooltrainerF1EndBattleText::
@@ -44,8 +45,8 @@ _Route9CooltrainerM2EndBattleText::
 	prompt
 
 _Route9CooltrainerM2AfterBattleText::
-	text "Toi aussi tu vas à"
-	line "la GROTTE?"
+	text "Toi aussi tu vas"
+	line "à la GROTTE?"
 	done
 
 _Route9CooltrainerF2BattleText::
@@ -65,13 +66,14 @@ _Route9CooltrainerF2AfterBattleText::
 	done
 
 _Route9Hiker1BattleText::
-	text "Bwahaha! Super! Je"
-	line "m'ennuyais, hein!"
+	text "Bwahaha! Super!"
+	line "Je m'ennuyais,"
+	cont "hein!"
 	done
 
 _Route9Hiker1EndBattleText::
-	text "Continue comme ça,"
-	line "hein!"
+	text "Continue comme"
+	line "ça, hein!"
 
 	para "Oh attends. Je"
 	line "n'ai plus de"
@@ -101,10 +103,11 @@ _Route9Hiker2AfterBattleText::
 
 _Route9Youngster1BattleText::
 	text "Je me suis levé"
-	line "tôt tous les jours"
-	cont "pour élever mes"
-	cont "#MON depuis"
-	cont "leur cocon!"
+	line "tôt tous les"
+	cont "jours pour élever"
+	cont "mes #MON"
+	cont "depuis leur"
+	cont "cocon!"
 	done
 
 _Route9Youngster1EndBattleText::
@@ -116,9 +119,10 @@ _Route9Youngster1EndBattleText::
 
 _Route9Youngster1AfterBattleText::
 	text "Je dois"
-	line "collectionner plus"
-	cont "que des insectes"
-	cont "pour devenir plus"
+	line "collectionner"
+	cont "plus que des"
+	cont "insectes pour"
+	cont "devenir plus"
 	cont "fort..."
 	done
 
@@ -129,7 +133,8 @@ _Route9Hiker3BattleText::
 
 _Route9Hiker3EndBattleText::
 	text "Hahahaha! Tu m'as"
-	line "battu à la loyale!"
+	line "battu à la"
+	cont "loyale!"
 	prompt
 
 _Route9Hiker3AfterBattleText::

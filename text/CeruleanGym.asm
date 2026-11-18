@@ -3,9 +3,10 @@ _CeruleanGymMistyPreBattleText::
 	line "nouveau!"
 
 	para "Quelle est ta"
-	line "stratégie avec les"
-	cont "#MON? Comment"
-	cont "t'y prends-tu?"
+	line "stratégie avec"
+	cont "les #MON?"
+	cont "Comment t'y"
+	cont "prends-tu?"
 
 	para "Ma stratégie,"
 	line "c'est l'attaque à"
@@ -26,14 +27,16 @@ _CeruleanGymMistyTM11ExplanationText::
 	line "BULLES D'O!"
 
 	para "Utilise-la sur un"
-	line "#MON aquatique!"
+	line "#MON"
+	cont "aquatique!"
 	done
 
 _CeruleanGymMistyCascadeBadgeInfoText::
 	text "Le BADGECASCADE"
-	line "permet de te faire"
-	cont "obéir des #MON"
-	cont "jusqu'au N.30!"
+	line "permet de te"
+	cont "faire obéir des"
+	cont "#MON jusqu'au"
+	cont "N.30!"
 
 	para "Même ceux que tu"
 	line "as reçus par"
@@ -44,13 +47,14 @@ _CeruleanGymMistyCascadeBadgeInfoText::
 	cont "maintenant"
 	cont "utiliser COUPE!"
 
-	para "Tu peux COUPER les"
-	line "petits arbustes"
-	cont "pour ouvrir de"
+	para "Tu peux COUPER"
+	line "les petits"
+	cont "arbustes pour"
+	cont "ouvrir de"
 	cont "nouveaux chemins!"
 
-	para "Prends aussi ma CT"
-	line "préférée!"
+	para "Prends aussi ma"
+	line "CT préférée!"
 	done
 
 _CeruleanGymMistyReceivedTM11Text::
@@ -73,8 +77,8 @@ _CeruleanGymMistyReceivedCascadeBadgeText::
 
 	para "Voici le"
 	line "BADGECASCADE,"
-	cont "preuve que tu m'as"
-	cont "battue!"
+	cont "preuve que tu"
+	cont "m'as battue!"
 	prompt
 
 _CeruleanGymBattleText1::
@@ -87,14 +91,16 @@ _CeruleanGymBattleText1::
 	done
 
 _CeruleanGymEndBattleText1::
-	text "Tu m'as submergée!"
+	text "Tu m'as"
+	line "submergée!"
 	prompt
 
 _CeruleanGymAfterBattleText1::
 	text "Il faut affronter"
-	line "d'autres dresseurs"
-	cont "pour savoir ce que"
-	cont "tu vaux vraiment."
+	line "d'autres"
+	cont "dresseurs pour"
+	cont "savoir ce que tu"
+	cont "vaux vraiment."
 	done
 
 _CeruleanGymBattleText2::
@@ -114,16 +120,18 @@ _CeruleanGymAfterBattleText2::
 	line "continuer à"
 	cont "progresser!"
 
-	para "Elle ne perdra pas"
-	line "contre quelqu'un"
-	cont "comme toi!"
+	para "Elle ne perdra"
+	line "pas contre"
+	cont "quelqu'un comme"
+	cont "toi!"
 	done
 
 _CeruleanGymGymGuideChampInMakingText::
 	text "Yo! Futur"
 	line "champion!"
 
-	para "Voici mon conseil!"
+	para "Voici mon"
+	line "conseil!"
 
 	para "La CHAMPIONNE,"
 	line "ONDINE, est une"
@@ -144,7 +152,8 @@ _CeruleanGymGymGuideBeatMistyText::
 	cont "que je t'avais"
 	cont "dit?"
 
-	para "Toi et moi, petit,"
-	line "on fait une sacrée"
-	cont "bonne équipe!"
+	para "Toi et moi,"
+	line "petit, on fait"
+	cont "une sacrée bonne"
+	cont "équipe!"
 	done

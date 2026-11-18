@@ -1,16 +1,19 @@
 _PewterGymBrockPreBattleText::
-	text "Je suis PIERRE! Le"
-	line "CHAMPION de"
-	cont "l'ARENE d'ARGENTA!"
+	text "Je suis PIERRE!"
+	line "Le CHAMPION de"
+	cont "l'ARENE"
+	cont "d'ARGENTA!"
 
 	para "Je crois en une"
 	line "défense solide"
-	cont "comme le roc et en"
-	cont "la détermination!"
+	cont "comme le roc et"
+	cont "en la"
+	cont "détermination!"
 
-	para "C'est pourquoi mes"
-	line "#MON sont tous"
-	cont "de type roche!"
+	para "C'est pourquoi"
+	line "mes #MON sont"
+	cont "tous de type"
+	cont "roche!"
 
 	para "Tu veux toujours"
 	line "me défier? Très"
@@ -31,10 +34,10 @@ _PewterGymBrockPostBattleAdviceText::
 	cont "voient comme des"
 	cont "compagnons."
 
-	para "Moi, je m'entraîne"
-	line "pour devenir"
-	cont "éleveur de"
-	cont "#MON."
+	para "Moi, je"
+	line "m'entraîne pour"
+	cont "devenir éleveur"
+	cont "de #MON."
 
 	para "Si tu prends ton"
 	line "entraînement au"
@@ -63,7 +66,7 @@ _TM34ExplanationText::
 	cont "aux #MON!"
 
 	para "Une CT ne sert"
-	line "qu'une fois! Alors"
+	line "qu'une fois! Donc"
 	cont "quand tu en"
 	cont "utilises une,"
 	cont "choisis bien ton"
@@ -87,9 +90,10 @@ _PewterGymBrockReceivedBoulderBadgeText::
 	text "Je t'ai"
 	line "sous-estimé."
 
-	para "Comme preuve de ta"
-	line "victoire, voici le"
-	cont "BADGE ROCHE!"
+	para "Comme preuve de"
+	line "ta victoire,"
+	cont "voici le BADGE"
+	cont "ROCHE!"
 
 	para "<PLAYER> reçoit le"
 	line "BADGE ROCHE!@"
@@ -102,43 +106,46 @@ _PewterGymBrockBoulderBadgeInfoText::
 	line "officiel de la"
 	cont "LIGUE #MON!"
 
-	para "Les #MON de son"
-	line "porteur deviennent"
+	para "Les #MON du"
+	line "porteur sont"
 	cont "plus puissants!"
 
 	para "La capacité FLASH"
-	line "peut être utilisée"
+	line "est utilisable"
 	cont "à tout moment!"
 	prompt
 
 _PewterGymCooltrainerMBattleText::
 	text "Halte-là, petit!"
 
-	para "Tu es encore à des"
-	line "années-lumière de"
+	para "Tu es encore à"
+	line "des"
+	cont "années-lumière de"
 	cont "PIERRE!"
 	done
 
 _PewterGymCooltrainerMEndBattleText::
 	text "Zut!"
 
-	para "Une année-lumière,"
-	line "ce n'est pas du"
+	para "Une"
+	line "année-lumière, ce"
+	cont "n'est pas du"
 	cont "temps! C'est une"
 	cont "distance!"
 	prompt
 
 _PewterGymCooltrainerMAfterBattleText::
-	text "Tu es plutôt fort,"
-	line "mais pas autant"
-	cont "que PIERRE!"
+	text "Tu es plutôt"
+	line "fort, mais pas"
+	cont "autant que"
+	cont "PIERRE!"
 	done
 
 _PewterGymGuidePreAdviceText::
-	text "Salut! Je vois que"
-	line "tu as l'étoffe"
-	cont "d'un champion"
-	cont "#MON!"
+	text "Salut! Je vois"
+	line "que tu as"
+	cont "l'étoffe d'un"
+	cont "champion #MON!"
 
 	para "Je ne suis pas"
 	line "dresseur, mais je"
@@ -165,7 +172,8 @@ _PewterGymGuideAdviceText::
 	line "l'ordre de tes"
 	cont "#MON, les"
 	cont "combats peuvent"
-	cont "être plus faciles!"
+	cont "être plus"
+	cont "faciles!"
 	done
 
 _PewterGymGuideFreeServiceText::
@@ -190,7 +198,8 @@ _PewterGymGuyPikachuText::
 
 	para "Les attaques"
 	line "électriques sont"
-	cont "sans effet sur les"
-	cont "#MON de type"
-	cont "sol de PIERRE."
+	cont "sans effet sur"
+	cont "les #MON de"
+	cont "type sol de"
+	cont "PIERRE."
 	done

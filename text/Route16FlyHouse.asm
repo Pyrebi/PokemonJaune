@@ -17,12 +17,13 @@ _Route16FlyHouseBrunetteGirlReceivedHM02Text::
 
 _Route16FlyHouseBrunetteGirlHM02ExplanationText::
 	text "La CS02 contient"
-	line "VOL. Elle t'emmène"
-	cont "dans n'importe"
-	cont "quelle ville"
-	cont "visitée."
+	line "VOL. Elle"
+	cont "t'emmène dans"
+	cont "n'importe quelle"
+	cont "ville visitée."
 
-	para "Fais-en bon usage!"
+	para "Fais-en bon"
+	line "usage!"
 	done
 
 _Route16FlyHouseBrunetteGirlHM02NoRoomText::

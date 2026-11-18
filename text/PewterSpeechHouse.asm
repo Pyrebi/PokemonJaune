@@ -14,9 +14,9 @@ _PewterSpeechHouseGamblerText::
 _PewterSpeechHouseYoungsterText::
 	text "Les #MON sont"
 	line "plus faciles à"
-	cont "attraper quand ils"
-	cont "sont blessés ou"
-	cont "endormis!"
+	cont "attraper quand"
+	cont "ils sont blessés"
+	cont "ou endormis!"
 
 	para "Mais ce n'est"
 	line "jamais garanti!"

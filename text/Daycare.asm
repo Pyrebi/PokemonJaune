@@ -15,7 +15,7 @@ _DaycareGentlemanWillLookAfterMonText::
 	line "de @"
 	text_ram wNameBuffer
 	text_start
-	cont "pendant un moment."
+	cont "quelque temps."
 	prompt
 
 _DaycareGentlemanComeSeeMeInAWhileText::
@@ -27,14 +27,14 @@ _DaycareGentlemanMonHasGrownText::
 	text "Ton @"
 	text_ram wNameBuffer
 	text_start
-	line "a beaucoup grandi!"
+	line "a bien grandi!"
 
 	para "Il a gagné"
 	line "@"
 	text_decimal wDayCareNumLevelsGrown, 1, 3
 	text " niveaux!"
 
-	para "Je suis doué, non?"
+	para "Doué, hein?"
 	prompt
 
 _DaycareGentlemanOweMoneyText::
@@ -58,7 +58,7 @@ _DaycareGentlemanMonNeedsMoreTimeText::
 	text_ram wNameBuffer
 	text_start
 	cont "a encore besoin"
-	cont "de temps avec moi."
+	cont "de temps ici."
 	prompt
 
 _DaycareGentlemanAllRightThenText::
@@ -78,8 +78,9 @@ _DaycareGentlemanNoRoomForMonText::
 	done
 
 _DaycareGentlemanOnlyHaveOneMonText::
-	text "Tu n'as qu'un seul"
-	line "#MON avec toi."
+	text "Tu n'as qu'un"
+	line "seul #MON avec"
+	cont "toi."
 	done
 
 _DaycareGentlemanCantAcceptMonWithHMText::

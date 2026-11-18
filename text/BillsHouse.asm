@@ -5,8 +5,8 @@ _BillsHouseBillDontLeaveText::
 
 _BillsHouseBillImNotAPokemonText::
 	text "Salut! Je suis un"
-	line "#MON... ...Mais"
-	cont "non!"
+	line "#MON..."
+	cont "...Mais non!"
 
 	para "Appelle-moi LEO!"
 	line "Je suis un vrai"
@@ -16,9 +16,9 @@ _BillsHouseBillImNotAPokemonText::
 
 	para "Je ne blague pas,"
 	line "j'ai raté une"
-	cont "expérience et j'ai"
-	cont "fusionné avec un"
-	cont "#MON!"
+	cont "expérience et"
+	cont "j'ai fusionné"
+	cont "avec un #MON!"
 
 	para "Alors, tu veux"
 	line "bien? Aide-moi!"
@@ -45,14 +45,15 @@ _BillsHouseBillNoYouGottaHelpText::
 	prompt
 
 _BillsHouseBillThankYouText::
-	text "LEO: Youpi! Merci,"
-	line "l'ami! Je te dois"
-	cont "une fière"
+	text "LEO: Youpi!"
+	line "Merci, l'ami! Je"
+	cont "te dois une fière"
 	cont "chandelle!"
 
 	para "Alors, tu es venu"
-	line "voir ma collection"
-	cont "de #MON? Non?"
+	line "voir ma"
+	cont "collection de"
+	cont "#MON? Non?"
 	cont "Dommage."
 
 	para "Je dois te"
@@ -77,13 +78,13 @@ _BillsHouseBillWhyDontYouGoInsteadOfMeText::
 	text "Le paquebot"
 	line "L'OCEANE est à"
 	cont "CARMIN SUR MER."
-	cont "Tous ses passagers"
-	cont "sont des"
-	cont "dresseurs!"
+	cont "Tous ses"
+	cont "passagers sont"
+	cont "des dresseurs!"
 
-	para "Ils m'ont invité à"
-	line "leur fête, mais je"
-	cont "déteste les"
+	para "Ils m'ont invité"
+	line "à leur fête, mais"
+	cont "je déteste les"
 	cont "mondanités."
 	cont "Pourquoi"
 	cont "n'irais-tu pas à"
@@ -92,7 +93,7 @@ _BillsHouseBillWhyDontYouGoInsteadOfMeText::
 
 _BillsHouseBillCheckOutMyRarePokemonText::
 	text "LEO: Ecoute,"
-	line "l'ami, va voir mes"
-	cont "#MON rares sur"
-	cont "mon PC!"
+	line "l'ami, va voir"
+	cont "mes #MON rares"
+	cont "sur mon PC!"
 	done

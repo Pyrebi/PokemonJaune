@@ -4,7 +4,8 @@ _Route3Text1::
 	cont "Pff..."
 
 	para "Ce tunnel depuis"
-	line "AZURIA, ça épuise!"
+	line "AZURIA, ça"
+	cont "épuise!"
 	done
 
 _Route3Youngster1BattleText::
@@ -19,9 +20,10 @@ _Route3Youngster1EndBattleText::
 	prompt
 
 _Route3Youngster1AfterBattleText::
-	text "Il existe d'autres"
-	line "#MON que ceux"
-	cont "de la forêt!"
+	text "Il existe"
+	line "d'autres #MON"
+	cont "que ceux de la"
+	cont "forêt!"
 	done
 
 _Route3Youngster2BattleText::
@@ -37,8 +39,8 @@ _Route3Youngster2EndBattleText::
 
 _Route3Youngster2AfterBattleText::
 	text "Tu stockes tes"
-	line "#MON sur le PC?"
-	cont "Chaque BOITE"
+	line "#MON sur le"
+	cont "PC? Chaque BOITE"
 	cont "contient 20"
 	cont "#MON!"
 	done
@@ -53,9 +55,10 @@ _Route3CooltrainerF1EndBattleText::
 	prompt
 
 _Route3CooltrainerF1AfterBattleText::
-	text "Arrête de me fixer"
-	line "si tu ne veux pas"
-	cont "te battre!"
+	text "Arrête de me"
+	line "fixer si tu ne"
+	cont "veux pas te"
+	cont "battre!"
 	done
 
 _Route3Youngster3BattleText::
@@ -78,8 +81,8 @@ _Route3Youngster3AfterBattleText::
 
 _Route3CooltrainerF2BattleText::
 	text "Ce regard que tu"
-	line "m'as lancé, il est"
-	cont "si intrigant!"
+	line "m'as lancé, il"
+	cont "est si intrigant!"
 	done
 
 _Route3CooltrainerF2EndBattleText::
@@ -121,8 +124,8 @@ _Route3Youngster5EndBattleText::
 _Route3Youngster5AfterBattleText::
 	text "Les #MON"
 	line "entraînés sont"
-	cont "plus forts que les"
-	cont "sauvages!"
+	cont "plus forts que"
+	cont "les sauvages!"
 	done
 
 _Route3CooltrainerF3BattleText::

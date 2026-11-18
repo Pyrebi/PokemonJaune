@@ -1,12 +1,14 @@
 SilphCo2FSilphWorkerFPleaseTakeThisText::
-	text "Hiii! Non! Arrête!"
-	line "Au secours!"
+	text "Hiii! Non!"
+	line "Arrête! Au"
+	cont "secours!"
 
-	para "Oh, tu n'es pas de"
-	line "la TEAM ROCKET. Je"
-	cont "croyais... Pardon."
-	cont "Tiens, prends"
-	cont "ceci!"
+	para "Oh, tu n'es pas"
+	line "de la TEAM"
+	cont "ROCKET. Je"
+	cont "croyais..."
+	cont "Pardon. Tiens,"
+	cont "prends ceci!"
 	prompt
 
 _SilphCo2FSilphWorkerFReceivedTM36Text::
@@ -61,8 +63,9 @@ _SilphCo2FScientist2EndBattleText::
 	prompt
 
 _SilphCo2FScientist2AfterBattleText::
-	text "Sauras-tu résoudre"
-	line "ce labyrinthe?"
+	text "Sauras-tu"
+	line "résoudre ce"
+	cont "labyrinthe?"
 	done
 
 _SilphCo2FRocket1BattleText::

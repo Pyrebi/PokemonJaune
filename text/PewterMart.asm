@@ -1,9 +1,9 @@
 _PewterMartYoungsterText::
 	text "Un vieil homme"
 	line "louche m'a fait"
-	cont "acheter ce #MON"
-	cont "poisson très"
-	cont "bizarre!"
+	cont "acheter ce"
+	cont "#MON poisson"
+	cont "très bizarre!"
 
 	para "Il est super"
 	line "faible et il m'a"
@@ -12,8 +12,9 @@ _PewterMartYoungsterText::
 
 _PewterMartSuperNerdText::
 	text "De bonnes choses"
-	line "peuvent arriver si"
-	cont "tu élèves tes"
-	cont "#MON avec soin,"
-	cont "même les faibles!"
+	line "peuvent arriver"
+	cont "si tu élèves tes"
+	cont "#MON avec"
+	cont "soin, même les"
+	cont "faibles!"
 	done

@@ -9,8 +9,8 @@ _SafariZoneGateSafariZoneWorker1LeavingEarlyText::
 
 _SafariZoneGateSafariZoneWorker1ReturnSafariBallsText::
 	text "Rends-nous les"
-	line "SAFARI BALLS qu'il"
-	cont "te reste."
+	line "SAFARI BALLS"
+	cont "qu'il te reste."
 	done
 
 _SafariZoneGateSafariZoneWorker1GoodLuckText::
@@ -26,12 +26,14 @@ _SafariZoneGateSafariZoneWorker1GoodHaulComeAgainText::
 _SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText::
 	text "Pour seulement"
 	line "¥500, tu peux"
-	cont "attraper autant de"
-	cont "#MON que tu"
-	cont "veux dans le parc!"
+	cont "attraper autant"
+	cont "de #MON que tu"
+	cont "veux dans le"
+	cont "parc!"
 
-	para "Tu veux participer"
-	line "à la chasse?@"
+	para "Tu veux"
+	line "participer à la"
+	cont "chasse?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
@@ -53,7 +55,7 @@ _SafariZoneGateSafariZoneWorker1CallYouOnThePAText::
 
 	para "On t'appellera"
 	line "au haut-parleur à"
-	cont "la fin du temps ou"
+	cont "la fin du temps"
 	cont "des SAFARI BALLS!"
 	done
 
@@ -73,15 +75,15 @@ _SafariZoneGateSafariZoneWorker2FirstTimeHereText::
 	done
 
 _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
-	text "Le PARC SAFARI a 4"
-	line "zones."
+	text "Le PARC SAFARI a"
+	line "4 zones."
 
 	para "Chaque zone a des"
 	line "#MON"
 	cont "différents."
-	cont "Utilise les SAFARI"
-	cont "BALLS pour les"
-	cont "attraper!"
+	cont "Utilise les"
+	cont "SAFARI BALLS pour"
+	cont "les attraper!"
 
 	para "Quand le temps ou"
 	line "les SAFARI BALLS"
@@ -91,7 +93,8 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 	para "Avant d'y aller,"
 	line "ouvre une BOITE"
 	cont "#MON vide pour"
-	cont "avoir de la place!"
+	cont "avoir de la"
+	cont "place!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::
@@ -103,7 +106,7 @@ _SafariZoneLowCostText1::
 	text_start
 
 	para "Bon, d'accord,"
-	line "paie ce que tu as."
+	line "paie ce que tu as"
 	prompt
 
 _SafariZoneLowCostText2::
@@ -118,9 +121,9 @@ _SafariZoneLowCostText3::
 	para "Tu es tenace,"
 	line "hein?"
 
-	para "OK, tu peux entrer"
-	line "gratuitement, mais"
-	cont "juste cette fois!@"
+	para "OK, tu entres"
+	line "gratis, mais"
+	cont "cette fois-ci!@"
 	text_end
 
 _SafariZoneLowCostText4::
@@ -135,7 +138,8 @@ _SafariZoneLowCostText5::
 
 _SafariZoneLowCostText6::
 	text "Tu ne peux pas"
-	line "entrer sans payer!"
+	line "entrer sans"
+	cont "payer!"
 	done
 
 _SafariZoneLowCostText7::

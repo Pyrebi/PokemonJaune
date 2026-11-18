@@ -3,10 +3,10 @@ _PokemonTowerJessieJamesText1::
 	text_end
 
 _PokemonTowerJessieJamesText2::
-	text "Le papy voulait se"
-	line "plaindre, alors on"
-	cont "le remet à sa"
-	cont "place."
+	text "Le papy voulait"
+	line "se plaindre,"
+	cont "alors on le remet"
+	cont "à sa place."
 
 	para "Alors rends-toi"
 	line "invisible, ou"
@@ -27,7 +27,8 @@ _PokemonTowerJessieJamesText4::
 
 _PokemonTower7FMrFujiRescueText::
 	text "M.FUJI: Hein? Tu"
-	line "es venu me sauver?"
+	line "es venu me"
+	cont "sauver?"
 
 	para "Merci. Mais je"
 	line "suis venu ici de"

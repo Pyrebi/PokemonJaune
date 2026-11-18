@@ -6,7 +6,8 @@ _VermilionPidgeyHouseYoungsterText::
 	done
 
 _VermilionPidgeyHousePidgeyText::
-	text "ROUCOOL: Roucouu!@"
+	text "ROUCOOL:"
+	line "Roucouu!@"
 	text_end
 
 _VermilionPidgeyHouseLetterText::

@@ -2,8 +2,9 @@ _CeladonMart3FGameBoyKid1Text::
 	text "Les #MON"
 	line "capturés sont"
 	cont "enregistrés avec"
-	cont "un No ID et un DO,"
-	cont "le nom du Dresseur"
+	cont "un No ID et un"
+	cont "DO, le nom du"
+	cont "Dresseur"
 	cont "d'Origine qui l'a"
 	cont "attrapé!"
 	done
@@ -18,24 +19,26 @@ _CeladonMart3FGameBoyKid2Text::
 	done
 
 _CeladonMart3FGameBoyKid3Text::
-	text "Allez, GRAVALANCH!"
+	text "Allez,"
+	line "GRAVALANCH!"
 
 	para "J'adore"
-	line "GRAVALANCH! Je les"
-	cont "collectionne!"
+	line "GRAVALANCH! Je"
+	cont "les collectionne!"
 
 	para "Hein?"
 
 	para "GRAVALANCH s'est"
-	line "changé en un autre"
-	cont "#MON!"
+	line "changé en un"
+	cont "autre #MON!"
 	done
 
 _CeladonMart3FLittleBoyText::
-	text "Tu peux identifier"
-	line "les #MON reçus"
-	cont "par échange grâce"
-	cont "à leur No ID!"
+	text "Tu peux"
+	line "identifier les"
+	cont "#MON reçus par"
+	cont "échange grâce à"
+	cont "leur No ID!"
 	done
 
 _CeladonMart3FSNESText::
@@ -69,8 +72,8 @@ _CeladonMart3FCurrentFloorSignText::
 	done
 
 _CeladonMart3FPokemonPosterText::
-	text "Rouge et Bleu! Les"
-	line "deux sont des"
+	text "Rouge et Bleu!"
+	line "Les deux sont des"
 	cont "#MON!"
 	done
 
@@ -100,5 +103,6 @@ _CeladonMart3FClerkTM18ExplanationText::
 	done
 
 _CeladonMart3FClerkTM18NoRoomText::
-	text "Ton sac est plein!"
+	text "Ton sac est"
+	line "plein!"
 	done

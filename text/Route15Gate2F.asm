@@ -1,8 +1,9 @@
 _Route15Gate2FOaksAideExpAllText::
-	text "Le MULTI EXP donne"
-	line "des points EXP à"
-	cont "tous tes #MON,"
-	cont "même s'ils ne"
+	text "Le MULTI EXP"
+	line "donne des points"
+	cont "EXP à tous tes"
+	cont "#MON, même"
+	cont "s'ils ne"
 	cont "combattent pas."
 
 	para "Mais il réduit la"

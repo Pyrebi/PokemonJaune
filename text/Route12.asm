@@ -1,6 +1,7 @@
 _Route12SnorlaxText::
-	text "Un #MON endormi"
-	line "bloque le passage!"
+	text "Un #MON"
+	line "endormi bloque le"
+	cont "passage!"
 	done
 
 _Route12SnorlaxWokeUpText::
@@ -26,8 +27,8 @@ _Route12Fisher1BattleText::
 	done
 
 _Route12Fisher1EndBattleText::
-	text "Tss! Juste du menu"
-	line "fretin!"
+	text "Tss! Juste du"
+	line "menu fretin!"
 	prompt
 
 _Route12Fisher1AfterBattleText::
@@ -37,8 +38,8 @@ _Route12Fisher1AfterBattleText::
 
 _Route12Fisher2BattleText::
 	text "Patience! La"
-	line "pêche, c'est l'art"
-	cont "d'attendre!"
+	line "pêche, c'est"
+	cont "l'art d'attendre!"
 	done
 
 _Route12Fisher2EndBattleText::
@@ -46,10 +47,11 @@ _Route12Fisher2EndBattleText::
 	prompt
 
 _Route12Fisher2AfterBattleText::
-	text "Avec une meilleure"
-	line "CANNE,"
+	text "Avec une"
+	line "meilleure CANNE,"
 	cont "j'attraperais de"
-	cont "meilleurs #MON!"
+	cont "meilleurs"
+	cont "#MON!"
 	done
 
 _Route12CooltrainerMBattleText::

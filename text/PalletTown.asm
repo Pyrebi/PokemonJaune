@@ -1,6 +1,7 @@
 _PalletTownOakHeyWaitDontGoOutText::
-	text "CHEN: Hé! Attends!"
-	line "Ne sors pas!@"
+	text "CHEN: Hé!"
+	line "Attends! Ne sors"
+	cont "pas!@"
 	text_end
 
 _PalletTownOakThatWasCloseText::
@@ -19,9 +20,10 @@ _PalletTownOakWhewText::
 
 _PalletTownOakComeWithMe::
 	text "CHEN: Un #MON"
-	line "peut surgir à tout"
-	cont "moment dans les"
-	cont "hautes herbes."
+	line "peut surgir à"
+	cont "tout moment dans"
+	cont "les hautes"
+	cont "herbes."
 
 	para "Il te faut ton"
 	line "propre #MON"
@@ -42,14 +44,15 @@ _PalletTownGirlText::
 	done
 
 _PalletTownFisherText::
-	text "La technologie est"
-	line "incroyable!"
+	text "La technologie"
+	line "est incroyable!"
 
-	para "On peut stocker et"
-	line "récupérer des"
+	para "On peut stocker"
+	line "et récupérer des"
 	cont "objets et des"
-	cont "#MON sous forme"
-	cont "de données sur PC!"
+	cont "#MON sous"
+	cont "forme de données"
+	cont "sur PC!"
 	done
 
 _PalletTownOaksLabSignText::

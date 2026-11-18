@@ -1,6 +1,7 @@
 _CeladonMart4FSuperNerdText::
-	text "J'achète un cadeau"
-	line "pour la COPIEUSE"
+	text "J'achète un"
+	line "cadeau pour la"
+	cont "COPIEUSE"
 	cont "d'AZURIA."
 
 	para "Ce sera une"
@@ -20,13 +21,14 @@ _CeladonMart4FYoungsterText::
 	done
 
 _CeladonMart4FCurrentFloorSignText::
-	text "Exprimez-vous avec"
-	line "des cadeaux!"
+	text "Exprimez-vous"
+	line "avec des cadeaux!"
 
 	para "3E: BOUTIQUE"
 	line "CADEAUX"
 
-	para "Spécial évolution!"
-	line "PIERRES en"
+	para "Spécial"
+	line "évolution!"
+	cont "PIERRES en"
 	cont "promotion!"
 	done

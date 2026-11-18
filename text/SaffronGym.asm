@@ -12,10 +12,11 @@ _SaffronGymSabrinaText::
 	cont "la pensée."
 
 	para "Je n'aime pas me"
-	line "battre, mais si tu"
-	cont "le souhaites, je"
-	cont "vais te montrer"
-	cont "mes pouvoirs!"
+	line "battre, mais si"
+	cont "tu le souhaites,"
+	cont "je vais te"
+	cont "montrer mes"
+	cont "pouvoirs!"
 	done
 
 _SaffronGymSabrinaReceivedMarshBadgeText::
@@ -56,7 +57,8 @@ _SaffronGymSabrinaMarshBadgeInfoText::
 	line "tes #MON!"
 
 	para "Attends, prends"
-	line "cette CT avec toi!"
+	line "cette CT avec"
+	cont "toi!"
 	done
 
 _SaffronGymSabrinaReceivedTM46Text::
@@ -69,7 +71,7 @@ _TM46ExplanationText::
 
 	para "La CT46 contient"
 	line "VAGUE PSY! Elle"
-	cont "inflige des dégâts"
+	cont "inflige des coups"
 	cont "par ondes psy!"
 	done
 
@@ -84,14 +86,15 @@ _SaffronGymGuideChampInMakingText::
 
 	para "Les #MON de"
 	line "MORGANE utilisent"
-	cont "la force psychique"
-	cont "plutôt que la"
-	cont "force brute!"
+	cont "la force"
+	cont "psychique plutôt"
+	cont "que la force"
+	cont "brute!"
 
-	para "Les #MON combat"
-	line "sont faibles"
-	cont "contre les #MON"
-	cont "psy!"
+	para "Les #MON"
+	line "combat sont"
+	cont "faibles contre"
+	cont "les #MON psy!"
 
 	para "Ils sont écrasés"
 	line "avant même de"
@@ -121,9 +124,10 @@ _SaffronGymChanneler1EndBattleText::
 	prompt
 
 _SaffronGymChanneler1AfterBattleText::
-	text "Entre égaux, c'est"
-	line "la volonté la plus"
-	cont "forte qui gagne!"
+	text "Entre égaux,"
+	line "c'est la volonté"
+	cont "la plus forte qui"
+	cont "gagne!"
 
 	para "Si tu veux battre"
 	line "MORGANE,"
@@ -143,9 +147,9 @@ _SaffronGymYoungster1EndBattleText::
 	prompt
 
 _SaffronGymYoungster1AfterBattleText::
-	text "Les #MON psy ne"
-	line "craignent que les"
-	cont "insectes!"
+	text "Les #MON psy"
+	line "ne craignent que"
+	cont "les insectes!"
 	done
 
 _SaffronGymChanneler2BattleText::
@@ -204,12 +208,13 @@ _SaffronGymChanneler3AfterBattleText::
 	done
 
 _SaffronGymYoungster3BattleText::
-	text "MORGANE est jeune,"
-	line "mais c'est notre"
-	cont "CHAMPIONNE!"
+	text "MORGANE est"
+	line "jeune, mais c'est"
+	cont "notre CHAMPIONNE!"
 
-	para "Tu ne l'atteindras"
-	line "pas facilement!"
+	para "Tu ne"
+	line "l'atteindras pas"
+	cont "facilement!"
 	done
 
 _SaffronGymYoungster3EndBattleText::
@@ -219,14 +224,14 @@ _SaffronGymYoungster3EndBattleText::
 
 _SaffronGymYoungster3AfterBattleText::
 	text "Avant, il y avait"
-	line "2 ARENES #MON à"
-	cont "SAFRANIA."
+	line "2 ARENES #MON"
+	cont "à SAFRANIA."
 
 	para "Le DOJO DE COMBAT"
 	line "d'à côté a perdu"
-	cont "son statut d'ARENE"
-	cont "quand on l'a"
-	cont "écrasé!"
+	cont "son statut"
+	cont "d'ARENE quand on"
+	cont "l'a écrasé!"
 	done
 
 _SaffronGymYoungster4BattleText::

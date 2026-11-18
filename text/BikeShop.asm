@@ -1,10 +1,11 @@
 _BikeShopClerkWelcomeText::
-	text "Bonjour! Bienvenue"
-	line "au MAGASIN DE"
-	cont "VELOS."
+	text "Bonjour!"
+	line "Bienvenue au"
+	cont "MAGASIN DE VELOS."
 
-	para "Nous avons le VELO"
-	line "qu'il vous faut!"
+	para "Nous avons le"
+	line "VELO qu'il vous"
+	cont "faut!"
 	prompt
 
 _BikeShopClerkDoYouLikeItText::
@@ -26,8 +27,8 @@ _BikeShopClerkOhThatsAVoucherText::
 	prompt
 
 _BikeShopExchangedVoucherText::
-	text "<PLAYER> échange le"
-	line "BON COMMANDE"
+	text "<PLAYER> échange"
+	line "le BON COMMANDE"
 	cont "contre une"
 	cont "BICYCLETTE.@"
 	text_end
@@ -42,15 +43,15 @@ _BikeShopClerkHowDoYouLikeYourBicycleText::
 	line "nouvelle"
 	cont "BICYCLETTE?"
 
-	para "Tu peux l'utiliser"
-	line "sur la PISTE"
-	cont "CYCLABLE et dans"
-	cont "les grottes!"
+	para "Tu peux"
+	line "l'utiliser sur la"
+	cont "PISTE CYCLABLE et"
+	cont "dans les grottes!"
 	done
 
 _BikeShopBagFullText::
-	text "Fais-lui un peu de"
-	line "place!"
+	text "Fais-lui un peu"
+	line "de place!"
 	done
 
 _BikeShopMiddleAgedWomanText::
@@ -71,5 +72,6 @@ _BikeShopYoungsterTheseBikesAreExpensiveText::
 
 _BikeShopYoungsterCoolBikeText::
 	text "Waouh. Ton VELO"
-	line "est vraiment cool!"
+	line "est vraiment"
+	cont "cool!"
 	done

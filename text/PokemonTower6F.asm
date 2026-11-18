@@ -23,8 +23,9 @@ _PokemonTower6FChanneler1EndBattleText::
 	prompt
 
 _PokemonTower6FChanneler1AfterBattleText::
-	text "Je me sens anémiée"
-	line "et faible..."
+	text "Je me sens"
+	line "anémiée et"
+	cont "faible..."
 	done
 
 _PokemonTower6FChanneler2BattleText::

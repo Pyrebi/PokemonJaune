@@ -1,36 +1,40 @@
 _PokemonMansion2FSuperNerdBattleText::
 	text "Je ne peux pas"
 	line "sortir! Ce vieux"
-	cont "manoir est un vrai"
-	cont "labyrinthe!"
+	cont "manoir est un"
+	cont "vrai labyrinthe!"
 	done
 
 _PokemonMansion2FSuperNerdEndBattleText::
-	text "Oh non! Mon butin!"
+	text "Oh non! Mon"
+	line "butin!"
 	prompt
 
 _PokemonMansion2FSuperNerdAfterBattleText::
 	text "Les interrupteurs"
-	line "ouvrent et ferment"
-	cont "des portes en"
+	line "ouvrent et"
+	cont "ferment des"
+	cont "portes en"
 	cont "alternance!"
 	done
 
 _PokemonMansion2FDiary1Text::
-	text "Journal: 5 juillet"
-	line "Guyana, Amérique"
-	cont "du Sud"
+	text "Journal: 5"
+	line "juillet Guyana,"
+	cont "Amérique du Sud"
 
-	para "Un nouveau #MON"
-	line "a été découvert au"
-	cont "fond de la jungle."
+	para "Un nouveau"
+	line "#MON a été"
+	cont "découvert au fond"
+	cont "de la jungle."
 	done
 
 _PokemonMansion2FDiary2Text::
 	text "Journal: 10"
-	line "juillet Nous avons"
-	cont "baptisé le #MON"
-	cont "découvert MEW."
+	line "juillet Nous"
+	cont "avons baptisé le"
+	cont "#MON découvert"
+	cont "MEW."
 	done
 
 _PokemonMansion2FSwitchText::

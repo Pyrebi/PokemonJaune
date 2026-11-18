@@ -1,21 +1,23 @@
 _SilphCo5FSilphWorkerMThatsYouRightText::
-	text "La TEAM ROCKET est"
-	line "en émoi à cause"
-	cont "d'un intrus. C'est"
+	text "La TEAM ROCKET"
+	line "est en émoi à"
+	cont "cause d'un"
+	cont "intrus. C'est"
 	cont "toi, hein?"
 	done
 
 _SilphCo5FSilphWorkerMYoureOurHeroText::
-	text "La TEAM ROCKET est"
-	line "partie! Tu es"
+	text "La TEAM ROCKET"
+	line "est partie! Tu es"
 	cont "notre héros!"
 	cont "Merci!"
 	done
 
 _SilphCo5FRocket1BattleText::
 	text "On m'a dit qu'un"
-	line "gamin se promenait"
-	cont "par ici."
+	line "gamin se"
+	cont "promenait par"
+	cont "ici."
 	done
 
 _SilphCo5FRocket1EndBattleText::
@@ -23,8 +25,8 @@ _SilphCo5FRocket1EndBattleText::
 	prompt
 
 _SilphCo5FRocket1AfterBattleText::
-	text "C'est pas malin de"
-	line "chercher la"
+	text "C'est pas malin"
+	line "de chercher la"
 	cont "bagarre avec la"
 	cont "TEAM ROCKET!"
 	done
@@ -42,8 +44,8 @@ _SilphCo5FScientistEndBattleText::
 	prompt
 
 _SilphCo5FScientistAfterBattleText::
-	text "On travaillait sur"
-	line "la POKé BALL"
+	text "On travaillait"
+	line "sur la POKé BALL"
 	cont "ultime qui"
 	cont "attraperait tout!"
 	done
@@ -66,8 +68,8 @@ _SilphCo5FRockerAfterBattleText::
 	done
 
 _SilphCo5FRocket2BattleText::
-	text "Respecte un peu la"
-	line "TEAM ROCKET!"
+	text "Respecte un peu"
+	line "la TEAM ROCKET!"
 	done
 
 _SilphCo5FRocket2EndBattleText::
@@ -75,7 +77,8 @@ _SilphCo5FRocket2EndBattleText::
 	prompt
 
 _SilphCo5FRocket2AfterBattleText::
-	text "Ca me fait penser."
+	text "Ca me fait"
+	line "penser."
 
 	para "SMOGO évolue en"
 	line "SMOGOGO!"
@@ -108,7 +111,8 @@ _SilphCo5FPokemonReport3Text::
 	para "4 #MON"
 	line "n'évoluaient que"
 	cont "par échange. Ils"
-	cont "évoluent désormais"
-	cont "en gagnant des"
+	cont "évoluent"
+	cont "désormais en"
+	cont "gagnant des"
 	cont "niveaux!"
 	done

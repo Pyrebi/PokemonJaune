@@ -57,7 +57,8 @@ _Route22RivalBeforeBattleText1::
 _Route22RivalAfterBattleText1::
 	text "Il paraît que la"
 	line "LIGUE #MON a"
-	cont "plein de dresseurs"
+	cont "plein de"
+	cont "dresseurs"
 	cont "coriaces!"
 
 	para "Je dois trouver"
@@ -91,9 +92,9 @@ _Route22RivalBeforeBattleText2::
 	done
 
 _Route22RivalAfterBattleText2::
-	text "Ca m'a détendu! Je"
-	line "suis prêt pour la"
-	cont "LIGUE #MON!"
+	text "Ca m'a détendu!"
+	line "Je suis prêt pour"
+	cont "la LIGUE #MON!"
 
 	para "<PLAYER>, il te"
 	line "faut plus"

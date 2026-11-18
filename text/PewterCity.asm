@@ -5,8 +5,9 @@ _PewterCityCooltrainerFText::
 
 	para "Ils sont apparus"
 	line "après la chute de"
-	cont "la PIERRE LUNE sur"
-	cont "le MONT SELENITE."
+	cont "la PIERRE LUNE"
+	cont "sur le MONT"
+	cont "SELENITE."
 	done
 
 _PewterCityCooltrainerMText::
@@ -18,8 +19,9 @@ _PewterCityCooltrainerMText::
 	para "Ils sont tous"
 	line "comme des SCOUTS,"
 	cont "mais PIERRE, de"
-	cont "l'ARENE d'ARGENTA,"
-	cont "est un passionné!"
+	cont "l'ARENE"
+	cont "d'ARGENTA, est un"
+	cont "passionné!"
 	done
 
 _PewterCitySuperNerd1DidYouCheckOutMuseumText::
@@ -49,13 +51,13 @@ _PewterCitySuperNerd1ItsRightHereText::
 	done
 
 _PewterCitySuperNerd2DoYouKnowWhatImDoingText::
-	text "Psssst! Tu sais ce"
-	line "que je fais?"
+	text "Psssst! Tu sais"
+	line "ce que je fais?"
 	done
 
 _PewterCitySuperNerd2ThatsRightText::
-	text "C'est ça! C'est un"
-	line "travail dur!"
+	text "C'est ça! C'est"
+	line "un travail dur!"
 	done
 
 _PewterCitySuperNerd2ImSprayingRepelText::
@@ -67,9 +69,9 @@ _PewterCitySuperNerd2ImSprayingRepelText::
 	done
 
 _PewterCityYoungsterYoureATrainerFollowMeText::
-	text "Tu es un dresseur,"
-	line "hein? PIERRE"
-	cont "cherche de"
+	text "Tu es un"
+	line "dresseur, hein?"
+	cont "PIERRE cherche de"
 	cont "nouveaux"
 	cont "challengers!"
 	cont "Suis-moi!"
@@ -99,14 +101,15 @@ _PewterCityPoliceNoticeSignText::
 	line "dérobent des"
 	cont "fossiles de"
 	cont "#MON au MONT"
-	cont "SELENITE! Prévenez"
-	cont "la POLICE"
-	cont "d'ARGENTA!"
+	cont "SELENITE!"
+	cont "Prévenez la"
+	cont "POLICE d'ARGENTA!"
 	done
 
 _PewterCityMuseumSignText::
-	text "MUSEE DES SCIENCES"
-	line "D'ARGENTA"
+	text "MUSEE DES"
+	line "SCIENCES"
+	cont "D'ARGENTA"
 	done
 
 _PewterCityGymSignText::
