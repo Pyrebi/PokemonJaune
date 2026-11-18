@@ -197,6 +197,11 @@ ItemUseBall:
 ; Loop until an acceptable number is found.
 
 .loop
+; option bonus : capture à 100 % (après les cas spéciaux : tutoriel, spectre, dresseurs)
+	ld a, [wBonusOptions]
+	bit 0, a
+	jp nz, .captured
+
 	call Random
 	ld b, a
 

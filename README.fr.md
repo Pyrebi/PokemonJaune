@@ -26,6 +26,10 @@
   et ne prennent donc pas de place. Les CT/CS ne se jettent ni ne se vendent.
   Ce changement rend les sauvegardes des versions précédentes incompatibles.
 
+- **Options bonus** (écran OPTIONS) : CAPT. AUTO (capture à 100 %, sauf contre
+  les dresseurs et le Spectre) et MULTI. EXP (×1, ×2, ×3, ×5). Enregistrées
+  avec la partie, réglables aussi depuis l'écran titre.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

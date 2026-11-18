@@ -5,7 +5,8 @@
 	const OPT_BATTLE_STYLE ; 2
 	const OPT_SOUND        ; 3
 	const OPT_PRINTER      ; 4
-	const_skip 2
+	const OPT_CATCH        ; 5
+	const OPT_EXP          ; 6
 	const OPT_CANCEL       ; 7
 DEF NUM_OPTIONS EQU const_value ; 8
 
@@ -47,8 +48,8 @@ OptionMenuJumpTable:
 	dw OptionsMenu_BattleStyle
 	dw OptionsMenu_SpeakerSettings
 	dw OptionsMenu_GBPrinterBrightness
-	dw OptionsMenu_Dummy
-	dw OptionsMenu_Dummy
+	dw OptionsMenu_Catch
+	dw OptionsMenu_ExpMultiplier
 	dw OptionsMenu_Cancel
 
 	const_def
@@ -371,9 +372,73 @@ GetGBPrinterBrightness:
 	lb de, PRINTER_BRIGHTNESS_DARKER, PRINTER_BRIGHTNESS_LIGHTEST
 	ret
 
-OptionsMenu_Dummy:
+; option bonus : capture à 100 % (OUI/NON)
+OptionsMenu_Catch:
+	ldh a, [hJoy5]
+	and PAD_LEFT | PAD_RIGHT
+	jr z, .nothingPressed
+	ld a, [wBonusOptions]
+	xor 1
+	ld [wBonusOptions], a
+.nothingPressed
+	ld a, [wBonusOptions]
+	and 1
+	ld de, .Off
+	jr z, .place
+	ld de, .On
+.place
+	hlcoord 14, 12
+	call PlaceString
 	and a ; clear carry flag
 	ret
+
+.On:  db "OUI@"
+.Off: db "NON@"
+
+; option bonus : multiplicateur d'EXP (x1, x2, x3, x5)
+OptionsMenu_ExpMultiplier:
+	ld a, [wBonusOptions]
+	srl a
+	and %11
+	ld c, a
+	ldh a, [hJoy5]
+	bit B_PAD_RIGHT, a
+	jr nz, .pressedRight
+	bit B_PAD_LEFT, a
+	jr z, .nothingPressed
+	dec c
+	jr .save
+.pressedRight
+	inc c
+.save
+	ld a, c
+	and %11
+	ld c, a
+	add a
+	ld b, a
+	ld a, [wBonusOptions]
+	and ~%110
+	or b
+	ld [wBonusOptions], a
+.nothingPressed
+	ld b, 0
+	ld hl, .Strings
+	add hl, bc
+	add hl, bc
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	hlcoord 14, 14
+	call PlaceString
+	and a ; clear carry flag
+	ret
+
+.Strings:
+	dw .x1, .x2, .x3, .x5
+.x1: db "×1@"
+.x2: db "×2@"
+.x3: db "×3@"
+.x5: db "×5@"
 
 OptionsMenu_Cancel:
 	ldh a, [hJoy5]
@@ -404,22 +469,12 @@ OptionsControl:
 	scf
 	ret
 .doNotWrap
-	cp OPT_PRINTER ; skip the next two dummy options
-	jr c, .increase
-	ld [hl], OPT_CANCEL - 1 ; Cancel is after Print
-.increase
 	inc [hl]
 	scf
 	ret
 
 .pressedUp
 	ld a, [hl]
-	cp OPT_CANCEL ; skip the previous two dummy options
-	jr nz, .doNotSkip
-	ld [hl], OPT_PRINTER ; Print is before Cancel
-	scf
-	ret
-.doNotSkip
 	and a
 	jr nz, .decrease
 	ld [hl], NUM_OPTIONS
@@ -456,7 +511,7 @@ InitOptionsMenu:
 	call PlaceString
 	xor a
 	ld [wOptionsCursorLocation], a
-	ld c, 5 ; the number of options to loop through
+	ld c, 7 ; the number of options to loop through
 .loop
 	push bc
 	call GetOptionPointer ; updates the next option
@@ -477,7 +532,9 @@ AllOptionsText:
 	next "ANIMATION  :"
 	next "STYLE COMB.:"
 	next "SON:"
-	next "IMPR.:@"
+	next "IMPR.:"
+	next "CAPT. AUTO :"
+	next "MULTI. EXP :@"
 
 OptionMenuCancelText:
 	db "RETOUR@"

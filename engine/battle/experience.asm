@@ -86,6 +86,7 @@ GainExperience:
 	ld a, [wIsInBattle]
 	dec a ; is it a trainer battle?
 	call nz, BoostExp ; if so, boost exp
+	call ApplyExpMultiplier ; option bonus
 	inc hl
 	inc hl
 	inc hl
@@ -331,6 +332,48 @@ DivideExpDataByNumMonsGainingExp:
 	ret
 
 ; multiplies exp by 1.5
+; option bonus : multiplie l'EXP gagnée (hQuotient + 2/3) par x1, x2, x3 ou x5
+ApplyExpMultiplier:
+	ld a, [wBonusOptions]
+	srl a
+	and %11
+	ret z
+	push hl
+	push de
+	push bc
+	ld c, a
+	ld b, 0
+	ld hl, ExpMultipliers
+	add hl, bc
+	ld c, [hl] ; multiplicateur
+	dec c ; nombre d'additions supplémentaires
+	ldh a, [hQuotient + 2]
+	ld d, a
+	ldh a, [hQuotient + 3]
+	ld e, a
+	ld h, d
+	ld l, e
+.loop
+	add hl, de
+	jr c, .cap
+	dec c
+	jr nz, .loop
+	jr .store
+.cap
+	ld hl, $ffff
+.store
+	ld a, h
+	ldh [hQuotient + 2], a
+	ld a, l
+	ldh [hQuotient + 3], a
+	pop bc
+	pop de
+	pop hl
+	ret
+
+ExpMultipliers:
+	db 1, 2, 3, 5
+
 BoostExp:
 	ldh a, [hQuotient + 2]
 	ld b, a
