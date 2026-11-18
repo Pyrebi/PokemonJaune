@@ -32,3 +32,6 @@
 *.sn*
 *.sa*
 *.sg1
+
+# page HTML autonome (contient le ROM)
+web/pokemon_jaune.html
