@@ -1,5 +1,5 @@
 _CableClubNPCPleaseWaitText::
-	text "Please wait.@"
+	text "Patiente.@"
 	text_end
 
 _CableClubNPCLinkClosedBecauseOfInactivityText::
@@ -11,118 +11,124 @@ IF DEF(_YELLOW_VC)
 	db   "osed because of"
 	cont "inactivity."
 ELSE
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
+	text "La connexion a été"
+	line "coupée pour cause"
+	cont "d'inactivité."
 ENDC
 	vc_patch_end
 
-	para "Please contact"
-	line "your friend and"
-	cont "come again!"
+	para "Contacte ton ami"
+	line "et reviens nous"
+	cont "voir!"
 	done
 
 _CableClubNPCPleaseComeAgainText::
-	text "Please come again!"
+	text "Reviens quand tu"
+	line "veux!"
 	done
 
 _CableClubNPCMakingPreparationsText::
-	text "We're making"
-	line "preparations."
-	cont "Please wait."
+	text "Nous faisons les"
+	line "préparatifs."
+	cont "Patiente."
 	done
 
 _FlashLightsAreaText::
-	text "A blinding FLASH"
-	line "lights the area!"
+	text "Un FLASH aveuglant"
+	line "éclaire les lieux!"
 	prompt
 
 _WarpToLastPokemonCenterText::
-	text "Warp to the last"
-	line "#MON CENTER."
+	text "Retour au dernier"
+	line "CENTRE #MON."
 	done
 
 _CannotUseTeleportNowText::
 	text_ram wNameBuffer
-	text " can't"
-	line "use TELEPORT now."
+	text " ne"
+	line "peut pas utiliser"
+	cont "TELEPORT ici."
 	prompt
 
 _CannotFlyHereText::
 	text_ram wNameBuffer
-	text " can't"
-	line "FLY here."
+	text " ne"
+	line "peut pas VOLER"
+	cont "ici."
 	prompt
 
 _NotHealthyEnoughText::
-	text "Not healthy"
-	line "enough."
+	text "Pas assez en"
+	line "forme."
 	prompt
 
 _NewBadgeRequiredText::
-	text "No! A new BADGE"
-	line "is required."
+	text "Non! Il faut un"
+	line "nouveau BADGE."
 	prompt
 
 _CannotUseItemsHereText::
-	text "You can't use items"
-	line "here."
+	text "Tu ne peux pas"
+	line "utiliser d'objet"
+	cont "ici."
 	prompt
 
 _CannotGetOffHereText::
-	text "You can't get off"
-	line "here."
+	text "Tu ne peux pas"
+	line "descendre ici."
 	prompt
 
 _UsedStrengthText::
 	text_ram wNameBuffer
-	text " used"
-	line "STRENGTH.@"
+	text " utilise"
+	line "FORCE.@"
 	text_end
 
 _CanMoveBouldersText::
 	text_ram wNameBuffer
-	text " can"
-	line "move boulders."
+	text " peut"
+	line "déplacer les"
+	cont "rochers."
 	prompt
 
 _CurrentTooFastText::
-	text "The current is"
-	line "much too fast!"
+	text "Le courant est"
+	line "bien trop fort!"
 	prompt
 
 _CyclingIsFunText::
-	text "Cycling is fun!"
-	line "Forget SURFing!"
+	text "Le vélo, c'est"
+	line "génial! Oublie le"
+	cont "SURF!"
 	prompt
 
 _GotMonText::
-	text "<PLAYER> got"
+	text "<PLAYER> obtient"
 	line "@"
 	text_ram wNameBuffer
 	text "!@"
 	text_end
 
 _SentToBoxText::
-	text "There's no more"
-	line "room for #MON!"
+	text "Plus de place pour"
+	line "les #MON!"
 	cont "@"
 	text_ram wBoxMonNicks
-	text " was"
-	cont "sent to #MON"
-	cont "BOX @"
+	text " est"
+	cont "envoyé dans la"
+	cont "BOITE @"
 	text_ram wStringBuffer
-	text " on PC!"
+	text " du PC!"
 	done
 
 _BoxIsFullText::
-	text "There's no more"
-	line "room for #MON!"
+	text "Plus de place pour"
+	line "les #MON!"
 
-	para "The #MON BOX"
-	line "is full and can't"
-	cont "accept any more!"
+	para "La BOITE #MON"
+	line "est pleine!"
 
-	para "Change the BOX at"
-	line "a #MON CENTER!"
+	para "Change de BOITE"
+	line "dans un CENTRE"
+	cont "#MON!"
 	done

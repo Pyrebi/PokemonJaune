@@ -1,10 +1,10 @@
 TeachingHMsText::
-	text "Once a #MON"
-	line "learns an HM, the"
-	cont "technique can't"
-	cont "be replaced."
+	text "Une capacité CS"
+	line "apprise par un"
+	cont "#MON ne peut"
+	cont "plus être oubliée."
 
-	para "Better think care-"
-	line "fully before you"
-	cont "teach HM moves."
+	para "Réfléchis bien"
+	line "avant d'enseigner"
+	cont "une CS."
 	done

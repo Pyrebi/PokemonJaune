@@ -32,6 +32,15 @@ def width(s):
 
 
 def wrap(s):
+    lead = len(s) - len(s.lstrip(' '))
+    if width(s) <= WIDTH:
+        return [s]
+    out = _wrap(s.strip(' '))
+    out[0] = ' ' * lead + out[0]
+    return out
+
+
+def _wrap(s):
     words = s.split(' ')
     out, cur = [], ''
     for w in words:
@@ -52,14 +61,15 @@ def blocks(lines):
     segs, i, n = [], 0, len(lines)
     while i < n:
         m = STR_RE.match(lines[i])
-        if m and m.group(2) == 'text':
+        prev = next((x for x in reversed(lines[:i]) if x.strip()), '')
+        if m and m.group(2) == 'text' and LABEL_RE.match(prev):
             j = i
             ok = True
             while j < n:
                 l = lines[j]
                 sm = STR_RE.match(l)
                 if sm:
-                    if sm.group(2) == 'next':
+                    if sm.group(2) == 'next' or (j > i and sm.group(3).startswith('@')):
                         ok = False
                     j += 1
                     continue
@@ -101,7 +111,7 @@ def paragraphs(block):
             if kw in ('text', 'para'):
                 paras.append([kw, s])
             else:
-                paras[-1][1] = (paras[-1][1] + ' ' + s).strip() if s else paras[-1][1]
+                paras[-1][1] = (paras[-1][1] + ' ' + s) if paras[-1][1] else s
         elif l.strip():
             term.append(l)
     return paras, term
@@ -130,8 +140,23 @@ def do_wrap(block):
     return out + term
 
 
+# la police n'a pas de majuscules accentuées ni de ligatures
+SANITIZE = str.maketrans({'É': 'E', 'È': 'E', 'Ê': 'E', 'À': 'A', 'Â': 'A', 'Ç': 'C',
+                          'Î': 'I', 'Ô': 'O', 'Ù': 'U', 'Û': 'U', '’': "'", '«': '"', '»': '"'})
+
+
+def sanitize(line):
+    sm = STR_RE.match(line)
+    if not sm:
+        return line
+    s = sm.group(3).translate(SANITIZE).replace('œ', 'oe').replace('…', '...')
+    return line[:sm.start(3)] + s + line[sm.end(3):]
+
+
 def process(path, mode):
     lines = open(path, encoding='utf-8').read().split('\n')
+    if mode == 'wrap':
+        lines = [sanitize(l) for l in lines]
     out, problems = [], []
     for kind, blk in blocks(lines):
         if kind == 'simple' and mode in ('join', 'wrap'):

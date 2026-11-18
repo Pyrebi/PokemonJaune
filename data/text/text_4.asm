@@ -1,56 +1,57 @@
 _FileDataDestroyedText::
-	text "The file data is"
-	line "destroyed!"
+	text "Les données de"
+	line "sauvegarde sont"
+	cont "détruites!"
 	prompt
 
 _WouldYouLikeToSaveText::
-	text "Would you like to"
-	line "SAVE the game?"
+	text "Voulez-vous SAUVER"
+	line "la partie?"
 	done
 
 _SavingText::
-	text "Saving..."
+	text "Sauvegarde..."
 	done
 
 _GameSavedText::
-	text "<PLAYER> saved"
-	line "the game!"
+	text "<PLAYER> a sauvé la"
+	line "partie!"
 	done
 
 _OlderFileWillBeErasedText::
-	text "The older file"
-	line "will be erased to"
-	cont "save. Okay?"
+	text "L'ancienne"
+	line "sauvegarde sera"
+	cont "effacée. D'accord?"
 	done
 
 _WhenYouChangeBoxText::
-	text "When you change a"
-	line "#MON BOX, data"
-	cont "will be saved."
+	text "Changer de BOITE"
+	line "#MON sauvegarde"
+	cont "la partie."
 
-	para "Is that okay?"
+	para "D'accord?"
 	done
 
 _ChooseABoxText::
-	text "Choose a"
-	line "<PKMN> BOX.@"
+	text "Choisis une"
+	line "BOITE.@"
 	text_end
 
 _EvolvedText::
 	text_ram wStringBuffer
-	text " evolved"
+	text " évolue"
 	done
 
 _IntoText::
 	text_start
-	line "into @"
+	line "en @"
 	text_ram wNameBuffer
 	text "!"
 	done
 
 _StoppedEvolvingText::
-	text "Huh? @"
+	text "Quoi? @"
 	text_ram wStringBuffer
 	text_start
-	line "stopped evolving!"
+	line "n'évolue plus!"
 	prompt
