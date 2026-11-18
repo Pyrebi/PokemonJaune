@@ -6,9 +6,9 @@ ViridianForestWildMons:
 	db  5, CATERPIE
 	db  4, PIDGEY
 	db  6, PIDGEY
-	db  6, CATERPIE
-	db  6, METAPOD
-	db  8, PIDGEY
+	db  5, WEEDLE
+	db  6, KAKUNA
+	db  7, WEEDLE
 	db  9, PIDGEOTTO
 	end_grass_wildmons
 

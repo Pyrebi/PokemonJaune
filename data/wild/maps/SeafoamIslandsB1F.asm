@@ -6,9 +6,9 @@ SeafoamIslandsB1FWildMons:
 	db 28, KRABBY
 	db 27, GOLBAT
 	db 29, SLOWPOKE
-	db 18, ZUBAT
+	db 28, JYNX
 	db 28, KINGLER
-	db 22, SEEL
+	db 30, JYNX
 	db 26, SEEL
 	end_grass_wildmons
 

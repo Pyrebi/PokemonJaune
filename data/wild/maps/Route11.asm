@@ -6,9 +6,9 @@ Route11WildMons:
 	db 15, DROWZEE
 	db 17, RATTATA
 	db 17, DROWZEE
-	db 18, PIDGEOTTO
+	db 16, EKANS
 	db 20, PIDGEOTTO
-	db 19, DROWZEE
+	db 19, EKANS
 	db 17, RATICATE
 	end_grass_wildmons
 

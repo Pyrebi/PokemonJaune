@@ -151,6 +151,18 @@
 	charmap "z",         $b9
 
 	charmap "é",         $ba
+	; accents français (gfx/font/font.png, tuiles $c0-$ca)
+	charmap "à",         $c0
+	charmap "â",         $c1
+	charmap "ç",         $c2
+	charmap "è",         $c3
+	charmap "ê",         $c4
+	charmap "ë",         $c5
+	charmap "î",         $c6
+	charmap "ï",         $c7
+	charmap "ô",         $c8
+	charmap "ù",         $c9
+	charmap "û",         $ca
 	charmap "'d",        $bb
 	charmap "'l",        $bc
 	charmap "'s",        $bd
