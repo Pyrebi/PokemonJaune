@@ -3129,13 +3129,15 @@ IsKeyItem_::
 	ret nz
 .checkIfItemIsHM
 	ld a, [wCurItem]
-	call IsItemHM
-	ret c
+	cp HM01 ; CT et CS : réutilisables, donc ni jetées ni vendues
+	ret nc
 	xor a
 	ld [wIsKeyItem], a
 	ret
 
 INCLUDE "data/items/key_items.asm"
+
+INCLUDE "engine/items/bag_pockets.asm"
 
 ; store the new mon in the first slot, shifting all existing box data down
 SendNewMonToBox:

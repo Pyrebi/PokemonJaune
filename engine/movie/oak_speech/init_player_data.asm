@@ -23,6 +23,10 @@ InitPlayerData2:
 	call InitializeEmptyList
 	ld hl, wNumBagItems
 	call InitializeEmptyList
+	ld hl, wOwnedTMHMs
+	ld bc, (NUM_TM_HM + 7) / 8 + 1 ; CT/CS et poche du sac
+	xor a
+	call FillMemory
 	ld hl, wNumBoxItems
 	call InitializeEmptyList
 

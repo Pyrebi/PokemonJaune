@@ -2319,12 +2319,13 @@ SimulatedInputBattleItemList:
 	db -1 ; end
 
 DisplayPlayerBag:
-	; get the pointer to player's bag when in a normal battle
-	ld hl, wNumBagItems
-	ld a, l
-	ld [wListPointer], a
-	ld a, h
-	ld [wListPointer + 1], a
+	; sac par poches
+	farcall BagPocketMenu
+	ld a, $0
+	ld [wMenuWatchMovingOutOfBounds], a
+	ld [wMenuItemToSwap], a
+	jp c, DisplayBattleMenu ; retour au menu de combat si rien n'est choisi
+	jr UseBagItem
 
 DisplayBagMenu:
 	xor a

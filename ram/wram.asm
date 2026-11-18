@@ -501,6 +501,10 @@ NEXTU
 wFilteredBagItems:: ds 4
 
 NEXTU
+; vue de la poche affichée (même format qu'une liste d'objets)
+wPocketView:: ds BAG_ITEM_CAPACITY * 2 + 2
+
+NEXTU
 ; Saved copy of OAM for the first frame of the animation to make it easy to
 ; flip back from the second frame.
 wMonPartySpritesSavedOAM:: ds OBJ_SIZE * 4 * PARTY_LENGTH
@@ -1928,9 +1932,8 @@ wPokedexOwnedEnd::
 wPokedexSeen:: flag_array NUM_POKEMON
 wPokedexSeenEnd::
 
-wNumBagItems:: db
-; item, quantity
-wBagItems:: ds BAG_ITEM_CAPACITY * 2 + 1
+; ancien emplacement du sac (20 objets), conservé vide pour ne rien décaler
+	ds 20 * 2 + 2
 
 wPlayerMoney:: ds 3 ; BCD
 
@@ -2292,10 +2295,17 @@ wSeafoamIslandsB3FCurScript:: db
 wRoute23CurScript:: db
 wSeafoamIslandsB4FCurScript:: db
 wRoute18Gate1FCurScript:: db
-	ds 78
 wGameProgressFlagsEnd::
 
-	ds 56
+; sac étendu, dans l'espace autrefois inutilisé (78 + 56 octets)
+wNumBagItems:: db
+; item, quantity
+wBagItems:: ds BAG_ITEM_CAPACITY * 2 + 1
+; CT/CS possédées (1 bit chacune, réutilisables)
+wOwnedTMHMs:: flag_array NUM_TM_HM
+; poche du sac affichée
+wCurBagPocket:: db
+	ds 78 + 56 - (1 + BAG_ITEM_CAPACITY * 2 + 1) - (NUM_TM_HM + 7) / 8 - 1
 
 wObtainedHiddenItemsFlags:: flag_array MAX_HIDDEN_ITEMS
 

@@ -175,6 +175,8 @@ DisplayListMenuIDLoop::
 	bit B_PAD_SELECT, a
 	jp nz, HandleItemListSwapping ; if so, allow the player to swap menu entries
 	ld b, a
+	and PAD_LEFT | PAD_RIGHT ; changement de poche du sac (si surveillé)
+	jp nz, ExitListMenu
 	bit B_PAD_DOWN, b
 	ld hl, wListScrollOffset
 	jr z, .upPressed
@@ -316,6 +318,12 @@ InitialQuantityText::
 
 SpacesBetweenQuantityAndPriceText::
 	db "      @"
+
+; suite de DisplayPocketListMenu (sac) : passe dans la banque des menus
+DisplayPocketListMenuLoop::
+	ld a, $01
+	call BankswitchHome
+	jp DisplayListMenuIDLoop
 
 ExitListMenu::
 	ld a, [wCurrentMenuItem]

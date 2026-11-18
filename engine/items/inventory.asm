@@ -5,6 +5,46 @@
 ; [wItemQuantity] = item quantity
 ; sets carry flag if successful, unsets carry flag if unsuccessful
 AddItemToInventory_::
+; CT/CS ajoutées au sac : simple bit dans wOwnedTMHMs (elles sont réutilisables)
+	ld a, l
+	cp LOW(wNumBagItems)
+	jr nz, .notTMHM
+	ld a, h
+	cp HIGH(wNumBagItems)
+	jr nz, .notTMHM
+	ld a, [wCurItem]
+	sub HM01
+	jr c, .notTMHM
+	push hl
+	push bc
+	ld c, a
+	srl a
+	srl a
+	srl a
+	ld hl, wOwnedTMHMs
+	add l
+	ld l, a
+	jr nc, .noCarry
+	inc h
+.noCarry
+	ld a, c
+	and 7
+	ld b, a
+	ld a, 1
+	inc b
+.shift
+	dec b
+	jr z, .setBit
+	add a
+	jr .shift
+.setBit
+	or [hl]
+	ld [hl], a
+	pop bc
+	pop hl
+	scf
+	ret
+.notTMHM
 	ld a, [wItemQuantity] ; a = item quantity
 	push af
 	push bc

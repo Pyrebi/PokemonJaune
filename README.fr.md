@@ -15,6 +15,17 @@
 - **CT réutilisables et CS oubliables** : une CT n'est plus consommée quand on
   l'utilise, et les capacités CS peuvent être remplacées comme les autres.
 
+- **Repousse** : à la fin de l'effet, le jeu propose d'en utiliser un autre du
+  même type s'il en reste.
+- **Objets des CS** : SECATEUR (COUPE), TELEPORTEUR (VOL), BATEAU (SURF),
+  GANTS (FORCE) et LAMPE (FLASH), donnés avec la CS correspondante. Ils
+  s'utilisent depuis le sac, ou avec A devant un arbuste, l'eau ou un rocher
+  (« Utiliser ...? »), avec les mêmes conditions que les CS (badges compris).
+- **Sac par poches** : OBJETS, BALLS, RARES et CT/CS (Gauche/Droite pour changer).
+  60 lignes au lieu de 20 ; les 55 CT/CS sont stockées à part (1 bit chacune)
+  et ne prennent donc pas de place. Les CT/CS ne se jettent ni ne se vendent.
+  Ce changement rend les sauvegardes des versions précédentes incompatibles.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

@@ -1,4 +1,12 @@
-DEF BAG_ITEM_CAPACITY EQU 20
+DEF BAG_ITEM_CAPACITY EQU 60
+
+; poches du sac
+	const_def
+	const POCKET_ITEMS ; 0
+	const POCKET_BALLS ; 1
+	const POCKET_KEY   ; 2
+	const POCKET_TMHM  ; 3
+DEF NUM_POCKETS EQU const_value
 DEF PC_ITEM_CAPACITY  EQU 50
 
 ; text box IDs

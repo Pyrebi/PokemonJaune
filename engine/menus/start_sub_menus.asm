@@ -347,20 +347,7 @@ StartMenu_Item::
 	call PrintText
 	jr .exitMenu
 .notInCableClubRoom
-	; store item bag pointer in wListPointer (for DisplayListMenuID)
-	ld hl, wListPointer
-	ld [hl], LOW(wNumBagItems)
-	inc hl
-	ld [hl], HIGH(wNumBagItems)
-	xor a
-	ld [wPrintItemPrices], a
-	ld a, ITEMLISTMENU
-	ld [wListMenuID], a
-	ld a, [wBagSavedMenuItem]
-	ld [wCurrentMenuItem], a
-	call DisplayListMenuID
-	ld a, [wCurrentMenuItem]
-	ld [wBagSavedMenuItem], a
+	farcall BagPocketMenu ; sac par poches
 	jr nc, .choseItem
 .exitMenu
 	call LoadScreenTilesFromBuffer2
