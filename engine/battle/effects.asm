@@ -168,7 +168,7 @@ PoisonEffect:
 	cp POISON_EFFECT
 	ret nz
 .didntAffect
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	jp PrintDidntAffectText
 
@@ -871,7 +871,7 @@ SwitchAndTeleportEffect:
 	srl b  ; b = enemyLevel / 4
 	cp b ; is rand[0, playerLevel + enemyLevel] >= (enemyLevel / 4)?
 	jr nc, .playerMoveWasSuccessful ; if so, allow teleporting
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	ld a, [wPlayerMoveNum]
 	cp TELEPORT
@@ -886,7 +886,7 @@ SwitchAndTeleportEffect:
 	ld a, [wPlayerMoveNum]
 	jr .playAnimAndPrintText
 .notWildBattle1
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	ld hl, IsUnaffectedText
 	ld a, [wPlayerMoveNum]
@@ -913,7 +913,7 @@ SwitchAndTeleportEffect:
 	srl b
 	cp b
 	jr nc, .enemyMoveWasSuccessful
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	ld a, [wEnemyMoveNum]
 	cp TELEPORT
@@ -928,7 +928,7 @@ SwitchAndTeleportEffect:
 	ld a, [wEnemyMoveNum]
 	jr .playAnimAndPrintText
 .notWildBattle2
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	ld hl, IsUnaffectedText
 	ld a, [wEnemyMoveNum]
@@ -938,7 +938,7 @@ SwitchAndTeleportEffect:
 .playAnimAndPrintText
 	push af
 	call PlayBattleAnimation
-	ld c, 20
+	ld c, 10 ; (accéléré) 20 à l'origine
 	call DelayFrames
 	pop af
 	ld hl, RanFromBattleText
@@ -1219,7 +1219,7 @@ BecameConfusedText:
 ConfusionEffectFailed:
 	cp CONFUSION_SIDE_EFFECT
 	ret z
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	jp ConditionalPrintButItFailed
 
@@ -1262,7 +1262,7 @@ RageEffect:
 	ret
 
 MimicEffect:
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	call MoveHitTest
 	ld a, [wMoveMissed]

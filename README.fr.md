@@ -37,6 +37,20 @@
   la confirmation du Maître des capacités et dans le message « ... veut apprendre ».
   « - » pour les capacités de statut ou à dégâts fixes.
 
+- **Confort** :
+  - courir en maintenant B (à pied ou en surf) ;
+  - SELECT pour monter sur la BICYCLETTE ou en descendre ;
+  - vitesse de texte « INST » (instantané) dans les OPTIONS ;
+  - combats plus rapides : barre de PV deux fois plus rapide et pauses
+    raccourcies (animations inchangées) ;
+  - entrée « SOIGNER » du PC : soigne toute l'équipe.
+- **Corrections de bugs d'origine** :
+  - les capacités SPECTRE sont super efficaces contre PSY (au lieu de sans effet) ;
+  - PUISSANCE double les chances de coup critique (au lieu de les diviser par 4) ;
+  - une précision de 100 % ne rate plus jamais (fin du raté à 1/256).
+- **Informations** : les DV (0-15) dans le résumé, à côté de chaque statistique et
+  sous les PV ; amitié et humeur du PIKACHU de départ en page 2 du résumé.
+
 Outils : `tools/textreflow.py` recoupe les textes à la largeur de la boîte de
 dialogue (17 caractères) et vérifie qu'aucune ligne ne dépasse.
 

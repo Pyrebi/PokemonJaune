@@ -28,6 +28,11 @@ _RepelWoreOffText::
 	cont "dissipé."
 	done
 
+_NoBicycleText::
+	text "Tu n'as pas de"
+	line "BICYCLETTE."
+	prompt
+
 _UseAnotherRepelText::
 	text "Utiliser un autre"
 	line "@"
@@ -201,6 +206,11 @@ _NeedYourPokemonText::
 	text "OK. Confiez-nous"
 	line "vos #MON."
 	done
+
+_PCHealedText::
+	text "Tes #MON sont"
+	line "en pleine forme!"
+	prompt
 
 _PokemonFightingFitText::
 	text "Merci! Vos"

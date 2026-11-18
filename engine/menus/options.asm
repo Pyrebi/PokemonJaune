@@ -52,11 +52,7 @@ OptionMenuJumpTable:
 	dw OptionsMenu_ExpMultiplier
 	dw OptionsMenu_Cancel
 
-	const_def
-	const OPT_TEXT_SPEED_FAST ; 0
-	const OPT_TEXT_SPEED_MID  ; 1
-	const OPT_TEXT_SPEED_SLOW ; 2
-DEF NUM_TEXT_SPEED_OPTS EQU const_value ; 3
+DEF NUM_TEXT_SPEED_OPTS EQU 4
 
 OptionsMenu_TextSpeed:
 	call GetTextSpeed
@@ -64,35 +60,27 @@ OptionsMenu_TextSpeed:
 	bit B_PAD_RIGHT, a
 	jr nz, .pressedRight
 	bit B_PAD_LEFT, a
-	jr nz, .pressedLeft
-	jr .nonePressed
-
-.pressedRight
-	ld a, c
-	cp NUM_TEXT_SPEED_OPTS - 1
-	jr c, .increase
-	ld c, -1
-.increase
-	inc c
-	ld a, e
-	jr .save
-
-.pressedLeft
-	ld a, c
-	and a
-	jr nz, .decrease
-	ld c, NUM_TEXT_SPEED_OPTS
-.decrease
+	jr z, .nonePressed
+; gauche
 	dec c
-	ld a, d
-
+	bit 7, c
+	jr z, .save
+	ld c, NUM_TEXT_SPEED_OPTS - 1
+	jr .save
+.pressedRight
+	inc c
+	ld a, c
+	cp NUM_TEXT_SPEED_OPTS
+	jr c, .save
+	ld c, 0
 .save
-	ld b, a
+	ld b, 0
+	ld hl, TextSpeedDelays
+	add hl, bc
 	ld a, [wOptions]
 	and ~TEXT_DELAY_MASK
-	or b
+	or [hl]
 	ld [wOptions], a
-
 .nonePressed
 	ld b, 0
 	ld hl, .Strings
@@ -107,37 +95,36 @@ OptionsMenu_TextSpeed:
 	ret
 
 .Strings:
-; entries correspond to OPT_TEXT_SPEED_* constants
+	dw .Inst
 	dw .Fast
 	dw .Mid
 	dw .Slow
 
+.Inst: db "INST@"
 .Fast: db "RAPI@"
 .Mid:  db "MOY.@"
 .Slow: db "LENT@"
 
-; Loads the value of the current selection in c
-; Loads the text delay value of the options
-; to the left in d and to the right in e
+; délai par lettre de chaque vitesse (0 = texte instantané)
+TextSpeedDelays:
+	db 0, TEXT_DELAY_FAST, TEXT_DELAY_MEDIUM, TEXT_DELAY_SLOW
+
+; c = index de la vitesse actuelle dans TextSpeedDelays (MOY. par défaut)
 GetTextSpeed:
 	ld a, [wOptions]
 	and TEXT_DELAY_MASK
-	cp TEXT_DELAY_SLOW
-	jr z, .slowTextOption
-	cp TEXT_DELAY_FAST
-	jr z, .fastTextOption
-	ld c, OPT_TEXT_SPEED_MID
-	lb de, TEXT_DELAY_FAST, TEXT_DELAY_SLOW
-	ret
-
-.slowTextOption
-	ld c, OPT_TEXT_SPEED_SLOW
-	lb de, TEXT_DELAY_MEDIUM, TEXT_DELAY_FAST
-	ret
-
-.fastTextOption
-	ld c, OPT_TEXT_SPEED_FAST
-	lb de, TEXT_DELAY_SLOW, TEXT_DELAY_MEDIUM
+	ld b, a
+	ld hl, TextSpeedDelays
+	ld c, 0
+.loop
+	ld a, [hli]
+	cp b
+	ret z
+	inc c
+	ld a, c
+	cp NUM_TEXT_SPEED_OPTS
+	jr c, .loop
+	ld c, 2
 	ret
 
 OptionsMenu_BattleAnimations:

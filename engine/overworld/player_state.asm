@@ -445,3 +445,26 @@ CheckForBoulderCollisionWithSprites:
 .success
 	xor a
 	ret
+
+; double vitesse à vélo ; à pied ou en surf, seulement si B est enfoncé (course)
+DoBikeSpeedup_::
+	ld a, [wWalkBikeSurfState]
+	dec a ; à vélo ?
+	jr z, .checks
+	ldh a, [hJoyHeld]
+	and PAD_B
+	ret z
+.checks
+	ld a, [wMovementFlags]
+	bit BIT_LEDGE_OR_FISHING, a
+	ret nz
+	ld a, [wNPCMovementScriptPointerTableNum]
+	and a
+	ret nz
+	ld a, [wCurMap]
+	cp ROUTE_17 ; Piste Cyclable
+	jp nz, AdvancePlayerSprite
+	ldh a, [hJoyHeld]
+	and PAD_UP | PAD_LEFT | PAD_RIGHT
+	ret nz
+	jp AdvancePlayerSprite

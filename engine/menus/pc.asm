@@ -16,7 +16,8 @@ PCMainMenu:
 	call HandleMenuInput
 	bit B_PAD_B, a
 	jp nz, LogOff
-; entrées : 0 LEO, 1 joueur, 2 maître des capacités, puis [CHEN], [LIGUE], déconnexion
+; entrées : 0 LEO, 1 joueur, 2 maître des capacités, 3 soins,
+; puis [CHEN], [LIGUE], déconnexion
 	ld a, [wCurrentMenuItem]
 	and a
 	jp z, BillsPC
@@ -25,11 +26,13 @@ PCMainMenu:
 	cp 2
 	jr z, MoveRelearner
 	ld b, a
+	cp 3
+	jr z, HealFromPC
 	ld a, [wMaxMenuItem]
 	cp b ; dernière entrée = déconnexion
 	jp z, LogOff
 	ld a, b
-	cp 3
+	cp 4
 	jp z, OaksPC
 	jp PKMNLeague
 .playersPC
@@ -48,6 +51,14 @@ MoveRelearner:
 	call PlaySound
 	call WaitForSoundToFinish
 	farcall MoveRelearnerPC
+	jr ReloadMainMenu
+HealFromPC:
+	predef HealParty
+	ld a, SFX_HEAL_AILMENT
+	call PlaySound
+	call WaitForSoundToFinish
+	ld hl, PCHealedText
+	call PrintText
 	jr ReloadMainMenu
 OaksPC:
 	ld a, SFX_ENTER_PC
@@ -99,6 +110,10 @@ AccessedBillsPCText:
 
 AccessedSomeonesPCText:
 	text_far _AccessedSomeonesPCText
+	text_end
+
+PCHealedText:
+	text_far _PCHealedText
 	text_end
 
 AccessedMyPCText:

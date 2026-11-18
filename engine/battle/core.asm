@@ -535,7 +535,7 @@ HandlePoisonBurnLeechSeed:
 	or [hl]
 	ret nz          ; test if fainted
 	call DrawHUDsAndHPBars
-	ld c, 20
+	ld c, 10 ; (accéléré) 20 à l'origine
 	call DelayFrames
 	xor a
 	ret
@@ -2525,7 +2525,7 @@ PartyMenuOrRockOrRun:
 
 SwitchPlayerMon:
 	callfar RetreatMon
-	ld c, 50
+	ld c, 25 ; (accéléré) 50 à l'origine
 	call DelayFrames
 	call AnimateRetreatingPlayerMon
 	ld a, [wWhichPokemon]
@@ -3354,7 +3354,7 @@ PlayPlayerMoveAnimation:
 	call nz, Bankswitch
 	jr MirrorMoveCheck
 PlayerCheckIfFlyOrChargeEffect:
-	ld c, 30
+	ld c, 15 ; (accéléré) 30 à l'origine
 	call DelayFrames
 	ld a, [wPlayerMoveEffect]
 	cp FLY_EFFECT
@@ -4676,14 +4676,18 @@ CriticalHitTest:
 	ld c, [hl]                   ; read move id
 	ld a, [de]
 	bit GETTING_PUMPED, a        ; test for focus energy
-	jr nz, .focusEnergyUsed      ; bug: using focus energy causes a shift to the right instead of left,
-	                             ; resulting in 1/4 the usual crit chance
+	jr nz, .focusEnergyUsed      ; (corrigé : PUISSANCE double maintenant les
+	                             ; chances de coup critique au lieu de les diviser par 4)
 	sla b                        ; (effective (base speed/2)*2)
 	jr nc, .noFocusEnergyUsed
-	ld b, $ff                    ; cap at 255/256
-	jr .noFocusEnergyUsed
+	jr .capCritChance
 .focusEnergyUsed
-	srl b
+	sla b
+	jr c, .capCritChance
+	sla b
+	jr nc, .noFocusEnergyUsed
+.capCritChance
+	ld b, $ff                    ; cap at 255/256
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -5503,7 +5507,10 @@ MoveHitTest:
 	ld b, a
 .doAccuracyCheck
 ; if the random number generated is greater than or equal to the scaled accuracy, the move misses
-; note that this means that even the highest accuracy is still just a 255/256 chance, not 100%
+; (corrigé : une précision de 255 touche toujours, plus de raté à 1/256)
+	ld a, b
+	inc a
+	ret z
 	call BattleRandom
 	cp b
 	jr nc, .moveMissed
@@ -5767,7 +5774,7 @@ PlayEnemyMoveAnimation:
 
 EnemyCheckIfFlyOrChargeEffect:
 	call SwapPlayerAndEnemyLevels
-	ld c, 30
+	ld c, 15 ; (accéléré) 30 à l'origine
 	call DelayFrames
 	ld a, [wEnemyMoveEffect]
 	cp FLY_EFFECT

@@ -80,6 +80,13 @@ OverworldLoopLessDelay::
 	ldh [hTextID], a
 	jp .displayDialogue
 .startButtonNotPressed
+	bit B_PAD_SELECT, a
+	jr z, .selectButtonNotPressed
+	ld a, TEXT_BIKE_TOGGLE
+	ldh [hTextID], a
+	call DisplayTextID
+	jp OverworldLoop
+.selectButtonNotPressed
 	bit B_PAD_A, a
 	jp z, .checkIfDownButtonIsPressed
 ; if A is pressed
@@ -335,26 +342,9 @@ NewBattle::
 	and a
 	ret
 
-; function to make bikes twice as fast as walking
+; double vitesse à vélo, ou à pied/en surf avec B enfoncé (course)
 DoBikeSpeedup::
-	ld a, [wWalkBikeSurfState]
-	dec a ; riding a bike?
-	ret nz
-	ld a, [wMovementFlags]
-	bit BIT_LEDGE_OR_FISHING, a
-	ret nz
-	ld a, [wNPCMovementScriptPointerTableNum]
-	and a
-	ret nz
-	ld a, [wCurMap]
-	cp ROUTE_17 ; Cycling Road
-	jr nz, .goFaster
-	ldh a, [hJoyHeld]
-	and PAD_UP | PAD_LEFT | PAD_RIGHT
-	ret nz
-.goFaster
-	call AdvancePlayerSprite
-	ret
+	farjp DoBikeSpeedup_
 
 ; check if the player has stepped onto a warp after having not collided
 CheckWarpsNoCollision::

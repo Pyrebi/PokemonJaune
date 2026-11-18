@@ -1,10 +1,10 @@
 DisplayPCMainMenu::
-; entrées : PC de LEO, PC du joueur, MAITRE CAPA., [PC du PROF.CHEN],
+; entrées : PC de LEO, PC du joueur, MAITRE CAPA., SOIGNER, [PC du PROF.CHEN],
 ; [LIGUE #MON], DECONNEXION
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	call SaveScreenTilesToBuffer2
-	ld b, 4 ; LEO, joueur, maître des capacités, déconnexion
+	ld b, 5 ; LEO, joueur, maître des capacités, soins, déconnexion
 	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .countDone
 	inc b
@@ -41,17 +41,20 @@ DisplayPCMainMenu::
 	ld de, MoveRelearnerPCText
 	call PlaceString
 	hlcoord 2, 8
+	ld de, HealPCText
+	call PlaceString
+	hlcoord 2, 10
 	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .placeLogOff
 	ld de, OaksPCText
 	call PlaceString
-	hlcoord 2, 10
+	hlcoord 2, 12
 	ld a, [wNumHoFTeams]
 	and a
 	jr z, .placeLogOff
 	ld de, PKMNLeaguePCText
 	call PlaceString
-	hlcoord 2, 12
+	hlcoord 2, 14
 .placeLogOff
 	ld de, LogOffPCText
 	call PlaceString
@@ -72,6 +75,7 @@ SomeonesPCText:   db "PC DE ???@"
 BillsPCText:      db "PC DE LEO@"
 PlayersPCText:    db "PC DE @"
 MoveRelearnerPCText: db "MAITRE CAPA.@"
+HealPCText:       db "SOIGNER@"
 OaksPCText:       db "PC DU PROF.CHEN@"
 PKMNLeaguePCText: db "LIGUE <PKMN>@"
 LogOffPCText:     db "DECONNEXION@"

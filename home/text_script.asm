@@ -28,6 +28,7 @@ DisplayTextID::
 	dict TEXT_MON_FAINTED,      DisplayPokemonFaintedText
 	dict TEXT_BLACKED_OUT,      DisplayPlayerBlackedOutText
 	dict TEXT_REPEL_WORE_OFF,   DisplayRepelWoreOffText
+	dict TEXT_BIKE_TOGGLE,      DisplayRepelWoreOffText ; même trampoline
 
 	ld a, [wNumSprites]
 	ld e, a
@@ -208,8 +209,8 @@ PlayerBlackedOutText::
 	text_end
 
 DisplayRepelWoreOffText::
-	callfar RepelWoreOffPrompt
-	jp AfterDisplayingTextID
+	callfar RepelWoreOffPrompt ; attend elle-même l'appui sur un bouton
+	jp CloseTextDisplay
 
 RepelWoreOffText::
 	text_far _RepelWoreOffText

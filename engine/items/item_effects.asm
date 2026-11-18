@@ -1851,8 +1851,33 @@ ItemUseRepelCommon:
 	ld [wLastRepelUsed], a
 	jp PrintItemUseTextAndRemoveItem
 
-; fin d'un REPOUSSE : propose d'en utiliser un autre du même type
+; SELECT dans le monde : monter/descendre de BICYCLETTE (si elle est dans le sac)
+; (les textes de la BICYCLETTE se terminent déjà par une attente)
+SelectBikeToggle:
+	ld b, BICYCLE
+	call IsItemInBag
+	ld hl, .noBikeText
+	jp z, PrintText
+	ld a, BICYCLE
+	ld [wNamedObjectIndex], a
+	call GetItemName
+	call CopyToStringBuffer
+	jp ItemUseBicycle
+.noBikeText
+	text_far _NoBicycleText
+	text_end
+
+; textes spéciaux TEXT_REPEL_WORE_OFF et TEXT_BIKE_TOGGLE (appelé par
+; DisplayRepelWoreOffText, qui ferme ensuite la boîte de texte)
 RepelWoreOffPrompt::
+	ld a, [wSpriteIndex] ; = [hTextID]
+	cp TEXT_BIKE_TOGGLE
+	jr z, SelectBikeToggle
+	call .repel
+	jp WaitForTextScrollButtonPress
+
+; fin d'un REPOUSSE : propose d'en utiliser un autre du même type
+.repel
 	ld hl, RepelWoreOffText
 	call PrintText
 	ld a, [wLastRepelUsed]

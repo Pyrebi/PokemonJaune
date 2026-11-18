@@ -164,6 +164,7 @@ StatusScreen:
 	call PrintNumber ; ID Number
 	ld d, STATUS_SCREEN_STATS_BOX
 	call PrintStatsBox
+	call StatusScreen_PrintDVs
 	call Delay3
 	call GBPalNormal
 	hlcoord 1, 0
@@ -433,6 +434,7 @@ StatusScreen2:
 	call GetMonName
 	hlcoord 9, 1
 	call PlaceString
+	call StatusScreen_PrintPikachuInfo
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
 	call Delay3
@@ -512,3 +514,96 @@ StatusScreen_PrintPP:
 	dec c
 	jr nz, StatusScreen_PrintPP
 	ret
+
+; DV (0-15) : à gauche de chaque statistique, et celui des PV sous les PV
+StatusScreen_PrintDVs:
+	ld a, [wLoadedMonDVs]
+	push af
+	swap a
+	hlcoord 1, 10
+	call .print ; ATTAQUE
+	pop af
+	hlcoord 1, 12
+	call .print ; DEFENSE
+	ld a, [wLoadedMonDVs + 1]
+	push af
+	swap a
+	hlcoord 1, 14
+	call .print ; VITESSE
+	pop af
+	hlcoord 1, 16
+	call .print ; SPECIAL
+; DV des PV = bit de poids faible des 4 autres DV
+	ld b, 0
+	ld a, [wLoadedMonDVs]
+	bit 4, a
+	jr z, .noAtk
+	set 3, b
+.noAtk
+	bit 0, a
+	jr z, .noDef
+	set 2, b
+.noDef
+	ld a, [wLoadedMonDVs + 1]
+	bit 4, a
+	jr z, .noSpd
+	set 1, b
+.noSpd
+	bit 0, a
+	jr z, .noSpc
+	set 0, b
+.noSpc
+	hlcoord 12, 5
+	ld [hl], 'P'
+	inc hl
+	ld [hl], 'V'
+	hlcoord 15, 5
+	ld a, b
+; écrit « DVnn » en hl (a = DV dans le quartet bas)
+.print
+	and $f
+	ld [hl], 'D'
+	inc hl
+	ld [hl], 'V'
+	inc hl
+	ld [hl], ' '
+	cp 10
+	jr c, .digit
+	ld [hl], '1'
+	sub 10
+.digit
+	inc hl
+	add '0'
+	ld [hl], a
+	ret
+
+; PIKACHU de départ : amitié et humeur (page 2, lignes libres 0 et 2)
+StatusScreen_PrintPikachuInfo:
+	ld a, [wMonDataLocation]
+	cp ENEMY_PARTY_DATA
+	ret z
+	cp BOX_DATA
+	jr z, .box
+	callfar IsThisPartyMonStarterPikachu
+	jr .check
+.box
+	callfar IsThisBoxMonStarterPikachu
+.check
+	ret nc
+	hlcoord 9, 0
+	ld de, .happinessText
+	call PlaceString
+	hlcoord 16, 0
+	ld de, wPikachuHappiness
+	lb bc, 1, 3
+	call PrintNumber
+	hlcoord 9, 2
+	ld de, .moodText
+	call PlaceString
+	hlcoord 16, 2
+	ld de, wPikachuMood
+	lb bc, 1, 3
+	jp PrintNumber
+
+.happinessText db "AMITIE@"
+.moodText      db "HUMEUR@"
