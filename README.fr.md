@@ -83,6 +83,10 @@
   sauvages de l'endroit exact où l'on se trouve (étage de grotte compris) :
   herbe/grotte, surf et pêche (CANNE, SUPER CANNE, MEGA CANNE), avec le niveau
   maximal et la fréquence. Poké Ball = déjà capturé, « ????? » = jamais vu.
+- **Encore du confort** : la fuite réussit toujours contre les Pokémon sauvages ;
+  soin express au Centre Pokémon (sans discours ni animation de la machine) ;
+  CORDE SORTIE réutilisable ; les stats de base (et leur total) s'affichent sur
+  une page de plus dans la fiche INFO du Pokédex.
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,

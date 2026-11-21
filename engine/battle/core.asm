@@ -1554,6 +1554,9 @@ TryRunningFromBattle:
 	ld a, [wIsInBattle]
 	dec a
 	jr nz, .trainerBattle ; jump if it's a trainer battle
+; fuite toujours réussie contre les #MON sauvages
+	call LoadScreenTilesFromBuffer1
+	jp .canEscape
 	ld a, [wNumRunAttempts]
 	inc a
 	ld [wNumRunAttempts], a

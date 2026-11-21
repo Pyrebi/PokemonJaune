@@ -8,87 +8,25 @@ DisplayPokemonCenterDialogue_::
 	call PrintText
 	ret
 .regularCenter
+; soin express : pas de discours d'accueil ni d'animation de la machine
 	call SaveScreenTilesToBuffer1 ; save screen
-	ld hl, PokemonCenterWelcomeText
-	call PrintText
 	ld hl, wStatusFlags4
-	bit BIT_USED_POKECENTER, [hl]
 	set BIT_UNKNOWN_4_1, [hl]
 	set BIT_USED_POKECENTER, [hl]
-	jr nz, .skipShallWeHealYourPokemon
 	ld hl, ShallWeHealYourPokemonText
 	call PrintText
-.skipShallWeHealYourPokemon
 	call YesNoChoicePokeCenter ; yes/no menu
 	call UpdateSprites
 	ld a, [wCurrentMenuItem]
 	and a
-	jp nz, .declinedHealing ; if the player chose No
+	jr nz, .declinedHealing ; if the player chose No
 	call SetLastBlackoutMap
-	callfar IsStarterPikachuAliveInOurParty
-	jr nc, .notHealingPlayerPikachu
-	call CheckPikachuFollowingPlayer
-	jr nz, .notHealingPlayerPikachu
-	call LoadCurrentMapView
-	call Delay3
-	call UpdateSprites
-	callfar PikachuWalksToNurseJoy
-.notHealingPlayerPikachu
-	ld hl, NeedYourPokemonText
-	call PrintText
-	ld c, 64
-	call DelayFrames
-	call CheckPikachuFollowingPlayer
-	jr nz, .playerPikachuNotOnScreen
-	call DisablePikachuOverworldSpriteDrawing
-	callfar IsStarterPikachuAliveInOurParty
-	call c, PokemonCenterNurseFacesUp
-.playerPikachuNotOnScreen
-	lb bc, 1, SPRITE_FACING_LEFT
-	call PokemonCenterUpdateSpriteImageIndex
-	ld c, 30
-	call DelayFrames
-	farcall AnimateHealingMachine ; do the healing machine animation
 	predef HealParty
-	xor a
-	ld [wAudioFadeOutControl], a
-	ld a, [wAudioSavedROMBank]
-	ld [wAudioROMBank], a
-	ld a, [wMapMusicSoundID]
-	ld [wLastMusicSoundID], a
-	ld [wNewSoundID], a
+	ld a, SFX_HEAL_AILMENT
 	call PlaySound
-	call CheckPikachuFollowingPlayer
-	jr nz, .doNotReturnPikachu
-	callfar IsStarterPikachuAliveInOurParty
-	call c, PokemonCenterNurseFacesUp
-	ld a, PIKACHU_SPAWN_ABOVE
-	ld [wPikachuSpawnState], a
-	call EnablePikachuOverworldSpriteDrawing
-.doNotReturnPikachu
-	lb bc, 1, SPRITE_FACING_DOWN
-	call PokemonCenterUpdateSpriteImageIndex
+	call WaitForSoundToFinish
 	ld hl, PokemonFightingFitText
 	call PrintText
-	callfar IsStarterPikachuAliveInOurParty
-	jr nc, .notInParty
-	lb bc, 15, SPRITE_FACING_DOWN
-	call PokemonCenterUpdateSpriteImageIndex
-.notInParty
-	call LoadCurrentMapView
-	call Delay3
-	call UpdateSprites
-	callfar ReloadWalkingTilePatterns
-	ld a, $1
-	ldh [hSpriteIndex], a
-	ld a, $1
-	ldh [hSpriteImageIndex], a
-	call SetSpriteImageIndex
-	ld c, 40
-	call DelayFrames
-	call UpdateSprites
-	call LoadFontTilePatterns
-	jr .done
 .declinedHealing
 	call LoadScreenTilesFromBuffer1 ; restore screen
 .done

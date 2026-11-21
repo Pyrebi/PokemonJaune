@@ -1830,8 +1830,7 @@ ItemUseEscapeRope:
 	ret nz ; if so, return
 	call ItemUseReloadOverworldData
 	ld c, 30
-	call DelayFrames
-	jp RemoveUsedItem
+	jp DelayFrames ; CORDE SORTIE réutilisable (n'est plus retirée du sac)
 
 .notUsable
 	jp ItemUseNotTime

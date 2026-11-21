@@ -469,12 +469,12 @@ ShowPokedexDataInternal:
 	pop af
 	ld [wPokedexNum], a
 	call DrawDexEntryOnScreen
-	call c, Pokedex_PrintFlavorTextAtRow11
+	jr nc, .waitForButtonPress
+	call Pokedex_PrintFlavorTextAtRow11
+	call .waitButton
+	callfar PokedexShowBaseStats ; page de plus : stats de base
 .waitForButtonPress
-	call JoypadLowSensitivity
-	ldh a, [hJoy5]
-	and PAD_A | PAD_B
-	jr z, .waitForButtonPress
+	call .waitButton
 	pop af
 	ldh [hTileAnimations], a
 	call GBPalWhiteOut
@@ -486,6 +486,13 @@ ShowPokedexDataInternal:
 	res BIT_NO_AUDIO_FADE_OUT, [hl]
 	ld a, $77 ; max volume
 	ldh [rAUDVOL], a
+	ret
+
+.waitButton
+	call JoypadLowSensitivity
+	ldh a, [hJoy5]
+	and PAD_A | PAD_B
+	jr z, .waitButton
 	ret
 
 HeightWeightText:
