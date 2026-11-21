@@ -55,18 +55,7 @@ GetAnimationSpeed:
 	ld bc, OBJ_SIZE * 4
 	ld a, [wCurrentMenuItem]
 	call AddNTimes
-	ld c, ICONOFFSET
-	ld a, [hl]
-	cp ICON_BALL << 2
-	jr z, .editCoords
-	cp ICON_HELIX << 2
-	jr nz, .editTileIDS
-; ICON_BALL and ICON_HELIX only shake up and down
-.editCoords
-	dec hl
-	dec hl ; dec hl to the OAM y coord
-	ld c, $1 ; amount to increase the y coord by
-; otherwise, load a second sprite frame
+	ld c, ICONOFFSET ; (icônes Cristal : toujours 2 images)
 .editTileIDS
 	ld b, 4
 	ld de, OBJ_SIZE
@@ -126,8 +115,13 @@ LoadAnimSpriteGfx:
 	ret
 
 LoadMonPartySpriteGfxWithLCDDisabled:
-; Load mon party sprite tile patterns into VRAM immediately by disabling the
-; LCD.
+; icônes Cristal de l'équipe (voir engine/gfx/crystal_icons.asm)
+	call DisableLCD
+	farcall LoadPartyCrystalIconsLCDOff
+	jp EnableLCD
+
+; ancien chargement des icônes génériques (plus utilisé)
+LoadMonPartySpriteGfxWithLCDDisabled_Old:
 	call DisableLCD
 	ld hl, MonPartySpritePointers
 	ld a, $1e
@@ -172,12 +166,8 @@ WriteMonPartySpriteOAMByPartyIndex:
 	ldh a, [hPartyMonIndex]
 	cp $ff
 	jr z, .saveSprites
-	ld hl, wPartySpecies
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	call GetPartyMonSpriteID
+	add a
+	add a ; emplacement de l'icône = index dans l'équipe
 	ld [wOAMBaseTile], a
 	call WriteMonPartySpriteOAM
 	pop bc
@@ -200,8 +190,8 @@ WriteMonPartySpriteOAMBySpecies:
 ; [wMonPartySpriteSpecies].
 	xor a
 	ldh [hPartyMonIndex], a
-	ld a, [wMonPartySpriteSpecies]
-	call GetPartyMonSpriteID
+	farcall LoadSingleCrystalIcon
+	ld a, CRYSTAL_ICON_SLOT_SINGLE << 2
 	ld [wOAMBaseTile], a
 	jr WriteMonPartySpriteOAM
 
@@ -255,12 +245,7 @@ WriteMonPartySpriteOAM:
 	add $10
 	ld b, a
 	pop af
-	cp ICON_HELIX << 2
-	jr z, .helix
-	call WriteSymmetricMonPartySpriteOAM
-	jr .makeCopy
-.helix
-	call WriteAsymmetricMonPartySpriteOAM
+	call WriteAsymmetricMonPartySpriteOAM ; (icônes Cristal non symétriques)
 ; Make a copy of the OAM buffer with the first animation frame written so that
 ; we can flip back to it from the second frame by copying it back.
 .makeCopy

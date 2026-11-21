@@ -75,6 +75,10 @@
   baissent plus.
 - **FORCE** reste active d'une zone à l'autre ; **Parc Safari** : 1000 pas et
   50 SAFARI BALLS ; **Casino** : gains des machines à sous doublés.
+- **Icônes de Pokémon Cristal** dans le menu de l'équipe, l'écran de surnom et
+  l'échange : 33 icônes animées (contre 11 en Jaune), reprises du désassemblage
+  [pret/pokecrystal](https://github.com/pret/pokecrystal) (`gfx/icons/crystal`).
+  Chaque Pokémon de l'équipe a son icône chargée dans son propre emplacement.
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,

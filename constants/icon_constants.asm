@@ -16,3 +16,5 @@
 	const ICON_TRADEBUBBLE ; $e
 
 DEF ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
+
+DEF CRYSTAL_ICON_SLOT_SINGLE EQU 6 ; emplacement de l'icône affichée seule (engine/gfx/crystal_icons.asm)
