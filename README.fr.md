@@ -100,7 +100,7 @@
   FANTOMINUS, TADMORV et RONFLEX (il faut 8 places libres dans la BOITE).
 - **Rééquilibrage** (valeurs inspirées des jeux suivants) :
   - capacités : DARD-NUEE 25 (précision 95 %), VAMPIRISME 50, DOUBLE-DARD 30,
-    LECHOUILLE 30 ;
+    LECHOUILLE 30, TORNADE de type VOL ;
   - stats de base : CANARTICHO ATQ 90, DARDARGNAN ATQ 90, PAPILUSION SPE 90,
     ARBOK ATQ 95, TRIOPIKEUR ATQ 100, GRODOUDOU SPE 75, ONIX PV 50 et ATQ 70.
 - **Informations** : les DV (0-15) dans le résumé, à côté de chaque statistique et
@@ -139,7 +139,8 @@ python3 -m http.server 8000 -d web
 Puis ouvrir http://localhost:8000 : le jeu démarre directement. On peut aussi ouvrir `web/index.html`
 sans serveur et choisir le fichier `.gbc` avec le bouton « Charger un ROM ».
 
-Boutons : Pause, Vitesse, Son, « Exporter la partie » (fichier `.pjsave` : sauvegarde du jeu +
+Boutons : Pause, « Sauv. état » / « Charg. état » (instantané de l'émulateur, gardé dans le
+navigateur, ou seulement pendant la visite en navigation privée), Vitesse, Son, « Exporter la partie » (fichier `.pjsave` : sauvegarde du jeu +
 état exact du moment) et « Importer une partie » (accepte aussi un `.sav` de 32 Ko). L'import
 fonctionne aussi en navigation privée, où le navigateur ne conserve rien d'une visite à l'autre.
 Le bouton « Charger un ROM » n'apparaît que si aucun ROM n'est intégré ou servi à côté de la page.

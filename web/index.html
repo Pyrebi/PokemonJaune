@@ -32,6 +32,8 @@
 <div class="bar">
   <label class="file" id="romPicker" hidden>Charger un ROM (.gbc)<input id="file" type="file" accept=".gbc,.gb" hidden></label>
   <button id="pause">Pause</button>
+  <button id="save" title="Sauver l'état (instantané de l'émulateur)">Sauv. état</button>
+  <button id="load" title="Charger le dernier état sauvé">Charg. état</button>
   <button id="fast">Vitesse x1</button>
   <button id="sound">Son : oui</button>
 </div>
@@ -71,6 +73,7 @@ const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
 let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true, romBytes = null, romName = '';
 let pendingImport = null; // { sram, state } appliqué au prochain démarrage
+let memState = null; // dernier état sauvé (gardé en mémoire si le navigateur ne stocke rien)
 let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
 
 function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
@@ -194,6 +197,19 @@ function download(bytes, name) {
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
 const stamp = () => { const d = new Date(), z = n => String(n).padStart(2, '0'); return d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate()) + '_' + z(d.getHours()) + 'h' + z(d.getMinutes()); };
+document.getElementById('save').onclick = () => {
+  if (!e) return;
+  memState = getState();
+  const kept = store.set(romKey + ':state', toB64(memState));
+  say(kept ? 'État sauvé' : 'État sauvé (pour cette visite seulement : navigation privée)');
+};
+document.getElementById('load').onclick = () => {
+  if (!e) return;
+  let data = memState;
+  if (!data) { const s = store.get(romKey + ':state'); if (s) data = fromB64(s); }
+  if (!data) return say('Aucun état sauvé');
+  say(setState(data) ? 'État chargé' : 'État incompatible');
+};
 document.getElementById('exportGame').onclick = () => {
   if (!e) return say('Aucun jeu lancé');
   const sram = getSram(), state = getState();
