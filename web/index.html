@@ -38,8 +38,9 @@
   <button id="sound">Son : oui</button>
 </div>
 <div class="bar">
-  <button id="exportSav">Exporter la sauvegarde (.sav)</button>
-  <label class="file">Importer une sauvegarde<input id="importSav" type="file" accept=".sav,.srm" hidden></label>
+  <button id="exportGame">Exporter la partie</button>
+  <label class="file">Importer une partie<input id="importSav" type="file" hidden></label>
+  <button id="exportSav">.sav seul</button>
 </div>
 <div class="controls">
   <div class="pad">
@@ -51,8 +52,10 @@
 </div>
 <div class="ss"><button data-k="select">SELECT</button><button data-k="start">START</button></div>
 <p class="help">Clavier : flèches = croix · X = A · Z (ou W) = B · Entrée = Start · Maj droite / Retour arrière = Select.<br>
-La sauvegarde en jeu est conservée dans le navigateur. « Exporter » télécharge un fichier .sav
-(compatible avec les autres émulateurs) ; « Importer » le recharge et redémarre le jeu.</p>
+La sauvegarde en jeu est conservée dans le navigateur, sauf en navigation privée.
+« Exporter la partie » télécharge un fichier contenant la sauvegarde du jeu <b>et</b> l'état exact
+du moment : garde-le et réimporte-le avec « Importer une partie » pour reprendre là où tu étais
+(fonctionne aussi en navigation privée). « .sav seul » = sauvegarde du jeu pour d'autres émulateurs.</p>
 
 <!-- Émulateur binjgb (c) Ben Smith, licence MIT : https://github.com/binji/binjgb -->
 <script src="binjgb.js"></script>
@@ -70,6 +73,7 @@ const toB64 = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s 
 const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
 let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true, romBytes = null, romName = '';
+let pendingImport = null; // { sram, state } appliqué au prochain démarrage
 let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
 
 function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
@@ -146,7 +150,9 @@ async function start(bytes, name) {
   audioBuf = heap(M._get_audio_buffer_ptr(e), M._get_audio_buffer_capacity(e));
   ctx2d = document.getElementById('screen').getContext('2d');
   imageData = ctx2d.createImageData(160, 144);
-  loadBattery();
+  if (pendingImport && pendingImport.sram) setSram(pendingImport.sram); else loadBattery();
+  if (pendingImport && pendingImport.state) setState(pendingImport.state);
+  pendingImport = null;
   running = true; lastRaf = 0; leftover = 0;
   requestAnimationFrame(frame);
   say('En jeu : ' + name);
@@ -194,29 +200,47 @@ document.getElementById('load').onclick = () => {
     buf.set(data); M._emulator_read_state(e, p); say('État chargé');
   });
 };
+// ----- export / import de la partie -----
+// Fichier de partie : "PJS1", taille SRAM (u32), SRAM, taille état (u32), état.
+function getSram() { let out = null; withFileData(M._ext_ram_file_data_new(e), (p, buf) => { M._emulator_write_ext_ram(e, p); out = buf.slice(); }); return out; }
+function setSram(data) { withFileData(M._ext_ram_file_data_new(e), (p, buf) => { buf.set(data.subarray(0, buf.length)); M._emulator_read_ext_ram(e, p); }); store.set(romKey + ':sram', toB64(data.subarray(0, 0x8000))); }
+function getState() { let out = null; withFileData(M._state_file_data_new(e), (p, buf) => { M._emulator_write_state(e, p); out = buf.slice(); }); return out; }
+function setState(data) { let ok = false; withFileData(M._state_file_data_new(e), (p, buf) => { if (buf.length === data.length) { buf.set(data); M._emulator_read_state(e, p); ok = true; } }); return ok; }
+function download(bytes, name) {
+  const url = URL.createObjectURL(new Blob([bytes], { type: 'application/octet-stream' }));
+  const a = document.createElement('a'); a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+const stamp = () => { const d = new Date(), z = n => String(n).padStart(2, '0'); return d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate()) + '_' + z(d.getHours()) + 'h' + z(d.getMinutes()); };
+document.getElementById('exportGame').onclick = () => {
+  if (!e) return say('Aucun jeu lancé');
+  const sram = getSram(), state = getState();
+  const out = new Uint8Array(12 + sram.length + state.length), dv = new DataView(out.buffer);
+  out.set([0x50, 0x4a, 0x53, 0x31]); dv.setUint32(4, sram.length, true); out.set(sram, 8);
+  dv.setUint32(8 + sram.length, state.length, true); out.set(state, 12 + sram.length);
+  download(out, 'pokemon-jaune_' + stamp() + '.pjsave');
+  say('Partie exportée (sauvegarde + état actuel)');
+};
 document.getElementById('exportSav').onclick = () => {
   if (!e) return say('Aucun jeu lancé');
-  withFileData(M._ext_ram_file_data_new(e), (p, buf) => {
-    M._emulator_write_ext_ram(e, p);
-    const url = URL.createObjectURL(new Blob([buf.slice()], { type: 'application/octet-stream' }));
-    const a = document.createElement('a');
-    a.href = url; a.download = romName.replace(/\.gbc?$/i, '') + '.sav';
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    say('Sauvegarde exportée');
-  });
+  download(getSram(), 'pokemon-jaune.sav'); say('Sauvegarde .sav exportée');
 };
 document.getElementById('importSav').addEventListener('change', async ev => {
   const f = ev.target.files[0]; ev.target.value = '';
-  if (!f || !romBytes) return say(romBytes ? '' : 'Lance d\'abord le jeu');
+  if (!f) return;
+  if (!romBytes) return say('Lance d\'abord le jeu');
   const data = new Uint8Array(await f.arrayBuffer());
-  let size = 0;
-  withFileData(M._ext_ram_file_data_new(e), (p, buf) => { size = buf.length; });
-  if (data.length < size) return say('Fichier .sav trop petit (' + data.length + ' octets, ' + size + ' attendus)');
-  if (!confirm('Remplacer la sauvegarde actuelle par ' + f.name + ' ?')) return;
-  store.set(romKey + ':sram', toB64(data.subarray(0, size)));
-  await start(romBytes, romName); // redémarre avec la sauvegarde importée
-  say('Sauvegarde importée : ' + f.name);
+  let imp;
+  if (data.length >= 12 && data[0] === 0x50 && data[1] === 0x4a && data[2] === 0x53 && data[3] === 0x31) {
+    const dv = new DataView(data.buffer), n = dv.getUint32(4, true), m = dv.getUint32(8 + n, true);
+    imp = { sram: data.slice(8, 8 + n), state: data.slice(12 + n, 12 + n + m) };
+  } else if (data.length >= 0x8000) {
+    imp = { sram: data.slice(0, 0x8000), state: null };
+  } else return say('Fichier non reconnu (' + data.length + ' octets)');
+  pendingImport = imp;
+  await start(romBytes, romName); // redémarre avec la partie importée
+  say('Partie importée : ' + f.name + (imp.state ? ' (état restauré)' : ' (sauvegarde du jeu)'));
 });
 document.getElementById('fast').onclick = ev => {
   speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; ev.target.textContent = 'Vitesse x' + speed;
