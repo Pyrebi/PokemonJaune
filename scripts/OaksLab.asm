@@ -808,6 +808,10 @@ OaksLabOak1Text:
 	text_asm
 	CheckEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
 	jr nz, .already_got_poke_balls
+; (le cadeau du PC donne des #MON avant le Pokédex : on ne compte les
+; #MON possédés qu'une fois le Pokédex obtenu)
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .check_for_poke_balls
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
 	call CountSetBits
@@ -827,12 +831,15 @@ OaksLabOak1Text:
 	jr nz, .come_see_me_sometimes
 ; This wPokedexOwned check is redundant, since the same check was performed
 ; earlier to reach this .check_for_poke_balls block in the first place.
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .noPokedexYet
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
 	call CountSetBits
 	ld a, [wNumSetBits]
 	cp 2
 	jr nc, .come_see_me_sometimes
+.noPokedexYet
 	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
 	jr nz, .give_poke_balls
 	CheckEvent EVENT_GOT_POKEDEX
