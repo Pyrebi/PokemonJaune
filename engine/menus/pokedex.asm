@@ -28,7 +28,7 @@ ShowPokedexMenu:
 	inc hl
 	ld a, 6
 	ld [hli], a ; max menu item ID
-	ld [hl], PAD_LEFT | PAD_RIGHT | PAD_B | PAD_A
+	ld [hl], PAD_LEFT | PAD_RIGHT | PAD_B | PAD_A | PAD_SELECT
 	call HandlePokedexListMenu
 	jr c, .goToSideMenu ; if the player chose a pokemon from the list
 .exitPokedex
@@ -191,6 +191,14 @@ HandlePokedexListMenu:
 	call Pokedex_PlacePokemonList
 	call GBPalNormal
 	call HandleMenuInput
+	bit B_PAD_SELECT, a ; SELECT : Pokémon de la zone
+	jr z, .notSelect
+	callfar ZoneDex
+	xor a
+	ldh [hAutoBGTransferEnabled], a
+	call ClearScreen
+	jp HandlePokedexListMenu
+.notSelect
 	bit B_PAD_B, a ; was the B button pressed?
 	jp nz, .buttonBPressed
 	bit B_PAD_A, a ; was the A button pressed?

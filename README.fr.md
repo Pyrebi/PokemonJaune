@@ -79,6 +79,10 @@
   l'échange : 33 icônes animées (contre 11 en Jaune), reprises du désassemblage
   [pret/pokecrystal](https://github.com/pret/pokecrystal) (`gfx/icons/crystal`).
   Chaque Pokémon de l'équipe a son icône chargée dans son propre emplacement.
+- **Pokédex de la zone** : SELECT dans la liste du Pokédex affiche les Pokémon
+  sauvages de l'endroit exact où l'on se trouve (étage de grotte compris) :
+  herbe/grotte, surf et pêche (CANNE, SUPER CANNE, MEGA CANNE), avec le niveau
+  maximal et la fréquence. Poké Ball = déjà capturé, « ????? » = jamais vu.
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,
