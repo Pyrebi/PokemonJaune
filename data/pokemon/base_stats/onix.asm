@@ -1,6 +1,6 @@
 	db DEX_ONIX ; pokedex id
 
-	db  35,  45, 160,  70,  30
+	db  50,  70, 160,  70,  30 ; rééquilibré (35, 45, 160, 70, 30 à l'origine)
 	;   hp  atk  def  spd  spc
 
 	db ROCK, GROUND ; type

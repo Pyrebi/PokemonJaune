@@ -60,6 +60,11 @@
     (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
     lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
     (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW) ainsi que RONFLEX.
+- **Rééquilibrage** (valeurs inspirées des jeux suivants) :
+  - capacités : DARD-NUEE 25 (précision 95 %), VAMPIRISME 50, DOUBLE-DARD 30,
+    LECHOUILLE 30 ;
+  - stats de base : CANARTICHO ATQ 90, DARDARGNAN ATQ 90, PAPILUSION SPE 90,
+    ARBOK ATQ 95, TRIOPIKEUR ATQ 100, GRODOUDOU SPE 75, ONIX PV 50 et ATQ 70.
 - **Informations** : les DV (0-15) dans le résumé, à côté de chaque statistique et
   sous les PV ; amitié et humeur du PIKACHU de départ en page 2 du résumé.
 
