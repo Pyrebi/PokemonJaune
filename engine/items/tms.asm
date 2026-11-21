@@ -28,7 +28,7 @@ CanLearnTM:
 
 ; converts TM/HM number in [wTempTMHM] into move number
 ; HMs start at 51
-TMToMove:
+TMToMove::
 	ld a, [wTempTMHM]
 	dec a
 	ld hl, TechnicalMachines

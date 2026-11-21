@@ -32,6 +32,8 @@
 
 - **Maître des capacités** (entrée « MAITRE CAPA. » du PC) : réapprendre les
   capacités de départ et celles de la liste par niveau jusqu'au niveau actuel.
+  Après la Ligue, il devient un tuteur complet : toute la liste par niveau (même
+  les capacités futures) et toutes les CT/CS compatibles, sans avoir la CT.
 
 - **Puissance des capacités** affichée dans le résumé d'un Pokémon (« PUI »), dans
   la confirmation du Maître des capacités et dans le message « ... veut apprendre ».

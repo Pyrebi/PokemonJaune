@@ -1,4 +1,5 @@
 ; Maître des capacités (accessible depuis le PC) : propose à un #MON de
+; (après la Ligue : toute sa liste par niveau et toutes ses CT/CS compatibles)
 ; l'équipe les capacités de départ et celles de sa liste par niveau jusqu'à son
 ; niveau actuel, sauf celles qu'il connaît déjà. L'apprentissage passe par la
 ; routine habituelle LearnMove (oubli d'une capacité, PP...).
@@ -159,6 +160,12 @@ BuildRelearnableMovesList:
 	call AddNTimes
 	ld a, [hl]
 	ld [wBuffer], a
+; après la Ligue : toute la liste par niveau, quel que soit le niveau
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
+	jr z, .levelLimit
+	ld a, MAX_LEVEL
+	ld [wBuffer], a
+.levelLimit
 	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wWhichPokemon]
@@ -186,6 +193,33 @@ BuildRelearnableMovesList:
 	pop hl
 	dec b
 	jr nz, .startingMovesLoop
+; après la Ligue : toutes les capacités CT/CS que l'espèce peut apprendre
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
+	jr z, .noTMs
+	ld c, 0
+.tmLoop
+	push bc
+	ld hl, wMonHLearnset
+	ld b, FLAG_TEST
+	predef FlagActionPredef
+	ld a, c
+	pop bc
+	and a
+	jr z, .tmNext
+	ld a, c
+	inc a ; numéro de CT/CS (CS à partir de 51)
+	ld [wTempTMHM], a
+	push bc
+	callfar TMToMove
+	ld a, [wTempTMHM]
+	call AddRelearnableMove
+	pop bc
+.tmNext
+	inc c
+	ld a, c
+	cp NUM_TM_HM
+	jr c, .tmLoop
+.noTMs
 ; capacités apprises par niveau, jusqu'au niveau actuel
 	call GetMonLearnset
 .learnsetLoop
