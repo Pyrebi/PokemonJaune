@@ -9,7 +9,7 @@ CeruleanCaveB1FWildMons:
 	db 56, CHANSEY
 	db 65, DITTO
 	db 55, LICKITUNG
-	db 60, MEW
+	db 50, LICKITUNG ; (MEW : voir l'événement du camion au quai de CARMIN)
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

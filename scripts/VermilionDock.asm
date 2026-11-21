@@ -211,7 +211,35 @@ VermilionDock_EraseSSAnne:
 VermilionDock_TextPointers:
 	def_text_pointers
 	dw_const VermilionDockUnusedText, TEXT_VERMILIONDOCK_UNUSED
+	dw_const VermilionDockTruckText,  TEXT_VERMILIONDOCK_TRUCK
 
 VermilionDockUnusedText:
 	text_far _VermilionDockUnusedText
+	text_end
+
+; la légende du camion : MEW caché dessous (combat au N.30 tant qu'il n'est
+; pas capturé)
+VermilionDockTruckText:
+	text_asm
+	ld a, [wPokedexOwned + (DEX_MEW - 1) / 8]
+	bit (DEX_MEW - 1) % 8, a
+	ld hl, .NothingText
+	jr nz, .print
+	ld hl, .SomethingText
+	call PrintText
+	ld a, MEW
+	ld [wCurOpponent], a
+	ld a, 30
+	ld [wCurEnemyLevel], a
+	jp TextScriptEnd
+.print
+	call PrintText
+	jp TextScriptEnd
+
+.SomethingText:
+	text_far _VermilionDockTruckSomethingText
+	text_end
+
+.NothingText:
+	text_far _VermilionDockTruckNothingText
 	text_end

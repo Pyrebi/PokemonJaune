@@ -61,6 +61,12 @@ _VermilionCitySailor1ShipSetSailText::
 	line "la mer."
 	done
 
+_VermilionCitySailor1ShipIsBackText::
+	text "L'OCEANE est de"
+	line "retour au port!"
+	cont "Tu peux passer."
+	done
+
 _VermilionCityGambler2Text::
 	text "Je fais"
 	line "construire un"

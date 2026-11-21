@@ -74,6 +74,8 @@ VermilionCityDefaultScript:
 	and a
 	ret nz
 .ship_departed
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
+	ret nz ; après la Ligue, l'OCEANE est de retour : on peut passer
 	ld a, PAD_UP
 	ld [wSimulatedJoypadStatesEnd], a
 	ld a, $1
@@ -207,6 +209,12 @@ VermilionCitySailor1Text:
 	jr .end
 .ship_departed
 	ld hl, .ShipSetSailText
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
+	jr z, .printShipText
+	ld a, SCRIPT_VERMILIONCITY_PLAYER_ALLOWED_TO_PASS
+	ld [wVermilionCityCurScript], a
+	ld hl, .ShipIsBackText
+.printShipText
 	call PrintText
 .end
 	jp TextScriptEnd
@@ -234,6 +242,10 @@ VermilionCitySailor1Text:
 
 .ShipSetSailText:
 	text_far _VermilionCitySailor1ShipSetSailText
+	text_end
+
+.ShipIsBackText:
+	text_far _VermilionCitySailor1ShipIsBackText
 	text_end
 
 VermilionCityGambler2Text:

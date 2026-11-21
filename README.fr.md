@@ -60,6 +60,11 @@
     (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
     lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
     (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW).
+- **Événement MEW : la légende du camion** : après la Ligue, le marin de CARMIN
+  laisse passer (« L'OCEANE est de retour au port ! ») ; sur le quai, on peut
+  désormais marcher jusqu'au camion. Quelque chose bouge dessous : MEW, niveau
+  30 (Pokémon « star »). Tant qu'il n'est pas capturé, on peut retenter. La
+  rencontre aléatoire de MEW à la CAVERNE AZUREE est retirée.
 - **Champions d'arène renforcés** : DV au maximum pour les champions, le
   Conseil 4 et le Maître ; équipes complétées (Pierre 3, Ondine 4, Major Bob 4,
   Erika 5, Koga, Morgane et Giovanni 6, Auguste 5, Conseil 4 à 6 Pokémon) et
