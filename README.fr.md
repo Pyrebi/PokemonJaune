@@ -60,6 +60,10 @@
     (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
     lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
     (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW).
+- **Champions d'arène renforcés** : DV au maximum pour les champions, le
+  Conseil 4 et le Maître ; équipes complétées (Pierre 3, Ondine 4, Major Bob 4,
+  Erika 5, Koga, Morgane et Giovanni 6, Auguste 5, Conseil 4 à 6 Pokémon) et
+  quelques niveaux en plus en début de jeu.
 - **Options bonus supplémentaires** : COURSE AUTO (courir sans tenir B, B fait
   alors marcher), RENCONTRES (NON = aucune rencontre sauvage, comme un Repousse
   infini) et ARGENT ×2 (contre les dresseurs). L'écran OPTIONS passe à une

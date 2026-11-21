@@ -6199,6 +6199,10 @@ GetCurrentMove:
 	ld de, wNameBuffer
 	jp CopyToStringBuffer
 
+BoostedTrainerClasses:
+	db BROCK, MISTY, LT_SURGE, ERIKA, KOGA, SABRINA, BLAINE, GIOVANNI
+	db LORELEI, BRUNO, AGATHA, LANCE, RIVAL3, -1
+
 LoadEnemyMonData:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
@@ -6215,10 +6219,20 @@ LoadEnemyMonData:
 	jr nz, .storeDVs
 	ld a, [wIsInBattle]
 	cp TRAINER_BATTLE
-; fixed DVs for trainer mon
+	jr nz, .wildDVs
+; fixed DVs for trainer mon (au maximum pour les champions, le Conseil 4 et
+; le Maître)
+	ld a, [wTrainerClass]
+	ld hl, BoostedTrainerClasses
+	ld de, 1
+	call IsInArray
 	ld a, ATKDEFDV_TRAINER
 	ld b, SPDSPCDV_TRAINER
-	jr z, .storeDVs
+	jr nc, .storeDVs
+	ld a, $ff
+	ld b, a
+	jr .storeDVs
+.wildDVs
 ; random DVs for wild mon
 	call BattleRandom
 	ld b, a
