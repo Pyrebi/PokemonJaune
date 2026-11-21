@@ -29,6 +29,8 @@ InitPlayerData2:
 	call FillMemory
 	ld hl, wNumBoxItems
 	call InitializeEmptyList
+	xor a
+	ld [wPCGiftsGiven], a
 
 DEF START_MONEY EQU $3000
 	ld hl, wPlayerMoney + 1

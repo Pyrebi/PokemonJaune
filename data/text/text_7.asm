@@ -207,6 +207,20 @@ _NeedYourPokemonText::
 	line "vos #MON."
 	done
 
+_PCGiftMonsText::
+	text "Cadeau du PROF."
+	line "CHEN: 8 #MON"
+	cont "t'attendent dans"
+	cont "la BOITE!"
+	prompt
+
+_PCGiftBoxFullText::
+	text "Cadeau du PROF."
+	line "CHEN: libère 8"
+	cont "places dans la"
+	cont "BOITE!"
+	prompt
+
 _PCHealedText::
 	text "Tes #MON sont"
 	line "en pleine forme!"

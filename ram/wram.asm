@@ -2309,7 +2309,9 @@ wCurBagPocket:: db
 wBonusOptions:: db
 ; puissance d'une capacité (temporaire, pour l'affichage)
 wMovePower:: db
-	ds 78 + 56 - (1 + BAG_ITEM_CAPACITY * 2 + 1) - (NUM_TM_HM + 7) / 8 - 3
+; non nul quand les #MON cadeaux du PC ont été donnés
+wPCGiftsGiven:: db
+	ds 78 + 56 - (1 + BAG_ITEM_CAPACITY * 2 + 1) - (NUM_TM_HM + 7) / 8 - 4
 
 wObtainedHiddenItemsFlags:: flag_array MAX_HIDDEN_ITEMS
 

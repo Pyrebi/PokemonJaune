@@ -5,6 +5,7 @@ ActivatePC::
 	ld hl, TurnedOnPC1Text
 	call PrintText
 	call WaitForSoundToFinish
+	farcall GivePCStarMons
 	ld hl, wMiscFlags
 	set BIT_USING_GENERIC_PC, [hl]
 	call LoadScreenTilesFromBuffer2

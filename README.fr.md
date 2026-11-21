@@ -59,7 +59,11 @@
   - **Pokémon « stars »** : stats ×1,25 pour tous les Pokémon obtenus hors combat
     (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
     lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
-    (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW) ainsi que RONFLEX.
+    (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW).
+- **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
+  la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
+  BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,
+  FANTOMINUS, TADMORV et RONFLEX (il faut 8 places libres dans la BOITE).
 - **Rééquilibrage** (valeurs inspirées des jeux suivants) :
   - capacités : DARD-NUEE 25 (précision 95 %), VAMPIRISME 50, DOUBLE-DARD 30,
     LECHOUILLE 30 ;

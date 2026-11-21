@@ -13,6 +13,7 @@ PlayerPC::
 	call PlaySound
 	ld hl, TurnedOnPC2Text
 	call PrintText
+	farcall GivePCStarMons
 
 PlayerPCMenu:
 	ld hl, wStatusFlags5

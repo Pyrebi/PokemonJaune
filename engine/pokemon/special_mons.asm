@@ -56,7 +56,7 @@ MarkSpecialBoxMon::
 	jp MarkSpecialMon
 
 SpecialWildMons:
-	db ARTICUNO, ZAPDOS, MOLTRES, MEWTWO, MEW, SNORLAX, -1
+	db ARTICUNO, ZAPDOS, MOLTRES, MEWTWO, MEW, -1
 
 ; CalcStats (voir home/move_mon.asm) puis, pour les #MON du joueur (b = 1),
 ; bonus des Pokémon marqués : x1,5 (super) ou x1,25 (star), plafond 999.
@@ -182,3 +182,66 @@ UpgradeStarterPikachu::
 	ld hl, wWhichPokemon
 	inc [hl]
 	jr .loop
+
+; #MON emblématiques de la série, donnés une fois au niveau 5 dans la BOITE
+; la première fois qu'un PC est allumé (stars : voir MarkSpecialMon)
+DEF PC_GIFT_LEVEL EQU 5
+GivePCStarMons::
+	ld a, [wPCGiftsGiven]
+	and a
+	ret nz
+	ld a, [wBoxCount]
+	cp MONS_PER_BOX - (PCGiftMons.end - PCGiftMons - 1) + 1
+	jr nc, .boxFull
+	ld a, $ff ; en cours (pas de demande de surnom)
+	ld [wPCGiftsGiven], a
+	ld hl, PCGiftMons
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .done
+	push hl
+	ld [wCurPartySpecies], a
+	ld [wEnemyMonSpecies2], a
+	ld a, PC_GIFT_LEVEL
+	ld [wCurEnemyLevel], a
+	xor a
+	ld [wEnemyBattleStatus3], a
+	callfar LoadEnemyMonData
+; Pokédex : vu et possédé
+	ld a, [wCurPartySpecies]
+	ld [wPokedexNum], a
+	predef IndexToPokedex
+	ld a, [wPokedexNum]
+	dec a
+	ld c, a
+	ld b, FLAG_SET
+	push bc
+	ld hl, wPokedexOwned
+	predef FlagActionPredef
+	pop bc
+	ld hl, wPokedexSeen
+	predef FlagActionPredef
+	callfar SendNewMonToBox
+	pop hl
+	jr .loop
+.done
+	ld a, 1
+	ld [wPCGiftsGiven], a
+	ld hl, .giftText
+	jp PrintText
+.boxFull
+	ld hl, .boxFullText
+	jp PrintText
+.giftText
+	text_far _PCGiftMonsText
+	sound_get_item_1
+	text_end
+.boxFullText
+	text_far _PCGiftBoxFullText
+	text_end
+
+; dans l'ordre inverse (chaque nouveau #MON prend la première place)
+PCGiftMons:
+	db SNORLAX, GRIMER, GASTLY, TAUROS, MANKEY, KRABBY, PIDGEY, CATERPIE, -1
+.end

@@ -10,6 +10,12 @@ AskName:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndex], a
 	call GetMonName
+	ld a, [wPCGiftsGiven]
+	inc a ; $ff = cadeaux du PC en cours : pas de surnom
+	jr nz, .askNickname
+	pop hl
+	jr .declinedNickname
+.askNickname
 	ld hl, DoYouWantToNicknameText
 	call PrintText
 	hlcoord 14, 7
