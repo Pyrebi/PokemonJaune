@@ -30,17 +30,14 @@
 <canvas id="screen" width="160" height="144"></canvas>
 <div id="status">Chargement…</div>
 <div class="bar">
-  <label class="file">Charger un ROM (.gbc)<input id="file" type="file" accept=".gbc,.gb" hidden></label>
+  <label class="file" id="romPicker" hidden>Charger un ROM (.gbc)<input id="file" type="file" accept=".gbc,.gb" hidden></label>
   <button id="pause">Pause</button>
-  <button id="save">Sauver état</button>
-  <button id="load">Charger état</button>
   <button id="fast">Vitesse x1</button>
   <button id="sound">Son : oui</button>
 </div>
 <div class="bar">
   <button id="exportGame">Exporter la partie</button>
   <label class="file">Importer une partie<input id="importSav" type="file" hidden></label>
-  <button id="exportSav">.sav seul</button>
 </div>
 <div class="controls">
   <div class="pad">
@@ -55,7 +52,7 @@
 La sauvegarde en jeu est conservée dans le navigateur, sauf en navigation privée.
 « Exporter la partie » télécharge un fichier contenant la sauvegarde du jeu <b>et</b> l'état exact
 du moment : garde-le et réimporte-le avec « Importer une partie » pour reprendre là où tu étais
-(fonctionne aussi en navigation privée). « .sav seul » = sauvegarde du jeu pour d'autres émulateurs.</p>
+(fonctionne aussi en navigation privée).</p>
 
 <!-- Émulateur binjgb (c) Ben Smith, licence MIT : https://github.com/binji/binjgb -->
 <script src="binjgb.js"></script>
@@ -184,22 +181,6 @@ document.getElementById('pause').onclick = ev => {
   running = !running; ev.target.textContent = running ? 'Pause' : 'Reprendre';
   if (running) { lastRaf = 0; requestAnimationFrame(frame); say('En jeu'); } else { saveBattery(); say('En pause'); }
 };
-document.getElementById('save').onclick = () => {
-  if (!e) return;
-  withFileData(M._state_file_data_new(e), (p, buf) => {
-    M._emulator_write_state(e, p);
-    say(store.set(romKey + ':state', toB64(buf)) ? 'État sauvegardé' : 'Impossible de sauvegarder l\'état');
-  });
-};
-document.getElementById('load').onclick = () => {
-  if (!e) return;
-  const s = store.get(romKey + ':state'); if (!s) return say('Aucun état sauvegardé');
-  const data = fromB64(s);
-  withFileData(M._state_file_data_new(e), (p, buf) => {
-    if (buf.length !== data.length) return say('État incompatible');
-    buf.set(data); M._emulator_read_state(e, p); say('État chargé');
-  });
-};
 // ----- export / import de la partie -----
 // Fichier de partie : "PJS1", taille SRAM (u32), SRAM, taille état (u32), état.
 function getSram() { let out = null; withFileData(M._ext_ram_file_data_new(e), (p, buf) => { M._emulator_write_ext_ram(e, p); out = buf.slice(); }); return out; }
@@ -221,10 +202,6 @@ document.getElementById('exportGame').onclick = () => {
   dv.setUint32(8 + sram.length, state.length, true); out.set(state, 12 + sram.length);
   download(out, 'pokemon-jaune_' + stamp() + '.pjsave');
   say('Partie exportée (sauvegarde + état actuel)');
-};
-document.getElementById('exportSav').onclick = () => {
-  if (!e) return say('Aucun jeu lancé');
-  download(getSram(), 'pokemon-jaune.sav'); say('Sauvegarde .sav exportée');
 };
 document.getElementById('importSav').addEventListener('change', async ev => {
   const f = ev.target.files[0]; ev.target.value = '';
@@ -252,7 +229,7 @@ document.getElementById('sound').onclick = ev => {
 // Si le ROM compilé est servi à côté de la page (make web), on le lance directement.
 fetch('pokeyellow.gbc').then(r => r.ok ? r.arrayBuffer() : Promise.reject())
   .then(b => start(new Uint8Array(b), 'pokeyellow.gbc'))
-  .catch(err => { if (err) console.error(err); say('Choisis le fichier pokeyellow.gbc compilé pour commencer.'); });
+  .catch(err => { if (err) console.error(err); document.getElementById('romPicker').hidden = false; say('Choisis le fichier pokeyellow.gbc compilé pour commencer.'); });
 </script>
 </body>
 </html>
