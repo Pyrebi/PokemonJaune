@@ -23,12 +23,17 @@
   .ab { display:flex; gap:12px; } .ab button { width:60px; height:60px; border-radius:50%; }
   .ss { display:flex; gap:12px; } .ss button { font-size:.75rem; }
   .help { font-size:.8rem; opacity:.75; text-align:center; max-width:480px; }
+  #toast { position:fixed; left:50%; top:40%; transform:translate(-50%,-50%); z-index:10;
+           background:var(--btn); color:var(--btnfg); border:3px solid var(--accent); border-radius:10px;
+           padding:14px 18px; max-width:min(90vw,420px); text-align:center; font-size:.95rem;
+           box-shadow:0 6px 24px rgba(0,0,0,.35); opacity:0; pointer-events:none; transition:opacity .25s; }
+  #toast.show { opacity:1; pointer-events:auto; }
 </style>
 </head>
 <body>
-<h1>Pokémon Jaune — build local</h1>
 <canvas id="screen" width="160" height="144"></canvas>
 <div id="status">Chargement…</div>
+<div id="toast" role="status" aria-live="polite"></div>
 <div class="bar">
   <label class="file" id="romPicker" hidden>Charger un ROM (.gbc)<input id="file" type="file" accept=".gbc,.gb" hidden></label>
   <button id="pause">Pause</button>
@@ -64,6 +69,13 @@ const EVENT_NEW_FRAME = 1, EVENT_AUDIO_BUFFER_FULL = 2;
 const AUDIO_FRAMES = 4096, AUDIO_LATENCY_SEC = 0.1, MAX_UPDATE_SEC = 5 / 60;
 const statusEl = document.getElementById('status');
 const say = t => statusEl.textContent = t;
+let toastTimer = 0;
+function popup(t) { // message en fenêtre, fermé au toucher ou après 3 s
+  const el = document.getElementById('toast');
+  el.textContent = t; el.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+  el.onclick = () => el.classList.remove('show');
+}
 const store = {
   get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
   set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
@@ -230,10 +242,11 @@ document.getElementById('importSav').addEventListener('change', async ev => {
     imp = { sram: data.slice(8, 8 + n), state: data.slice(12 + n, 12 + n + m) };
   } else if (data.length >= 0x8000) {
     imp = { sram: data.slice(0, 0x8000), state: null };
-  } else return say('Fichier non reconnu (' + data.length + ' octets)');
+  } else return popup('Fichier non reconnu (' + data.length + ' octets)');
   pendingImport = imp;
   await start(romBytes, romName); // redémarre avec la partie importée
-  say('Partie importée : ' + f.name + (imp.state ? ' (état restauré)' : ' (sauvegarde du jeu)'));
+  say('En jeu');
+  popup('Partie importée : ' + f.name + (imp.state ? ' (état restauré)' : ' (sauvegarde du jeu)'));
 });
 document.getElementById('fast').onclick = ev => {
   speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; ev.target.textContent = 'Vitesse x' + speed;
