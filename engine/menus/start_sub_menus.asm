@@ -691,6 +691,7 @@ SwitchPartyMon::
 	call SwitchPartyMon_ClearGfx
 	ld a, [wCurrentMenuItem]
 	call SwitchPartyMon_ClearGfx
+	farcall ReloadSwappedPartyIcons ; icônes Cristal des deux emplacements
 	jp RedrawPartyMenu_
 
 SwitchPartyMon_ClearGfx:

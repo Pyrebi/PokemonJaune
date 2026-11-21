@@ -48,8 +48,32 @@ LoadPartyCrystalIconsLCDOff::
 ; charge l'icône de [wMonPartySpriteSpecies] dans l'emplacement 6 (écran allumé)
 LoadSingleCrystalIcon::
 	ld a, [wMonPartySpriteSpecies]
+	ld b, a
+	ld c, CRYSTAL_ICON_SLOT_SINGLE
+	jr LoadCrystalIconVBlank
+
+; après un échange dans le menu de l'équipe : recharge les icônes des deux
+; emplacements échangés
+ReloadSwappedPartyIcons::
+	ld a, [wSwappedMenuItem]
+	call .slot
+	ld a, [wCurrentMenuItem]
+.slot
+	ld c, a
+	ld e, a
+	ld d, 0
+	ld hl, wPartySpecies
+	add hl, de
+	ld b, [hl]
+; fallthrough
+
+; b = espèce, c = emplacement ; copie pendant le V-blank (écran allumé)
+LoadCrystalIconVBlank:
+	push bc
+	ld a, b
 	call GetCrystalIconPointer
-	ld a, CRYSTAL_ICON_SLOT_SINGLE
+	pop bc
+	ld a, c
 	call GetIconSlotVRAM
 	push hl
 	push de
