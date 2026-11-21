@@ -23,6 +23,9 @@ TryDoWildEncounter:
 	jr z, .lastRepelStep
 	ld [wRepelRemainingSteps], a
 .next
+	ld a, [wBonusOptions]
+	bit BIT_BONUS_NO_ENCOUNTERS, a ; option « RENCONTRES : NON »
+	jr nz, .CantEncounter
 ; determine if wild pokemon can appear in the half-block we're standing in
 ; is the bottom left tile (8,9) of the half-block we're standing in a grass/water tile?
 ; note that by using the bottom left tile, this prevents the "left-shore" tiles from generating grass encounters

@@ -164,6 +164,7 @@
 	charmap "ù",         $c9
 	charmap "û",         $ca
 	charmap "+",         $cb
+	charmap "<BALL>",    $cc ; Poké Ball (déjà capturé)
 	charmap "'d",        $bb
 	charmap "'l",        $bc
 	charmap "'s",        $bd

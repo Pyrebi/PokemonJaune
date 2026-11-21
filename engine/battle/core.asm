@@ -955,6 +955,14 @@ TrainerBattleVictory:
 	call DelayFrames
 	call PrintEndBattleText
 ; win money
+	ld a, [wBonusOptions]
+	bit BIT_BONUS_MONEY_X2, a ; option « ARGENT ×2 »
+	jr z, .noMoneyBonus
+	ld de, wAmountMoneyWon + 2
+	ld hl, wAmountMoneyWon + 2
+	ld c, $3
+	predef AddBCDPredef
+.noMoneyBonus
 	ld hl, MoneyForWinningText
 	call PrintText
 	ld de, wPlayerMoney + 2
@@ -1970,6 +1978,7 @@ DrawEnemyHUDAndHPBar:
 	ld [wLoadedMonLevel], a
 	call PrintLevel
 .skipPrintLevel
+	callfar PrintEnemyOwnedBall
 	ld hl, wEnemyMonHP
 	ld a, [hli]
 	ldh [hMultiplicand + 1], a

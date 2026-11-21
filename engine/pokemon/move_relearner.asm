@@ -82,7 +82,11 @@ GetMovePower::
 	ld hl, Moves + MOVE_POWER
 	ld bc, MOVE_LENGTH
 	call AddNTimes
-	ld a, [hl]
+	ld a, [hli]
+	push af
+	ld a, [hl] ; type
+	call .typeText
+	pop af
 .gotPower
 	ld [wMovePower], a
 	ld hl, wMovePowerText
@@ -101,6 +105,29 @@ GetMovePower::
 	ld [hli], a
 	ld [hl], '@'
 	ret
+.typeText ; écrit le nom abrégé du type a dans wMoveTypeText
+	cp FIRE
+	jr c, .physicalType
+	sub FIRE - (GHOST + 1)
+.physicalType
+	add a
+	add a
+	ld c, a
+	ld b, 0
+	ld hl, ShortTypeNames
+	add hl, bc
+	ld de, wMoveTypeText
+	ld c, 4
+.typeLoop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .typeLoop
+	ld a, '@'
+	ld [de], a
+	ret
+
 .digit ; écrit le chiffre de a / c (sans zéro en tête), a = reste
 	ld b, '0' - 1
 .sub
@@ -209,3 +236,9 @@ AddRelearnableMove:
 	ld hl, wPocketView
 	inc [hl]
 	ret
+
+; noms de types abrégés (4 caractères), dans l'ordre des constantes de type
+; (NORMAL à SPECTRE, puis FEU à DRAGON)
+ShortTypeNames:
+	db "NORM", "COMB", "VOL ", "POIS", "SOL ", "ROCH", "OIS.", "INS.", "SPEC"
+	db "FEU ", "EAU ", "PLAN", "ELEC", "PSY ", "GLAC", "DRAG"

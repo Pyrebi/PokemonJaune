@@ -2275,10 +2275,9 @@ ItemUseOldRod:
 ItemUseGoodRod:
 	call FishingInit
 	jp c, ItemUseNotTime
-.RandomLoop
+.RandomLoop ; (ça mord toujours)
 	call Random
 	srl a
-	jr c, .SetBite
 	and %11
 	cp 2
 	jr nc, .RandomLoop
@@ -2311,14 +2310,8 @@ ItemUseSuperRod:
 	ld a, c
 	and a ; are there fish in the map?
 	jr z, DoNotGenerateFishingEncounter ; if not, do not generate an encounter
-	ld a, $1
-	ld [wRodResponse], a
-	call Random
-	and $1
-	jr nz, RodResponse
-	xor a
-	ld [wRodResponse], a
-	jr DoNotGenerateFishingEncounter
+	ld a, $1 ; ça mord toujours
+	jr RodResponse
 
 RodResponse:
 	ld [wRodResponse], a

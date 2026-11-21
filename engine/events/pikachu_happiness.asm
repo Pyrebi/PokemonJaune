@@ -95,12 +95,12 @@ HappinessChangeTable:
 	db   3, 2, 1 ; Challenged Gym Leader
 	db   1, 1, 0 ; Teach TM/HM
 	db   2, 1, 1 ; Walking around
-	; Decrease
-	db  -3, -3, -5 ; Deposited
-	db  -1, -1, -1 ; Fainted in battle
-	db  -5, -5, -10 ; Fainted due to Poison outside of battle
-	db  -5, -5, -10 ; Fainted to opponent at least 30 levels higher
-	db -10, -10, -20 ; Traded away
+	; Decrease (désactivé : l'amitié de PIKACHU ne baisse plus)
+	db   0, 0, 0 ; Deposited
+	db   0, 0, 0 ; Fainted in battle
+	db   0, 0, 0 ; Fainted due to Poison outside of battle
+	db   0, 0, 0 ; Fainted to opponent at least 30 levels higher
+	db   0, 0, 0 ; Traded away
 
 PikachuMoods:
 	; Increase
@@ -110,9 +110,9 @@ PikachuMoods:
 	db $80           ; Challenged Gym Leader
 	db $94           ; Unknown (d = 5)
 	db $80           ; Unknown (d = 6)
-	; Decrease
-	db $62           ; Deposited
-	db $6c           ; Fainted
-	db $62           ; Unknown (d = 9)
-	db $6c           ; Unknown (d = 10)
-	db $00           ; Unknown (d = 11)
+	; Decrease (désactivé : l'humeur de PIKACHU ne baisse plus)
+	db $80           ; Deposited
+	db $80           ; Fainted
+	db $80           ; Unknown (d = 9)
+	db $80           ; Unknown (d = 10)
+	db $80           ; Unknown (d = 11)

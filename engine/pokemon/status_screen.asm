@@ -491,20 +491,19 @@ StatusScreen_PrintMovePower:
 	callfar GetMovePower
 	pop de
 	push de
-	ld hl, -11
+	ld hl, -12
 	add hl, de
-	ld de, .label
+	ld de, wMoveTypeText ; type abrégé (col. 2) puis puissance (col. 7)
 	call PlaceString
-	ld h, b
-	ld l, c
-	inc hl
+	pop de
+	push de
+	ld hl, -7
+	add hl, de
 	ld de, wMovePowerText
 	call PlaceString
 	pop de
 	pop bc
 	ret
-.label
-	db "PUI@"
 
 StatusScreen_PrintPP:
 ; print PP or -- c times, going down two rows each time

@@ -60,6 +60,15 @@
     (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
     lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
     (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW).
+- **Options bonus supplémentaires** : COURSE AUTO (courir sans tenir B, B fait
+  alors marcher), RENCONTRES (NON = aucune rencontre sauvage, comme un Repousse
+  infini) et ARGENT ×2 (contre les dresseurs). L'écran OPTIONS passe à une
+  option par ligne.
+- **Petits plus** : la pêche mord toujours ; PIERRE LUNE (CENTRE COMMERCIAL 4e)
+  et SUPER BONBON (5e) en vente à CELADOPOLE ; le type des capacités (abrégé)
+  est affiché dans le résumé avec la puissance ; une Poké Ball s'affiche à côté
+  d'un Pokémon sauvage déjà capturé ; l'amitié et l'humeur de PIKACHU ne
+  baissent plus.
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,

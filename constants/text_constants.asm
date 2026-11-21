@@ -31,3 +31,4 @@ DEF TEXT_START_MENU EQU $00
 
 ; texte de la puissance d'une capacité (« 120@ » ou « -@ »), dans le tampon temporaire
 DEF wMovePowerText EQUS "(wBuffer + 20)"
+DEF wMoveTypeText  EQUS "(wBuffer + 24)" ; type abrégé (4 lettres max)

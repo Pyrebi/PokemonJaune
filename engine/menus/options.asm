@@ -7,8 +7,12 @@
 	const OPT_PRINTER      ; 4
 	const OPT_CATCH        ; 5
 	const OPT_EXP          ; 6
-	const OPT_CANCEL       ; 7
-DEF NUM_OPTIONS EQU const_value ; 8
+	const OPT_AUTORUN      ; 7
+	const OPT_ENCOUNTERS   ; 8
+	const OPT_MONEY        ; 9
+	const OPT_CANCEL       ; 10
+DEF NUM_OPTIONS EQU const_value ; 11
+DEF OPTIONS_TOP_ROW EQU 3 ; une option par ligne à partir de cette ligne
 
 DisplayOptionMenu_:
 	call InitOptionsMenu
@@ -50,6 +54,9 @@ OptionMenuJumpTable:
 	dw OptionsMenu_GBPrinterBrightness
 	dw OptionsMenu_Catch
 	dw OptionsMenu_ExpMultiplier
+	dw OptionsMenu_AutoRun
+	dw OptionsMenu_Encounters
+	dw OptionsMenu_Money
 	dw OptionsMenu_Cancel
 
 DEF NUM_TEXT_SPEED_OPTS EQU 4
@@ -89,7 +96,7 @@ OptionsMenu_TextSpeed:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 14, 2
+	hlcoord 14, OPTIONS_TOP_ROW + 0
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -150,7 +157,7 @@ OptionsMenu_BattleAnimations:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 14, 4
+	hlcoord 14, OPTIONS_TOP_ROW + 1
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -186,7 +193,7 @@ OptionsMenu_BattleStyle:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 14, 6
+	hlcoord 14, OPTIONS_TOP_ROW + 2
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -240,7 +247,7 @@ OptionsMenu_SpeakerSettings:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 8, 8
+	hlcoord 8, OPTIONS_TOP_ROW + 3
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -304,7 +311,7 @@ OptionsMenu_GBPrinterBrightness:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 8, 10
+	hlcoord 8, OPTIONS_TOP_ROW + 4
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -359,22 +366,47 @@ GetGBPrinterBrightness:
 	lb de, PRINTER_BRIGHTNESS_DARKER, PRINTER_BRIGHTNESS_LIGHTEST
 	ret
 
-; option bonus : capture à 100 % (OUI/NON)
+; options bonus OUI/NON (bits de wBonusOptions)
 OptionsMenu_Catch:
+	lb bc, 0, 1 << BIT_BONUS_CATCH
+	hlcoord 14, OPTIONS_TOP_ROW + 5
+	jr OptionsMenu_BonusToggle
+
+OptionsMenu_AutoRun:
+	lb bc, 0, 1 << BIT_BONUS_AUTORUN
+	hlcoord 14, OPTIONS_TOP_ROW + 7
+	jr OptionsMenu_BonusToggle
+
+OptionsMenu_Encounters: ; RENCONTRES : OUI = bit à 0
+	lb bc, 1, 1 << BIT_BONUS_NO_ENCOUNTERS
+	hlcoord 14, OPTIONS_TOP_ROW + 8
+	jr OptionsMenu_BonusToggle
+
+OptionsMenu_Money:
+	lb bc, 0, 1 << BIT_BONUS_MONEY_X2
+	hlcoord 14, OPTIONS_TOP_ROW + 9
+; fallthrough
+
+; c = bit dans wBonusOptions, hl = position de la valeur,
+; b = 0 : OUI quand le bit est à 1 ; b = 1 : OUI quand il est à 0
+OptionsMenu_BonusToggle:
 	ldh a, [hJoy5]
 	and PAD_LEFT | PAD_RIGHT
-	jr z, .nothingPressed
+	jr z, .show
 	ld a, [wBonusOptions]
-	xor 1
+	xor c
 	ld [wBonusOptions], a
-.nothingPressed
+.show
 	ld a, [wBonusOptions]
-	and 1
+	and c
+	jr z, .bitClear
+	ld a, 1
+.bitClear
+	xor b
 	ld de, .Off
 	jr z, .place
 	ld de, .On
 .place
-	hlcoord 14, 12
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -415,7 +447,7 @@ OptionsMenu_ExpMultiplier:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 14, 14
+	hlcoord 14, OPTIONS_TOP_ROW + 6
 	call PlaceString
 	and a ; clear carry flag
 	ret
@@ -479,8 +511,8 @@ OptionsMenu_UpdateCursorPosition:
 	add hl, de
 	dec c
 	jr nz, .loop
-	hlcoord 1, 2
-	ld bc, SCREEN_WIDTH * 2
+	hlcoord 1, OPTIONS_TOP_ROW
+	ld bc, SCREEN_WIDTH
 	ld a, [wOptionsCursorLocation]
 	call AddNTimes
 	ld [hl], '▶'
@@ -490,15 +522,21 @@ InitOptionsMenu:
 	hlcoord 0, 0
 	lb bc, SCREEN_HEIGHT - 2, SCREEN_WIDTH - 2
 	call TextBoxBorder
-	hlcoord 2, 2
+	ldh a, [hUILayoutFlags]
+	push af
+	set BIT_SINGLE_SPACED_LINES, a
+	ldh [hUILayoutFlags], a
+	hlcoord 2, OPTIONS_TOP_ROW
 	ld de, AllOptionsText
 	call PlaceString
-	hlcoord 2, 16
+	pop af
+	ldh [hUILayoutFlags], a
+	hlcoord 2, OPTIONS_TOP_ROW + OPT_CANCEL
 	ld de, OptionMenuCancelText
 	call PlaceString
 	xor a
 	ld [wOptionsCursorLocation], a
-	ld c, 7 ; the number of options to loop through
+	ld c, NUM_OPTIONS - 1 ; the number of options to loop through
 .loop
 	push bc
 	call GetOptionPointer ; updates the next option
@@ -521,7 +559,10 @@ AllOptionsText:
 	next "SON:"
 	next "IMPR.:"
 	next "CAPT. AUTO :"
-	next "MULTI. EXP :@"
+	next "MULTI. EXP :"
+	next "COURSE AUTO:"
+	next "RENCONTRES :"
+	next "ARGENT ×2  :@"
 
 OptionMenuCancelText:
 	db "RETOUR@"

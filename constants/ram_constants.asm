@@ -40,6 +40,13 @@ DEF TEXT_DELAY_FAST   EQU %001 ; 1
 DEF TEXT_DELAY_MEDIUM EQU %011 ; 3
 DEF TEXT_DELAY_SLOW   EQU %101 ; 5
 
+; wBonusOptions (options bonus, enregistrées avec la partie)
+DEF BIT_BONUS_CATCH          EQU 0 ; capture à 100 %
+DEF BONUS_EXP_MASK           EQU %110 ; multiplicateur d'EXP (x1, x2, x3, x5)
+DEF BIT_BONUS_AUTORUN        EQU 3 ; course sans tenir B
+DEF BIT_BONUS_NO_ENCOUNTERS  EQU 4 ; pas de rencontres sauvages
+DEF BIT_BONUS_MONEY_X2       EQU 5 ; argent x2 contre les dresseurs
+
 ; wPrinterSettings
 DEF PRINTER_BRIGHTNESS_LIGHTEST EQU $0
 DEF PRINTER_BRIGHTNESS_LIGHTER  EQU $20
