@@ -52,8 +52,8 @@ SafariZoneGatePrintSafariZoneWorker1WouldYouLikeToJoinText::
 	call DisplayTextBoxID
 	ld hl, .MakePaymentText
 	call PrintText
-	ld a, 30
-	ld hl, 502
+	ld a, 50 ; (30 à l'origine)
+	ld hl, 1002 ; (502 à l'origine)
 .poor_mans_discount
 	ld [wNumSafariBalls], a
 	ld a, h
@@ -162,12 +162,12 @@ SafariZoneEntranceCalculateLowCostAdmission:
 	pop af
 	inc a
 	jr z, .max_balls
-	cp 29
+	cp 49
 	jr c, .load_balls
 .max_balls
-	ld a, 29
+	ld a, 49
 .load_balls
-	ld hl, 502
+	ld hl, 1002
 	and a
 	ret
 

@@ -510,16 +510,16 @@ SlotRewardPointers:
 	dw SlotReward15Text
 
 SlotReward300Text:
-	db "300@"
+	db "600@" ; (gains doublés)
 
 SlotReward100Text:
-	db "100@"
+	db "200@"
 
 SlotReward8Text:
-	db "8@"
+	db "16@"
 
 SlotReward15Text:
-	db "15@"
+	db "30@"
 
 NotThisTimeText:
 	text_far _NotThisTimeText
@@ -573,7 +573,7 @@ SlotReward8Func:
 	dec [hl]
 .skip
 	ld b, $2
-	ld de, 8
+	ld de, 16 ; (gains doublés, 8 à l'origine)
 	ret
 
 SlotReward15Func:
@@ -584,7 +584,7 @@ SlotReward15Func:
 	dec [hl]
 .skip
 	ld b, $4
-	ld de, 15
+	ld de, 30 ; (15)
 	ret
 
 SlotReward100Func:
@@ -593,7 +593,7 @@ SlotReward100Func:
 	xor a
 	ld [wSlotMachineFlags], a
 	ld b, $8
-	ld de, 100
+	ld de, 200 ; (100)
 	ret
 
 SlotReward300Func:
@@ -609,7 +609,7 @@ SlotReward300Func:
 .skip
 	ld [wSlotMachineAllowMatchesCounter], a
 	ld b, $14
-	ld de, 300
+	ld de, 600 ; (300)
 	ret
 
 YeahText:

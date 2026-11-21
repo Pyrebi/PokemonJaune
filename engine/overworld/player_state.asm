@@ -225,13 +225,13 @@ PrintSafariZoneSteps::
 	cp CERULEAN_CAVE_2F
 	ret nc
 	hlcoord 0, 0
-	lb bc, 3, 7
+	lb bc, 3, 8
 	call TextBoxBorder
 	hlcoord 1, 1
 	ld de, wSafariSteps
-	lb bc, 2, 3
+	lb bc, 2, 4
 	call PrintNumber
-	hlcoord 4, 1
+	hlcoord 6, 1
 	ld de, SafariSteps
 	call PlaceString
 	hlcoord 1, 3
@@ -250,7 +250,7 @@ PrintSafariZoneSteps::
 	jp PrintNumber
 
 SafariSteps:
-	db "/500@"
+	db "PAS@" ; (« /500 » à l'origine, 1000 pas maintenant)
 
 SafariBallText:
 	db "BALL×× @"

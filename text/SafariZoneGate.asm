@@ -47,7 +47,7 @@ _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
 	cont "spéciales ici."
 
 	para "<PLAYER> reçoit"
-	line "30 SAFARI BALLS!@"
+	line "50 SAFARI BALLS!@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1CallYouOnThePAText::
@@ -112,7 +112,7 @@ _SafariZoneLowCostText1::
 _SafariZoneLowCostText2::
 	text "Mais je ne peux"
 	line "pas te donner les"
-	cont "30 BALLS."
+	cont "50 BALLS."
 	done
 
 _SafariZoneLowCostText3::

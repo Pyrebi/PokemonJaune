@@ -12,8 +12,7 @@ EnterMap::
 .skipGivingThreeStepsOfNoRandomBattles
 	ld hl, wStatusFlags4
 	bit BIT_BATTLE_OVER_OR_BLACKOUT, [hl]
-	res BIT_BATTLE_OVER_OR_BLACKOUT, [hl]
-	call z, ResetUsingStrengthOutOfBattleBit
+	res BIT_BATTLE_OVER_OR_BLACKOUT, [hl] ; (FORCE reste active d'une zone à l'autre)
 	call nz, MapEntryAfterBattle
 	ld hl, wStatusFlags6
 	ld a, [hl]
@@ -2093,11 +2092,6 @@ IgnoreInputForHalfSecond:
 	ld a, [hl]
 	or (1 << BIT_DISABLE_JOYPAD) | (1 << BIT_UNKNOWN_5_2) | (1 << BIT_UNKNOWN_5_1)
 	ld [hl], a ; set ignore input bit
-	ret
-
-ResetUsingStrengthOutOfBattleBit:
-	ld hl, wStatusFlags1
-	res BIT_STRENGTH_ACTIVE, [hl]
 	ret
 
 ForceBikeOrSurf::
