@@ -37,6 +37,10 @@
   <button id="fast">Vitesse x1</button>
   <button id="sound">Son : oui</button>
 </div>
+<div class="bar">
+  <button id="exportSav">Exporter la sauvegarde (.sav)</button>
+  <label class="file">Importer une sauvegarde<input id="importSav" type="file" accept=".sav,.srm" hidden></label>
+</div>
 <div class="controls">
   <div class="pad">
     <span></span><button data-k="up">▲</button><span></span>
@@ -47,7 +51,8 @@
 </div>
 <div class="ss"><button data-k="select">SELECT</button><button data-k="start">START</button></div>
 <p class="help">Clavier : flèches = croix · X = A · Z (ou W) = B · Entrée = Start · Maj droite / Retour arrière = Select.<br>
-La sauvegarde en jeu est conservée dans le navigateur.</p>
+La sauvegarde en jeu est conservée dans le navigateur. « Exporter » télécharge un fichier .sav
+(compatible avec les autres émulateurs) ; « Importer » le recharge et redémarre le jeu.</p>
 
 <!-- Émulateur binjgb (c) Ben Smith, licence MIT : https://github.com/binji/binjgb -->
 <script src="binjgb.js"></script>
@@ -64,7 +69,7 @@ const store = {
 const toB64 = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
 const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
-let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true;
+let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true, romBytes = null, romName = '';
 let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
 
 function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
@@ -122,6 +127,7 @@ function frame(ms) {
 
 async function start(bytes, name) {
   say('Démarrage…');
+  romBytes = bytes; romName = name;
   if (!M) M = await Binjgb(window.BINJGB_WASM ? {
     instantiateWasm(imports, receive) {
       WebAssembly.instantiate(window.BINJGB_WASM, imports).then(r => receive(r.instance));
@@ -188,6 +194,30 @@ document.getElementById('load').onclick = () => {
     buf.set(data); M._emulator_read_state(e, p); say('État chargé');
   });
 };
+document.getElementById('exportSav').onclick = () => {
+  if (!e) return say('Aucun jeu lancé');
+  withFileData(M._ext_ram_file_data_new(e), (p, buf) => {
+    M._emulator_write_ext_ram(e, p);
+    const url = URL.createObjectURL(new Blob([buf.slice()], { type: 'application/octet-stream' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = romName.replace(/\.gbc?$/i, '') + '.sav';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    say('Sauvegarde exportée');
+  });
+};
+document.getElementById('importSav').addEventListener('change', async ev => {
+  const f = ev.target.files[0]; ev.target.value = '';
+  if (!f || !romBytes) return say(romBytes ? '' : 'Lance d\'abord le jeu');
+  const data = new Uint8Array(await f.arrayBuffer());
+  let size = 0;
+  withFileData(M._ext_ram_file_data_new(e), (p, buf) => { size = buf.length; });
+  if (data.length < size) return say('Fichier .sav trop petit (' + data.length + ' octets, ' + size + ' attendus)');
+  if (!confirm('Remplacer la sauvegarde actuelle par ' + f.name + ' ?')) return;
+  store.set(romKey + ':sram', toB64(data.subarray(0, size)));
+  await start(romBytes, romName); // redémarre avec la sauvegarde importée
+  say('Sauvegarde importée : ' + f.name);
+});
 document.getElementById('fast').onclick = ev => {
   speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; ev.target.textContent = 'Vitesse x' + speed;
 };

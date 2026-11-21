@@ -124,6 +124,9 @@ python3 -m http.server 8000 -d web
 Puis ouvrir http://localhost:8000 : le jeu démarre directement. On peut aussi ouvrir `web/index.html`
 sans serveur et choisir le fichier `.gbc` avec le bouton « Charger un ROM ».
 
+Boutons « Exporter la sauvegarde » (fichier `.sav` de 32 Ko, compatible avec les autres
+émulateurs) et « Importer une sauvegarde » (recharge le fichier et redémarre le jeu).
+
 Clavier : flèches = croix, X = A, Z (ou W) = B, Entrée = Start, Maj droite / Retour arrière = Select.
 
 Les ROM compilés (`*.gbc`) ne sont pas versionnés (voir `.gitignore`).
