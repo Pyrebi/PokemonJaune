@@ -31,21 +31,15 @@ AddPartyMon::
 	ret
 
 ; calculates all 5 stats of current mon and writes them to [de]
+; (bonus des Pokémon spéciaux compris, voir CalcStats_)
 CalcStats::
-	ld c, $0
-.statsLoop
-	inc c
-	call CalcStat
-	ldh a, [hMultiplicand+1]
-	ld [de], a
-	inc de
-	ldh a, [hMultiplicand+2]
-	ld [de], a
-	inc de
-	ld a, c
-	cp NUM_STATS
-	jr nz, .statsLoop
-	ret
+	ldh a, [hLoadedROMBank]
+	push af
+	ld a, BANK(CalcStats_)
+	call BankswitchCommon
+	call CalcStats_
+	pop af
+	jp BankswitchCommon
 
 ; calculates stat c of current mon
 ; c: stat to calc (HP=1,Atk=2,Def=3,Spd=4,Spc=5)

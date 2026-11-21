@@ -51,6 +51,15 @@
 - **DV au maximum** : tout Pokémon obtenu par le joueur (capture, cadeau,
   PIKACHU de départ, envoi dans la boîte) a 15 dans chaque DV. Les Pokémon
   sauvages et ceux des dresseurs ne changent pas.
+- **Pokémon spéciaux** (EXP de stats au maximum, bonus conservé aux niveaux,
+  évolutions et passages au PC, stats plafonnées à 999) :
+  - **Super PIKACHU** (celui du PROF.CHEN) : stats ×1,5 et Ballon Lumière
+    intégré (puissance des capacités ELECTRIK doublée). Dans une partie déjà
+    commencée, il est mis à niveau au moment de CONTINUER ;
+  - **Pokémon « stars »** : stats ×1,25 pour tous les Pokémon obtenus hors combat
+    (BULBIZARRE, SALAMECHE, CARAPUCE, LOKHLASS, EVOLI, KICKLEE/TYGNON, fossiles,
+    lots du CASINO, échanges, MAGICARPE) et pour les légendaires capturés
+    (ARTIKODIN, ELECTHOR, SULFURA, MEWTWO, MEW) ainsi que RONFLEX.
 - **Informations** : les DV (0-15) dans le résumé, à côté de chaque statistique et
   sous les PV ; amitié et humeur du PIKACHU de départ en page 2 du résumé.
 

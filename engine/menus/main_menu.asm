@@ -103,6 +103,7 @@ MainMenu:
 	jp nz, .mainMenuLoop
 	jr .inputLoop
 .pressedA
+	farcall UpgradeStarterPikachu ; parties commencées avant les Pokémon spéciaux
 	call GBPalWhiteOutWithDelay3
 	call ClearScreen
 	ld a, PLAYER_DIR_DOWN

@@ -4209,6 +4209,17 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
+; Ballon Lumière intégré : le PIKACHU de départ double la puissance ÉLECTRIK
+	ld a, [hl]
+	cp ELECTRIC
+	jr nz, .noLightBall
+	ld a, [wBattleMonCatchRate]
+	cp SUPER_MON_MARK
+	jr nz, .noLightBall
+	sla d
+	jr nc, .noLightBall
+	ld d, $ff
+.noLightBall
 	ld a, [hl] ; a = [wPlayerMoveType]
 	cp SPECIAL ; types >= SPECIAL are all special
 	jr nc, .specialAttack

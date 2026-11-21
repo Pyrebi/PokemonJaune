@@ -231,19 +231,22 @@ _AddPartyMon::
 	ld a, [wCurEnemyLevel]
 	ld [de], a
 	inc de
-	ld a, [wIsInBattle]
-	dec a
-	jr nz, .calcFreshStats
-	ld hl, wEnemyMonMaxHP
-	ld bc, NUM_STATS * 2
-	call CopyData          ; copy stats of cur enemy mon
+; stats toujours recalculées (DV au maximum, bonus des Pokémon spéciaux)
 	pop hl
-	jr .done
-.calcFreshStats
+	ld a, [wMonDataLocation]
+	and $f
+	jr nz, .notPlayerMon
+	push hl
+	push de
+	ld d, h
+	ld e, l
+	farcall MarkSpecialMonFromDE ; #MON du joueur
+	pop de
 	pop hl
+.notPlayerMon
 	ld bc, MON_HP_EXP - 1
 	add hl, bc
-	ld b, $0
+	ld b, $1
 	call CalcStats         ; calculate fresh set of stats
 .done
 	scf
@@ -519,3 +522,4 @@ _MoveMon::
 .done
 	and a
 	ret
+

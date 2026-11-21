@@ -3355,6 +3355,7 @@ SendNewMonToBox:
 	ld a, TWISTEDSPOON_GSC
 	ld [wBoxMon1CatchRate], a
 .notKadabra
+	farcall MarkSpecialBoxMon
 	ret
 
 ; checks if the tile in front of the player is a shore or water tile

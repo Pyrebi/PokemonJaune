@@ -33,7 +33,9 @@ DEF MON_TYPE       rw
 rsset MON_TYPE
 DEF MON_TYPE1      rb
 DEF MON_TYPE2      rb
-DEF MON_CATCH_RATE rb
+DEF MON_CATCH_RATE rb ; (objet tenu en Gen 2) sert aussi de marque « spécial » :
+DEF SUPER_MON_MARK EQU $fd ; PIKACHU de départ : stats x1,5 + Ballon Lumière
+DEF STAR_MON_MARK  EQU $fe ; Pokémon donnés et légendaires : stats x1,25
 DEF MON_MOVES      rb NUM_MOVES
 DEF MON_OTID       rw
 DEF MON_EXP        rb 3
