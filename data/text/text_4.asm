@@ -25,6 +25,28 @@ _OlderFileWillBeErasedText::
 	cont "D'accord?"
 	done
 
+_BillsPCSameBoxText::
+	text "Il est déjà dans"
+	line "cette BOITE!"
+	prompt
+
+_BillsPCTargetBoxFullText::
+	text "Cette BOITE est"
+	line "pleine!"
+	prompt
+
+_BillsPCMonMovedText::
+	text_ram wNameBuffer
+	text " est"
+	line "envoyé dans la"
+	cont "BOITE @"
+	text_ram wBoxNumString
+	text "."
+
+	para "La partie est"
+	line "sauvegardée."
+	prompt
+
 _WhenYouChangeBoxText::
 	text "Changer de BOITE"
 	line "#MON"

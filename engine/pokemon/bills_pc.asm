@@ -173,7 +173,7 @@ BillsPCMenu:
 	cp $3
 	jp z, BillsPCChangeBox ; change box
 	cp $4
-	jp z, BillsPCPrintBox
+	jp z, BillsPCMoveMon ; déplacer vers une autre BOITE
 
 ExitBillsPC:
 	ld a, [wMiscFlags]
@@ -236,6 +236,7 @@ BillsPCDeposit:
 	call PlayCry
 .continue
 	farcall_ModifyPikachuHappiness PIKAHAPPY_DEPOSITED
+	farcall HealPartyMon ; soigné en entrant dans le PC
 	ld a, PARTY_TO_BOX
 	ld [wMoveMonType], a
 	call MoveMon
@@ -352,6 +353,24 @@ BillsPCChangeBox:
 	farcall ChangeBox
 	jp BillsPCMenu
 
+; déplacer un #MON de la BOITE actuelle vers une autre (sauvegarde la partie)
+BillsPCMoveMon:
+	ld a, [wBoxCount]
+	and a
+	jr nz, .boxNotEmpty
+	ld hl, NoMonText
+	call PrintText
+	jp BillsPCMenu
+.boxNotEmpty
+	ld hl, wBoxCount
+	call DisplayMonListMenu
+	jp c, BillsPCMenu
+	ld a, [wWhichPokemon]
+	ld hl, wBoxMonNicks
+	call GetPartyMonName
+	farcall MoveBoxMonToOtherBox
+	jp BillsPCMenu
+
 DisplayMonListMenu:
 	ld a, l
 	ld [wListPointer], a
@@ -374,7 +393,7 @@ BillsPCMenuText:
 	next "STOCKER <PKMN>"
 	next "RELACHER <PKMN>"
 	next "CHANGER BOITE"
-	next "IMPR. BOITE"
+	next "DEPLACER <PKMN>"
 	next "SALUT!"
 	db "@"
 

@@ -97,3 +97,63 @@ HealParty:
 	dec b
 	jr nz, .ppup
 	ret
+
+; soigne le #MON [wWhichPokemon] de l'équipe (PV, statut, PP) : utilisé avant
+; de le déposer dans le PC
+HealPartyMon::
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1HP
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld hl, MON_STATUS - MON_HP
+	add hl, de
+	ld [hl], 0
+	ld b, NUM_MOVES
+.pp
+	push bc
+	ld a, NUM_MOVES
+	sub b
+	ld c, a
+	ld b, 0
+	ld hl, MON_MOVES - MON_HP
+	add hl, de
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .nextMove
+	push bc
+	push de
+	dec a
+	ld hl, Moves
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	push de
+	ld de, wMoveData
+	ld a, BANK(Moves)
+	call FarCopyData
+	pop de
+	pop de
+	pop bc
+	ld hl, MON_PP - MON_HP
+	add hl, de
+	add hl, bc
+	ld a, [hl]
+	and PP_UP_MASK
+	ld b, a
+	ld a, [wMoveData + MOVE_PP]
+	add b
+	ld [hl], a
+.nextMove
+	pop bc
+	dec b
+	jr nz, .pp
+	ld hl, MON_MAXHP - MON_HP
+	add hl, de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	ret

@@ -389,6 +389,177 @@ WhenYouChangeBoxText:
 	text_far _WhenYouChangeBoxText
 	text_end
 
+; déplace le #MON [wWhichPokemon] de la BOITE actuelle vers une BOITE choisie
+; (écrit directement dans la sauvegarde, puis sauvegarde la partie)
+MoveBoxMonToOtherBox::
+	ld hl, wCurrentBoxNum
+	bit BIT_HAS_CHANGED_BOXES, [hl] ; BOITES pas encore initialisées en SRAM ?
+	jr nz, .boxesReady
+	call EmptyAllSRAMBoxes
+	ld hl, wCurrentBoxNum
+	set BIT_HAS_CHANGED_BOXES, [hl]
+.boxesReady
+	call DisplayChangeBoxMenu
+	call UpdateSprites
+	ld hl, hUILayoutFlags
+	set BIT_DOUBLE_SPACED_MENU, [hl]
+	call HandleMenuInput
+	ld hl, hUILayoutFlags
+	res BIT_DOUBLE_SPACED_MENU, [hl]
+	bit B_PAD_B, a
+	ret nz
+	ld a, [wCurrentBoxNum]
+	and BOX_NUM_MASK
+	ld b, a
+	ld a, [wCurrentMenuItem]
+	cp b
+	ld hl, .SameBoxText
+	jp z, PrintText
+; emplacement de la BOITE cible (GetBoxSRAMLocation lit wCurrentBoxNum)
+	ld a, [wCurrentBoxNum]
+	push af
+	ld a, [wCurrentMenuItem]
+	ld [wBuffer], a ; numéro de la BOITE cible (pour le message)
+	ld [wCurrentBoxNum], a
+	call GetBoxSRAMLocation ; b = banque, hl = début de la BOITE
+	pop af
+	ld [wCurrentBoxNum], a
+	push bc
+	call EnableSRAM
+	ld a, b
+	ld [rRAMB], a
+	ld a, [hl] ; nombre de #MON de la BOITE cible
+	cp MONS_PER_BOX
+	jr c, .notFull
+	pop bc
+	call DisableSRAM
+	ld hl, .TargetFullText
+	jp PrintText
+.notFull
+	ld c, a ; n = place libre
+	ld [wBuffer + 1], a
+	push hl
+	inc [hl] ; nombre + 1
+	inc hl
+	ld e, c
+	ld d, 0
+	add hl, de
+	ld a, [wWhichPokemon]
+	push hl
+	ld e, a
+	ld hl, wBoxSpecies
+	add hl, de
+	ld a, [hl]
+	pop hl
+	ld [hli], a ; espèce
+	ld [hl], $ff
+	pop hl ; début de la BOITE
+	push hl
+; données du #MON
+	ld de, wBoxMons - wBoxDataStart
+	ld b, BOXMON_STRUCT_LENGTH
+	call .copyEntry
+	pop hl
+	push hl
+	ld de, wBoxMonOT - wBoxDataStart
+	ld b, NAME_LENGTH
+	call .copyEntry
+	pop hl
+	ld de, wBoxMonNicks - wBoxDataStart
+	ld b, NAME_LENGTH
+	call .copyEntry
+; sommes de contrôle de la banque modifiée
+	pop bc
+	ld a, b
+	ld [rRAMB], a
+	ld hl, sBox1 ; sBox7
+	ld bc, sBank2AllBoxesChecksum - sBox1
+	call CalcCheckSum
+	ld [sBank2AllBoxesChecksum], a ; sBank3AllBoxesChecksum
+	call CalcIndividualBoxCheckSums
+	call DisableSRAM
+; retirer le #MON de la BOITE actuelle puis sauvegarder
+	ld a, 1
+	ld [wRemoveMonFromBox], a
+	call RemovePokemon
+	ld a, SFX_SAVE
+	call PlaySoundWaitForCurrent
+	call WaitForSoundToFinish
+	ld hl, wCurMapTextPtr
+	ld de, wChangeBoxSavedMapTextPointer
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	call RestoreMapTextPointer
+	call SaveGameData
+	ld hl, wChangeBoxSavedMapTextPointer
+	call SetMapTextPointer
+; message : numéro de la BOITE cible
+	ld hl, wBoxNumString
+	ld a, [wBuffer]
+	cp 9
+	jr c, .singleDigit
+	sub 9
+	ld [hl], '1'
+	inc hl
+	add '0'
+	jr .placeNumber
+.singleDigit
+	add '1'
+.placeNumber
+	ld [hli], a
+	ld [hl], '@'
+	ld hl, .MovedText
+	jp PrintText
+
+; copie b octets : entrée [wWhichPokemon] du tableau (offset de dans la BOITE)
+; de la BOITE actuelle -> entrée [wBuffer + 1] du même tableau de la BOITE en hl
+.copyEntry
+	push bc ; b = taille
+	add hl, de ; tableau de la BOITE cible
+	push de
+	ld a, [wBuffer + 1]
+	ld e, b
+	ld d, 0
+	call .times ; entrée cible
+	pop de
+	push hl
+	ld hl, wBoxDataStart
+	add hl, de ; tableau de la BOITE actuelle
+	ld a, [wWhichPokemon]
+	pop de ; de = entrée cible
+	pop bc ; b = taille
+	push de
+	ld e, b
+	ld d, 0
+	call .times ; entrée source
+	pop de
+	ld c, b
+	ld b, 0
+	jp CopyData
+
+; hl += a * de
+.times
+	and a
+	ret z
+	add hl, de
+	dec a
+	jr .times
+
+.SameBoxText:
+	text_far _BillsPCSameBoxText
+	text_end
+
+.TargetFullText:
+	text_far _BillsPCTargetBoxFullText
+	text_end
+
+.MovedText:
+	text_far _BillsPCMonMovedText
+	text_end
+
 CopyBoxToOrFromSRAM:
 ; copy an entire box from hl to de with b as the SRAM bank
 	push hl

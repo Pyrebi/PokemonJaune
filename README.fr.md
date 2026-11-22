@@ -97,6 +97,10 @@
 - **Objets cachés visibles** : une mini Poké Ball s'affiche sur la case de chaque
   objet caché pas encore ramassé (elle disparaît une fois l'objet trouvé, et
   pendant les textes et menus). Il faut toujours appuyer sur A devant la case.
+- **PC de LEO** : un Pokémon déposé est soigné (PV, statut, PP) ; nouvelle
+  entrée « DEPLACER » (à la place de l'impression de BOITE) pour envoyer un
+  Pokémon de la BOITE actuelle vers une autre BOITE sans passer par l'équipe
+  (sauvegarde la partie, comme un changement de BOITE).
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,
