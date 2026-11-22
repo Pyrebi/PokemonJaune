@@ -151,6 +151,9 @@ navigateur, ou seulement pendant la visite en navigation privée), Vitesse, Son,
 état exact du moment) et « Importer une partie » (accepte aussi un `.sav` de 32 Ko). L'import
 fonctionne aussi en navigation privée, où le navigateur ne conserve rien d'une visite à l'autre.
 Le bouton « Charger un ROM » n'apparaît que si aucun ROM n'est intégré ou servi à côté de la page.
+Un état d'émulateur n'est valable que pour la version exacte du jeu : les fichiers `.pjsave`
+portent l'empreinte de la version, et un fichier d'une autre version ne reprend que la sauvegarde
+faite en jeu (menu SAUVER), sans l'état, pour éviter que le jeu ne se fige.
 
 Clavier : flèches = croix, X = A, Z (ou W) = B, Entrée = Start, Maj droite / Retour arrière = Select.
 

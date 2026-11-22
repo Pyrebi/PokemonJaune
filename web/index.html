@@ -73,7 +73,7 @@ let toastTimer = 0;
 function popup(t) { // message en fenêtre, fermé au toucher ou après 3 s
   const el = document.getElementById('toast');
   el.textContent = t; el.classList.add('show');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), Math.min(9000, 2500 + 45 * t.length));
   el.onclick = () => el.classList.remove('show');
 }
 const store = {
@@ -85,7 +85,7 @@ const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
 let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true, romBytes = null, romName = '';
 let pendingImport = null; // { sram, state } appliqué au prochain démarrage
-let memState = null, audioTick = 0; // dernier état sauvé (gardé en mémoire si le navigateur ne stocke rien)
+let memState = null, audioTick = 0, romHash = 0; // dernier état sauvé (gardé en mémoire si le navigateur ne stocke rien)
 let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
 
 function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
@@ -145,6 +145,9 @@ function frame(ms) {
 async function start(bytes, name) {
   say('Démarrage…');
   romBytes = bytes; romName = name;
+  // empreinte de la version du jeu : un état d'émulateur n'est valable que pour cette version
+  romHash = 0x811c9dc5; for (let i = 0; i < bytes.length; i++) romHash = Math.imul(romHash ^ bytes[i], 16777619) >>> 0;
+  memState = null;
   if (!M) M = await Binjgb(window.BINJGB_WASM ? {
     instantiateWasm(imports, receive) {
       WebAssembly.instantiate(window.BINJGB_WASM, imports).then(r => receive(r.instance));
@@ -213,22 +216,24 @@ const stamp = () => { const d = new Date(), z = n => String(n).padStart(2, '0');
 document.getElementById('save').onclick = () => {
   if (!e) return;
   memState = getState();
-  const kept = store.set(romKey + ':state', toB64(memState));
+  const kept = store.set(romKey + ':state:' + romHash.toString(16), toB64(memState));
   say(kept ? 'État sauvé' : 'État sauvé (pour cette visite seulement : navigation privée)');
 };
 document.getElementById('load').onclick = () => {
   if (!e) return;
   let data = memState;
-  if (!data) { const s = store.get(romKey + ':state'); if (s) data = fromB64(s); }
+  if (!data) { const s = store.get(romKey + ':state:' + romHash.toString(16)); if (s) data = fromB64(s); }
   if (!data) return say('Aucun état sauvé');
   say(setState(data) ? 'État chargé' : 'État incompatible');
 };
 document.getElementById('exportGame').onclick = () => {
   if (!e) return say('Aucun jeu lancé');
   const sram = getSram(), state = getState();
-  const out = new Uint8Array(12 + sram.length + state.length), dv = new DataView(out.buffer);
-  out.set([0x50, 0x4a, 0x53, 0x31]); dv.setUint32(4, sram.length, true); out.set(sram, 8);
-  dv.setUint32(8 + sram.length, state.length, true); out.set(state, 12 + sram.length);
+  // "PJS2", empreinte (u32), taille SRAM (u32), SRAM, taille état (u32), état
+  const out = new Uint8Array(16 + sram.length + state.length), dv = new DataView(out.buffer);
+  out.set([0x50, 0x4a, 0x53, 0x32]); dv.setUint32(4, romHash, true);
+  dv.setUint32(8, sram.length, true); out.set(sram, 12);
+  dv.setUint32(12 + sram.length, state.length, true); out.set(state, 16 + sram.length);
   download(out, 'pokemon-jaune_' + stamp() + '.pjsave');
   say('Partie exportée (sauvegarde + état actuel)');
 };
@@ -237,17 +242,25 @@ document.getElementById('importSav').addEventListener('change', async ev => {
   if (!f) return;
   if (!romBytes) return say('Lance d\'abord le jeu');
   const data = new Uint8Array(await f.arrayBuffer());
-  let imp;
-  if (data.length >= 12 && data[0] === 0x50 && data[1] === 0x4a && data[2] === 0x53 && data[3] === 0x31) {
-    const dv = new DataView(data.buffer), n = dv.getUint32(4, true), m = dv.getUint32(8 + n, true);
-    imp = { sram: data.slice(8, 8 + n), state: data.slice(12 + n, 12 + n + m) };
+  let imp, oldVersion = false;
+  const magic = data.length >= 12 && data[0] === 0x50 && data[1] === 0x4a && data[2] === 0x53 ? data[3] : 0;
+  if (magic === 0x32) { // PJS2 : l'état n'est repris que si la version du jeu est la même
+    const dv = new DataView(data.buffer), h = dv.getUint32(4, true), n = dv.getUint32(8, true), m = dv.getUint32(12 + n, true);
+    oldVersion = h !== romHash;
+    imp = { sram: data.slice(12, 12 + n), state: oldVersion ? null : data.slice(16 + n, 16 + n + m) };
+  } else if (magic === 0x31) { // PJS1 : version inconnue, l'état ferait figer le jeu
+    const dv = new DataView(data.buffer), n = dv.getUint32(4, true);
+    oldVersion = true;
+    imp = { sram: data.slice(8, 8 + n), state: null };
   } else if (data.length >= 0x8000) {
     imp = { sram: data.slice(0, 0x8000), state: null };
   } else return popup('Fichier non reconnu (' + data.length + ' octets)');
   pendingImport = imp;
   await start(romBytes, romName); // redémarre avec la partie importée
   say('En jeu');
-  popup('Partie importée : ' + f.name + (imp.state ? ' (état restauré)' : ' (sauvegarde du jeu)'));
+  popup(oldVersion
+    ? 'Partie importée : ' + f.name + '. Elle vient d\'une autre version du jeu : seule la sauvegarde faite en jeu (menu SAUVER) est reprise. Choisis CONTINUER.'
+    : 'Partie importée : ' + f.name + (imp.state ? ' (état restauré)' : ' (sauvegarde du jeu : choisis CONTINUER)'));
 });
 document.getElementById('fast').onclick = ev => {
   speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; ev.target.textContent = 'Vitesse x' + speed;
