@@ -23,6 +23,141 @@ HiddenItems:
 	ldh [hItemAlreadyFound], a
 	ret
 
+; mini Poké Balls sur les objets cachés pas encore ramassés de la carte
+; (appelé pendant le V-blank par PrepareOAMData, après les autres sprites)
+DEF HIDDEN_BALL_TILE EQU $f8
+DrawHiddenItemBalls::
+	ld a, [wFontLoaded]
+	bit BIT_FONT_LOADED, a ; police chargée (texte, menu) : la tuile est écrasée
+	ret nz
+	ld hl, HiddenItemCoords
+	ld c, 0 ; index de l'objet caché
+.loop
+	ld a, [hli] ; carte
+	cp -1
+	ret z
+	ld b, a
+	ld a, [wCurMap]
+	cp b
+	jr nz, .skip
+	ld a, [hli] ; y
+	ld d, a
+	ld a, [hli] ; x
+	ld e, a
+	push hl
+	push bc
+	call .isObtained
+	call z, .drawBall
+	pop bc
+	pop hl
+	inc c
+	jr .loop
+.skip
+	inc hl
+	inc hl
+	inc c
+	jr .loop
+
+; z si l'objet caché c n'a pas encore été ramassé
+.isObtained
+	ld a, c
+	srl a
+	srl a
+	srl a
+	ld hl, wObtainedHiddenItemsFlags
+	add l
+	ld l, a
+	jr nc, .noCarry
+	inc h
+.noCarry
+	ld a, c
+	and 7
+	ld b, a
+	ld a, [hl]
+	inc b
+.shift
+	dec b
+	jr z, .test
+	rrca
+	jr .shift
+.test
+	and 1
+	ret
+
+; d = y, e = x de l'objet
+.drawBall
+	ldh a, [hOAMBufferOffset]
+	cp LOW(wShadowOAMSprite36) ; garder les dernières entrées (saut, pêche)
+	ret nc
+	ld l, a
+	ld h, HIGH(wShadowOAM)
+; écart avec le joueur, limité à l'écran
+	ld a, [wYCoord]
+	ld b, a
+	ld a, d
+	sub b
+	add 5
+	cp 11
+	ret nc
+	sub 5
+	add a
+	add a
+	add a
+	add a ; x 16 (écart signé)
+	add 64 + 4 + 16 ; OAM Y
+	ld d, a
+	ld a, [wXCoord]
+	ld b, a
+	ld a, e
+	sub b
+	add 6
+	cp 12
+	ret nc
+	sub 6
+	add a
+	add a
+	add a
+	add a
+	add 64 + 4 + 8 ; OAM X
+	ld e, a
+; pendant un pas, les coordonnées ne changent qu'à la fin, mais chaque avancée
+; a déjà décalé le décor (et les PNJ) de 2 pixels : 2 * (8 - compteur)
+	ld a, [wWalkCounter]
+	and a
+	jr z, .gotProgress
+	cpl
+	add 8 + 1 ; 8 - compteur
+	add a
+.gotProgress
+	ld b, a
+	ld a, [wSpritePlayerStateData1YStepVector]
+	call .offset
+	add d
+	ld [hli], a
+	ld a, [wSpritePlayerStateData1XStepVector]
+	call .offset
+	add e
+	ld [hli], a
+	ld a, HIDDEN_BALL_TILE
+	ld [hli], a
+	xor a
+	ld [hli], a
+	ld a, l
+	ldh [hOAMBufferOffset], a
+	ret
+
+; a = vecteur de pas (-1, 0, 1), b = pixels déjà parcourus -> a = décalage
+; (le décor se déplace à l'opposé du joueur)
+.offset
+	and a
+	ret z
+	bit 7, a
+	ld a, b
+	ret nz ; vers le haut / la gauche : le décor descend
+	cpl
+	inc a
+	ret
+
 INCLUDE "data/events/hidden_item_coords.asm"
 
 FoundHiddenItemText::

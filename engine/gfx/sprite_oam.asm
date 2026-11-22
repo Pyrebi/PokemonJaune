@@ -137,6 +137,7 @@ PrepareOAMData::
 	jp nz, .spriteLoop
 
 .clearUnusedOAM
+	farcall DrawHiddenItemBalls ; mini Poké Balls sur les objets cachés
 	ld a, [wMovementFlags]
 	bit BIT_LEDGE_OR_FISHING, a
 	ld c, LOW(wShadowOAMEnd)

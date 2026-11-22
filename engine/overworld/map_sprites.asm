@@ -152,7 +152,7 @@ LoadMapSpriteTilePatterns:
 	inc a
 	cp 11
 	jr nz, .loop
-	ret
+	jr LoadHiddenItemBallTile
 
 ReloadWalkingTilePatterns:
 	xor a
@@ -166,7 +166,16 @@ ReloadWalkingTilePatterns:
 	inc a
 	cp 11
 	jr nz, .loop
-	ret
+; fallthrough
+
+; mini Poké Ball des objets cachés (tuile de sprite $f8, libre sur la carte)
+LoadHiddenItemBallTile:
+	ld hl, vNPCSprites2 tile $78
+	ld de, HiddenItemBallGFX
+	lb bc, BANK(HiddenItemBallGFX), 1
+	jp CopyVideoDataAlternate
+
+HiddenItemBallGFX: INCBIN "gfx/overworld/hidden_item_ball.2bpp"
 
 LoadStillTilePattern:
 	ld a, [wFontLoaded]

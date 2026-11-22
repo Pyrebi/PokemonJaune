@@ -94,6 +94,9 @@
   soin express au Centre Pokémon (sans discours ni animation de la machine) ;
   CORDE SORTIE réutilisable ; les stats de base (et leur total) s'affichent sur
   une page de plus dans la fiche INFO du Pokédex.
+- **Objets cachés visibles** : une mini Poké Ball s'affiche sur la case de chaque
+  objet caché pas encore ramassé (elle disparaît une fois l'objet trouvé, et
+  pendant les textes et menus). Il faut toujours appuyer sur A devant la case.
 - **Cadeau du PROF.CHEN** : la première fois qu'un PC est allumé (même celui de
   la chambre), 8 Pokémon emblématiques de la série arrivent au niveau 5 dans la
   BOITE, en Pokémon « stars » : CHENIPAN, ROUCOOL, KRABBY, FEROSINGE, TAUROS,
