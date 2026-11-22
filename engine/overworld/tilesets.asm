@@ -46,6 +46,27 @@ LoadTilesetHeader:
 .done
 	ret
 
+; recopie l'en-tête du tileset actuel (adresses des graphismes, blocs et
+; collisions). Ces adresses sont gardées dans la sauvegarde : une partie
+; sauvegardée avec une autre version du jeu aurait des adresses périmées
+; (collisions fausses, joueur bloqué). Appelé à CONTINUER.
+RefreshTilesetPointers::
+	ld a, [wCurMapTileset]
+	add a
+	add a
+	ld e, a
+	ld d, 0
+	ld hl, Tilesets
+	add hl, de
+	add hl, de
+	add hl, de
+	ld de, wTilesetBank
+	ld bc, $b
+	call CopyData
+	ld a, [hl]
+	ldh [hTileAnimations], a
+	ret
+
 INCLUDE "data/tilesets/dungeon_tilesets.asm"
 
 INCLUDE "data/tilesets/tileset_headers.asm"

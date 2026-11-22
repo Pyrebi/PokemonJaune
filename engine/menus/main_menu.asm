@@ -104,6 +104,7 @@ MainMenu:
 	jr .inputLoop
 .pressedA
 	farcall UpgradeStarterPikachu ; parties commencées avant les Pokémon spéciaux
+	farcall RefreshTilesetPointers ; sauvegarde d'une autre version du jeu
 	call GBPalWhiteOutWithDelay3
 	call ClearScreen
 	ld a, PLAYER_DIR_DOWN
