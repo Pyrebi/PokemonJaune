@@ -516,7 +516,26 @@ PikachuMovementState_ProcessCommand:
 	jp z, PikachuDoubleStep
 	call AreThereAtLeastTwoStepsInPikachuFollowCommandBuffer
 	jp c, FastPikachuFollow
+	call IsPlayerRunningForPikachu ; le joueur court : PIKACHU court aussi
+	jp c, FastPikachuFollow
 	jp NormalPikachuFollow
+
+; carry si le joueur court à pied (B, ou sans B avec l'option COURSE AUTO)
+IsPlayerRunningForPikachu:
+	ld a, [wWalkBikeSurfState]
+	and a
+	ret nz ; (and a : pas de carry)
+	ldh a, [hJoyHeld]
+	and PAD_B
+	jr z, .noB
+	ld a, 1 << BIT_BONUS_AUTORUN
+.noB
+	ld hl, wBonusOptions
+	xor [hl]
+	and 1 << BIT_BONUS_AUTORUN
+	ret z
+	scf
+	ret
 
 PikachuMovementCommandData:
 	db  0,  0

@@ -85,7 +85,7 @@ const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
 let M = null, e = 0, romKey = '', running = false, speed = 1, soundOn = true, romBytes = null, romName = '';
 let pendingImport = null; // { sram, state } appliqué au prochain démarrage
-let memState = null; // dernier état sauvé (gardé en mémoire si le navigateur ne stocke rien)
+let memState = null, audioTick = 0; // dernier état sauvé (gardé en mémoire si le navigateur ne stocke rien)
 let audioCtx = null, audioStart = 0, lastRaf = 0, leftover = 0, frameBuf, audioBuf, imageData, ctx2d;
 
 function heap(ptr, size) { return new Uint8Array(M.HEAP8.buffer, ptr, size); }
@@ -133,7 +133,8 @@ function frame(ms) {
   for (let guard = 0; guard < 1000; guard++) {
     const ev = M._emulator_run_until_f64(e, until);
     if (ev & EVENT_NEW_FRAME) newFrame = true;
-    if (ev & EVENT_AUDIO_BUFFER_FULL) { if (speed === 1) pushAudio(); }
+    // en accéléré, on ne joue qu'un tampon audio sur « speed » pour rester synchronisé
+    if (ev & EVENT_AUDIO_BUFFER_FULL) { if (++audioTick % speed === 0) pushAudio(); }
     if (M._emulator_get_ticks_f64(e) >= until) break;
   }
   leftover = M._emulator_get_ticks_f64(e) - until;
